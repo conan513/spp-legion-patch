@@ -44,21 +44,23 @@ echo Pass: %pass%
 echo.
 echo ############################################
 echo.
-echo 1 - Start the servers (x86)
-echo 2 - Start the servers (x64) with support system
+echo 1  -  Start the servers (x86)
+echo 2a -  Start the servers (x64)
+echo 2b -  Start the servers (x64) without the Support System
 echo.
-echo 3 - Create game accounts
-echo 4 - Change server IP (Offline/LAN)
+echo 3  -  Create game accounts
+echo 4  -  Change server IP (Offline/LAN)
 echo.
-echo 5 - Export characters
-echo 6 - Import characters
+echo 5  -  Export characters
+echo 6  -  Import characters
 echo.
 REM echo 7 - Reset randombots
 REM echo.
 set /P menu=Enter a number: 
 if "%menu%"=="0" (goto servers_stop)
 if "%menu%"=="1" (goto servers_start)
-if "%menu%"=="2" (goto servers_start_x64)
+if "%menu%"=="2a" (goto servers_start_x64)
+if "%menu%"=="2b" (goto servers_start_x64_without_support)
 if "%menu%"=="3" (goto account_tool)
 if "%menu%"=="4" (goto ip_changer)
 if "%menu%"=="5" (goto export_char)
@@ -76,6 +78,10 @@ goto exit
 
 :servers_start_x64
 start Server\Tools\server_check_x64.bat
+goto exit
+
+:servers_start_x64_without_support
+start Server\Tools\server_check_x64_without_donation.bat
 goto exit
 
 :export_char
