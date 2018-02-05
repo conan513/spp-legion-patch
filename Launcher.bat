@@ -65,7 +65,6 @@ if "%menu%"=="3" (goto account_tool)
 if "%menu%"=="4" (goto ip_changer)
 if "%menu%"=="5" (goto export_char)
 if "%menu%"=="6" (goto import_char)
-if "%menu%"=="7" (goto clear_bots)
 if "%menu%"=="" (goto menu)
 
 goto menu
@@ -132,51 +131,27 @@ echo Importing characters from backup file...please wait...
 echo.
 Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%characters% < Backup\%characters%.sql
 echo.
-REM echo Importing realmd updates...
-REM echo.
-REM for %%i in (Server\Tools\sql\realmd\*sql) do if %%i neq Server\Tools\sql\realmd\*sql if %%i neq Server\Tools\sql\realmd\*sql if %%i neq Server\Tools\sql\realmd\*sql echo %%i & Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 -f --local-infile %login% --database=%login% < %%i
-REM echo.
-REM echo Importing character updates...
-REM echo.
-REM for %%i in (Server\Tools\sql\characters\*sql) do if %%i neq Server\Tools\sql\characters\*sql if %%i neq Server\Tools\sql\characters\*sql if %%i neq Server\Tools\sql\characters\*sql echo %%i & Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 -f --local-infile %characters% --database=%characters% < %%i
-REM echo.
 echo Import done.
 echo.
 pause
 goto menu
 
-:clear_bots
-Echo You need to reset bots every time when you change anything in bots.conf.
-set /P menu=Are you sure want to reset randombots? (Y/n)
-if "%menu%"=="n" (goto menu)
-if "%menu%"=="y" (goto clear_bots_1)
-
-:clear_bots_1
+:account_tool
 cls
-echo Reseting randombots table...please wait...
+echo How to create account?
+echo ----------------------
+echo In world server console type: bnet create name@name password
+echo After this you need to create a game account first: account create gamename password
+echo And finally you need to link the bnet account to game account: bnet link name@name gamename
 echo.
-Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%characters% < Server\Tools\sql\randombots_reset.sql
+echo How to create GM account?
+echo -------------------------
+echo Set the GM level: account set gmlevel gamename 3 1
+echo (3 is the GM level and the 1 is the realm ID)
 echo.
-echo Reset complete.
-echo.
+echo Warning! Some patches and features are working differently if you playing with GM account!
 pause
 goto menu
-
-:account_tool
-start Server\Tools\AccountCreator.exe
-goto account_tool_check
-
-:account_tool_check
-ping -n 2 127.0.0.1>nul
-cls
-echo.
-echo The account creator is running...
-echo.
-echo Enter the username and password and hit the "Create" button.
-echo Doesn't matter what is the expansion level in this repack.
-tasklist /FI "IMAGENAME eq AccountCreator.exe" 2>NUL | find /I /N "AccountCreator">NUL
-if "%ERRORLEVEL%"=="0" goto account_tool_check
-if "%ERRORLEVEL%"=="1" goto menu
 
 :ip_changer
 start Server\Tools\SingleCoreLanSwitcher.exe
