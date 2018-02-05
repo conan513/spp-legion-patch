@@ -54,8 +54,6 @@ echo.
 echo 5  -  Export characters
 echo 6  -  Import characters
 echo.
-REM echo 7 - Reset randombots
-REM echo.
 set /P menu=Enter a number: 
 if "%menu%"=="0" (goto servers_stop)
 if "%menu%"=="1" (goto servers_start)
