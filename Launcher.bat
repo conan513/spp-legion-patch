@@ -22,6 +22,8 @@ set login=realmd
 REM --- Settings ---
 
 :start_database
+del sql\ashamane\world\2017_12_03_01_world_npc_vendor.sql
+del sql\ashamane\world\2018_01_08_01_world_index.sql
 start Server\Database\start.bat
 goto menu
 
