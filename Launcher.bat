@@ -22,6 +22,8 @@ set login=realmd
 REM --- Settings ---
 
 :start_database
+del ..\Update.bat
+copy Server\Tools\Update.bat ..
 start Server\Database\start.bat
 goto menu
 
