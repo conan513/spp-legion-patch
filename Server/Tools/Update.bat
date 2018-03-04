@@ -5,8 +5,8 @@ COLOR 0A
 set mod=%1
 
 cd spp-legion
-..\git\cmd\git.exe config --global user.name "SPP User"
-..\git\cmd\git.exe config --global user.email sppuser@spp.com
+..\git\cmd\git.exe config user.name "SPP User"
+..\git\cmd\git.exe config user.email sppuser@spp.com
 ..\git\cmd\git.exe add Settings
 ..\git\cmd\git.exe commit -m "Custom Changes"
 ..\git\cmd\git.exe add sql
