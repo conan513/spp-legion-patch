@@ -4,6 +4,9 @@ TITLE %NAME%
 COLOR 0A
 set mod=%1
 
+taskkill /f /im bnetserver.exe
+taskkill /f /im worldserver.exe
+
 cd spp-legion
 ..\git\cmd\git.exe config user.name "SPP User"
 ..\git\cmd\git.exe config user.email sppuser@spp.com
