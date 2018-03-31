@@ -25,6 +25,13 @@ REM --- Settings ---
 del ..\Update.bat
 copy Server\Tools\Update.bat ..
 start Server\Database\start.bat
+cls
+echo Single Player Project - AshamaneCore 7.3.5 Build 26124 (V2) available now.
+echo https://www.patreon.com/posts/17889284
+echo.
+echo You need to download it to get the updates in the future.
+echo Use the character export and import if you wanna move you characters to the new repack.
+pause
 goto menu
 
 :menu
