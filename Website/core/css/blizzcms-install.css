@@ -1,0 +1,14 @@
+/*!-----------------------------------------------------------------
+    Install CSS
+    Version: 0.0.1
+    Author: BlizzCMS
+    Copyright 2018
+-------------------------------------------------------------------*/
+/*!-----------------------------------------------------------------
+                            UI MOD
+-------------------------------------------------------------------*/
+@font-face{font-family:'Lobster';font-style:normal;font-weight:400;src:local("Lobster Regular"),local("Lobster-Regular"),url("../../core/fonts/Lobster-Regular.ttf") format("truetype")}
+.uk-text-center .uk-button-secondary{border-radius: 40px;}
+.uk-form-controls .uk-button-secondary{border-radius: 40px;}
+.blizzcms-logo-install{font-family:'Lobster' !important;font-size:28px !important;}
+.blizzcms-logo-installation{font-family:'Lobster' !important;font-size:44px !important;}

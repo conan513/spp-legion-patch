@@ -25,6 +25,12 @@ REM --- Settings ---
 del ..\Update.bat
 copy Server\Tools\Update.bat ..
 start Server\Database\start.bat
+goto webserver
+
+:webserver
+cd Server\Apache24
+start apache_start.bat
+cd ..\..
 goto menu
 
 :menu

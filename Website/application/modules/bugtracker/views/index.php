@@ -1,0 +1,39 @@
+<?= $tiny ?>
+<?= $fx_adds ?>
+        <div class="uk-space-xlarge"></div>
+        <div class="uk-grid uk-grid-large" data-uk-grid>
+            <div class="uk-width-1-6@l"></div>
+            <div class="uk-width-4-6@l">
+                <div class="uk-principal-title uk-text-white"><i class="fas fa-bug"></i> <?= $this->lang->line('nav_bugtracker'); ?></div>
+                <?php if ($this->m_data->isLogged()) { ?>
+                    <span class="uk-align-right">
+                        <a href="#" class="uk-button uk-button-primary" uk-toggle="target: #createReport"><i class="fas fa-pencil-alt"></i> <?= $this->lang->line('button_create_report'); ?></a>
+                    </span>
+                <?php } ?>
+                <p class="uk-text-uppercase uk-text-bold uk-text-white"><?= $this->lang->line('bugtracker_report_list'); ?></p>
+                <div align="right" id="pagination_link"></div>
+                <div class="table-responsive" id="bugtracker_table"></div>
+                <script>
+                    $(document).ready(function() {
+                        function load_country_data(page) {
+                            $.ajax({
+                                url:"<?php echo base_url(); ?>bugtracker/pagination/"+page,
+                                method:"GET",
+                                dataType:"json",
+                                success:function(data) {
+                                    $('#bugtracker_table').html(data.bugtracker_table);
+                                    $('#pagination_link').html(data.pagination_link);
+                                }
+                            });
+                        }
+                        load_country_data(1);
+                        $(document).on("click", ".pagination li a", function(event) {
+                            event.preventDefault();
+                            var page = $(this).data("ci-pagination-page");
+                            load_country_data(page);
+                        });
+                    });
+                </script>
+            </div>
+            <div class="uk-width-1-6@l"></div>
+        </div>

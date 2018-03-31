@@ -1,0 +1,351 @@
+Starting the Apache2.2 service
+The Apache2.2 service is running.
+rmine the server's fully qualified domain name, using 10.0.0.109 for ServerName
+[Thu Jan 31 20:30:15 2008] [notice] Apache/2.2.8 (Win32) configured -- resuming normal operations
+[Thu Jan 31 20:30:15 2008] [notice] Server built: Jan 18 2008 00:37:19
+[Thu Jan 31 20:30:15 2008] [notice] Parent: Created child process 756
+httpd.exe: Could not reliably determine the server's fully qualified domain name, using 10.0.0.109 for ServerName
+httpd.exe: Could not reliably determine the server's fully qualified domain name, using 10.0.0.109 for ServerName
+[Thu Jan 31 20:30:15 2008] [notice] Child 756: Child process is running
+[Thu Jan 31 20:30:15 2008] [notice] Child 756: Acquired the start mutex.
+[Thu Jan 31 20:30:15 2008] [notice] Child 756: Starting 64 worker threads.
+[Thu Jan 31 20:30:15 2008] [notice] Child 756: Starting thread to listen on port 80.
+[Thu Jan 31 20:30:22 2008] [notice] Parent: Received shutdown signal -- Shutting down the server.
+[Thu Jan 31 20:30:22 2008] [notice] Child 756: Exit event signaled. Child process is ending.
+[Thu Jan 31 20:30:23 2008] [notice] Child 756: Released the start mutex
+[Thu Jan 31 20:30:24 2008] [notice] Child 756: All worker threads have exited.
+[Thu Jan 31 20:30:24 2008] [notice] Child 756: Child process is exiting
+[Thu Jan 31 20:30:24 2008] [notice] Parent: Child process exited successfully.
+[Sat Mar 31 10:10:35.387444 2018] [ssl:warn] [pid 9776:tid 824] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Mar 31 10:10:35.432592 2018] [mpm_winnt:notice] [pid 9776:tid 824] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 configured -- resuming normal operations
+[Sat Mar 31 10:10:35.433568 2018] [mpm_winnt:notice] [pid 9776:tid 824] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 10:10:35.433568 2018] [core:notice] [pid 9776:tid 824] AH00094: Command line: 'bin\\httpd.exe -d C:/AppServ/Apache24'
+[Sat Mar 31 10:10:35.470666 2018] [mpm_winnt:notice] [pid 9776:tid 824] AH00418: Parent: Created child process 3168
+Apache server shutdown initiated...
+sl:warn] [pid 3168:tid 788] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Mar 31 10:10:36.005087 2018] [mpm_winnt:notice] [pid 3168:tid 788] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 10:19:19.976160 2018] [mpm_winnt:notice] [pid 9776:tid 824] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 31 10:19:21.977483 2018] [mpm_winnt:notice] [pid 3168:tid 788] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 10:19:22.021600 2018] [mpm_winnt:notice] [pid 9776:tid 824] AH00430: Parent: Child process 3168 exited successfully.
+[Sat Mar 31 10:35:37.689151 2018] [ssl:warn] [pid 21216:tid 820] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Mar 31 10:35:37.692159 2018] [mpm_winnt:notice] [pid 21216:tid 820] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 configured -- resuming normal operations
+[Sat Mar 31 10:35:37.692159 2018] [mpm_winnt:notice] [pid 21216:tid 820] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 10:35:37.692159 2018] [core:notice] [pid 21216:tid 820] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/mini_server_6/AppServ/Apache24'
+[Sat Mar 31 10:35:37.699177 2018] [mpm_winnt:notice] [pid 21216:tid 820] AH00418: Parent: Created child process 21236
+Apache server interrupted...
+018] [ssl:warn] [pid 21236:tid 804] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Mar 31 10:35:38.217556 2018] [mpm_winnt:notice] [pid 21236:tid 804] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 10:39:04.102680 2018] [mpm_winnt:notice] [pid 21216:tid 820] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 31 10:39:06.105002 2018] [mpm_winnt:notice] [pid 21236:tid 804] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 10:39:06.133077 2018] [mpm_winnt:notice] [pid 21216:tid 820] AH00430: Parent: Child process 21236 exited successfully.
+[Sat Mar 31 10:39:09.593276 2018] [ssl:warn] [pid 12708:tid 816] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Mar 31 10:39:09.596284 2018] [mpm_winnt:notice] [pid 12708:tid 816] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 configured -- resuming normal operations
+[Sat Mar 31 10:39:09.596284 2018] [mpm_winnt:notice] [pid 12708:tid 816] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 10:39:09.596284 2018] [core:notice] [pid 12708:tid 816] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/mini_server_6/AppServ/Apache24'
+[Sat Mar 31 10:39:09.598290 2018] [mpm_winnt:notice] [pid 12708:tid 816] AH00418: Parent: Created child process 20320
+Apache server interrupted...
+018] [ssl:warn] [pid 20320:tid 832] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Mar 31 10:39:10.123687 2018] [mpm_winnt:notice] [pid 20320:tid 832] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 10:40:25.287826 2018] [mpm_winnt:notice] [pid 12708:tid 816] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 31 10:40:27.289663 2018] [mpm_winnt:notice] [pid 20320:tid 832] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 10:40:27.318738 2018] [mpm_winnt:notice] [pid 12708:tid 816] AH00430: Parent: Child process 20320 exited successfully.
+[Sat Mar 31 10:40:45.290524 2018] [ssl:warn] [pid 13292:tid 816] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Mar 31 10:40:45.316593 2018] [mpm_winnt:notice] [pid 13292:tid 816] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 configured -- resuming normal operations
+[Sat Mar 31 10:40:45.316593 2018] [mpm_winnt:notice] [pid 13292:tid 816] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 10:40:45.316593 2018] [core:notice] [pid 13292:tid 816] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/mini_server_6/AppServ/Apache24'
+[Sat Mar 31 10:40:45.324614 2018] [mpm_winnt:notice] [pid 13292:tid 816] AH00418: Parent: Created child process 19096
+Apache server interrupted...
+018] [ssl:warn] [pid 19096:tid 788] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Mar 31 10:40:45.921201 2018] [mpm_winnt:notice] [pid 19096:tid 788] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 10:44:20.211353 2018] [mpm_winnt:notice] [pid 13292:tid 816] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 31 10:44:22.213678 2018] [mpm_winnt:notice] [pid 19096:tid 788] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 10:44:22.256793 2018] [mpm_winnt:notice] [pid 13292:tid 816] AH00430: Parent: Child process 19096 exited successfully.
+[Sat Mar 31 10:44:26.690580 2018] [ssl:warn] [pid 1308:tid 816] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_gd2.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_imap.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_mbstring.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_mysql.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_mysqli.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_pdo_mysql.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_sockets.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_sqlite3.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_xmlrpc.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_xsl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 10:44:26.714645 2018] [mpm_winnt:notice] [pid 1308:tid 816] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Sat Mar 31 10:44:26.714645 2018] [mpm_winnt:notice] [pid 1308:tid 816] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 10:44:26.714645 2018] [core:notice] [pid 1308:tid 816] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/mini_server_6/AppServ/Apache24'
+[Sat Mar 31 10:44:26.721664 2018] [mpm_winnt:notice] [pid 1308:tid 816] AH00418: Parent: Created child process 20772
+Apache server interrupted...
+018] [ssl:warn] [pid 20772:tid 812] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_gd2.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_imap.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_mbstring.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_mysql.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_mysqli.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_pdo_mysql.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_sockets.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_sqlite3.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_xmlrpc.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_xsl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 10:44:27.291177 2018] [mpm_winnt:notice] [pid 20772:tid 812] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 10:49:12.068953 2018] [mpm_winnt:notice] [pid 1308:tid 816] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 31 10:49:14.071276 2018] [mpm_winnt:notice] [pid 20772:tid 812] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 10:49:14.109377 2018] [mpm_winnt:notice] [pid 1308:tid 816] AH00430: Parent: Child process 20772 exited successfully.
+[Sat Mar 31 10:49:39.973146 2018] [ssl:warn] [pid 6568:tid 240] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_gd2.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_imap.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_mbstring.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_mysql.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_mysqli.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_pdo_mysql.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_sockets.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_sqlite3.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_xmlrpc.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_xsl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 10:49:39.998213 2018] [mpm_winnt:notice] [pid 6568:tid 240] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Sat Mar 31 10:49:39.998213 2018] [mpm_winnt:notice] [pid 6568:tid 240] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 10:49:39.998213 2018] [core:notice] [pid 6568:tid 240] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/mini_server_6/AppServ/Apache24'
+[Sat Mar 31 10:49:40.000218 2018] [mpm_winnt:notice] [pid 6568:tid 240] AH00418: Parent: Created child process 18672
+Apache server interrupted...
+018] [ssl:warn] [pid 18672:tid 788] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_curl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_gd2.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_imap.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_mbstring.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_mysql.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_mysqli.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_pdo_mysql.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_sockets.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_sqlite3.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_xmlrpc.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_xsl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 10:49:40.546671 2018] [mpm_winnt:notice] [pid 18672:tid 788] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 10:53:04.073371 2018] [mpm_winnt:notice] [pid 6568:tid 240] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+Apache server interrupted...
+Apache server interrupted...
+Apache server interrupted...
+Apache server interrupted...
+Apache server interrupted...
+Apache server interrupted...
+Apache server interrupted...
+Apache server interrupted...
+Apache server interrupted...
+Apache server interrupted...
+Apache server shutdown initiated...
+[Sat Mar 31 10:53:23.691532 2018] [core:warn] [pid 7860:tid 808] AH00098: pid file e:/Cucc/mini_server_6/AppServ/Apache24/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Mar 31 10:53:23.798817 2018] [ssl:warn] [pid 7860:tid 808] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php7/ext\\php_mysql.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 10:53:23.824887 2018] [mpm_winnt:notice] [pid 7860:tid 808] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/7.1.1 configured -- resuming normal operations
+[Sat Mar 31 10:53:23.824887 2018] [mpm_winnt:notice] [pid 7860:tid 808] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 10:53:23.824887 2018] [core:notice] [pid 7860:tid 808] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/mini_server_6/AppServ/Apache24'
+[Sat Mar 31 10:53:23.835916 2018] [mpm_winnt:notice] [pid 7860:tid 808] AH00418: Parent: Created child process 7492
+Apache server interrupted...
+018] [ssl:warn] [pid 7492:tid 792] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php7/ext\\php_mysql.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 10:53:24.401419 2018] [mpm_winnt:notice] [pid 7492:tid 792] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 10:53:26.531082 2018] [mpm_winnt:notice] [pid 18672:tid 788] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 10:56:04.030864 2018] [mpm_winnt:notice] [pid 7860:tid 808] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+Apache server interrupted...
+Apache server interrupted...
+[Sat Mar 31 10:56:06.032185 2018] [mpm_winnt:notice] [pid 7492:tid 792] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 10:56:06.049231 2018] [mpm_winnt:notice] [pid 7860:tid 808] AH00430: Parent: Child process 7492 exited successfully.
+[Sat Mar 31 10:56:58.473624 2018] [ssl:warn] [pid 21720:tid 808] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Mar 31 10:56:58.493677 2018] [mpm_winnt:notice] [pid 21720:tid 808] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 configured -- resuming normal operations
+[Sat Mar 31 10:56:58.493677 2018] [mpm_winnt:notice] [pid 21720:tid 808] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 10:56:58.493677 2018] [core:notice] [pid 21720:tid 808] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/mini_server_6/AppServ/Apache24'
+[Sat Mar 31 10:56:58.504707 2018] [mpm_winnt:notice] [pid 21720:tid 808] AH00418: Parent: Created child process 21904
+[Sat Mar 31 10:56:59.064194 2018] [ssl:warn] [pid 21904:tid 820] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Mar 31 10:56:59.084248 2018] [mpm_winnt:notice] [pid 21904:tid 820] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 12:50:22.399508 2018] [core:warn] [pid 8740:tid 812] AH00098: pid file e:/Cucc/Server/SingleCore_Legion/spp-legion/Server/Apache24/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Mar 31 12:50:22.531366 2018] [ssl:warn] [pid 8740:tid 812] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 12:50:22.915911 2018] [mpm_winnt:notice] [pid 8740:tid 812] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 configured -- resuming normal operations
+[Sat Mar 31 12:50:22.915911 2018] [mpm_winnt:notice] [pid 8740:tid 812] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 12:50:22.915911 2018] [core:notice] [pid 8740:tid 812] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/Server/SingleCore_Legion/spp-legion/Server/Apache24'
+[Sat Mar 31 12:50:22.924935 2018] [mpm_winnt:notice] [pid 8740:tid 812] AH00418: Parent: Created child process 11260
+Apache server shutdown initiated...
+sl:warn] [pid 11260:tid 572] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 12:50:23.602777 2018] [mpm_winnt:notice] [pid 11260:tid 572] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 12:53:30.888556 2018] [mpm_winnt:notice] [pid 8740:tid 812] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 31 12:53:32.888990 2018] [mpm_winnt:notice] [pid 11260:tid 572] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 12:53:32.928096 2018] [mpm_winnt:notice] [pid 8740:tid 812] AH00430: Parent: Child process 11260 exited successfully.
+[Sat Mar 31 12:53:35.652497 2018] [ssl:warn] [pid 22316:tid 628] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 12:53:35.674055 2018] [mpm_winnt:notice] [pid 22316:tid 628] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 configured -- resuming normal operations
+[Sat Mar 31 12:53:35.674055 2018] [mpm_winnt:notice] [pid 22316:tid 628] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 12:53:35.674055 2018] [core:notice] [pid 22316:tid 628] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/Server/SingleCore_Legion/spp-legion/Server/Apache24'
+[Sat Mar 31 12:53:35.676562 2018] [mpm_winnt:notice] [pid 22316:tid 628] AH00418: Parent: Created child process 7000
+Apache server interrupted...
+018] [ssl:warn] [pid 7000:tid 812] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 12:53:36.259646 2018] [mpm_winnt:notice] [pid 7000:tid 812] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 12:53:49.046386 2018] [mpm_winnt:notice] [pid 22316:tid 628] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 31 12:53:51.047321 2018] [mpm_winnt:notice] [pid 7000:tid 812] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 12:53:51.064869 2018] [mpm_winnt:notice] [pid 22316:tid 628] AH00430: Parent: Child process 7000 exited successfully.
+[Sat Mar 31 13:01:32.716265 2018] [ssl:warn] [pid 21612:tid 800] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 13:01:32.758379 2018] [mpm_winnt:notice] [pid 21612:tid 800] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 configured -- resuming normal operations
+[Sat Mar 31 13:01:32.758880 2018] [mpm_winnt:notice] [pid 21612:tid 800] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 13:01:32.758880 2018] [core:notice] [pid 21612:tid 800] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/Server/SingleCore_Legion/spp-legion/Server/Apache24'
+[Sat Mar 31 13:01:32.775425 2018] [mpm_winnt:notice] [pid 21612:tid 800] AH00418: Parent: Created child process 23784
+Apache server shutdown initiated...
+sl:warn] [pid 23784:tid 840] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 13:01:33.412146 2018] [mpm_winnt:notice] [pid 23784:tid 840] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 13:02:17.956808 2018] [mpm_winnt:notice] [pid 21612:tid 800] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 31 13:02:19.957705 2018] [mpm_winnt:notice] [pid 23784:tid 840] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 13:02:19.974751 2018] [mpm_winnt:notice] [pid 21612:tid 800] AH00430: Parent: Child process 23784 exited successfully.
+[Sat Mar 31 13:08:35.846691 2018] [ssl:warn] [pid 6076:tid 820] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 13:08:35.869252 2018] [mpm_winnt:notice] [pid 6076:tid 820] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 configured -- resuming normal operations
+[Sat Mar 31 13:08:35.869252 2018] [mpm_winnt:notice] [pid 6076:tid 820] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 13:08:35.869252 2018] [core:notice] [pid 6076:tid 820] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/Server/SingleCore_Legion/spp-legion/Server/Apache24'
+[Sat Mar 31 13:08:35.877274 2018] [mpm_winnt:notice] [pid 6076:tid 820] AH00418: Parent: Created child process 21568
+Apache server shutdown initiated...
+sl:warn] [pid 21568:tid 712] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 13:08:36.471883 2018] [mpm_winnt:notice] [pid 21568:tid 712] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 13:08:37.046434 2018] [mpm_winnt:notice] [pid 6076:tid 820] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 31 13:08:39.046829 2018] [mpm_winnt:notice] [pid 21568:tid 712] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 13:08:39.071897 2018] [mpm_winnt:notice] [pid 6076:tid 820] AH00430: Parent: Child process 21568 exited successfully.
+[Sat Mar 31 13:09:54.858713 2018] [ssl:warn] [pid 21348:tid 804] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 13:09:54.881274 2018] [mpm_winnt:notice] [pid 21348:tid 804] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 configured -- resuming normal operations
+[Sat Mar 31 13:09:54.881274 2018] [mpm_winnt:notice] [pid 21348:tid 804] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 13:09:54.881274 2018] [core:notice] [pid 21348:tid 804] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/Server/SingleCore_Legion/spp-legion/Server/Apache24'
+[Sat Mar 31 13:09:54.883781 2018] [mpm_winnt:notice] [pid 21348:tid 804] AH00418: Parent: Created child process 24516
+Apache server shutdown initiated...
+sl:warn] [pid 24516:tid 820] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 13:09:55.470363 2018] [mpm_winnt:notice] [pid 24516:tid 820] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 13:16:47.904768 2018] [mpm_winnt:notice] [pid 21348:tid 804] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 31 13:16:49.905665 2018] [mpm_winnt:notice] [pid 24516:tid 820] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 13:16:49.924717 2018] [mpm_winnt:notice] [pid 21348:tid 804] AH00430: Parent: Child process 24516 exited successfully.
+[Sat Mar 31 13:17:40.571336 2018] [ssl:warn] [pid 12696:tid 812] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 13:17:40.597907 2018] [mpm_winnt:notice] [pid 12696:tid 812] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 configured -- resuming normal operations
+[Sat Mar 31 13:17:40.598409 2018] [mpm_winnt:notice] [pid 12696:tid 812] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 13:17:40.598409 2018] [core:notice] [pid 12696:tid 812] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/Server/SingleCore_Legion/spp-legion/Server/Apache24'
+[Sat Mar 31 13:17:40.605929 2018] [mpm_winnt:notice] [pid 12696:tid 812] AH00418: Parent: Created child process 20664
+Apache server shutdown initiated...
+sl:warn] [pid 20664:tid 756] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 13:17:41.250167 2018] [mpm_winnt:notice] [pid 20664:tid 756] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 13:17:54.584147 2018] [mpm_winnt:notice] [pid 12696:tid 812] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 31 13:17:56.585045 2018] [mpm_winnt:notice] [pid 20664:tid 756] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 13:17:56.606602 2018] [mpm_winnt:notice] [pid 12696:tid 812] AH00430: Parent: Child process 20664 exited successfully.
+[Sat Mar 31 13:19:16.050412 2018] [ssl:warn] [pid 24252:tid 804] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 13:19:16.072973 2018] [mpm_winnt:notice] [pid 24252:tid 804] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 configured -- resuming normal operations
+[Sat Mar 31 13:19:16.072973 2018] [mpm_winnt:notice] [pid 24252:tid 804] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 13:19:16.072973 2018] [core:notice] [pid 24252:tid 804] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/Server/SingleCore_Legion/spp-legion/Server/Apache24'
+[Sat Mar 31 13:19:16.082499 2018] [mpm_winnt:notice] [pid 24252:tid 804] AH00418: Parent: Created child process 14592
+Apache server shutdown initiated...
+sl:warn] [pid 14592:tid 816] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 13:19:16.739270 2018] [mpm_winnt:notice] [pid 14592:tid 816] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 13:19:58.682465 2018] [mpm_winnt:notice] [pid 24252:tid 804] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 31 13:20:00.683952 2018] [mpm_winnt:notice] [pid 14592:tid 816] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 13:20:00.703004 2018] [mpm_winnt:notice] [pid 24252:tid 804] AH00430: Parent: Child process 14592 exited successfully.
+[Sat Mar 31 13:20:25.964381 2018] [ssl:warn] [pid 21528:tid 772] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 13:20:25.988446 2018] [mpm_winnt:notice] [pid 21528:tid 772] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 configured -- resuming normal operations
+[Sat Mar 31 13:20:25.988446 2018] [mpm_winnt:notice] [pid 21528:tid 772] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 13:20:25.988446 2018] [core:notice] [pid 21528:tid 772] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/Server/SingleCore_Legion/spp-legion/Server/Apache24'
+[Sat Mar 31 13:20:25.990952 2018] [mpm_winnt:notice] [pid 21528:tid 772] AH00418: Parent: Created child process 5092
+Apache server shutdown initiated...
+sl:warn] [pid 5092:tid 812] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 13:20:26.613633 2018] [mpm_winnt:notice] [pid 5092:tid 812] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 13:20:39.341471 2018] [mpm_winnt:notice] [pid 21528:tid 772] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 31 13:20:41.342368 2018] [mpm_winnt:notice] [pid 5092:tid 812] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 13:20:41.363425 2018] [mpm_winnt:notice] [pid 21528:tid 772] AH00430: Parent: Child process 5092 exited successfully.
+[Sat Mar 31 13:21:13.872114 2018] [ssl:warn] [pid 23680:tid 672] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 13:21:13.892670 2018] [mpm_winnt:notice] [pid 23680:tid 672] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 configured -- resuming normal operations
+[Sat Mar 31 13:21:13.892670 2018] [mpm_winnt:notice] [pid 23680:tid 672] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 13:21:13.893171 2018] [core:notice] [pid 23680:tid 672] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/Server/SingleCore_Legion/spp-legion/Server/Apache24'
+[Sat Mar 31 13:21:13.900691 2018] [mpm_winnt:notice] [pid 23680:tid 672] AH00418: Parent: Created child process 24828
+Apache server shutdown initiated...
+sl:warn] [pid 24828:tid 600] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 13:21:14.511839 2018] [mpm_winnt:notice] [pid 24828:tid 600] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 14:16:21.781155 2018] [mpm_winnt:notice] [pid 23680:tid 672] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 31 14:16:23.783867 2018] [mpm_winnt:notice] [pid 24828:tid 600] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 14:16:24.866717 2018] [mpm_winnt:notice] [pid 23680:tid 672] AH00430: Parent: Child process 24828 exited successfully.
+[Sat Mar 31 14:16:38.350764 2018] [ssl:warn] [pid 25232:tid 788] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 14:16:38.593187 2018] [mpm_winnt:notice] [pid 25232:tid 788] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 configured -- resuming normal operations
+[Sat Mar 31 14:16:38.593187 2018] [mpm_winnt:notice] [pid 25232:tid 788] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 14:16:38.593187 2018] [core:notice] [pid 25232:tid 788] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/Server/SingleCore_Legion/spp-legion/Server/Apache24'
+[Sat Mar 31 14:16:38.601038 2018] [mpm_winnt:notice] [pid 25232:tid 788] AH00418: Parent: Created child process 16480
+Apache server shutdown initiated...
+sl:warn] [pid 16480:tid 812] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 14:16:39.231125 2018] [mpm_winnt:notice] [pid 16480:tid 812] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 14:38:47.797445 2018] [mpm_winnt:notice] [pid 25232:tid 788] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 31 14:38:49.798279 2018] [mpm_winnt:notice] [pid 16480:tid 812] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 14:38:49.873980 2018] [mpm_winnt:notice] [pid 25232:tid 788] AH00430: Parent: Child process 16480 exited successfully.
+[Sat Mar 31 14:39:37.560348 2018] [ssl:warn] [pid 8856:tid 788] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 14:39:37.587421 2018] [mpm_winnt:notice] [pid 8856:tid 788] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 configured -- resuming normal operations
+[Sat Mar 31 14:39:37.587421 2018] [mpm_winnt:notice] [pid 8856:tid 788] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 14:39:37.587421 2018] [core:notice] [pid 8856:tid 788] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/Server/SingleCore_Legion/spp-legion/Server/Apache24'
+[Sat Mar 31 14:39:37.590429 2018] [mpm_winnt:notice] [pid 8856:tid 788] AH00418: Parent: Created child process 24148
+Apache server interrupted...
+018] [ssl:warn] [pid 24148:tid 796] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 14:39:38.225143 2018] [mpm_winnt:notice] [pid 24148:tid 796] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 15:14:37.389787 2018] [mpm_winnt:notice] [pid 8856:tid 788] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 31 15:14:39.392221 2018] [mpm_winnt:notice] [pid 24148:tid 796] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 15:14:39.480467 2018] [mpm_winnt:notice] [pid 8856:tid 788] AH00430: Parent: Child process 24148 exited successfully.
+[Sat Mar 31 15:15:59.925256 2018] [ssl:warn] [pid 11576:tid 836] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 15:16:00.227070 2018] [mpm_winnt:notice] [pid 11576:tid 836] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 configured -- resuming normal operations
+[Sat Mar 31 15:16:00.227070 2018] [mpm_winnt:notice] [pid 11576:tid 836] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 15:16:00.227070 2018] [core:notice] [pid 11576:tid 836] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/Server/SingleCore_Legion/spp-legion/Server/Apache24'
+[Sat Mar 31 15:16:00.239102 2018] [mpm_winnt:notice] [pid 11576:tid 836] AH00418: Parent: Created child process 21992
+Apache server shutdown initiated...
+sl:warn] [pid 21992:tid 828] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 15:16:00.845233 2018] [mpm_winnt:notice] [pid 21992:tid 828] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 15:25:35.190651 2018] [mpm_winnt:notice] [pid 11576:tid 836] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 31 15:25:37.191601 2018] [mpm_winnt:notice] [pid 21992:tid 828] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 15:25:37.214664 2018] [mpm_winnt:notice] [pid 11576:tid 836] AH00430: Parent: Child process 21992 exited successfully.
+[Sat Mar 31 15:25:46.660383 2018] [ssl:warn] [pid 28516:tid 824] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 15:25:46.721048 2018] [mpm_winnt:notice] [pid 28516:tid 824] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 configured -- resuming normal operations
+[Sat Mar 31 15:25:46.721048 2018] [mpm_winnt:notice] [pid 28516:tid 824] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 15:25:46.721048 2018] [core:notice] [pid 28516:tid 824] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/Server/SingleCore_Legion/spp-legion/Server/Apache24'
+[Sat Mar 31 15:25:46.723554 2018] [mpm_winnt:notice] [pid 28516:tid 824] AH00418: Parent: Created child process 25132
+Apache server shutdown initiated...
+sl:warn] [pid 25132:tid 836] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 15:25:47.338718 2018] [mpm_winnt:notice] [pid 25132:tid 836] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 15:30:53.606063 2018] [authz_core:error] [pid 25132:tid 1448] [client 127.0.0.1:25209] AH01630: client denied by server configuration: E:/Cucc/Server/SingleCore_Legion/spp-legion/Website/application/modules/admin/
+[Sat Mar 31 18:43:42.148814 2018] [mpm_winnt:notice] [pid 28516:tid 824] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 31 18:43:46.255733 2018] [mpm_winnt:notice] [pid 25132:tid 836] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 18:43:46.371042 2018] [mpm_winnt:notice] [pid 28516:tid 824] AH00430: Parent: Child process 25132 exited successfully.
+[Sat Mar 31 18:44:14.896922 2018] [ssl:warn] [pid 3116:tid 788] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 18:44:14.988165 2018] [mpm_winnt:notice] [pid 3116:tid 788] AH00455: Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 configured -- resuming normal operations
+[Sat Mar 31 18:44:14.988165 2018] [mpm_winnt:notice] [pid 3116:tid 788] AH00456: Server built: Dec 16 2016 18:55:21
+[Sat Mar 31 18:44:14.988165 2018] [core:notice] [pid 3116:tid 788] AH00094: Command line: 'bin\\httpd.exe -d E:/Cucc/Server/SingleCore_Legion/spp-legion/Server/Apache24'
+[Sat Mar 31 18:44:14.996687 2018] [mpm_winnt:notice] [pid 3116:tid 788] AH00418: Parent: Created child process 7996
+Apache server shutdown initiated...
+sl:warn] [pid 7996:tid 744] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+PHP Warning:  PHP Startup: Unable to load dynamic library '../php5/ext\\php_intl.dll' - A megadott modul nem tal\xef\xbf\xbdlhat\xef\xbf\xbd.\r\n in Unknown on line 0
+[Sat Mar 31 18:44:15.556175 2018] [mpm_winnt:notice] [pid 7996:tid 744] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 31 19:06:09.652247 2018] [authz_core:error] [pid 7996:tid 1448] [client 127.0.0.1:50547] AH01630: client denied by server configuration: E:/Cucc/Server/SingleCore_Legion/spp-legion/Website, referer: http://127.0.0.1:8099/
+[Sat Mar 31 19:06:20.810916 2018] [mpm_winnt:notice] [pid 3116:tid 788] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 31 19:06:22.812238 2018] [mpm_winnt:notice] [pid 7996:tid 744] AH00364: Child: All worker threads have exited.
+[Sat Mar 31 19:06:22.858361 2018] [mpm_winnt:notice] [pid 3116:tid 788] AH00430: Parent: Child process 7996 exited successfully.
+[Sat Mar 31 19:06:22.859363 2018] [core:error] [pid 3116:tid 788] (OS 3)A rendszer nem találja a megadott elérési utat.  : AH00095: failed to remove PID file e:/Cucc/Server/SingleCore_Legion/spp-legion/Server/Apache24/logs/httpd.pid
