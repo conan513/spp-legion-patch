@@ -18,6 +18,6 @@ ECHO.
 ping -n 5 127.0.0.1>nul
 start http://127.0.0.1:8099
 
-bin\httpd.exe  -n "Apache24"
+bin\httpd.exe
 
 exit
