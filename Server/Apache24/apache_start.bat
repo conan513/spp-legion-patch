@@ -15,6 +15,10 @@ ping -n 2 127.0.0.1>nul
 ECHO.
 ECHO Registration page available on http://127.0.0.1:8099
 ECHO.
+ECHO Log in with this account to get access to the Admin Panel:
+ECHO Email:    conanhun@gmail.com
+ECHO Password: 123456
+echo.
 ping -n 5 127.0.0.1>nul
 start http://127.0.0.1:8099
 
