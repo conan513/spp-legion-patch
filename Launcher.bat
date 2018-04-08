@@ -56,11 +56,13 @@ echo 1  -  Start the servers (x86)
 echo 2a -  Start the servers (x64)
 echo 2b -  Start the servers (x64) without the Support System
 echo.
-echo 3  -  Create game accounts
+echo 3  -  Open Website / create account
 echo 4  -  Change server IP (Offline/LAN)
 echo.
 echo 5  -  Export characters
 echo 6  -  Import characters
+echo.
+echo X  -  Shutdown all servers
 echo.
 set /P menu=Enter a number: 
 if "%menu%"=="0" (goto servers_stop)
@@ -71,6 +73,7 @@ if "%menu%"=="3" (goto account_tool)
 if "%menu%"=="4" (goto ip_changer)
 if "%menu%"=="5" (goto export_char)
 if "%menu%"=="6" (goto import_char)
+if "%menu%"=="x" (goto shutdown_servers)
 if "%menu%"=="" (goto menu)
 
 goto menu
@@ -79,15 +82,15 @@ goto menu
 
 :servers_start
 start Server\Tools\server_check.bat
-goto exit
+goto menu
 
 :servers_start_x64
 start Server\Tools\server_check_x64.bat
-goto exit
+goto menu
 
 :servers_start_x64_without_support
 start Server\Tools\server_check_x64_without_donation.bat
-goto exit
+goto menu
 
 :export_char
 cls
@@ -143,20 +146,8 @@ pause
 goto menu
 
 :account_tool
-cls
-echo How to create account?
-echo ----------------------
-echo In world server console type: bnet create name@name password
-echo After this you need to create a game account first: account create gamename password
-echo And finally you need to link the bnet account to game account: bnet link name@name gamename
-echo.
-echo How to create GM account?
-echo -------------------------
-echo Set the GM level: account set gmlevel gamename 3 1
-echo (3 is the GM level and the 1 is the realm ID)
-echo.
-echo Warning! Some patches and features are working differently if you playing with GM account!
-pause
+start http://127.0.0.1:8099
+ping -n 5 127.0.0.1>nul
 goto menu
 
 :ip_changer
@@ -174,6 +165,13 @@ Echo You can change the LAN IP to your internet, VPN, Tunngle or Hamachi IP and 
 tasklist /FI "IMAGENAME eq SingleCoreLanSwitcher.exe" 2>NUL | find /I /N "SingleCoreLanSwitcher">NUL
 if "%ERRORLEVEL%"=="0" goto ip_changer_check
 if "%ERRORLEVEL%"=="1" goto menu
+
+:shutdown_servers
+taskkill /f /im bnetserver.exe
+taskkill /f /im worldserver.exe
+taskkill /f /im spp-httpd.exe
+Server\Database\bin\mysqladmin -u root -p123456 --port=3310 shutdown
+goto exit
 
 :exit
 exit
