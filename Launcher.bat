@@ -18,6 +18,7 @@ set pass=123456
 set characters=characters
 set world=world
 set login=realmd
+set website=blizzcms
 
 REM --- Settings ---
 
@@ -106,14 +107,18 @@ if "%menu%"=="y" (goto export_char_1)
 cls
 echo.
 echo Exporting accounts...please wait...
-echo.
 Server\Database\bin\mysqldump.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 %login% > Backup\%login%.sql
+echo Done!
 echo.
 echo Exporting characters...please wait...
-echo.
 Server\Database\bin\mysqldump.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 %characters% > Backup\%characters%.sql
+echo Done!
 echo.
-echo Characters export done.
+echo Exporting website data...please wait...
+Server\Database\bin\mysqldump.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 %website% > Backup\%website%.sql
+echo Done!
+echo.
+echo Every user data exported.
 echo The backup files available in the Backup folder.
 echo.
 pause
@@ -133,14 +138,18 @@ if "%menu%"=="y" (goto import_char_1)
 cls
 echo.
 echo Importing accounts from backup file...please wait...
-echo.
 Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%login% < Backup\%login%.sql
+echo Done!
 echo.
 echo Importing characters from backup file...please wait...
-echo.
 Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%characters% < Backup\%characters%.sql
+echo Done!
 echo.
-echo Import done.
+echo Importing Website data from backup file...please wait...
+Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%website% < Backup\%website%.sql
+echo Done!
+echo.
+echo Every user data import completed.
 echo.
 pause
 goto menu
