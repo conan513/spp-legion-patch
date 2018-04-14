@@ -15,6 +15,6 @@ cd spp-legion
 ..\git\cmd\git.exe add sql
 ..\git\cmd\git.exe commit -m "Fix git sql warning"
 cls
-..\git\cmd\git.exe pull https://github.com/conan513/spp-legion-patch.git 735-v2
+..\git\cmd\git.exe pull https://github.com/conan513/spp-legion-patch.git 735-v3
 echo.
 pause
