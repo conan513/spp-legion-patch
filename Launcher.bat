@@ -54,8 +54,8 @@ echo.
 echo ############################################
 echo.
 echo 1  -  Start the servers (x86)
-echo 2a -  Start the servers (x64)
-echo 2b -  Start the servers (x64) without the Support System
+REM echo 2a -  Start the servers (x64)
+echo 2 -  Start the servers (x64)
 echo.
 echo 3  -  Open Website / create account
 echo 4  -  Change server IP (Offline/LAN)
@@ -68,8 +68,8 @@ echo.
 set /P menu=Enter a number: 
 if "%menu%"=="0" (goto servers_stop)
 if "%menu%"=="1" (goto servers_start)
-if "%menu%"=="2a" (goto servers_start_x64)
-if "%menu%"=="2b" (goto servers_start_x64_without_support)
+REM if "%menu%"=="2a" (goto servers_start_x64)
+if "%menu%"=="2" (goto servers_start_x64_without_support)
 if "%menu%"=="3" (goto account_tool)
 if "%menu%"=="4" (goto ip_changer)
 if "%menu%"=="5" (goto export_char)
