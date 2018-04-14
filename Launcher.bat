@@ -55,7 +55,7 @@ echo ############################################
 echo.
 echo 1  -  Start the servers (x86)
 REM echo 2a -  Start the servers (x64)
-echo 2 -  Start the servers (x64)
+echo 2  -  Start the servers (x64)
 echo.
 echo 3  -  Open Website / create account
 echo 4  -  Change server IP (Offline/LAN)
