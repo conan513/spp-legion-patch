@@ -28,7 +28,6 @@ REM --- Settings ---
 :start_database
 del ..\Update.bat
 
-
 del sql\ashamane\world\2017_11_12_world_areatrigger.sql
 del sql\ashamane\world\2017_11_17_01_alter_gossip.sql
 del sql\ashamane\world\2017_11_17_02_creature_template_trigger.sql
@@ -229,7 +228,8 @@ goto webserver
 cd Server\Apache24
 start apache_start.bat
 cd ..\..
-goto menu
+if exist ADB_world_735.00.sql goto menu
+goto reset_world
 
 :menu
 echo.
@@ -385,7 +385,7 @@ goto exit
 cls
 echo.
 echo Are you sure want to reset your world and hotfix database?
-echo Sometimes this can fix some update issue.
+echo You must do this on first start to get the latest AshamaneCore database.
 echo.
 pause
 Server\Tools\7za.exe e -y sql\ADB735.00.7z
