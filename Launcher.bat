@@ -17,8 +17,11 @@ set pass=123456
 
 set characters=characters
 set world=world
+set hotfixes=hotfixes
 set login=realmd
 set website=blizzcms
+set worldfile=ADB_world_735.00.sql
+set hotfixesfile=ADB_hotfixes_735.00.sql
 
 REM --- Settings ---
 
@@ -63,6 +66,7 @@ echo.
 echo 5  -  Export characters
 echo 6  -  Import characters
 echo.
+echo 7  -  Reset world and hotfix database
 echo X  -  Shutdown all servers
 echo.
 set /P menu=Enter a number: 
@@ -74,6 +78,7 @@ if "%menu%"=="3" (goto account_tool)
 if "%menu%"=="4" (goto ip_changer)
 if "%menu%"=="5" (goto export_char)
 if "%menu%"=="6" (goto import_char)
+if "%menu%"=="7" (goto reset_world)
 if "%menu%"=="x" (goto shutdown_servers)
 if "%menu%"=="" (goto menu)
 
@@ -181,6 +186,32 @@ taskkill /f /im worldserver.exe
 taskkill /f /im spp-httpd.exe
 Server\Database\bin\mysqladmin -u root -p123456 --port=3310 shutdown
 goto exit
+
+:reset_world
+cls
+echo.
+echo Are you sure want to reset your world and hotfix database?
+echo Sometimes this can fix some update issue.
+echo.
+pause
+Server\Tools\7za.exe e -y sql\ADB735.00.7z
+echo.
+echo Clear %world% and %hotfixes% database.
+echo.
+Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 < sql\drop_mysql.sql
+Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 < sql\create_mysql.sql
+echo.
+echo Importing %worldfile% into %world% database.
+echo.
+Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%world% < %worldfile%
+echo.
+echo Importing %hotfixesfile% into %hotfixes% database.
+echo.
+Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%hotfixes% < %hotfixesfile%
+echo.
+echo Done!
+pause
+goto menu
 
 :exit
 exit

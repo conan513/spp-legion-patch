@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS `world`;
+
+DROP DATABASE IF EXISTS `hotfixes`;
