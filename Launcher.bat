@@ -235,10 +235,8 @@ goto reset_world
 echo.
 cls
 echo #######################################################
-echo # SingleCore - AshamaneCore repack tools.             #
+echo # Single Player Project - AshamaneCore                #
 echo # https://github.com/AshamaneProject/AshamaneCore.git #
-echo # --------------------------------------------------- #
-echo # Make sure the Database server is running!           #
 echo #######################################################
 echo.
 echo MySQL settings
