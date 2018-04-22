@@ -32,6 +32,15 @@ goto webserver
 cd Server\Apache24
 start apache_start.bat
 cd ..\..
+
+cls
+echo Single Player Project - AshamaneCore 7.3.5 Build 26365 (V3) available now.
+echo https://www.patreon.com/posts/18182851
+echo.
+echo You need to download it to get the updates in the future.
+echo Use the character export and import if you wanna move you characters to the new repack.
+pause
+
 goto menu
 
 :menu
