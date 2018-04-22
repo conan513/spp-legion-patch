@@ -18,10 +18,12 @@ ECHO - Apache 2.4.25
 ECHO - PHP 5.6.30
 ECHO - BlissCMS (Dev)
 ECHO.
-ECHO Registration page opening soon ...
 ping -n 2 127.0.0.1>nul
 ECHO.
-ECHO Registration page available on http://127.0.0.1:8099
+ECHO Server website available on http://127.0.0.1:8099
+ECHO Don't forget the port number at the end of the address.
+ECHO.
+ECHO You can create and modify your account there
 ECHO.
 ECHO Log in with this account to get access to the Admin Panel:
 ECHO Email:    conanhun@gmail.com
