@@ -357,6 +357,7 @@ ping -n 5 127.0.0.1>nul
 goto menu
 
 :ip_changer
+start notepad Settings\login.conf
 start Server\Tools\SingleCoreLanSwitcher.exe
 goto ip_changer_check
 
@@ -364,10 +365,11 @@ goto ip_changer_check
 ping -n 2 127.0.0.1>nul
 cls
 echo.
-echo The IP Changer is running...
+echo Change the server address in the IP Changer tool.
+echo Change the LoginREST.ExternalAddress in login.conf to the same address. 
 echo.
-echo You can easily switch between Offline/LAN modes by auto detecting your LAN IP address.
-Echo You can change the LAN IP to your internet, VPN, Tunngle or Hamachi IP and apply it.
+echo Close the IP Changer tool to continue...
+echo.
 tasklist /FI "IMAGENAME eq SingleCoreLanSwitcher.exe" 2>NUL | find /I /N "SingleCoreLanSwitcher">NUL
 if "%ERRORLEVEL%"=="0" goto ip_changer_check
 if "%ERRORLEVEL%"=="1" goto menu
