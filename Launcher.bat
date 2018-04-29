@@ -7,7 +7,10 @@ set mod=%1
 REM --- Settings ---
 
 REM SingleCore files name
-set wowbuild=24742
+set dbc_maps=dbc_gt_maps_cameras.zip
+set mmaps=mmaps.rar
+set vmaps=vmaps.rar
+
 
 REM Default MySQL settings
 set host=127.0.0.1
@@ -239,14 +242,7 @@ echo # Single Player Project - AshamaneCore                #
 echo # https://github.com/AshamaneProject/AshamaneCore.git #
 echo #######################################################
 echo.
-echo MySQL settings
-echo --------------
-echo Host: %host%
-echo Port: %port%
-echo User: %user%
-echo Pass: %pass%
-echo.
-echo ############################################
+echo 0  -  ## SERVICE MENU ##
 echo.
 echo 1  -  Start the servers (x86)
 REM echo 2a -  Start the servers (x64)
@@ -258,11 +254,10 @@ echo.
 echo 5  -  Export characters
 echo 6  -  Import characters
 echo.
-echo 7  -  Reset world and hotfix database
 echo X  -  Shutdown all servers
 echo.
 set /P menu=Enter a number: 
-if "%menu%"=="0" (goto servers_stop)
+if "%menu%"=="0" (goto service_menu)
 if "%menu%"=="1" (goto servers_start)
 REM if "%menu%"=="2a" (goto servers_start_x64)
 if "%menu%"=="2" (goto servers_start_x64_without_support)
@@ -270,7 +265,6 @@ if "%menu%"=="3" (goto account_tool)
 if "%menu%"=="4" (goto ip_changer)
 if "%menu%"=="5" (goto export_char)
 if "%menu%"=="6" (goto import_char)
-if "%menu%"=="7" (goto reset_world)
 if "%menu%"=="x" (goto shutdown_servers)
 if "%menu%"=="" (goto menu)
 
@@ -406,6 +400,81 @@ echo.
 echo Done!
 pause
 goto menu
+
+:service_menu
+echo.
+cls
+echo ################
+echo # SERVICE MENU #
+echo ################
+echo.
+echo MySQL settings
+echo --------------
+echo Host: %host%
+echo Port: %port%
+echo User: %user%
+echo Pass: %pass%
+echo --------------
+echo.
+echo 0 - Go back to main menu
+echo.
+echo UPDATE DATA FILES FROM ASHAMANECORE REPO
+echo http://dl.ashamane.com/7.3.5
+echo ----------------------------------------
+echo 1 - DBC and Maps
+echo 2 - VMaps
+echo 3 - MMaps
+echo.
+echo DATABASE
+echo --------
+echo 4 - Reset world and hotfix database
+echo.
+set /P menu=Enter a number: 
+if "%menu%"=="1" (goto update_dbc_maps)
+if "%menu%"=="2" (goto update_vmaps)
+if "%menu%"=="3" (goto update_mmaps)
+if "%menu%"=="4" (goto reset_world)
+if "%menu%"=="0" (goto menu)
+if "%menu%"=="" (goto menu)
+
+:update_dbc_maps
+cls
+cd Server\Data
+..\Tools\wget.exe -N http://dl.ashamane.com/7.3.5/%dbc_maps%
+rmdir /S /Q cameras
+rmdir /S /Q dbc
+rmdir /S /Q gt
+rmdir /S /Q maps
+..\Tools\7za.exe e -y -spf %dbc_maps%
+del %dbc_maps%
+echo.
+pause
+cd ..\..
+goto service_menu
+
+:update_vmaps
+cls
+cd Server\Data
+..\Tools\wget.exe -N http://dl.ashamane.com/7.3.5/%vmaps%
+rmdir /S /Q vmaps
+..\Tools\rar.exe x %vmaps%
+del %vmaps%
+echo.
+pause
+cd ..\..
+goto service_menu
+
+:update_mmaps
+cls
+cd Server\Data
+..\Tools\wget.exe -N http://dl.ashamane.com/7.3.5/%mmaps%
+rmdir /S /Q mmaps
+..\Tools\rar.exe x %mmaps%
+del %mmaps%
+echo.
+pause
+cd ..\..
+goto service_menu
 
 :exit
 exit
