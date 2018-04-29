@@ -416,8 +416,6 @@ echo User: %user%
 echo Pass: %pass%
 echo --------------
 echo.
-echo 0 - Go back to main menu
-echo.
 echo UPDATE DATA FILES FROM ASHAMANECORE REPO
 echo http://dl.ashamane.com/7.3.5
 echo ----------------------------------------
@@ -425,15 +423,18 @@ echo 1 - DBC and Maps (719M)
 echo 2 - VMaps (1.9G)
 echo 3 - MMaps (1.5G)
 echo.
-echo DATABASE
-echo --------
 echo 4 - Reset world and hotfix database
+echo.
+echo 5 - Opern worldserver log file
+echo.
+echo 0 - Go back to main menu
 echo.
 set /P menu=Enter a number: 
 if "%menu%"=="1" (goto update_dbc_maps)
 if "%menu%"=="2" (goto update_vmaps)
 if "%menu%"=="3" (goto update_mmaps)
 if "%menu%"=="4" (goto reset_world)
+if "%menu%"=="5" (goto log_file)
 if "%menu%"=="0" (goto menu)
 if "%menu%"=="" (goto menu)
 
@@ -474,6 +475,10 @@ del %mmaps%
 echo.
 pause
 cd ..\..
+goto service_menu
+
+:log_file
+notepad Server\Logs\server.log
 goto service_menu
 
 :exit
