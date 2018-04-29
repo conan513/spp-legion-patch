@@ -421,9 +421,9 @@ echo.
 echo UPDATE DATA FILES FROM ASHAMANECORE REPO
 echo http://dl.ashamane.com/7.3.5
 echo ----------------------------------------
-echo 1 - DBC and Maps
-echo 2 - VMaps
-echo 3 - MMaps
+echo 1 - DBC and Maps (719M)
+echo 2 - VMaps (1.9G)
+echo 3 - MMaps (1.5G)
 echo.
 echo DATABASE
 echo --------
