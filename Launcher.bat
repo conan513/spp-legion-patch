@@ -242,7 +242,7 @@ echo # Single Player Project - AshamaneCore                #
 echo # https://github.com/AshamaneProject/AshamaneCore.git #
 echo #######################################################
 echo.
-echo 0  -  ## SERVICE MENU ##
+echo 0  -  Service Menu (you can fix problems here)
 echo.
 echo 1  -  Start the servers (x86)
 REM echo 2a -  Start the servers (x64)
