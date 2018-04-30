@@ -11,7 +11,6 @@ set dbc_maps=dbc_gt_maps_cameras.zip
 set mmaps=mmaps.rar
 set vmaps=vmaps.rar
 
-
 REM Default MySQL settings
 set host=127.0.0.1
 set port=3310
@@ -251,8 +250,7 @@ echo.
 echo 3  -  Open Website / create account
 echo 4  -  Change server IP (Offline/LAN)
 echo.
-echo 5  -  Export characters
-echo 6  -  Import characters
+echo 5  -  Character save manager
 echo.
 echo X  -  Shutdown all servers
 echo.
@@ -263,8 +261,7 @@ REM if "%menu%"=="2a" (goto servers_start_x64)
 if "%menu%"=="2" (goto servers_start_x64_without_support)
 if "%menu%"=="3" (goto account_tool)
 if "%menu%"=="4" (goto ip_changer)
-if "%menu%"=="5" (goto export_char)
-if "%menu%"=="6" (goto import_char)
+if "%menu%"=="5" (goto save_menu)
 if "%menu%"=="x" (goto shutdown_servers)
 if "%menu%"=="" (goto menu)
 
@@ -284,13 +281,89 @@ goto menu
 start Server\Tools\server_check_x64_without_donation.bat
 goto menu
 
+:save_menu
+cls
+mkdir Saves
+mkdir Saves\1
+mkdir Saves\2
+mkdir Saves\3
+mkdir Saves\4
+mkdir Saves\5
+mkdir Saves\6
+mkdir Saves\7
+mkdir Saves\8
+mkdir Saves\9
+cls
+echo.
+set save1=Empty slot
+set save2=Empty slot
+set save3=Empty slot
+set save4=Empty slot
+set save5=Empty slot
+set save6=Empty slot
+set save7=Empty slot
+set save8=Empty slot
+set save9=Empty slot
+if exist Saves\1\characters.sql set save1=Already Used
+if exist Saves\2\characters.sql set save2=Already Used
+if exist Saves\3\characters.sql set save3=Already Used
+if exist Saves\4\characters.sql set save4=Already Used
+if exist Saves\5\characters.sql set save5=Already Used
+if exist Saves\6\characters.sql set save6=Already Used
+if exist Saves\7\characters.sql set save7=Already Used
+if exist Saves\8\characters.sql set save8=Already Used
+if exist Saves\9\characters.sql set save9=Already Used
+
+echo Single Player Project save manager.
+echo Select a slot where you want to save your characters.
+echo.
+echo -----------------------
+echo Save 1 - %save1%
+echo Save 2 - %save2%
+echo Save 3 - %save3%
+echo Save 4 - %save4%
+echo Save 5 - %save5%
+echo Save 6 - %save6%
+echo Save 7 - %save7%
+echo Save 8 - %save8%
+echo Save 9 - %save9%
+echo -----------------------
+echo.
+echo 1 - Save
+echo 2 - Restore
+echo.
+echo 0 - Back to main menu
+echo.
+set /P savemenu=Select your option: 
+if "%savemenu%"=="" (goto save_menu)
+echo.
+set /P saveslot=Select a save slot: 
+if "%saveslot%"=="1" (set saveslot=1)
+if "%saveslot%"=="2" (set saveslot=2)
+if "%saveslot%"=="3" (set saveslot=3)
+if "%saveslot%"=="4" (set saveslot=4)
+if "%saveslot%"=="5" (set saveslot=5)
+if "%saveslot%"=="6" (set saveslot=6)
+if "%saveslot%"=="7" (set saveslot=7)
+if "%saveslot%"=="8" (set saveslot=8)
+if "%saveslot%"=="9" (set saveslot=9)
+if "%saveslot%"=="" (goto save_menu)
+
+if "%savemenu%"=="1" (goto export_char_check)
+if "%savemenu%"=="2" (goto import_char_check)
+if "%savemenu%"=="0" (goto menu)
+
+:export_char_check
+cls
+if exist Saves\%saveslot%\characters.sql goto export_char
+goto export_char_1
+
 :export_char
 cls
 echo.
-echo Please stop all of your servers (except the database server) before continue from here!
-echo This process overwrite your previous backup files!
+echo This process overwrite your previous save files!
 echo.
-set /P menu=Are you sure want to export your characters into a backup file? (Y/n)
+set /P menu=Are you sure want to export your characters into a save file? (Y/n)
 if "%menu%"=="n" (goto menu)
 if "%menu%"=="y" (goto export_char_1)
 
@@ -298,22 +371,32 @@ if "%menu%"=="y" (goto export_char_1)
 cls
 echo.
 echo Exporting accounts...please wait...
-Server\Database\bin\mysqldump.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 %login% > Backup\%login%.sql
+Server\Database\bin\mysqldump.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 %login% > "Saves\%saveslot%\%login%.sql"
 echo Done!
 echo.
 echo Exporting characters...please wait...
-Server\Database\bin\mysqldump.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 %characters% > Backup\%characters%.sql
+Server\Database\bin\mysqldump.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 %characters% > Saves\%saveslot%\%characters%.sql
 echo Done!
 echo.
 echo Exporting website data...please wait...
-Server\Database\bin\mysqldump.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 %website% > Backup\%website%.sql
+Server\Database\bin\mysqldump.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 %website% > Saves\%saveslot%\%website%.sql
 echo Done!
 echo.
 echo Every user data exported.
-echo The backup files available in the Backup folder.
+echo The save files available in the Saves folder.
 echo.
 pause
 goto menu
+
+:import_char_check
+cls
+if exist Saves\%saveslot%\characters.sql goto import_char
+echo.
+echo This slot is empty.
+echo Please select another slot.
+echo.
+pause
+goto save_menu
 
 :import_char
 cls
@@ -321,23 +404,23 @@ echo.
 echo Please stop all of your servers (except the database server) before continue from here!
 echo This process overwrite your current database!
 echo.
-set /P menu=Are you sure want to import your characters from backup? (Y/n)
+set /P menu=Are you sure want to import your characters? (Y/n)
 if "%menu%"=="n" (goto menu)
 if "%menu%"=="y" (goto import_char_1)
 
 :import_char_1
 cls
 echo.
-echo Importing accounts from backup file...please wait...
-Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%login% < Backup\%login%.sql
+echo Importing accounts from the selected save file...please wait...
+Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%login% < Saves\%saveslot%\%login%.sql
 echo Done!
 echo.
-echo Importing characters from backup file...please wait...
-Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%characters% < Backup\%characters%.sql
+echo Importing characters from the selected save file...please wait...
+Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%characters% < Saves\%saveslot%\%characters%.sql
 echo Done!
 echo.
-echo Importing Website data from backup file...please wait...
-Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%website% < Backup\%website%.sql
+echo Importing Website data from the selected save file...please wait...
+Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%website% < Saves\%saveslot%\%website%.sql
 echo Done!
 echo.
 echo Every user data import completed.
