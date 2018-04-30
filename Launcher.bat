@@ -332,11 +332,19 @@ echo.
 echo 1 - Save
 echo 2 - Restore
 echo.
+echo 3 - Open the Saves folder
+echo.
 echo 0 - Back to main menu
 echo.
 set /P savemenu=Select your option: 
+if "%savemenu%"=="1" (goto saveslot_choose)
+if "%savemenu%"=="2" (goto saveslot_choose)
+if "%savemenu%"=="3" (explorer.exe Saves)
+if "%savemenu%"=="0" (goto menu)
 if "%savemenu%"=="" (goto save_menu)
+goto save_menu
 echo.
+:saveslot_choose
 set /P saveslot=Select a save slot: 
 if "%saveslot%"=="1" (set saveslot=1)
 if "%saveslot%"=="2" (set saveslot=2)
@@ -351,7 +359,7 @@ if "%saveslot%"=="" (goto save_menu)
 
 if "%savemenu%"=="1" (goto export_char_check)
 if "%savemenu%"=="2" (goto import_char_check)
-if "%savemenu%"=="0" (goto menu)
+
 
 :export_char_check
 cls
