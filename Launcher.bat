@@ -443,6 +443,7 @@ goto menu
 
 :ip_changer
 start notepad Settings\login.conf
+start notepad Website\application\config\config.php
 start Server\Tools\SingleCoreLanSwitcher.exe
 goto ip_changer_check
 
@@ -451,7 +452,9 @@ ping -n 2 127.0.0.1>nul
 cls
 echo.
 echo Change the server address in the IP Changer tool.
-echo Change the LoginREST.ExternalAddress in login.conf to the same address. 
+echo Change the LoginREST.ExternalAddress in login.conf to the same address.
+echo.
+echo Change the $config['base_url'] address for the website. (keep the port number)
 echo.
 echo Close the IP Changer tool to continue...
 echo.
