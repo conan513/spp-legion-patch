@@ -323,16 +323,18 @@ echo Save 9 - %save9%
 echo -----------------------
 echo.
 echo 1 - Save
-echo 2 - Restore
+echo 2 - Load
+echo 3 - Delete
 echo.
-echo 3 - Open the Saves folder
+echo 4 - Open the Saves folder
 echo.
 echo 0 - Back to main menu
 echo.
 set /P savemenu=Select your option: 
 if "%savemenu%"=="1" (goto saveslot_choose)
 if "%savemenu%"=="2" (goto saveslot_choose)
-if "%savemenu%"=="3" (explorer.exe Saves)
+if "%savemenu%"=="3" (goto saveslot_choose)
+if "%savemenu%"=="4" (explorer.exe Saves)
 if "%savemenu%"=="0" (goto menu)
 if "%savemenu%"=="" (goto save_menu)
 goto save_menu
@@ -352,7 +354,36 @@ if "%saveslot%"=="" (goto save_menu)
 
 if "%savemenu%"=="1" (goto export_char_check)
 if "%savemenu%"=="2" (goto import_char_check)
+if "%savemenu%"=="3" (goto delete_saveslot_check)
 
+:delete_saveslot_check
+cls
+if exist Saves\%saveslot%\characters.sql goto delete_saveslot
+echo.
+echo This slot is empty. You can't delete the nothing...
+echo.
+pause
+goto save_menu
+
+:delete_saveslot
+cls
+echo.
+set /P menu=Are you sure want to clear Save %saveslot% files? (Y/n)
+if "%menu%"=="n" (goto menu)
+if "%menu%"=="y" (goto delete_saveslot_1)
+
+:delete_saveslot_1
+cls
+echo.
+echo Removing the selected Save %saveslot% files...
+echo.
+del Saves\%saveslot%\realmd.sql
+del Saves\%saveslot%\characters.sql
+del Saves\%saveslot%\blizzcms.sql
+echo.
+echo Save %saveslot% is empty now.
+pause
+goto save_menu
 
 :export_char_check
 cls
