@@ -28,7 +28,7 @@ set hotfixesfile=ADB_hotfixes_735.00.sql
 REM --- Settings ---
 
 :start_database
-del /s ..\Update.bat 
+del ..\Update.bat
 
 del /s sql\ashamane\world\2017_11_12_world_areatrigger.sql >nul 2>&1
 del /s sql\ashamane\world\2017_11_17_01_alter_gossip.sql >nul 2>&1
