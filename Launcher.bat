@@ -28,207 +28,206 @@ set hotfixesfile=ADB_hotfixes_735.00.sql
 REM --- Settings ---
 
 :start_database
-del ..\Update.bat
+del /s ..\Update.bat 
 
-del sql\ashamane\world\2017_11_12_world_areatrigger.sql
-del sql\ashamane\world\2017_11_17_01_alter_gossip.sql
-del sql\ashamane\world\2017_11_17_02_creature_template_trigger.sql
-del sql\ashamane\world\2017_11_18_00_world.sql
-del sql\ashamane\world\2017_11_18_01_world.sql
-del sql\ashamane\world\2017_11_18_02_world.sql
-del sql\ashamane\world\2017_11_19_01_world.sql
-del sql\ashamane\world\2017_11_19_02_world_legion_creature_scaling.sql
-del sql\ashamane\world\2017_11_19_03_world_scene_template.sql
-del sql\ashamane\world\2017_11_19_04_world_spell_areatrigger.sql
-del sql\ashamane\world\2017_11_19_05_world_areatrigger_vertices.sql
-del sql\ashamane\world\2017_11_19_06_world_areatrigger_template.sql
-del sql\ashamane\world\2017_11_19_07_world_areatrigger_scriptname.sql
-del sql\ashamane\world\2017_11_22_01_world_mardum.sql
-del sql\ashamane\world\2017_11_24_01_world_creature_scaling.sql
-del sql\ashamane\world\2017_11_26_01_world_creature_template.sql
-del sql\ashamane\world\2017_11_29_01_world_tanaan_intro.sql
-del sql\ashamane\world\2017_11_29_01_world_tanaan_intro_phases.sql
-del sql\ashamane\world\2017_12_02_01_world_velen_waypoints.sql
-del sql\ashamane\world\2017_12_02_02_world_shadowmoon_begin.sql
-del sql\ashamane\world\2017_12_02_03_world_transports.sql
-del sql\ashamane\world\2017_12_02_04_world_at_mage_scriptname.sql
-del sql\ashamane\world\2017_12_02_05_world_scouting_map.sql
-del sql\ashamane\world\2017_12_02_06_world_misc.sql
-del sql\ashamane\world\2017_12_03_02_world_undead_start.sql
-del sql\ashamane\world\2017_12_04_01_world_misc.sql
-del sql\ashamane\world\2017_12_04_02_world_npc_custom_rate.sql
-del sql\ashamane\world\2017_12_04_03_world_gameobject_template.sql
-del sql\ashamane\world\2017_12_04_04_world_gameobject_lion_rest.sql
-del sql\ashamane\world\2017_12_05_01_world_spells_paladin.sql
-del sql\ashamane\world\2017_12_05_02_world_list_quest.sql
-del sql\ashamane\world\2017_12_05_03_world_mardum.sql
-del sql\ashamane\world\2017_12_05_04_world_phases_mardum.sql
-del sql\ashamane\world\2017_12_06_01_world_mardum.sql
-del sql\ashamane\world\2017_12_07_01_spell_mage.sql
-del sql\ashamane\world\2017_12_07_02_spell_mage.sql
-del sql\ashamane\world\2017_12_07_03_mardum.sql
-del sql\ashamane\world\2017_12_08_01_playerchoice.sql
-del sql\ashamane\world\2017_12_08_02_mardum.sql
-del sql\ashamane\world\2017_12_08_03_thousand_needles.sql
-del sql\ashamane\world\2017_12_09_01_world.sql
-del sql\ashamane\world\2017_12_10_01_spell_priest.sql
-del sql\ashamane\world\2017_12_10_02_spell_dk.sql
-del sql\ashamane\world\2017_12_10_04_acherus_upper_lower.sql
-del sql\ashamane\world\2017_12_10_05_spell_target_position.sql
-del sql\ashamane\world\2017_12_12_01_spell_paladin.sql
-del sql\ashamane\world\2017_12_12_01_world_minerais.sql
-del sql\ashamane\world\2017_12_13_01_world_item_loot.sql
-del sql\ashamane\world\2017_12_13_02_world_vendor.sql
-del sql\ashamane\world\2017_12_14_02_world_misc.sql
-del sql\ashamane\world\2017_12_14_03_world_mage.sql
-del sql\ashamane\world\2017_12_15_01_world_artifact_scriptname.sql
-del sql\ashamane\world\2017_12_15_02_world_misc.sql
-del sql\ashamane\world\2017_12_15_03_world_paladin.sql
-del sql\ashamane\world\2017_12_16_00_world.sql
-del sql\ashamane\world\2017_12_17_01_world_misc.sql
-del sql\ashamane\world\2017_12_19_01_world_misc.sql
-del sql\ashamane\world\2017_12_19_02_world_mage.sql
-del sql\ashamane\world\2017_12_20_01_world_tethyr.sql
-del sql\ashamane\world\2017_12_20_02_world_darkheart_thicket.sql
-del sql\ashamane\world\2017_12_20_03_world_suramar_cavern.sql
-del sql\ashamane\world\2017_12_21_01_world_gilneas.sql
-del sql\ashamane\world\2017_12_21_02_world_default.sql
-del sql\ashamane\world\2017_12_21_03_world_misc.sql
-del sql\ashamane\world\2017_12_28_01_world_areatrigger.sql
-del sql\ashamane\world\2017_12_29_01_world_instance_template.sql
-del sql\ashamane\world\2017_12_30_01_world_ud_start.sql
-del sql\ashamane\world\2017_12_30_02_world_transports.sql
-del sql\ashamane\world\2017_12_31_00_world.sql
-del sql\ashamane\world\2017_12_31_01_world_misc.sql
-del sql\ashamane\world\2018_01_01_01_world_misc.sql
-del sql\ashamane\world\2018_01_01_02_world_rare_mobs.sql
-del sql\ashamane\world\2018_01_01_03_world_quest_class_panda.sql
-del sql\ashamane\world\2018_01_02_01_world_quests.sql
-del sql\ashamane\world\2018_01_02_02_world_cre_template_732.sql
-del sql\ashamane\world\2018_01_02_03_world_quest_template_732.sql
-del sql\ashamane\world\2018_01_02_04_world_delete_duplicate.sql
-del sql\ashamane\world\2018_01_02_05_world_dalaran_karazhan.sql
-del sql\ashamane\world\2018_01_03_01_world_stormwind.sql
-del sql\ashamane\world\2018_01_03_02_world_misc.sql
-del sql\ashamane\world\2018_01_03_03_world_areatriggers.sql
-del sql\ashamane\world\2018_01_03_05_draenor_enchant_recipes.sql
-del sql\ashamane\world\2018_01_04_01_world_areatrigger_teleport.sql
-del sql\ashamane\world\2018_01_04_02_world_hunter_spells.sql
-del sql\ashamane\world\2018_01_04_03_world_hunter_spells.sql
-del sql\ashamane\world\2018_01_05_00_world.sql
-del sql\ashamane\world\2018_01_05_01_world.sql
-del sql\ashamane\world\2018_01_05_01_world_quest.sql
-del sql\ashamane\world\2018_01_05_02_world.sql
-del sql\ashamane\world\2018_01_05_02_world_blackmarket.sql
-del sql\ashamane\world\2018_01_05_03_world.sql
-del sql\ashamane\world\2018_01_05_03_world_scriptname.sql
-del sql\ashamane\world\2018_01_05_04_world.sql
-del sql\ashamane\world\2018_01_05_04_world_spell_script.sql
-del sql\ashamane\world\2018_01_05_05_world.sql
-del sql\ashamane\world\2018_01_05_06_world.sql
-del sql\ashamane\world\2018_01_05_07_world.sql
-del sql\ashamane\world\2018_01_05_08_world.sql
-del sql\ashamane\world\2018_01_05_09_world.sql
-del sql\ashamane\world\2018_01_05_10_world.sql
-del sql\ashamane\world\2018_01_05_11_world.sql
-del sql\ashamane\world\2018_01_05_12_world.sql
-del sql\ashamane\world\2018_01_05_13_world.sql
-del sql\ashamane\world\2018_01_05_14_world.sql
-del sql\ashamane\world\2018_01_05_15_world.sql
-del sql\ashamane\world\2018_01_05_16_world.sql
-del sql\ashamane\world\2018_01_05_17_world.sql
-del sql\ashamane\world\2018_01_05_18_world.sql
-del sql\ashamane\world\2018_01_05_19_world.sql
-del sql\ashamane\world\2018_01_05_20_world.sql
-del sql\ashamane\world\2018_01_05_21_world.sql
-del sql\ashamane\world\2018_01_06_00_world.sql
-del sql\ashamane\world\2018_01_06_01_world.sql
-del sql\ashamane\world\2018_01_06_02_world.sql
-del sql\ashamane\world\2018_01_06_03_world.sql
-del sql\ashamane\world\2018_01_06_04_world.sql
-del sql\ashamane\world\2018_01_06_04_world_spell_warrior.sql
-del sql\ashamane\world\2018_01_06_05_world.sql
-del sql\ashamane\world\2018_01_06_05_world_gob_template.sql
-del sql\ashamane\world\2018_01_06_06_world.sql
-del sql\ashamane\world\2018_01_06_06_world_creature_spawntime.sql
-del sql\ashamane\world\2018_01_06_07_world.sql
-del sql\ashamane\world\2018_01_07_00_world_trinity_string.sql
-del sql\ashamane\world\2018_01_07_01_world_arenas.sql
-del sql\ashamane\world\2018_01_07_02_world_arenas.sql
-del sql\ashamane\world\2018_01_07_03_world_misc.sql
-del sql\ashamane\world\2018_01_07_04_world_instance.sql
-del sql\ashamane\world\2018_01_07_05_world_disenchant.sql
-del sql\ashamane\world\2018_01_07_06_world_herbalism.sql
-del sql\ashamane\world\2018_01_08_00_world_gnome_zone.sql
-del sql\ashamane\world\2018_01_08_01_world_gnome_zone.sql
-del sql\ashamane\world\2018_01_09_00_world_gnome_intro.sql
-del sql\ashamane\world\2018_01_10_00_world.sql
-del sql\ashamane\world\2018_01_10_01_world_scriptname.sql
-del sql\ashamane\world\2018_01_10_02_world_locales.sql
-del sql\ashamane\world\2018_01_10_03_world_quest.sql
-del sql\ashamane\world\2018_01_11_01_world_scriptname.sql
-del sql\ashamane\world\2018_01_11_01_world_violet_hold.sql
-del sql\ashamane\world\2018_01_11_02_world_quest.sql
-del sql\ashamane\world\2018_01_11_03_world_vendor.sql
-del sql\ashamane\world\2018_01_12_01_world_pandaren.sql
-del sql\ashamane\world\2018_01_13_00_gilneas_quest.sql
-del sql\ashamane\world\2018_01_13_01_world_dk.sql
-del sql\ashamane\world\2018_01_13_02_world_pet.sql
-del sql\ashamane\world\2018_01_13_03_world_wandering_island.sql
-del sql\ashamane\world\2018_01_13_04_world_darkheart_thicket.sql
-del sql\ashamane\world\2018_01_14_01_world_quest_reward.sql
-del sql\ashamane\world\2018_01_15_01_world_gameobject.sql
-del sql\ashamane\world\2018_01_15_02_world_quest.sql
-del sql\ashamane\world\2018_01_15_03_world_sai.sql
-del sql\ashamane\world\2018_01_17_01_world_creature.sql
-del sql\ashamane\world\2018_01_18_01_scene_template.sql
-del sql\ashamane\world\2018_01_18_02_scriptname.sql
-del sql\ashamane\world\2018_01_19_01_misc.sql
-del sql\ashamane\world\2018_01_19_02_zone_script.sql
-del sql\ashamane\world\2018_01_19_03_spell.sql
-del sql\ashamane\world\2018_01_20_00_world.sql
-del sql\ashamane\world\2018_01_20_01_durotar.sql
-del sql\ashamane\world\2018_01_20_02_darkheart_thicket.sql
-del sql\ashamane\world\2018_01_20_02_pandaria_zone.sql
-del sql\ashamane\world\2018_01_20_03_battleground.sql
-del sql\ashamane\world\2018_01_21_00_battleground.sql
-del sql\ashamane\world\2018_01_21_01_spell_garrison_hearthstone.sql
-del sql\ashamane\world\2018_01_21_02_battleground.sql
-del sql\ashamane\world\2018_01_22_01_darkhearth_thicket.sql
-del sql\ashamane\world\2018_01_22_02_darkhearth_thicket.sql
-del sql\ashamane\world\2018_01_22_03_eye_of_azshara.sql
-del sql\ashamane\world\2018_01_23_01_dragonsoul_spellscript.sql
-del sql\ashamane\world\2018_01_23_02_gilneas.sql
-del sql\ashamane\world\2018_01_24_00_gilneas.sql
-del sql\ashamane\world\2018_01_24_01_gilneas.sql
-del sql\ashamane\world\2018_01_25_01_npc_vendor.sql
-del sql\ashamane\world\2018_01_28_00_world.sql
-del sql\ashamane\world\2018_01_31_01_spell_hunter.sql
-
-del sql\ashamane\hotfixes\2017_11_18_00_hotfixes.sql
-del sql\ashamane\hotfixes\2017_12_06_01_hotfixes_adventure_journal.sql
-del sql\ashamane\hotfixes\2018_01_01_00_hotfixes.sql
-del sql\ashamane\hotfixes\2018_01_01_01_hotfixes_global_strings.sql
-del sql\ashamane\hotfixes\2018_01_02_01_hotfixes_broadcast_text.sql
-del sql\ashamane\hotfixes\2018_01_04_00_hotfixes.sql
-del sql\ashamane\hotfixes\2018_01_04_01_hotfixes.sql
-del sql\ashamane\hotfixes\2018_01_04_02_hotfixes.sql
-del sql\ashamane\hotfixes\2018_01_05_00_hotfixes.sql
-del sql\ashamane\hotfixes\2018_01_05_01_hotfixes.sql
-del sql\ashamane\hotfixes\2018_01_05_02_hotfixes.sql
-del sql\ashamane\hotfixes\2018_01_05_03_hotfixes.sql
-del sql\ashamane\hotfixes\2018_01_05_04_hotfixes.sql
-del sql\ashamane\hotfixes\2018_01_05_05_hotfixes.sql
-del sql\ashamane\hotfixes\2018_01_05_06_hotfixes.sql
-del sql\ashamane\hotfixes\2018_01_07_00_hotfixes_pvp_talents.sql
+del /s sql\ashamane\world\2017_11_12_world_areatrigger.sql >nul 2>&1
+del /s sql\ashamane\world\2017_11_17_01_alter_gossip.sql >nul 2>&1
+del /s sql\ashamane\world\2017_11_17_02_creature_template_trigger.sql >nul 2>&1
+del /s sql\ashamane\world\2017_11_18_00_world.sql >nul 2>&1
+del /s sql\ashamane\world\2017_11_18_01_world.sql >nul 2>&1
+del /s sql\ashamane\world\2017_11_18_02_world.sql >nul 2>&1
+del /s sql\ashamane\world\2017_11_19_01_world.sql >nul 2>&1
+del /s sql\ashamane\world\2017_11_19_02_world_legion_creature_scaling.sql >nul 2>&1
+del /s sql\ashamane\world\2017_11_19_03_world_scene_template.sql >nul 2>&1
+del /s sql\ashamane\world\2017_11_19_04_world_spell_areatrigger.sql >nul 2>&1
+del /s sql\ashamane\world\2017_11_19_05_world_areatrigger_vertices.sql >nul 2>&1
+del /s sql\ashamane\world\2017_11_19_06_world_areatrigger_template.sql >nul 2>&1
+del /s sql\ashamane\world\2017_11_19_07_world_areatrigger_scriptname.sql >nul 2>&1
+del /s sql\ashamane\world\2017_11_22_01_world_mardum.sql >nul 2>&1
+del /s sql\ashamane\world\2017_11_24_01_world_creature_scaling.sql >nul 2>&1
+del /s sql\ashamane\world\2017_11_26_01_world_creature_template.sql >nul 2>&1
+del /s sql\ashamane\world\2017_11_29_01_world_tanaan_intro.sql >nul 2>&1
+del /s sql\ashamane\world\2017_11_29_01_world_tanaan_intro_phases.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_02_01_world_velen_waypoints.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_02_02_world_shadowmoon_begin.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_02_03_world_transports.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_02_04_world_at_mage_scriptname.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_02_05_world_scouting_map.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_02_06_world_misc.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_03_02_world_undead_start.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_04_01_world_misc.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_04_02_world_npc_custom_rate.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_04_03_world_gameobject_template.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_04_04_world_gameobject_lion_rest.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_05_01_world_spells_paladin.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_05_02_world_list_quest.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_05_03_world_mardum.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_05_04_world_phases_mardum.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_06_01_world_mardum.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_07_01_spell_mage.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_07_02_spell_mage.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_07_03_mardum.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_08_01_playerchoice.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_08_02_mardum.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_08_03_thousand_needles.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_09_01_world.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_10_01_spell_priest.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_10_02_spell_dk.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_10_04_acherus_upper_lower.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_10_05_spell_target_position.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_12_01_spell_paladin.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_12_01_world_minerais.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_13_01_world_item_loot.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_13_02_world_vendor.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_14_02_world_misc.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_14_03_world_mage.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_15_01_world_artifact_scriptname.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_15_02_world_misc.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_15_03_world_paladin.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_16_00_world.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_17_01_world_misc.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_19_01_world_misc.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_19_02_world_mage.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_20_01_world_tethyr.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_20_02_world_darkheart_thicket.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_20_03_world_suramar_cavern.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_21_01_world_gilneas.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_21_02_world_default.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_21_03_world_misc.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_28_01_world_areatrigger.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_29_01_world_instance_template.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_30_01_world_ud_start.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_30_02_world_transports.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_31_00_world.sql >nul 2>&1
+del /s sql\ashamane\world\2017_12_31_01_world_misc.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_01_01_world_misc.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_01_02_world_rare_mobs.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_01_03_world_quest_class_panda.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_02_01_world_quests.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_02_02_world_cre_template_732.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_02_03_world_quest_template_732.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_02_04_world_delete_duplicate.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_02_05_world_dalaran_karazhan.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_03_01_world_stormwind.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_03_02_world_misc.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_03_03_world_areatriggers.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_03_05_draenor_enchant_recipes.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_04_01_world_areatrigger_teleport.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_04_02_world_hunter_spells.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_04_03_world_hunter_spells.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_00_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_01_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_01_world_quest.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_02_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_02_world_blackmarket.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_03_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_03_world_scriptname.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_04_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_04_world_spell_script.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_05_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_06_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_07_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_08_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_09_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_10_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_11_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_12_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_13_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_14_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_15_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_16_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_17_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_18_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_19_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_20_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_05_21_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_06_00_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_06_01_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_06_02_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_06_03_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_06_04_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_06_04_world_spell_warrior.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_06_05_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_06_05_world_gob_template.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_06_06_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_06_06_world_creature_spawntime.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_06_07_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_07_00_world_trinity_string.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_07_01_world_arenas.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_07_02_world_arenas.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_07_03_world_misc.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_07_04_world_instance.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_07_05_world_disenchant.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_07_06_world_herbalism.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_08_00_world_gnome_zone.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_08_01_world_gnome_zone.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_09_00_world_gnome_intro.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_10_00_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_10_01_world_scriptname.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_10_02_world_locales.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_10_03_world_quest.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_11_01_world_scriptname.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_11_01_world_violet_hold.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_11_02_world_quest.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_11_03_world_vendor.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_12_01_world_pandaren.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_13_00_gilneas_quest.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_13_01_world_dk.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_13_02_world_pet.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_13_03_world_wandering_island.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_13_04_world_darkheart_thicket.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_14_01_world_quest_reward.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_15_01_world_gameobject.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_15_02_world_quest.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_15_03_world_sai.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_17_01_world_creature.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_18_01_scene_template.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_18_02_scriptname.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_19_01_misc.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_19_02_zone_script.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_19_03_spell.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_20_00_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_20_01_durotar.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_20_02_darkheart_thicket.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_20_02_pandaria_zone.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_20_03_battleground.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_21_00_battleground.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_21_01_spell_garrison_hearthstone.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_21_02_battleground.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_22_01_darkhearth_thicket.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_22_02_darkhearth_thicket.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_22_03_eye_of_azshara.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_23_01_dragonsoul_spellscript.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_23_02_gilneas.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_24_00_gilneas.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_24_01_gilneas.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_25_01_npc_vendor.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_28_00_world.sql >nul 2>&1
+del /s sql\ashamane\world\2018_01_31_01_spell_hunter.sql >nul 2>&1
+del /s sql\ashamane\hotfixes\2017_11_18_00_hotfixes.sql >nul 2>&1
+del /s sql\ashamane\hotfixes\2017_12_06_01_hotfixes_adventure_journal.sql >nul 2>&1
+del /s sql\ashamane\hotfixes\2018_01_01_00_hotfixes.sql >nul 2>&1
+del /s sql\ashamane\hotfixes\2018_01_01_01_hotfixes_global_strings.sql >nul 2>&1
+del /s sql\ashamane\hotfixes\2018_01_02_01_hotfixes_broadcast_text.sql >nul 2>&1
+del /s sql\ashamane\hotfixes\2018_01_04_00_hotfixes.sql >nul 2>&1
+del /s sql\ashamane\hotfixes\2018_01_04_01_hotfixes.sql >nul 2>&1
+del /s sql\ashamane\hotfixes\2018_01_04_02_hotfixes.sql >nul 2>&1
+del /s sql\ashamane\hotfixes\2018_01_05_00_hotfixes.sql >nul 2>&1
+del /s sql\ashamane\hotfixes\2018_01_05_01_hotfixes.sql >nul 2>&1
+del /s sql\ashamane\hotfixes\2018_01_05_02_hotfixes.sql >nul 2>&1
+del /s sql\ashamane\hotfixes\2018_01_05_03_hotfixes.sql >nul 2>&1
+del /s sql\ashamane\hotfixes\2018_01_05_04_hotfixes.sql >nul 2>&1
+del /s sql\ashamane\hotfixes\2018_01_05_05_hotfixes.sql >nul 2>&1
+del /s sql\ashamane\hotfixes\2018_01_05_06_hotfixes.sql >nul 2>&1
+del /s sql\ashamane\hotfixes\2018_01_07_00_hotfixes_pvp_talents.sql >nul 2>&1
 
 copy Server\Tools\Update.bat ..
-start Server\Database\start.bat
+start "" /min Server\Database\start.bat
 goto webserver
 
 :webserver
 cd Server\Apache24
-start apache_start.bat
+start "" /min apache_start.bat
 cd ..\..
 if exist ADB_world_735.00.sql goto menu
 goto reset_world
@@ -244,10 +243,9 @@ echo.
 echo 0  -  Service Menu (you can fix problems here)
 echo.
 echo 1  -  Start the servers (x86)
-REM echo 2a -  Start the servers (x64)
 echo 2  -  Start the servers (x64)
 echo.
-echo 3  -  Open Website / create account
+echo 3  -  Create/Manage Accounts (Website)
 echo 4  -  Change server IP (Offline/LAN)
 echo.
 echo 5  -  Character save manager
@@ -257,7 +255,6 @@ echo.
 set /P menu=Enter a number: 
 if "%menu%"=="0" (goto service_menu)
 if "%menu%"=="1" (goto servers_start)
-REM if "%menu%"=="2a" (goto servers_start_x64)
 if "%menu%"=="2" (goto servers_start_x64_without_support)
 if "%menu%"=="3" (goto account_tool)
 if "%menu%"=="4" (goto ip_changer)
@@ -271,10 +268,6 @@ goto menu
 
 :servers_start
 start Server\Tools\server_check.bat
-goto menu
-
-:servers_start_x64
-start Server\Tools\server_check_x64.bat
 goto menu
 
 :servers_start_x64_without_support
