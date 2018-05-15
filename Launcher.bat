@@ -247,8 +247,9 @@ echo 2  -  Start the servers (x64)
 echo.
 echo 3  -  Create/Manage Accounts (Website)
 echo 4  -  Change server IP (Offline/LAN)
+echo 5  -  Change server name
 echo.
-echo 5  -  Character save manager
+echo 6  -  Character save manager
 echo.
 echo X  -  Shutdown all servers
 echo.
@@ -258,7 +259,8 @@ if "%menu%"=="1" (goto servers_start)
 if "%menu%"=="2" (goto servers_start_x64_without_support)
 if "%menu%"=="3" (goto account_tool)
 if "%menu%"=="4" (goto ip_changer)
-if "%menu%"=="5" (goto save_menu)
+if "%menu%"=="5" (goto name_changer)
+if "%menu%"=="6" (goto save_menu)
 if "%menu%"=="x" (goto shutdown_servers)
 if "%menu%"=="" (goto menu)
 
@@ -598,6 +600,17 @@ goto service_menu
 :log_file
 notepad Server\Logs\server.log
 goto service_menu
+
+:name_changer
+cls
+echo.
+set /P servername=Enter the server new name: 
+echo UPDATE realmlist SET name='%servername%' WHERE id='1'; > sql\servername.sql
+Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%login% < sql\servername.sql
+echo.
+echo Server name changed to %servername%.
+pause
+goto menu
 
 :exit
 exit
