@@ -34,6 +34,7 @@ del sql\ashamane\characters\2017_05_20_char_world_quest.sql
 del sql\ashamane\characters\2018_01_05_01_characters_world_quest.sql
 del sql\ashamane\characters\2018_01_14_01_charactes_world_quest.sql
 copy sql\2017_05_15_char_world_quest.sql sql\ashamane\characters
+cls
 
 del /s sql\ashamane\world\2017_11_12_world_areatrigger.sql >nul 2>&1
 del /s sql\ashamane\world\2017_11_17_01_alter_gossip.sql >nul 2>&1
