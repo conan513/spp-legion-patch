@@ -24,6 +24,8 @@ set login=realmd
 set website=blizzcms
 set worldfile=ADB_world_735.00.sql
 set hotfixesfile=ADB_hotfixes_735.00.sql
+set world_clean=world_clean
+set hotfixes_clean=hotfixes_clean
 
 REM --- Settings ---
 
@@ -257,6 +259,8 @@ echo 5  -  Change server name
 echo.
 echo 6  -  Character save manager
 echo.
+echo 7  -  Mod manager [EXPERIMENTAL]
+echo.
 echo X  -  Shutdown all servers
 echo.
 set /P menu=Enter a number: 
@@ -267,6 +271,7 @@ if "%menu%"=="3" (goto account_tool)
 if "%menu%"=="4" (goto ip_changer)
 if "%menu%"=="5" (goto name_changer)
 if "%menu%"=="6" (goto save_menu)
+if "%menu%"=="7" (goto modmanager_menu)
 if "%menu%"=="x" (goto shutdown_servers)
 if "%menu%"=="" (goto menu)
 
@@ -528,7 +533,6 @@ pause
 goto menu
 
 :service_menu
-echo.
 cls
 echo ################
 echo # SERVICE MENU #
@@ -553,6 +557,9 @@ echo 4 - Reset world and hotfix database
 echo.
 echo 5 - Opern worldserver log file
 echo.
+echo 6 - Install vcredists x86 (2005-2017)
+echo 7 - Install vcredists x64 (2005-2017)
+echo.
 echo 0 - Go back to main menu
 echo.
 set /P menu=Enter a number: 
@@ -561,8 +568,34 @@ if "%menu%"=="2" (goto update_vmaps)
 if "%menu%"=="3" (goto update_mmaps)
 if "%menu%"=="4" (goto reset_world)
 if "%menu%"=="5" (goto log_file)
+if "%menu%"=="6" (goto vcredist_install_x86)
+if "%menu%"=="7" (goto vcredist_install_x64)
 if "%menu%"=="0" (goto menu)
 if "%menu%"=="" (goto menu)
+
+:vcredist_install_x86
+cls
+echo.
+"Addons\vcredist\2005 Updated\vcredist_x86.exe" /Q
+"Addons\vcredist\2008 SP1\vcredist_x86.exe" /qb
+"Addons\vcredist\2010\vcredist_x86.exe" /passive /norestart
+"Addons\vcredist\2012 Update 4\vcredist_x86.exe" /passive /norestart
+"Addons\vcredist\2013\vcredist_x86.exe" /install /passive /norestart
+"Addons\vcredist\2015 Update 3\vc_redist.x86.exe" /install /passive /norestart
+"Addons\vcredist\2017\vc_redist.x86.exe" /install /passive /norestart
+goto service_menu
+
+:vcredist_install_x64
+cls
+echo.
+"Addons\vcredist\2005 Updated\vcredist_x64.exe" /Q
+"Addons\vcredist\2008 SP1\vcredist_x64.exe" /qb
+"Addons\vcredist\2010\vcredist_x64.exe" /passive /norestart
+"Addons\vcredist\2012 Update 4\vcredist_x64.exe" /passive /norestart
+"Addons\vcredist\2013\vcredist_x64.exe" /install /passive /norestart
+"Addons\vcredist\2015 Update 3\vc_redist.x64.exe" /install /passive /norestart
+"Addons\vcredist\2017\vc_redist.x64.exe" /install /passive /norestart
+goto service_menu
 
 :update_dbc_maps
 cls
@@ -617,6 +650,69 @@ echo.
 echo Server name changed to %servername%.
 pause
 goto menu
+
+:modmanager_menu
+cls
+if exist vendor\autoload.php goto modmanager_menu_1
+echo Installing modmanager components...
+Server\php5\php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+Server\php5\php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+Server\php5\php composer-setup.php
+Server\php5\php -r "unlink('composer-setup.php');"
+echo.
+Server\php5\php composer.phar require "dbdiff/dbdiff:@dev"
+echo.
+:modmanager_menu_1
+cls
+echo.
+echo ########################
+echo # Database mod manager #
+echo ########################
+echo.
+echo Hint:
+echo Copy the mod files into the "spp-legion\sql\custom\world" folder.
+echo Server automatically load it on next startup.
+echo.
+echo 1 - Export world changes
+echo 2 - Export hotfixes changes (not available yet)
+echo.
+echo 0 - Back to main menu
+echo.
+set /P menu=Enter a number: 
+if "%menu%"=="1" (goto export_world_mods)
+if "%menu%"=="2" (goto modmanager_menu_1)
+if "%menu%"=="0" (goto menu)
+if "%menu%"=="" (goto menu)
+
+:export_world_mods
+cls
+echo.
+echo Prepare to exporting %world% database changes...
+echo.
+Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 < sql\mod_drop_mysql.sql
+Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 < sql\mod_create_mysql.sql
+echo.
+echo Importing %worldfile% into %world_clean% database.
+echo.
+Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%world_clean% < %worldfile%
+echo.
+echo Importing %world% updates...
+for %%i in (sql\ashamane\world\*sql) do if %%i neq sql\ashamane\world\*sql if %%i neq sql\ashamane\world\*sql if %%i neq sql\ashamane\world\*sql echo %%i & Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%world_clean% < %%i
+Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%world_clean% < sql\custom\world\2017_01_01_01_artifact_weapon_vendor.sql
+Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%world_clean% < sql\custom\world\2017_03_10_item_enchatment_random_tiers.sql
+Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%world_clean% < sql\custom\world\2018_04_11_00_azeroth_choppers_vendor.sql
+echo.
+echo Exporting changes to world_mods.sql files...
+echo.
+Server\php5\php vendor/dbdiff/dbdiff/dbdiff --include=up --output=../world_mods.sql server1.world:server2.world_clean
+echo.
+echo The mod file available in the main folder.
+echo Others need to copy this file into spp-legion\sql\custom\world folder 
+echo and start the servers to activate it.
+echo.
+pause
+Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 < sql\mod_drop_mysql.sql
+goto modmanager_menu
 
 :exit
 exit
