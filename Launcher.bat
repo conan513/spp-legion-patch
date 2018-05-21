@@ -30,6 +30,14 @@ set hotfixes_clean=hotfixes_clean
 REM --- Settings ---
 
 :start_database
+if not exist Saves\autosave mkdir Saves\autosave
+
+IF NOT EXIST "autosave.on" (
+  IF NOT EXIST "autosave.off" (
+    echo autosave > autosave.on
+  )
+)
+
 del ..\Update.bat
 del sql\ashamane\characters\2017_05_15_char_world_quest.sql
 del sql\ashamane\characters\2017_05_20_char_world_quest.sql
@@ -277,8 +285,6 @@ if "%menu%"=="" (goto menu)
 
 goto menu
 
-:servers_stop
-
 :servers_start
 start Server\Tools\server_check.bat
 goto menu
@@ -289,16 +295,18 @@ goto menu
 
 :save_menu
 cls
-mkdir Saves
-mkdir Saves\1
-mkdir Saves\2
-mkdir Saves\3
-mkdir Saves\4
-mkdir Saves\5
-mkdir Saves\6
-mkdir Saves\7
-mkdir Saves\8
-mkdir Saves\9
+if exist autosave.on set autosave=ON
+if exist autosave.off set autosave=OFF
+if not exist Saves mkdir Saves
+if not exist Saves\1 mkdir Saves\1
+if not exist Saves\2 mkdir Saves\2
+if not exist Saves\3 mkdir Saves\3
+if not exist Saves\4 mkdir Saves\4
+if not exist Saves\5 mkdir Saves\5
+if not exist Saves\6 mkdir Saves\6
+if not exist Saves\7 mkdir Saves\7
+if not exist Saves\8 mkdir Saves\8
+if not exist Saves\9 mkdir Saves\9
 cls
 echo.
 set save1=Empty slot
@@ -324,30 +332,38 @@ echo Single Player Project save manager.
 echo Select a slot where you want to save your characters.
 echo.
 echo -----------------------
-echo Save 1 - %save1%
-echo Save 2 - %save2%
-echo Save 3 - %save3%
-echo Save 4 - %save4%
-echo Save 5 - %save5%
-echo Save 6 - %save6%
-echo Save 7 - %save7%
-echo Save 8 - %save8%
-echo Save 9 - %save9%
+echo Save 1  -  [%save1%]
+echo Save 2  -  [%save2%]
+echo Save 3  -  [%save3%]
+echo Save 4  -  [%save4%]
+echo Save 5  -  [%save5%]
+echo Save 6  -  [%save6%]
+echo Save 7  -  [%save7%]
+echo Save 8  -  [%save8%]
+echo Save 9  -  [%save9%]
+echo Save 10 -  [Autosave]
+echo.
+echo Autosave: %autosave%
+echo.
 echo -----------------------
 echo.
 echo 1 - Save
 echo 2 - Load
 echo 3 - Delete
 echo.
-echo 4 - Open the Saves folder
+echo 4 - Turn autosave on/off
+echo.
+echo 5 - Open the Saves folder
 echo.
 echo 0 - Back to main menu
+echo.
 echo.
 set /P savemenu=Select your option: 
 if "%savemenu%"=="1" (goto saveslot_choose)
 if "%savemenu%"=="2" (goto saveslot_choose)
 if "%savemenu%"=="3" (goto saveslot_choose)
-if "%savemenu%"=="4" (explorer.exe Saves)
+if "%savemenu%"=="4" (goto autosave_switch)
+if "%savemenu%"=="5" (explorer.exe Saves)
 if "%savemenu%"=="0" (goto menu)
 if "%savemenu%"=="" (goto save_menu)
 goto save_menu
@@ -363,6 +379,7 @@ if "%saveslot%"=="6" (set saveslot=6)
 if "%saveslot%"=="7" (set saveslot=7)
 if "%saveslot%"=="8" (set saveslot=8)
 if "%saveslot%"=="9" (set saveslot=9)
+if "%saveslot%"=="10" (set saveslot=autosave)
 if "%saveslot%"=="" (goto save_menu)
 
 if "%savemenu%"=="1" (goto export_char_check)
@@ -500,9 +517,33 @@ if "%ERRORLEVEL%"=="0" goto ip_changer_check
 if "%ERRORLEVEL%"=="1" goto menu
 
 :shutdown_servers
+cls
 taskkill /f /im bnetserver.exe
 taskkill /f /im worldserver.exe
 taskkill /f /im spp-httpd.exe
+if exist autosave.on goto autosave_shutdown
+Server\Database\bin\mysqladmin -u root -p123456 --port=3310 shutdown
+goto exit
+
+:autosave_shutdown
+set saveslot=autosave
+echo.
+echo ###################
+echo # Autosave is on! #
+echo ###################
+echo.
+echo Exporting accounts...please wait...
+Server\Database\bin\mysqldump.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 %login% > "Saves\%saveslot%\%login%.sql"
+echo Done!
+echo.
+echo Exporting characters...please wait...
+Server\Database\bin\mysqldump.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 %characters% > Saves\%saveslot%\%characters%.sql
+echo Done!
+echo.
+echo Exporting website data...please wait...
+Server\Database\bin\mysqldump.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 %website% > Saves\%saveslot%\%website%.sql
+echo Done!
+echo.
 Server\Database\bin\mysqladmin -u root -p123456 --port=3310 shutdown
 goto exit
 
@@ -713,6 +754,21 @@ echo.
 pause
 Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 < sql\mod_drop_mysql.sql
 goto modmanager_menu
+
+:autosave_switch
+if exist autosave.on goto autosave_off
+if exist autosave.off goto autosave_on
+
+:autosave_off
+cls
+del autosave.on
+echo autosave > autosave.off
+goto save_menu
+
+:autosave_on
+del autosave.off
+echo autosave > autosave.on
+goto save_menu
 
 :exit
 exit
