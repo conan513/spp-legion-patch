@@ -309,54 +309,51 @@ if not exist Saves\8 mkdir Saves\8
 if not exist Saves\9 mkdir Saves\9
 cls
 echo.
-set save1=Empty slot
-set save2=Empty slot
-set save3=Empty slot
-set save4=Empty slot
-set save5=Empty slot
-set save6=Empty slot
-set save7=Empty slot
-set save8=Empty slot
-set save9=Empty slot
-if exist Saves\1\characters.sql set save1=Already Used
-if exist Saves\2\characters.sql set save2=Already Used
-if exist Saves\3\characters.sql set save3=Already Used
-if exist Saves\4\characters.sql set save4=Already Used
-if exist Saves\5\characters.sql set save5=Already Used
-if exist Saves\6\characters.sql set save6=Already Used
-if exist Saves\7\characters.sql set save7=Already Used
-if exist Saves\8\characters.sql set save8=Already Used
-if exist Saves\9\characters.sql set save9=Already Used
+set customname1=Empty slot
+set customname2=Empty slot
+set customname3=Empty slot
+set customname4=Empty slot
+set customname5=Empty slot
+set customname6=Empty slot
+set customname7=Empty slot
+set customname8=Empty slot
+set customname9=Empty slot
+
+if exist Saves\1\name.txt set /p customname1=<Saves\1\name.txt
+if exist Saves\2\name.txt set /p customname2=<Saves\2\name.txt
+if exist Saves\3\name.txt set /p customname3=<Saves\3\name.txt
+if exist Saves\4\name.txt set /p customname4=<Saves\4\name.txt
+if exist Saves\5\name.txt set /p customname5=<Saves\5\name.txt
+if exist Saves\6\name.txt set /p customname6=<Saves\6\name.txt
+if exist Saves\7\name.txt set /p customname7=<Saves\7\name.txt
+if exist Saves\8\name.txt set /p customname8=<Saves\8\name.txt
+if exist Saves\9\name.txt set /p customname9=<Saves\9\name.txt
 
 echo Single Player Project save manager.
 echo Select a slot where you want to save your characters.
 echo.
 echo -----------------------
-echo Save 1  -  [%save1%]
-echo Save 2  -  [%save2%]
-echo Save 3  -  [%save3%]
-echo Save 4  -  [%save4%]
-echo Save 5  -  [%save5%]
-echo Save 6  -  [%save6%]
-echo Save 7  -  [%save7%]
-echo Save 8  -  [%save8%]
-echo Save 9  -  [%save9%]
+echo Save 1  -  [%customname1%]
+echo Save 2  -  [%customname2%]
+echo Save 3  -  [%customname3%]
+echo Save 4  -  [%customname4%]
+echo Save 5  -  [%customname5%]
+echo Save 6  -  [%customname6%]
+echo Save 7  -  [%customname7%]
+echo Save 8  -  [%customname8%]
+echo Save 9  -  [%customname9%]
 echo Save 10 -  [Autosave]
-echo.
-echo Autosave: %autosave%
-echo.
 echo -----------------------
 echo.
 echo 1 - Save
 echo 2 - Load
 echo 3 - Delete
 echo.
-echo 4 - Turn autosave on/off
+echo 4 - Turn autosave on/off [%autosave%]
 echo.
 echo 5 - Open the Saves folder
 echo.
 echo 0 - Back to main menu
-echo.
 echo.
 set /P savemenu=Select your option: 
 if "%savemenu%"=="1" (goto saveslot_choose)
@@ -410,9 +407,10 @@ echo.
 del Saves\%saveslot%\realmd.sql
 del Saves\%saveslot%\characters.sql
 del Saves\%saveslot%\blizzcms.sql
+del Saves\%saveslot%\name.txt
 echo.
 echo Save %saveslot% is empty now.
-pause
+echo.
 goto save_menu
 
 :export_char_check
@@ -425,12 +423,15 @@ cls
 echo.
 echo This process overwrite your previous save files!
 echo.
-set /P menu=Are you sure want to export your characters into a save file? (Y/n)
+set /P menu=Are you sure want to export your characters into this save slot? (Y/n)
 if "%menu%"=="n" (goto menu)
 if "%menu%"=="y" (goto export_char_1)
 
 :export_char_1
 cls
+echo.
+set /P slotname=Add a name for the selected save slot: 
+echo %slotname%>Saves\%saveslot%\name.txt
 echo.
 echo Exporting accounts...please wait...
 Server\Database\bin\mysqldump.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 %login% > "Saves\%saveslot%\%login%.sql"
