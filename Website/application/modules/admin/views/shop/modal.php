@@ -81,13 +81,13 @@
                             <div class="uk-inline uk-width-1-2@s">
                                 <label class="uk-form-label uk-text-uppercase"><?=$this->lang->line('store_item_price');?> DP</label>
                                 <div class="uk-form-controls">
-                                    <input class="uk-input" name="priceDP" type="text" placeholder="0" value="0" required>
+                                    <input class="uk-input" name="priceDP" type="number" placeholder="0" value="0" required>
                                 </div>
                             </div>
                             <div class="uk-inline uk-width-1-2@s">
                                 <label class="uk-form-label uk-text-uppercase"><?=$this->lang->line('store_item_price');?> VP</label>
                                 <div class="uk-form-controls">
-                                    <input class="uk-input" name="priceVP" type="text" placeholder="0" value="0" required>
+                                    <input class="uk-input" name="priceVP" type="number" placeholder="0" value="0" required>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +97,7 @@
                             <div class="uk-inline uk-width-1-2@s">
                                 <label class="uk-form-label uk-text-uppercase"><?=$this->lang->line('form_store_item_id');?></label>
                                 <div class="uk-form-controls">
-                                            <input class="uk-input" name="itemID" type="text" placeholder="Item Id" required>
+                                    <input class="uk-input" name="itemID" type="text" placeholder="Item Id" required>
                                 </div>
                             </div>
                             <div class="uk-inline uk-width-1-2@s">

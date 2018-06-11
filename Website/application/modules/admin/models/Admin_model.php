@@ -212,6 +212,97 @@ class Admin_model extends CI_Model {
                 ->get('fx_shop');
     }
 
+    public function getItemSpecifyRows($id)
+    {
+        return $this->db->select('*')
+                ->where('id', $id)
+                ->get('fx_shop')
+                ->num_rows();
+    }
+
+    public function getItemSpecifyName($id)
+    {
+        return $this->db->select('name')
+                ->where('id', $id)
+                ->get('fx_shop')
+                ->row('name');
+    }
+
+    public function getItemSpecifyDpPrice($id)
+    {
+        return $this->db->select('price_dp')
+                ->where('id', $id)
+                ->get('fx_shop')
+                ->row_array()['price_dp'];
+    }
+
+    public function getItemSpecifyVpPrice($id)
+    {
+        return $this->db->select('price_vp')
+                ->where('id', $id)
+                ->get('fx_shop')
+                ->row_array()['price_vp'];
+    }
+
+    public function getItemSpecifyId($id)
+    {
+        return $this->db->select('itemid')
+                ->where('id', $id)
+                ->get('fx_shop')
+                ->row_array()['itemid'];
+    }
+
+    public function getItemSpecifyIcon($id)
+    {
+        return $this->db->select('iconname')
+                ->where('id', $id)
+                ->get('fx_shop')
+                ->row_array()['iconname'];
+    }
+
+    public function getItemSpecifyImg($id)
+    {
+        return $this->db->select('image')
+                ->where('id', $id)
+                ->get('fx_shop')
+                ->row_array()['image'];
+    }
+
+    public function getItemSpecifyGroup($id)
+    {
+        return $this->db->select('groups')
+                ->where('id', $id)
+                ->get('fx_shop')
+                ->row_array()['groups'];
+    }
+
+    public function getItemSpecifyType($id)
+    {
+        return $this->db->select('type')
+                ->where('id', $id)
+                ->get('fx_shop')
+                ->row_array()['type'];
+    }
+
+    public function updateSpecifyItem($id, $name, $group, $type, $pricedp, $pricevp, $itemid, $icon, $image)
+    {
+        $update = array(
+            'name' => $name,
+            'groups' => $group,
+            'type' => $type,
+            'price_dp' => $pricedp,
+            'price_vp' => $pricevp,
+            'itemid' => $itemid,
+            'iconname' => $icon,
+            'image' => $image
+        );
+
+        $this->db->where('id', $id)
+                ->update('fx_shop', $update);
+
+        redirect(base_url('admin/manageitems'),'refresh');
+    }
+
     public function getChangelogs()
     {
         return $this->db->select('*')
@@ -266,13 +357,15 @@ class Admin_model extends CI_Model {
         return ($qq+1);
     }
 
-    public function deleteNewAjax($id)
+    public function delSpecifyNew($id)
     {
         $this->db->where('id', $id)
                 ->delete('fx_news');
 
         $this->db->where('id_new', $id)
                 ->delete('fx_news_top');
+
+        redirect(base_url('admin/managenews'),'refresh');
     }
 
     public function getNewsSpecifyName($id)
@@ -504,13 +597,6 @@ class Admin_model extends CI_Model {
                 ->update('fx_donate');
     }
 
-     public function updateNewAjax($id, $name, $column)
-    {
-        $this->db->set($column, $name)
-                ->where('id', $id)
-                ->update('fx_news');
-    }
-
     public function delSpecifyDonation($id)
     {
         $this->db->where('id', $id)
@@ -533,9 +619,9 @@ class Admin_model extends CI_Model {
         redirect(base_url('admin/donate'),'refresh');
     }
 
-    public function getAdminNewsListAjax()
+    public function getAdminNewsList()
     {
-        return $this->db->select('*')
+        return $this->db->select('id, title, date')
             ->order_by('id', 'ASC')
             ->get('fx_news');
     }
@@ -583,9 +669,40 @@ class Admin_model extends CI_Model {
         redirect(base_url('admin/managenews'),'refresh');
     }
 
+    public function updateSpecifyNews($id, $title, $image, $description, $type)
+    {
+        $unlink = $this->getFileNameImage($id);
+        unlink('./assets/images/news/'.$unlink);
+
+        $date = $this->m_data->getTimestamp();
+
+        $update1 = array(
+            'title' => $title,
+            'image' => $image,
+            'description' => $description,
+            'date' => $date
+        );
+
+        $this->db->where('id', $id)
+                ->update('fx_news', $update1);
+
+        $this->db->where('id_new', $id)
+                ->delete('fx_news_top');
+
+        if ($type == 2)
+        {
+            $data['id_new'] = $id;
+
+            $this->db->insert('fx_news_top', $data);
+        }
+
+        redirect(base_url('admin/managenews'),'refresh');
+    }
+
     public function getNewIDperDate($date)
     {
-        return $this->db->select('id')            ->where('date', $date)
+        return $this->db->select('id')
+            ->where('date', $date)
             ->get('fx_news')
             ->row('id');
     }

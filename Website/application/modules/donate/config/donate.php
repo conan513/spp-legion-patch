@@ -19,11 +19,11 @@ $config['currencyType'] = 'USD';
 |
 | Options Available:
 |
-| live = Testing the code end-to-end
+| sandbox = Testing the code end-to-end
 | live    = Ready for production
 |
 */
-$config['ppMode'] = 'live';
+$config['ppMode'] = 'sandbox';
 
 /*
 |--------------------------------------------------------------------------

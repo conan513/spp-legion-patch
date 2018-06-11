@@ -43,66 +43,33 @@
                         </div>
                         <!-- content -->
                         <div class="uk-card-body">
-                        <!-- ajax -->
-                            <div id="newsList"></div>
-                        <!-- ajax -->
+                            <table class="uk-table uk-table-justify uk-table-divider">
+                                <thead>
+                                    <tr>
+                                        <th><?= $this->lang->line('form_title'); ?></th>
+                                        <th class="uk-text-center"><?= $this->lang->line('column_date'); ?></th>
+                                        <th class="uk-text-center"><?= $this->lang->line('column_action'); ?></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach($this->admin_model->getAdminNewsList()->result() as $news) { ?>
+                                        <tr>
+                                            <td><?= $news->title ?></td>
+                                            <td class="uk-text-center"><?= $news->date ?></td>
+                                            <td class="uk-text-center" uk-margin>
+                                                <a href="<?= base_url(); ?>admin/editnews/<?= $news->id ?>" class="uk-button uk-button-secondary"><i class="far fa-edit"></i></a>
+                                                <span class="" style="display:inline-block; width: 5px;"></span>
+                                                <form action="" method="post" accept-charset="utf-8" style="display: inline;">
+                                                    <button class="uk-button uk-button-danger" name="button_delNew" value="<?= $news->id ?>" type="submit"><i class="fas fa-trash-alt"></i></button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
+                                </tbody>
+                            </table>
                         </div>
                         <!-- content -->
                     </div>
                 </div>
             </div>
         </div>
-
-<script>
-    $(document).ready(function(){
-        function fetch_data(){
-            $.ajax({
-                url:"<?= base_url('admin/getNewsList'); ?>",
-                method:"POST",
-                success:function(data){
-                    $('#newsList').html(data);
-                }
-            });
-        }
-        fetch_data();
-        $(document).on('click', '#button_deleteNew', function(){
-            var id = $(this).data("id3");
-            $.ajax({
-                url:"<?= base_url('admin/deleteNew'); ?>",
-                method:"POST",
-                data:{id:id},
-                dataType:"text",
-                success:function(data){
-                    $.amaran({
-                        'theme'     :'awesome error',
-                        'content'   :{
-                            title:'<?= $this->lang->line('notify_title_success'); ?>',
-                            message:'<?= $this->lang->line('notify_news_deleted'); ?>',
-                            info:'',
-                            icon:'fas fa-minus'
-                        },
-                        'position'  :'top right',
-                        'inEffect'  :'slideRight',
-                        'outEffect' :'slideRight'
-                    });
-                    fetch_data();
-                }
-            });
-        });
-        $(document).on('click', '#button_editNew', function(){
-            var id = $(this).data("id4");
-            location.href = "<?= base_url('admin/managenews/?edit='); ?>"+id;
-        });
-    });
-</script>
-
-<script>
-    tinymce.init({
-      selector: 'textarea',
-      init_instance_callback: function (editor) {
-        editor.on('blur', function (e) {
-          alert('test');
-        });
-      }
-    });
-</script>

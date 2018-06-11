@@ -34,7 +34,7 @@
                                             <td><?= $shopall->price_dp ?></td>
                                             <td><?= $shopall->price_vp ?></td>
                                             <td class="uk-text-center" uk-margin>
-                                                <a href="#" class="uk-button uk-button-primary"><i class="far fa-edit"></i></a>
+                                                <a href="<?= base_url(); ?>admin/edititems/<?= $shopall->id ?>" class="uk-button uk-button-secondary"><i class="far fa-edit"></i></a>
                                                 <span class="" style="display:inline-block; width: 5px;"></span>
                                                 <form action="" method="post" accept-charset="utf-8" style="display: inline;">
                                                     <button class="uk-button uk-button-danger" name="button_deleteItem" value="<?= $shopall->id ?>" type="submit"><i class="fas fa-trash-alt"></i></button>

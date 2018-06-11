@@ -41,6 +41,7 @@ tinymce.addI18n('fr_FR',{
 "Heading 4": "En-t\u00eate 4",
 "Heading 5": "En-t\u00eate 5",
 "Heading 6": "En-t\u00eate 6",
+"Preformatted": "Pr\u00e9-formatt\u00e9",
 "Div": "Div",
 "Pre": "Pre",
 "Code": "Code",

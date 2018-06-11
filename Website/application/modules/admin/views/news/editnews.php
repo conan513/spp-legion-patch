@@ -67,7 +67,7 @@
                                     <div class="uk-form-controls">
                                         <div class="uk-inline uk-width-1-1">
                                             <div uk-form-custom="target: true">
-                                                <input type="file" required name="new_imageup">
+                                                <input type="file" name="new_imageup" required>
                                                 <input class="uk-input uk-form-width-medium" type="text" placeholder="Select file" disabled>
                                                 <button class="uk-button uk-button-default" type="button" tabindex="-1">Select</button>
                                             </div>

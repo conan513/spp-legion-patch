@@ -39,13 +39,29 @@ body{margin:0;background-color:#0f2a48;background-image:url(../../assets/images/
 .uk-text-quality-bind {color: #ffd100;}
 .uk-text-quality-heirloom {color: #71d5ff;}
 
-#top-head{z-index: 9;top: 0;left:0;right:0;}
-.bar-content{padding: 30px;}
-#top-head [class*="uk-navbar-dropdown-bottom"]{margin-top: 0;}
-.uk-card{box-shadow: none;}
-.uk-heading-primary{letter-spacing: -0.028em;font-weight: 300;}
-.uk-card{-webkit-transition: box-shadow 0.5s ease-out;transition: box-shadow 0.5s ease-out;}
 .custom-parallax-header{background-image:url(../../assets/images/backgrounds/fx-glass.jpg)}
+
+/*!-----------------------------------------------------------------
+                            Donate
+-------------------------------------------------------------------*/
+.uk-card-donate{background: linear-gradient(-45deg,#248bff,#b64eff);border-radius: 15px;color:#fff;box-shadow: 0 10px 15px rgba(0,0,0,.1);}
+.uk-card-donate .fab{color:#fff;font-size: 60px;width: 100px;height: 100px;border-radius: 50%;text-align: center;line-height: 100px;-webkit-box-shadow: 0 10px 10px rgba(0,0,0,.1);box-shadow: 0 10px 10px rgba(0,0,0,.1);}
+.uk-card-donate .uk-card-title{color:#fff}
+.uk-card-donate.uk-card-hover:hover{background-color: linear-gradient(-45deg,#248bff,#b64eff);box-shadow:0 14px 25px rgba(0,0,0,.16);}
+.uk-card-donate .uk-input{border-radius: 10px;}
+.uk-card-donate .uk-button-secondary{border-radius: 40px;}
+
+/*!-----------------------------------------------------------------
+                            Armory
+-------------------------------------------------------------------*/
+.fx-gap,.fx-gap-1,.fx-gap-2,.fx-gap-3,.fx-gap-4,.fx-gap-5,.fx-gap-6{display: block;height: 15px;}
+.fx-gap:after, .fx-gap:before,.fx-gap-1:after,.fx-gap-1:before,.fx-gap-2:after,.fx-gap-2:before,.fx-gap-3:after,.fx-gap-3:before,.fx-gap-4:after,.fx-gap-4:before,.fx-gap-5:after,.fx-gap-5:before,.fx-gap-6:after,.fx-gap-6:before{content: '';display: table;clear: both;}
+.fx-gap-1{height: 20px;}
+.fx-gap-2{height: 30px;}
+.fx-gap-3{height: 50px;}
+.fx-gap-4{height: 70px;}
+.fx-gap-5{height: 90px;}
+.fx-gap-6{height: 110px;}
 
 /*!-----------------------------------------------------------------
                             Forum
@@ -130,7 +146,7 @@ body{margin:0;background-color:#0f2a48;background-image:url(../../assets/images/
 .TopicPost-content{padding-left:0;padding-right:0}
 .TopicPost-content{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:.9375rem;position:relative;width:100%}
 .TopicPost-author{-ms-flex:0 0 auto;flex:0 0 auto;padding-right:1.25rem;width:18.75rem}
-.TopicPost-author .Author-details{max-width:11rem}}
+.TopicPost-author .Author-details{max-width:11rem}
 .Author-avatar:after,.Dropdown-arrow{content:''}
 .Author{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .Author-staff .Author-avatar{border:1px solid #000;border-radius:3px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.3),inset 0 0 0 3px #00b4ff,inset 0 0 0 4px #000,0 0 10px rgba(0, 0, 0, 0.8)}
@@ -165,7 +181,7 @@ body{margin:0;background-color:#0f2a48;background-image:url(../../assets/images/
 .topicplaceholder-header,.TopicForm-header{-ms-flex-align:center;align-items:center;display:-ms-flexbox;}
 .topicplaceholder-title,.TopicForm-heading,.TopicPostReport .TopicPostReport-heading{color:#fff;font-size:2.25rem;font-weight:100;margin:0}
 .topicplaceholder-content,.TopicForm-content{display:-ms-flexbox;-ms-flex-direction:column;flex-direction:column;margin-top:1.25rem}
-.topicplaceholder-details{background-color:transparent;border:2px solid rgba(255,255,255,.3);border-radius:3px;color:rgba(255,255,255,.7);display:-ms-flexbox;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-top:1rem;max-width:43.75rem;padding:3rem 0;text-align:center}@media only screen and (min-width:961px){.LoginPlaceholder-author .Author{width:auto}
+.topicplaceholder-details{background-color:transparent;border:2px solid rgba(255,255,255,.3);border-radius:3px;color:rgba(255,255,255,.7);display:-ms-flexbox;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-top:1rem;max-width:43.75rem;padding:3rem 0;text-align:center}@media only screen and (min-width:961px){.LoginPlaceholder-author .Author{width:auto}}
 .topicplaceholder-message,.LoginPlaceholder-author .Author{width:100%}
 .topicplaceholder-message.LogIn-message--center{-ms-flex-align:center;align-items:center;display:block;-ms-flex-pack:center;justify-content:center;margin:auto 15px}
 .LoginPlaceholder-content .Form,.TopicForm-content .Form{display:-ms-flexbox;-ms-flex-wrap:wrap;flex-wrap:wrap}
@@ -221,28 +237,6 @@ body{margin:0;background-color:#0f2a48;background-image:url(../../assets/images/
 .ForumCard-image{height:60px;width:60px}
 .ForumCard-details{margin-left:15px}
 }
-
-/*!-----------------------------------------------------------------
-                            Donate
--------------------------------------------------------------------*/
-.uk-card-donate{background: linear-gradient(-45deg,#248bff,#b64eff);border-radius: 15px;color:#fff;box-shadow: 0 10px 15px rgba(0,0,0,.1);}
-.uk-card-donate .fab{color:#fff;font-size: 60px;width: 100px;height: 100px;border-radius: 50%;text-align: center;line-height: 100px;-webkit-box-shadow: 0 10px 10px rgba(0,0,0,.1);box-shadow: 0 10px 10px rgba(0,0,0,.1);}
-.uk-card-donate .uk-card-title{color:#fff}
-.uk-card-donate.uk-card-hover:hover{background-color: linear-gradient(-45deg,#248bff,#b64eff);box-shadow:0 14px 25px rgba(0,0,0,.16);}
-.uk-card-donate .uk-input{border-radius: 10px;}
-.uk-card-donate .uk-button-secondary{border-radius: 40px;}
-
-/*!-----------------------------------------------------------------
-                            Armory
--------------------------------------------------------------------*/
-.fx-gap,.fx-gap-1,.fx-gap-2,.fx-gap-3,.fx-gap-4,.fx-gap-5,.fx-gap-6{display: block;height: 15px;}
-.fx-gap:after, .fx-gap:before,.fx-gap-1:after,.fx-gap-1:before,.fx-gap-2:after,.fx-gap-2:before,.fx-gap-3:after,.fx-gap-3:before,.fx-gap-4:after,.fx-gap-4:before,.fx-gap-5:after,.fx-gap-5:before,.fx-gap-6:after,.fx-gap-6:before{content: '';display: table;clear: both;}
-.fx-gap-1{height: 20px;}
-.fx-gap-2{height: 30px;}
-.fx-gap-3{height: 50px;}
-.fx-gap-4{height: 70px;}
-.fx-gap-5{height: 90px;}
-.fx-gap-6{height: 110px;}
 
 /*!-----------------------------------------------------------------
                             Footer

@@ -41,6 +41,7 @@ tinymce.addI18n('cs',{
 "Heading 4": "Nadpis 4",
 "Heading 5": "Nadpis 5",
 "Heading 6": "Nadpis 6",
+"Preformatted": "P\u0159edform\u00e1tov\u00e1no",
 "Div": "Div (blok)",
 "Pre": "Pre (p\u0159edform\u00e1tov\u00e1no)",
 "Code": "Code (k\u00f3d)",
