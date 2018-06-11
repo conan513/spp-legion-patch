@@ -3,6 +3,7 @@ SET NAME=SingleCore server launcher
 TITLE %NAME%
 COLOR 0A
 set mod=%1
+set mainfolder=%CD%
 
 REM --- Settings ---
 
@@ -26,6 +27,7 @@ set worldfile=ADB_world_735.00.sql
 set hotfixesfile=ADB_hotfixes_735.00.sql
 set world_clean=world_clean
 set hotfixes_clean=hotfixes_clean
+set gameversion=26654
 
 REM --- Settings ---
 
@@ -236,6 +238,7 @@ del /s sql\ashamane\hotfixes\2018_01_05_04_hotfixes.sql >nul 2>&1
 del /s sql\ashamane\hotfixes\2018_01_05_05_hotfixes.sql >nul 2>&1
 del /s sql\ashamane\hotfixes\2018_01_05_06_hotfixes.sql >nul 2>&1
 del /s sql\ashamane\hotfixes\2018_01_07_00_hotfixes_pvp_talents.sql >nul 2>&1
+rmdir /S /Q %mainfolder%\Settings
 
 copy Server\Tools\Update.bat ..
 start "" /min Server\Database\start.bat
@@ -258,35 +261,155 @@ echo #######################################################
 echo.
 echo 0  -  Service Menu (you can fix problems here)
 echo.
-echo 1  -  Start the servers (x86)
-echo 2  -  Start the servers (x64)
-echo.
-echo 3  -  Create/Manage Accounts (Website)
-echo 4  -  Change server IP (Offline/LAN)
-echo 5  -  Change server name
-echo.
-echo 6  -  Character save manager
-echo.
-echo 7  -  Mod manager [EXPERIMENTAL]
+echo 1  -  Start Servers
+echo 2  -  Create/Manage Accounts (Website)
+echo 3  -  Character save manager
+echo 4  -  Mod manager [EXPERIMENTAL]
 echo.
 echo X  -  Shutdown all servers
 echo.
 set /P menu=Enter a number: 
 if "%menu%"=="0" (goto service_menu)
-if "%menu%"=="1" (goto servers_start)
-if "%menu%"=="2" (goto servers_start_x64_without_support)
-if "%menu%"=="3" (goto account_tool)
-if "%menu%"=="4" (goto ip_changer)
-if "%menu%"=="5" (goto name_changer)
-if "%menu%"=="6" (goto save_menu)
-if "%menu%"=="7" (goto modmanager_menu)
+if "%menu%"=="1" (goto realm_menu)
+if "%menu%"=="2" (goto account_tool)
+if "%menu%"=="3" (goto save_menu)
+if "%menu%"=="4" (goto modmanager_menu)
 if "%menu%"=="x" (goto shutdown_servers)
 if "%menu%"=="" (goto menu)
 
 goto menu
 
+:realm_menu
+cls
+echo.
+
+if exist Realms\1\name.txt set /p realmname1=<Realms\1\name.txt
+if exist Realms\2\name.txt set /p realmname2=<Realms\2\name.txt
+if exist Realms\3\name.txt set /p realmname3=<Realms\3\name.txt
+if exist Realms\4\name.txt set /p realmname4=<Realms\4\name.txt
+if exist Realms\5\name.txt set /p realmname5=<Realms\5\name.txt
+if exist Realms\6\name.txt set /p realmname6=<Realms\6\name.txt
+if exist Realms\7\name.txt set /p realmname7=<Realms\7\name.txt
+if exist Realms\8\name.txt set /p realmname8=<Realms\8\name.txt
+if exist Realms\9\name.txt set /p realmname9=<Realms\9\name.txt
+
+echo Single Player Project realm starter menu.
+echo Select a slot where you want to save your characters.
+echo.
+echo -----------------------
+echo Realm 1  -  [%realmname1%]
+echo Realm 2  -  [%realmname2%]
+echo Realm 3  -  [%realmname3%]
+echo Realm 4  -  [%realmname4%]
+echo Realm 5  -  [%realmname5%]
+echo Realm 6  -  [%realmname6%]
+echo Realm 7  -  [%realmname7%]
+echo Realm 8  -  [%realmname8%]
+echo Realm 9  -  [%realmname9%]
+echo -----------------------
+echo.
+echo 1 - Start Server
+echo.
+echo 2 - Add/rename realm
+echo 3 - Delete realm
+echo.
+echo 4 - Open realm settings
+echo.
+echo 0 - Back to main menu
+echo.
+set /P realmmenu=Select your option: 
+if "%realmmenu%"=="1" (goto realm_choose)
+if "%realmmenu%"=="2" (goto realm_choose)
+if "%realmmenu%"=="3" (goto realm_choose)
+if "%realmmenu%"=="4" (goto realm_choose)
+if "%realmmenu%"=="5" (explorer.exe Saves)
+if "%realmmenu%"=="0" (goto menu)
+if "%realmmenu%"=="" (goto realm_menu)
+goto realm_menu
+
+:realm_choose
+echo.
+set /P realmslot=Select a realm slot: 
+if "%realmslot%"=="1" (set realmslot=1)
+if "%realmslot%"=="2" (set realmslot=2)
+if "%realmslot%"=="3" (set realmslot=3)
+if "%realmslot%"=="4" (set realmslot=4)
+if "%realmslot%"=="5" (set realmslot=5)
+if "%realmslot%"=="6" (set realmslot=6)
+if "%realmslot%"=="7" (set realmslot=7)
+if "%realmslot%"=="8" (set realmslot=8)
+if "%realmslot%"=="9" (set realmslot=9)
+
+if "%realmslot%"=="1" (set realmport=8085)
+if "%realmslot%"=="2" (set realmport=8185)
+if "%realmslot%"=="3" (set realmport=8285)
+if "%realmslot%"=="4" (set realmport=8385)
+if "%realmslot%"=="5" (set realmport=8485)
+if "%realmslot%"=="6" (set realmport=8585)
+if "%realmslot%"=="7" (set realmport=8685)
+if "%realmslot%"=="8" (set realmport=8785)
+if "%realmslot%"=="9" (set realmport=8885)
+
+if "%realmslot%"=="" (goto realm_menu)
+
+if "%realmmenu%"=="1" (goto servers_start)
+if "%realmmenu%"=="2" (goto realm_add)
+if "%realmmenu%"=="3" (goto realm_remove)
+if "%realmmenu%"=="4" (start explorer.exe %mainfolder%\Realms\%realmslot%\Settings)
+goto menu
+
+:realm_add
+echo.
+set /P realmname=Enter the realm name: 
+set /P realmaddress=Enter the realm address (127.0.0.1 for offline play): 
+echo %realmname%>%mainfolder%\Realms\%realmslot%\name.txt
+%mainfolder%\Server\tools\fart.exe  -r -c -- %mainfolder%\Realms\%realmslot%\Settings\login.conf LoginREST.ExternalAddress=127.0.0.1 LoginREST.ExternalAddress=%realmaddress%
+echo REPLACE INTO `realmlist` VALUES (%realmslot%,'%realmname%','%realmaddress%','127.0.0.1','255.255.255.0',%realmport%,0,0,1,0,0,%gameversion%,2,1); > %mainfolder%\Realms\%realmslot%\realmlist.sql
+%mainfolder%\Server\Database\bin\mysql.exe --defaults-extra-file=%mainfolder%\Server\Database\connection.cnf --default-character-set=utf8 --database=%login% < %mainfolder%\Realms\%realmslot%\realmlist.sql
+set realmname%realmslot%=%realmname%
+echo.
+echo %realmname% (%realmaddress%) added to the realm list.
+pause
+goto realm_menu
+
+:realm_remove
+echo.
+del /s %mainfolder%\Realms\%realmslot%\name.txt
+del /s %mainfolder%\Realms\%realmslot%\Settings\login.conf
+del /s %mainfolder%\Realms\%realmslot%\Settings\realmlist.sql
+copy %mainfolder%\Realms\login.conf %mainfolder%\Realms\%realmslot%\Settings\login.conf
+echo DELETE FROM `realmlist` WHERE `ID` IN (%realmslot%); > %mainfolder%\Realms\%realmslot%\realmlist.sql
+%mainfolder%\Server\Database\bin\mysql.exe --defaults-extra-file=%mainfolder%\Server\Database\connection.cnf --default-character-set=utf8 --database=%login% < %mainfolder%\Realms\%realmslot%\realmlist.sql
+set realmname%realmslot%=
+echo.
+goto realm_menu
+
 :servers_start
-start Server\Tools\server_check.bat
+cls
+cd %mainfolder%\Realms\%realmslot%
+echo.
+echo Select your architecture.
+echo Win32 better for low-end pc or laptops.
+echo.
+echo 1 - Win32
+echo 2 - Win64
+echo.
+set /P savemenu=Select your option: 
+if "%savemenu%"=="1" (goto server_x86)
+if "%savemenu%"=="2" (goto server_x64)
+
+:server_x86
+cd %mainfolder%\Realms\%realmslot%
+start ..\..\Server\Bin\bnetserver.exe
+Start ..\..\Server\Bin\worldserver.exe
+REM start Server\Tools\server_check.bat
+goto menu
+
+:server_x64
+cd %mainfolder%\Realms\%realmslot%
+start ..\..\Server\Bin64\bnetserver.exe
+Start ..\..\Server\Bin64\worldserver.exe
+REM start Server\Tools\server_check.bat
 goto menu
 
 :servers_start_x64_without_support
@@ -502,21 +625,6 @@ start notepad Website\application\config\config.php
 start Server\Tools\SingleCoreLanSwitcher.exe
 goto ip_changer_check
 
-:ip_changer_check
-ping -n 2 127.0.0.1>nul
-cls
-echo.
-echo Change the server address in the IP Changer tool.
-echo Change the LoginREST.ExternalAddress in login.conf to the same address.
-echo.
-echo Change the $config['base_url'] address for the website. (keep the port number)
-echo.
-echo Close the IP Changer tool to continue...
-echo.
-tasklist /FI "IMAGENAME eq SingleCoreLanSwitcher.exe" 2>NUL | find /I /N "SingleCoreLanSwitcher">NUL
-if "%ERRORLEVEL%"=="0" goto ip_changer_check
-if "%ERRORLEVEL%"=="1" goto menu
-
 :shutdown_servers
 cls
 taskkill /f /im bnetserver.exe
@@ -681,17 +789,6 @@ goto service_menu
 :log_file
 notepad Server\Logs\server.log
 goto service_menu
-
-:name_changer
-cls
-echo.
-set /P servername=Enter the server new name: 
-echo UPDATE realmlist SET name='%servername%' WHERE id='1'; > sql\servername.sql
-Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%login% < sql\servername.sql
-echo.
-echo Server name changed to %servername%.
-pause
-goto menu
 
 :modmanager_menu
 cls
