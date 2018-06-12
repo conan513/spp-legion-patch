@@ -3,6 +3,7 @@ SET NAME=SingleCore_TC Updater
 TITLE %NAME%
 COLOR 0A
 set mod=%1
+set mainfolder=%CD%
 
 taskkill /f /im bnetserver.exe
 taskkill /f /im worldserver.exe
@@ -10,7 +11,7 @@ cls
 echo.
 echo Commit local changes before pull the update...
 echo.
-cd spp-legion
+cd "%mainfolder%\spp-legion"
 ..\git\cmd\git.exe config user.name "SPP User"
 ..\git\cmd\git.exe config user.email sppuser@spp.com
 ..\git\cmd\git.exe add Settings

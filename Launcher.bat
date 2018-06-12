@@ -32,223 +32,223 @@ set gameversion=26654
 REM --- Settings ---
 
 :start_database
-if not exist Saves\autosave mkdir Saves\autosave
+if not exist "%mainfolder%\Saves\autosave" mkdir "%mainfolder%\Saves\autosave"
 
-IF NOT EXIST "autosave.on" (
-  IF NOT EXIST "autosave.off" (
-    echo autosave > autosave.on
+IF NOT EXIST "%mainfolder%\autosave.on" (
+  IF NOT EXIST "%mainfolder%\autosave.off" (
+    echo autosave > "%mainfolder%\autosave.on"
   )
 )
 
-del ..\Update.bat
-del sql\ashamane\characters\2017_05_15_char_world_quest.sql
-del sql\ashamane\characters\2017_05_20_char_world_quest.sql
-del sql\ashamane\characters\2018_01_05_01_characters_world_quest.sql
-del sql\ashamane\characters\2018_01_14_01_charactes_world_quest.sql
-copy sql\2017_05_15_char_world_quest.sql sql\ashamane\characters
+del "%mainfolder%\..\Update.bat"
+del "%mainfolder%\sql\ashamane\characters\2017_05_15_char_world_quest.sql"
+del "%mainfolder%\sql\ashamane\characters\2017_05_20_char_world_quest.sql"
+del "%mainfolder%\sql\ashamane\characters\2018_01_05_01_characters_world_quest.sql"
+del "%mainfolder%\sql\ashamane\characters\2018_01_14_01_charactes_world_quest.sql"
+copy "%mainfolder%\sql\2017_05_15_char_world_quest.sql" "%mainfolder%\sql\ashamane\characters
 cls
 
-del /s sql\ashamane\world\2017_11_12_world_areatrigger.sql >nul 2>&1
-del /s sql\ashamane\world\2017_11_17_01_alter_gossip.sql >nul 2>&1
-del /s sql\ashamane\world\2017_11_17_02_creature_template_trigger.sql >nul 2>&1
-del /s sql\ashamane\world\2017_11_18_00_world.sql >nul 2>&1
-del /s sql\ashamane\world\2017_11_18_01_world.sql >nul 2>&1
-del /s sql\ashamane\world\2017_11_18_02_world.sql >nul 2>&1
-del /s sql\ashamane\world\2017_11_19_01_world.sql >nul 2>&1
-del /s sql\ashamane\world\2017_11_19_02_world_legion_creature_scaling.sql >nul 2>&1
-del /s sql\ashamane\world\2017_11_19_03_world_scene_template.sql >nul 2>&1
-del /s sql\ashamane\world\2017_11_19_04_world_spell_areatrigger.sql >nul 2>&1
-del /s sql\ashamane\world\2017_11_19_05_world_areatrigger_vertices.sql >nul 2>&1
-del /s sql\ashamane\world\2017_11_19_06_world_areatrigger_template.sql >nul 2>&1
-del /s sql\ashamane\world\2017_11_19_07_world_areatrigger_scriptname.sql >nul 2>&1
-del /s sql\ashamane\world\2017_11_22_01_world_mardum.sql >nul 2>&1
-del /s sql\ashamane\world\2017_11_24_01_world_creature_scaling.sql >nul 2>&1
-del /s sql\ashamane\world\2017_11_26_01_world_creature_template.sql >nul 2>&1
-del /s sql\ashamane\world\2017_11_29_01_world_tanaan_intro.sql >nul 2>&1
-del /s sql\ashamane\world\2017_11_29_01_world_tanaan_intro_phases.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_02_01_world_velen_waypoints.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_02_02_world_shadowmoon_begin.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_02_03_world_transports.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_02_04_world_at_mage_scriptname.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_02_05_world_scouting_map.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_02_06_world_misc.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_03_02_world_undead_start.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_04_01_world_misc.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_04_02_world_npc_custom_rate.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_04_03_world_gameobject_template.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_04_04_world_gameobject_lion_rest.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_05_01_world_spells_paladin.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_05_02_world_list_quest.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_05_03_world_mardum.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_05_04_world_phases_mardum.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_06_01_world_mardum.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_07_01_spell_mage.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_07_02_spell_mage.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_07_03_mardum.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_08_01_playerchoice.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_08_02_mardum.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_08_03_thousand_needles.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_09_01_world.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_10_01_spell_priest.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_10_02_spell_dk.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_10_04_acherus_upper_lower.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_10_05_spell_target_position.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_12_01_spell_paladin.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_12_01_world_minerais.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_13_01_world_item_loot.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_13_02_world_vendor.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_14_02_world_misc.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_14_03_world_mage.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_15_01_world_artifact_scriptname.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_15_02_world_misc.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_15_03_world_paladin.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_16_00_world.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_17_01_world_misc.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_19_01_world_misc.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_19_02_world_mage.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_20_01_world_tethyr.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_20_02_world_darkheart_thicket.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_20_03_world_suramar_cavern.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_21_01_world_gilneas.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_21_02_world_default.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_21_03_world_misc.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_28_01_world_areatrigger.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_29_01_world_instance_template.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_30_01_world_ud_start.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_30_02_world_transports.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_31_00_world.sql >nul 2>&1
-del /s sql\ashamane\world\2017_12_31_01_world_misc.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_01_01_world_misc.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_01_02_world_rare_mobs.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_01_03_world_quest_class_panda.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_02_01_world_quests.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_02_02_world_cre_template_732.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_02_03_world_quest_template_732.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_02_04_world_delete_duplicate.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_02_05_world_dalaran_karazhan.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_03_01_world_stormwind.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_03_02_world_misc.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_03_03_world_areatriggers.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_03_05_draenor_enchant_recipes.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_04_01_world_areatrigger_teleport.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_04_02_world_hunter_spells.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_04_03_world_hunter_spells.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_00_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_01_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_01_world_quest.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_02_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_02_world_blackmarket.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_03_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_03_world_scriptname.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_04_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_04_world_spell_script.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_05_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_06_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_07_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_08_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_09_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_10_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_11_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_12_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_13_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_14_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_15_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_16_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_17_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_18_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_19_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_20_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_05_21_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_06_00_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_06_01_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_06_02_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_06_03_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_06_04_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_06_04_world_spell_warrior.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_06_05_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_06_05_world_gob_template.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_06_06_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_06_06_world_creature_spawntime.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_06_07_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_07_00_world_trinity_string.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_07_01_world_arenas.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_07_02_world_arenas.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_07_03_world_misc.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_07_04_world_instance.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_07_05_world_disenchant.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_07_06_world_herbalism.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_08_00_world_gnome_zone.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_08_01_world_gnome_zone.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_09_00_world_gnome_intro.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_10_00_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_10_01_world_scriptname.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_10_02_world_locales.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_10_03_world_quest.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_11_01_world_scriptname.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_11_01_world_violet_hold.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_11_02_world_quest.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_11_03_world_vendor.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_12_01_world_pandaren.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_13_00_gilneas_quest.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_13_01_world_dk.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_13_02_world_pet.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_13_03_world_wandering_island.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_13_04_world_darkheart_thicket.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_14_01_world_quest_reward.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_15_01_world_gameobject.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_15_02_world_quest.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_15_03_world_sai.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_17_01_world_creature.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_18_01_scene_template.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_18_02_scriptname.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_19_01_misc.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_19_02_zone_script.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_19_03_spell.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_20_00_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_20_01_durotar.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_20_02_darkheart_thicket.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_20_02_pandaria_zone.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_20_03_battleground.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_21_00_battleground.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_21_01_spell_garrison_hearthstone.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_21_02_battleground.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_22_01_darkhearth_thicket.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_22_02_darkhearth_thicket.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_22_03_eye_of_azshara.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_23_01_dragonsoul_spellscript.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_23_02_gilneas.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_24_00_gilneas.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_24_01_gilneas.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_25_01_npc_vendor.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_28_00_world.sql >nul 2>&1
-del /s sql\ashamane\world\2018_01_31_01_spell_hunter.sql >nul 2>&1
-del /s sql\ashamane\hotfixes\2017_11_18_00_hotfixes.sql >nul 2>&1
-del /s sql\ashamane\hotfixes\2017_12_06_01_hotfixes_adventure_journal.sql >nul 2>&1
-del /s sql\ashamane\hotfixes\2018_01_01_00_hotfixes.sql >nul 2>&1
-del /s sql\ashamane\hotfixes\2018_01_01_01_hotfixes_global_strings.sql >nul 2>&1
-del /s sql\ashamane\hotfixes\2018_01_02_01_hotfixes_broadcast_text.sql >nul 2>&1
-del /s sql\ashamane\hotfixes\2018_01_04_00_hotfixes.sql >nul 2>&1
-del /s sql\ashamane\hotfixes\2018_01_04_01_hotfixes.sql >nul 2>&1
-del /s sql\ashamane\hotfixes\2018_01_04_02_hotfixes.sql >nul 2>&1
-del /s sql\ashamane\hotfixes\2018_01_05_00_hotfixes.sql >nul 2>&1
-del /s sql\ashamane\hotfixes\2018_01_05_01_hotfixes.sql >nul 2>&1
-del /s sql\ashamane\hotfixes\2018_01_05_02_hotfixes.sql >nul 2>&1
-del /s sql\ashamane\hotfixes\2018_01_05_03_hotfixes.sql >nul 2>&1
-del /s sql\ashamane\hotfixes\2018_01_05_04_hotfixes.sql >nul 2>&1
-del /s sql\ashamane\hotfixes\2018_01_05_05_hotfixes.sql >nul 2>&1
-del /s sql\ashamane\hotfixes\2018_01_05_06_hotfixes.sql >nul 2>&1
-del /s sql\ashamane\hotfixes\2018_01_07_00_hotfixes_pvp_talents.sql >nul 2>&1
-rmdir /S /Q %mainfolder%\Settings
+del /s "%mainfolder%\sql\ashamane\world\2017_11_12_world_areatrigger.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_11_17_01_alter_gossip.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_11_17_02_creature_template_trigger.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_11_18_00_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_11_18_01_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_11_18_02_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_11_19_01_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_11_19_02_world_legion_creature_scaling.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_11_19_03_world_scene_template.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_11_19_04_world_spell_areatrigger.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_11_19_05_world_areatrigger_vertices.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_11_19_06_world_areatrigger_template.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_11_19_07_world_areatrigger_scriptname.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_11_22_01_world_mardum.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_11_24_01_world_creature_scaling.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_11_26_01_world_creature_template.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_11_29_01_world_tanaan_intro.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_11_29_01_world_tanaan_intro_phases.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_02_01_world_velen_waypoints.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_02_02_world_shadowmoon_begin.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_02_03_world_transports.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_02_04_world_at_mage_scriptname.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_02_05_world_scouting_map.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_02_06_world_misc.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_03_02_world_undead_start.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_04_01_world_misc.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_04_02_world_npc_custom_rate.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_04_03_world_gameobject_template.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_04_04_world_gameobject_lion_rest.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_05_01_world_spells_paladin.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_05_02_world_list_quest.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_05_03_world_mardum.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_05_04_world_phases_mardum.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_06_01_world_mardum.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_07_01_spell_mage.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_07_02_spell_mage.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_07_03_mardum.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_08_01_playerchoice.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_08_02_mardum.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_08_03_thousand_needles.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_09_01_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_10_01_spell_priest.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_10_02_spell_dk.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_10_04_acherus_upper_lower.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_10_05_spell_target_position.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_12_01_spell_paladin.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_12_01_world_minerais.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_13_01_world_item_loot.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_13_02_world_vendor.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_14_02_world_misc.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_14_03_world_mage.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_15_01_world_artifact_scriptname.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_15_02_world_misc.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_15_03_world_paladin.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_16_00_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_17_01_world_misc.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_19_01_world_misc.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_19_02_world_mage.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_20_01_world_tethyr.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_20_02_world_darkheart_thicket.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_20_03_world_suramar_cavern.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_21_01_world_gilneas.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_21_02_world_default.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_21_03_world_misc.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_28_01_world_areatrigger.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_29_01_world_instance_template.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_30_01_world_ud_start.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_30_02_world_transports.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_31_00_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2017_12_31_01_world_misc.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_01_01_world_misc.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_01_02_world_rare_mobs.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_01_03_world_quest_class_panda.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_02_01_world_quests.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_02_02_world_cre_template_732.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_02_03_world_quest_template_732.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_02_04_world_delete_duplicate.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_02_05_world_dalaran_karazhan.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_03_01_world_stormwind.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_03_02_world_misc.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_03_03_world_areatriggers.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_03_05_draenor_enchant_recipes.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_04_01_world_areatrigger_teleport.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_04_02_world_hunter_spells.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_04_03_world_hunter_spells.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_00_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_01_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_01_world_quest.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_02_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_02_world_blackmarket.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_03_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_03_world_scriptname.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_04_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_04_world_spell_script.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_05_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_06_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_07_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_08_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_09_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_10_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_11_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_12_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_13_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_14_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_15_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_16_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_17_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_18_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_19_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_20_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_05_21_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_06_00_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_06_01_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_06_02_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_06_03_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_06_04_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_06_04_world_spell_warrior.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_06_05_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_06_05_world_gob_template.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_06_06_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_06_06_world_creature_spawntime.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_06_07_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_07_00_world_trinity_string.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_07_01_world_arenas.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_07_02_world_arenas.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_07_03_world_misc.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_07_04_world_instance.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_07_05_world_disenchant.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_07_06_world_herbalism.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_08_00_world_gnome_zone.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_08_01_world_gnome_zone.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_09_00_world_gnome_intro.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_10_00_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_10_01_world_scriptname.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_10_02_world_locales.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_10_03_world_quest.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_11_01_world_scriptname.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_11_01_world_violet_hold.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_11_02_world_quest.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_11_03_world_vendor.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_12_01_world_pandaren.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_13_00_gilneas_quest.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_13_01_world_dk.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_13_02_world_pet.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_13_03_world_wandering_island.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_13_04_world_darkheart_thicket.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_14_01_world_quest_reward.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_15_01_world_gameobject.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_15_02_world_quest.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_15_03_world_sai.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_17_01_world_creature.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_18_01_scene_template.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_18_02_scriptname.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_19_01_misc.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_19_02_zone_script.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_19_03_spell.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_20_00_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_20_01_durotar.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_20_02_darkheart_thicket.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_20_02_pandaria_zone.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_20_03_battleground.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_21_00_battleground.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_21_01_spell_garrison_hearthstone.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_21_02_battleground.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_22_01_darkhearth_thicket.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_22_02_darkhearth_thicket.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_22_03_eye_of_azshara.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_23_01_dragonsoul_spellscript.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_23_02_gilneas.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_24_00_gilneas.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_24_01_gilneas.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_25_01_npc_vendor.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_28_00_world.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\world\2018_01_31_01_spell_hunter.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\hotfixes\2017_11_18_00_hotfixes.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\hotfixes\2017_12_06_01_hotfixes_adventure_journal.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_01_00_hotfixes.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_01_01_hotfixes_global_strings.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_02_01_hotfixes_broadcast_text.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_04_00_hotfixes.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_04_01_hotfixes.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_04_02_hotfixes.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_05_00_hotfixes.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_05_01_hotfixes.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_05_02_hotfixes.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_05_03_hotfixes.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_05_04_hotfixes.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_05_05_hotfixes.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_05_06_hotfixes.sql" >nul 2>&1
+del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_07_00_hotfixes_pvp_talents.sql" >nul 2>&1
+rmdir /S /Q "%mainfolder%\Settings
 
-copy Server\Tools\Update.bat ..
-start "" /min Server\Database\start.bat
+copy "%mainfolder%\Server\Tools\Update.bat" ..
+start "" /min "%mainfolder%\Server\Database\start.bat"
 goto webserver
 
 :webserver
-cd Server\Apache24
+cd "%mainfolder%\Server\Apache24"
 start "" /min apache_start.bat
 cd ..\..
-if exist ADB_world_735.00.sql goto menu
+if exist "%mainfolder%\ADB_world_735.00.sql" goto menu
 goto reset_world
 
 :menu
@@ -283,15 +283,15 @@ goto menu
 cls
 echo.
 
-if exist Realms\1\name.txt set /p realmname1=<Realms\1\name.txt
-if exist Realms\2\name.txt set /p realmname2=<Realms\2\name.txt
-if exist Realms\3\name.txt set /p realmname3=<Realms\3\name.txt
-if exist Realms\4\name.txt set /p realmname4=<Realms\4\name.txt
-if exist Realms\5\name.txt set /p realmname5=<Realms\5\name.txt
-if exist Realms\6\name.txt set /p realmname6=<Realms\6\name.txt
-if exist Realms\7\name.txt set /p realmname7=<Realms\7\name.txt
-if exist Realms\8\name.txt set /p realmname8=<Realms\8\name.txt
-if exist Realms\9\name.txt set /p realmname9=<Realms\9\name.txt
+if exist "%mainfolder%\Realms\1\name.txt" set /p realmname1=<"%mainfolder%\Realms\1\name.txt"
+if exist "%mainfolder%\Realms\2\name.txt" set /p realmname2=<"%mainfolder%\Realms\2\name.txt"
+if exist "%mainfolder%\Realms\3\name.txt" set /p realmname3=<"%mainfolder%\Realms\3\name.txt"
+if exist "%mainfolder%\Realms\4\name.txt" set /p realmname4=<"%mainfolder%\Realms\4\name.txt"
+if exist "%mainfolder%\Realms\5\name.txt" set /p realmname5=<"%mainfolder%\Realms\5\name.txt"
+if exist "%mainfolder%\Realms\6\name.txt" set /p realmname6=<"%mainfolder%\Realms\6\name.txt"
+if exist "%mainfolder%\Realms\7\name.txt" set /p realmname7=<"%mainfolder%\Realms\7\name.txt"
+if exist "%mainfolder%\Realms\8\name.txt" set /p realmname8=<"%mainfolder%\Realms\8\name.txt"
+if exist "%mainfolder%\Realms\9\name.txt" set /p realmname9=<"%mainfolder%\Realms\9\name.txt"
 
 echo Single Player Project realm starter menu.
 echo Select a slot where you want to save your characters.
@@ -355,17 +355,17 @@ if "%realmslot%"=="" (goto realm_menu)
 if "%realmmenu%"=="1" (goto servers_start)
 if "%realmmenu%"=="2" (goto realm_add)
 if "%realmmenu%"=="3" (goto realm_remove)
-if "%realmmenu%"=="4" (start explorer.exe %mainfolder%\Realms\%realmslot%\Settings)
+if "%realmmenu%"=="4" (start explorer.exe "%mainfolder%\Realms\%realmslot%\Settings")
 goto menu
 
 :realm_add
 echo.
 set /P realmname=Enter the realm name: 
 set /P realmaddress=Enter the realm address (127.0.0.1 for offline play): 
-echo %realmname%>%mainfolder%\Realms\%realmslot%\name.txt
-%mainfolder%\Server\tools\fart.exe  -r -c -- %mainfolder%\Realms\%realmslot%\Settings\login.conf LoginREST.ExternalAddress=127.0.0.1 LoginREST.ExternalAddress=%realmaddress%
-echo REPLACE INTO `realmlist` VALUES (%realmslot%,'%realmname%','%realmaddress%','127.0.0.1','255.255.255.0',%realmport%,0,0,1,0,0,%gameversion%,2,1); > %mainfolder%\Realms\%realmslot%\realmlist.sql
-%mainfolder%\Server\Database\bin\mysql.exe --defaults-extra-file=%mainfolder%\Server\Database\connection.cnf --default-character-set=utf8 --database=%login% < %mainfolder%\Realms\%realmslot%\realmlist.sql
+echo %realmname%>"%mainfolder%\Realms\%realmslot%\name.txt"
+"%mainfolder%\Server\tools\fart.exe"  -r -c -- "%mainfolder%\Realms\%realmslot%\Settings\login.conf" LoginREST.ExternalAddress=127.0.0.1 LoginREST.ExternalAddress=%realmaddress%
+echo REPLACE INTO `realmlist` VALUES (%realmslot%,'%realmname%','%realmaddress%','127.0.0.1','255.255.255.0',%realmport%,0,0,1,0,0,%gameversion%,2,1); > "%mainfolder%\Realms\%realmslot%\realmlist.sql"
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%login% < "%mainfolder%\Realms\%realmslot%\realmlist.sql"
 set realmname%realmslot%=%realmname%
 echo.
 echo %realmname% (%realmaddress%) added to the realm list.
@@ -374,19 +374,19 @@ goto realm_menu
 
 :realm_remove
 echo.
-del /s %mainfolder%\Realms\%realmslot%\name.txt
-del /s %mainfolder%\Realms\%realmslot%\Settings\login.conf
-del /s %mainfolder%\Realms\%realmslot%\Settings\realmlist.sql
-copy %mainfolder%\Realms\login.conf %mainfolder%\Realms\%realmslot%\Settings\login.conf
-echo DELETE FROM `realmlist` WHERE `ID` IN (%realmslot%); > %mainfolder%\Realms\%realmslot%\realmlist.sql
-%mainfolder%\Server\Database\bin\mysql.exe --defaults-extra-file=%mainfolder%\Server\Database\connection.cnf --default-character-set=utf8 --database=%login% < %mainfolder%\Realms\%realmslot%\realmlist.sql
+del /s "%mainfolder%\Realms\%realmslot%\name.txt"
+del /s "%mainfolder%\Realms\%realmslot%\Settings\login.conf"
+del /s "%mainfolder%\Realms\%realmslot%\Settings\realmlist.sql"
+copy "%mainfolder%\Realms\login.conf" "%mainfolder%\Realms\%realmslot%\Settings\login.conf"
+echo DELETE FROM `realmlist` WHERE `ID` IN (%realmslot%); > "%mainfolder%\Realms\%realmslot%\realmlist.sql"
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%login% < "%mainfolder%\Realms\%realmslot%\realmlist.sql"
 set realmname%realmslot%=
 echo.
 goto realm_menu
 
 :servers_start
 cls
-cd %mainfolder%\Realms\%realmslot%
+cd "%mainfolder%\Realms\%realmslot%
 echo.
 echo Select your architecture.
 echo Win32 better for low-end pc or laptops.
@@ -399,37 +399,33 @@ if "%savemenu%"=="1" (goto server_x86)
 if "%savemenu%"=="2" (goto server_x64)
 
 :server_x86
-cd %mainfolder%\Realms\%realmslot%
+cd "%mainfolder%\Realms\%realmslot%"
 start ..\..\Server\Bin\bnetserver.exe
 Start ..\..\Server\Bin\worldserver.exe
-REM start Server\Tools\server_check.bat
+REM start Server\Tools\server_check.bat"
 goto menu
 
 :server_x64
-cd %mainfolder%\Realms\%realmslot%
+cd "%mainfolder%\Realms\%realmslot%"
 start ..\..\Server\Bin64\bnetserver.exe
 Start ..\..\Server\Bin64\worldserver.exe
-REM start Server\Tools\server_check.bat
-goto menu
-
-:servers_start_x64_without_support
-start Server\Tools\server_check_x64_without_donation.bat
+REM start Server\Tools\server_check.bat"
 goto menu
 
 :save_menu
 cls
-if exist autosave.on set autosave=ON
-if exist autosave.off set autosave=OFF
-if not exist Saves mkdir Saves
-if not exist Saves\1 mkdir Saves\1
-if not exist Saves\2 mkdir Saves\2
-if not exist Saves\3 mkdir Saves\3
-if not exist Saves\4 mkdir Saves\4
-if not exist Saves\5 mkdir Saves\5
-if not exist Saves\6 mkdir Saves\6
-if not exist Saves\7 mkdir Saves\7
-if not exist Saves\8 mkdir Saves\8
-if not exist Saves\9 mkdir Saves\9
+if exist "%mainfolder%\autosave.on" set autosave=ON
+if exist "%mainfolder%\autosave.off" set autosave=OFF
+if not exist "%mainfolder%\Saves" mkdir "%mainfolder%\Saves"
+if not exist "%mainfolder%\Saves\1" mkdir "%mainfolder%\Saves\1"
+if not exist "%mainfolder%\Saves\2" mkdir "%mainfolder%\Saves\2"
+if not exist "%mainfolder%\Saves\3" mkdir "%mainfolder%\Saves\3"
+if not exist "%mainfolder%\Saves\4" mkdir "%mainfolder%\Saves\4"
+if not exist "%mainfolder%\Saves\5" mkdir "%mainfolder%\Saves\5"
+if not exist "%mainfolder%\Saves\6" mkdir "%mainfolder%\Saves\6"
+if not exist "%mainfolder%\Saves\7" mkdir "%mainfolder%\Saves\7"
+if not exist "%mainfolder%\Saves\8" mkdir "%mainfolder%\Saves\8"
+if not exist "%mainfolder%\Saves\9" mkdir "%mainfolder%\Saves\9"
 cls
 echo.
 set customname1=Empty slot
@@ -442,15 +438,15 @@ set customname7=Empty slot
 set customname8=Empty slot
 set customname9=Empty slot
 
-if exist Saves\1\name.txt set /p customname1=<Saves\1\name.txt
-if exist Saves\2\name.txt set /p customname2=<Saves\2\name.txt
-if exist Saves\3\name.txt set /p customname3=<Saves\3\name.txt
-if exist Saves\4\name.txt set /p customname4=<Saves\4\name.txt
-if exist Saves\5\name.txt set /p customname5=<Saves\5\name.txt
-if exist Saves\6\name.txt set /p customname6=<Saves\6\name.txt
-if exist Saves\7\name.txt set /p customname7=<Saves\7\name.txt
-if exist Saves\8\name.txt set /p customname8=<Saves\8\name.txt
-if exist Saves\9\name.txt set /p customname9=<Saves\9\name.txt
+if exist "%mainfolder%\Saves\1\name.txt" set /p customname1=<"%mainfolder%\Saves\1\name.txt"
+if exist "%mainfolder%\Saves\2\name.txt" set /p customname2=<"%mainfolder%\Saves\2\name.txt"
+if exist "%mainfolder%\Saves\3\name.txt" set /p customname3=<"%mainfolder%\Saves\3\name.txt"
+if exist "%mainfolder%\Saves\4\name.txt" set /p customname4=<"%mainfolder%\Saves\4\name.txt"
+if exist "%mainfolder%\Saves\5\name.txt" set /p customname5=<"%mainfolder%\Saves\5\name.txt"
+if exist "%mainfolder%\Saves\6\name.txt" set /p customname6=<"%mainfolder%\Saves\6\name.txt"
+if exist "%mainfolder%\Saves\7\name.txt" set /p customname7=<"%mainfolder%\Saves\7\name.txt"
+if exist "%mainfolder%\Saves\8\name.txt" set /p customname8=<"%mainfolder%\Saves\8\name.txt"
+if exist "%mainfolder%\Saves\9\name.txt" set /p customname9=<"%mainfolder%\Saves\9\name.txt"
 
 echo Single Player Project save manager.
 echo Select a slot where you want to save your characters.
@@ -508,7 +504,7 @@ if "%savemenu%"=="3" (goto delete_saveslot_check)
 
 :delete_saveslot_check
 cls
-if exist Saves\%saveslot%\characters.sql goto delete_saveslot
+if exist "%mainfolder%\Saves\%saveslot%\characters.sql" goto delete_saveslot
 echo.
 echo This slot is empty. You can't delete the nothing...
 echo.
@@ -527,10 +523,10 @@ cls
 echo.
 echo Removing the selected Save %saveslot% files...
 echo.
-del Saves\%saveslot%\realmd.sql
-del Saves\%saveslot%\characters.sql
-del Saves\%saveslot%\blizzcms.sql
-del Saves\%saveslot%\name.txt
+del "%mainfolder%\Saves\%saveslot%\realmd.sql"
+del "%mainfolder%\Saves\%saveslot%\characters.sql"
+del "%mainfolder%\Saves\%saveslot%\blizzcms.sql"
+del "%mainfolder%\Saves\%saveslot%\name.txt"
 echo.
 echo Save %saveslot% is empty now.
 echo.
@@ -538,7 +534,7 @@ goto save_menu
 
 :export_char_check
 cls
-if exist Saves\%saveslot%\characters.sql goto export_char
+if exist "%mainfolder%\Saves\%saveslot%\characters.sql" goto export_char
 goto export_char_1
 
 :export_char
@@ -554,18 +550,18 @@ if "%menu%"=="y" (goto export_char_1)
 cls
 echo.
 set /P slotname=Add a name for the selected save slot: 
-echo %slotname%>Saves\%saveslot%\name.txt
+echo %slotname%>"%mainfolder%\Saves\%saveslot%\name.txt"
 echo.
 echo Exporting accounts...please wait...
-Server\Database\bin\mysqldump.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 %login% > "Saves\%saveslot%\%login%.sql"
+"%mainfolder%\Server\Database\bin\mysqldump.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 %login% > "%mainfolder%\Saves\%saveslot%\%login%.sql"
 echo Done!
 echo.
 echo Exporting characters...please wait...
-Server\Database\bin\mysqldump.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 %characters% > Saves\%saveslot%\%characters%.sql
+"%mainfolder%\Server\Database\bin\mysqldump.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 %characters% > "%mainfolder%\Saves\%saveslot%\%characters%.sql"
 echo Done!
 echo.
 echo Exporting website data...please wait...
-Server\Database\bin\mysqldump.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 %website% > Saves\%saveslot%\%website%.sql
+"%mainfolder%\Server\Database\bin\mysqldump.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 %website% > "%mainfolder%\Saves\%saveslot%\%website%.sql"
 echo Done!
 echo.
 echo Every user data exported.
@@ -576,7 +572,7 @@ goto menu
 
 :import_char_check
 cls
-if exist Saves\%saveslot%\characters.sql goto import_char
+if exist "%mainfolder%\Saves\%saveslot%\characters.sql" goto import_char
 echo.
 echo This slot is empty.
 echo Please select another slot.
@@ -598,15 +594,15 @@ if "%menu%"=="y" (goto import_char_1)
 cls
 echo.
 echo Importing accounts from the selected save file...please wait...
-Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%login% < Saves\%saveslot%\%login%.sql
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%login% < "%mainfolder%\Saves\%saveslot%\%login%.sql"
 echo Done!
 echo.
 echo Importing characters from the selected save file...please wait...
-Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%characters% < Saves\%saveslot%\%characters%.sql
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%characters% < "%mainfolder%\Saves\%saveslot%\%characters%.sql"
 echo Done!
 echo.
 echo Importing Website data from the selected save file...please wait...
-Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%website% < Saves\%saveslot%\%website%.sql
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%website% < "%mainfolder%\Saves\%saveslot%\%website%.sql"
 echo Done!
 echo.
 echo Every user data import completed.
@@ -620,9 +616,9 @@ ping -n 5 127.0.0.1>nul
 goto menu
 
 :ip_changer
-start notepad Settings\login.conf
-start notepad Website\application\config\config.php
-start Server\Tools\SingleCoreLanSwitcher.exe
+start notepad "%mainfolder%\Settings\login.conf"
+start notepad "%mainfolder%\Website\application\config\config.php"
+start "%mainfolder%\Server\Tools\SingleCoreLanSwitcher.exe"
 goto ip_changer_check
 
 :shutdown_servers
@@ -631,7 +627,7 @@ taskkill /f /im bnetserver.exe
 taskkill /f /im worldserver.exe
 taskkill /f /im spp-httpd.exe
 if exist autosave.on goto autosave_shutdown
-Server\Database\bin\mysqladmin -u root -p123456 --port=3310 shutdown
+"%mainfolder%\Server\Database\bin\mysqladmin.exe" -u root -p123456 --port=3310 shutdown
 goto exit
 
 :autosave_shutdown
@@ -642,18 +638,18 @@ echo # Autosave is on! #
 echo ###################
 echo.
 echo Exporting accounts...please wait...
-Server\Database\bin\mysqldump.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 %login% > "Saves\%saveslot%\%login%.sql"
+"%mainfolder%\Server\Database\bin\mysqldump.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 %login% > "%mainfolder%\Saves\%saveslot%\%login%.sql"
 echo Done!
 echo.
 echo Exporting characters...please wait...
-Server\Database\bin\mysqldump.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 %characters% > Saves\%saveslot%\%characters%.sql
+"%mainfolder%\Server\Database\bin\mysqldump.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 %characters% > "%mainfolder%\Saves\%saveslot%\%characters%.sql"
 echo Done!
 echo.
 echo Exporting website data...please wait...
-Server\Database\bin\mysqldump.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 %website% > Saves\%saveslot%\%website%.sql
+"%mainfolder%\Server\Database\bin\mysqldump.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 %website% > "%mainfolder%\Saves\%saveslot%\%website%.sql"
 echo Done!
 echo.
-Server\Database\bin\mysqladmin -u root -p123456 --port=3310 shutdown
+"%mainfolder%\Server\Database\bin\mysqladmin.exe" -u root -p123456 --port=3310 shutdown
 goto exit
 
 :reset_world
@@ -663,20 +659,20 @@ echo Are you sure want to reset your world and hotfix database?
 echo You must do this on first start to get the latest AshamaneCore database.
 echo.
 pause
-Server\Tools\7za.exe e -y sql\ADB735.00.7z
+"%mainfolder%\Server\Tools\7za.exe e -y "%mainfolder%\sql\ADB735.00.7z
 echo.
 echo Clear %world% and %hotfixes% database.
 echo.
-Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 < sql\drop_mysql.sql
-Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 < sql\create_mysql.sql
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 < "%mainfolder%\sql\drop_mysql.sql"
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 < "%mainfolder%\sql\create_mysql.sql"
 echo.
 echo Importing %worldfile% into %world% database.
 echo.
-Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%world% < %worldfile%
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%world% < %worldfile%
 echo.
 echo Importing %hotfixesfile% into %hotfixes% database.
 echo.
-Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%hotfixes% < %hotfixesfile%
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%hotfixes% < %hotfixesfile%
 echo.
 echo Done!
 pause
@@ -726,30 +722,30 @@ if "%menu%"=="" (goto menu)
 :vcredist_install_x86
 cls
 echo.
-"Addons\vcredist\2005 Updated\vcredist_x86.exe" /Q
-"Addons\vcredist\2008 SP1\vcredist_x86.exe" /qb
-"Addons\vcredist\2010\vcredist_x86.exe" /passive /norestart
-"Addons\vcredist\2012 Update 4\vcredist_x86.exe" /passive /norestart
-"Addons\vcredist\2013\vcredist_x86.exe" /install /passive /norestart
-"Addons\vcredist\2015 Update 3\vc_redist.x86.exe" /install /passive /norestart
-"Addons\vcredist\2017\vc_redist.x86.exe" /install /passive /norestart
+"%mainfolder%\Addons\vcredist\2005 Updated\vcredist_x86.exe" /Q
+"%mainfolder%\Addons\vcredist\2008 SP1\vcredist_x86.exe" /qb
+"%mainfolder%\Addons\vcredist\2010\vcredist_x86.exe" /passive /norestart
+"%mainfolder%\Addons\vcredist\2012 Update 4\vcredist_x86.exe" /passive /norestart
+"%mainfolder%\Addons\vcredist\2013\vcredist_x86.exe" /install /passive /norestart
+"%mainfolder%\Addons\vcredist\2015 Update 3\vc_redist.x86.exe" /install /passive /norestart
+"%mainfolder%\Addons\vcredist\2017\vc_redist.x86.exe" /install /passive /norestart
 goto service_menu
 
 :vcredist_install_x64
 cls
 echo.
-"Addons\vcredist\2005 Updated\vcredist_x64.exe" /Q
-"Addons\vcredist\2008 SP1\vcredist_x64.exe" /qb
-"Addons\vcredist\2010\vcredist_x64.exe" /passive /norestart
-"Addons\vcredist\2012 Update 4\vcredist_x64.exe" /passive /norestart
-"Addons\vcredist\2013\vcredist_x64.exe" /install /passive /norestart
-"Addons\vcredist\2015 Update 3\vc_redist.x64.exe" /install /passive /norestart
-"Addons\vcredist\2017\vc_redist.x64.exe" /install /passive /norestart
+"%mainfolder%\Addons\vcredist\2005 Updated\vcredist_x64.exe" /Q
+"%mainfolder%\Addons\vcredist\2008 SP1\vcredist_x64.exe" /qb
+"%mainfolder%\Addons\vcredist\2010\vcredist_x64.exe" /passive /norestart
+"%mainfolder%\Addons\vcredist\2012 Update 4\vcredist_x64.exe" /passive /norestart
+"%mainfolder%\Addons\vcredist\2013\vcredist_x64.exe" /install /passive /norestart
+"%mainfolder%\Addons\vcredist\2015 Update 3\vc_redist.x64.exe" /install /passive /norestart
+"%mainfolder%\Addons\vcredist\2017\vc_redist.x64.exe" /install /passive /norestart
 goto service_menu
 
 :update_dbc_maps
 cls
-cd Server\Data
+cd "%mainfolder%\Server\Data"
 ..\Tools\wget.exe -N http://dl.ashamane.com/7.3.5/%dbc_maps%
 rmdir /S /Q cameras
 rmdir /S /Q dbc
@@ -764,7 +760,7 @@ goto service_menu
 
 :update_vmaps
 cls
-cd Server\Data
+cd "%mainfolder%\Server\Data"
 ..\Tools\wget.exe -N http://dl.ashamane.com/7.3.5/%vmaps%
 rmdir /S /Q vmaps
 ..\Tools\rar.exe x %vmaps%
@@ -776,7 +772,7 @@ goto service_menu
 
 :update_mmaps
 cls
-cd Server\Data
+cd "%mainfolder%\Server\Data"
 ..\Tools\wget.exe -N http://dl.ashamane.com/7.3.5/%mmaps%
 rmdir /S /Q mmaps
 ..\Tools\rar.exe x %mmaps%
@@ -787,19 +783,19 @@ cd ..\..
 goto service_menu
 
 :log_file
-notepad Server\Logs\server.log
+notepad "%mainfolder%\Server\Logs\server.log"
 goto service_menu
 
 :modmanager_menu
 cls
-if exist vendor\autoload.php goto modmanager_menu_1
+if exist "%mainfolder%\vendor\autoload.php" goto modmanager_menu_1
 echo Installing modmanager components...
-Server\php5\php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-Server\php5\php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-Server\php5\php composer-setup.php
-Server\php5\php -r "unlink('composer-setup.php');"
+"%mainfolder%\Server\php5\php.exe" -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+"%mainfolder%\Server\php5\php.exe" -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+"%mainfolder%\Server\php5\php.exe" composer-setup.php
+"%mainfolder%\Server\php5\php.exe" -r "unlink('composer-setup.php');"
 echo.
-Server\php5\php composer.phar require "dbdiff/dbdiff:@dev"
+"%mainfolder%\Server\php5\php.exe" composer.phar require "dbdiff/dbdiff:@dev"
 echo.
 :modmanager_menu_1
 cls
@@ -828,44 +824,44 @@ cls
 echo.
 echo Prepare to exporting %world% database changes...
 echo.
-Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 < sql\mod_drop_mysql.sql
-Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 < sql\mod_create_mysql.sql
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf --default-character-set=utf8 < "%mainfolder%\sql\mod_drop_mysql.sql"
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf --default-character-set=utf8 < "%mainfolder%\sql\mod_create_mysql.sql"
 echo.
 echo Importing %worldfile% into %world_clean% database.
 echo.
-Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%world_clean% < %worldfile%
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%world_clean% < %worldfile%
 echo.
 echo Importing %world% updates...
-for %%i in (sql\ashamane\world\*sql) do if %%i neq sql\ashamane\world\*sql if %%i neq sql\ashamane\world\*sql if %%i neq sql\ashamane\world\*sql echo %%i & Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%world_clean% < %%i
-Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%world_clean% < sql\custom\world\2017_01_01_01_artifact_weapon_vendor.sql
-Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%world_clean% < sql\custom\world\2017_03_10_item_enchatment_random_tiers.sql
-Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 --database=%world_clean% < sql\custom\world\2018_04_11_00_azeroth_choppers_vendor.sql
+for %%i in ("%mainfolder%\sql\ashamane\world\*sql") do if %%i neq "%mainfolder%\sql\ashamane\world\*sql" if %%i neq "%mainfolder%\sql\ashamane\world\*sql" if %%i neq "%mainfolder%\sql\ashamane\world\*sql" echo %%i & "%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%world_clean% < %%i
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%world_clean% < "%mainfolder%\sql\custom\world\2017_01_01_01_artifact_weapon_vendor.sql"
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%world_clean% < "%mainfolder%\sql\custom\world\2017_03_10_item_enchatment_random_tiers.sql"
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%world_clean% < "%mainfolder%\sql\custom\world\2018_04_11_00_azeroth_choppers_vendor.sql"
 echo.
-echo Exporting changes to world_mods.sql files...
+echo Exporting changes to world_mods.sql" files...
 echo.
-Server\php5\php vendor/dbdiff/dbdiff/dbdiff --include=up --output=../world_mods.sql server1.world:server2.world_clean
+"%mainfolder%\Server\php5\php.exe" "%mainfolder%/vendor/dbdiff/dbdiff/dbdiff" --include=up --output=../world_mods.sql" server1.world:server2.world_clean
 echo.
 echo The mod file available in the main folder.
 echo Others need to copy this file into spp-legion\sql\custom\world folder 
 echo and start the servers to activate it.
 echo.
 pause
-Server\Database\bin\mysql.exe --defaults-extra-file=Server\Database\connection.cnf --default-character-set=utf8 < sql\mod_drop_mysql.sql
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 < "%mainfolder%\sql\mod_drop_mysql.sql"
 goto modmanager_menu
 
 :autosave_switch
-if exist autosave.on goto autosave_off
-if exist autosave.off goto autosave_on
+if exist "%mainfolder%\autosave.on" goto autosave_off
+if exist "%mainfolder%\autosave.off" goto autosave_on
 
 :autosave_off
 cls
-del autosave.on
-echo autosave > autosave.off
+del "%mainfolder%\autosave.on"
+echo autosave > "%mainfolder%\autosave.off"
 goto save_menu
 
 :autosave_on
-del autosave.off
-echo autosave > autosave.on
+del "%mainfolder%\autosave.off"
+echo autosave > "%mainfolder%\autosave.on"
 goto save_menu
 
 :exit
