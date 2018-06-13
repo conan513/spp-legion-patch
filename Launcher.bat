@@ -32,6 +32,17 @@ set gameversion=26654
 REM --- Settings ---
 
 :start_database
+if not exist "%mainfolder%\Server\Data\dbc\deDE.7z" goto install_deDE
+if not exist "%mainfolder%\Server\Data\dbc\enUS.7z" goto install_enUS
+if not exist "%mainfolder%\Server\Data\dbc\esES.7z" goto install_esES
+if not exist "%mainfolder%\Server\Data\dbc\esMX.7z" goto install_esMX
+if not exist "%mainfolder%\Server\Data\dbc\frFR.7z" goto install_frFR
+if not exist "%mainfolder%\Server\Data\dbc\itIT.7z" goto install_itIT
+if not exist "%mainfolder%\Server\Data\dbc\koKR.7z" goto install_koKR
+if not exist "%mainfolder%\Server\Data\dbc\ptBR.7z" goto install_ptBR
+if not exist "%mainfolder%\Server\Data\dbc\ruRU.7z" goto install_ruRU
+if not exist "%mainfolder%\Server\Data\dbc\zhCN.7z" goto install_zhCN
+if not exist "%mainfolder%\Server\Data\dbc\zhTW.7z" goto install_zhTW
 if not exist "%mainfolder%\Saves\autosave" mkdir "%mainfolder%\Saves\autosave"
 
 IF NOT EXIST "%mainfolder%\autosave.on" (
@@ -39,6 +50,8 @@ IF NOT EXIST "%mainfolder%\autosave.on" (
     echo autosave > "%mainfolder%\autosave.on"
   )
 )
+
+IF NOT EXIST "%mainfolder%\Realms\1\serverlanguage.txt" echo English> "%mainfolder%\Realms\1\serverlanguage.txt"
 
 del "%mainfolder%\..\Update.bat"
 del "%mainfolder%\sql\ashamane\characters\2017_05_15_char_world_quest.sql"
@@ -266,6 +279,8 @@ echo 2  -  Create/Manage Accounts (Website)
 echo 3  -  Character save manager
 echo 4  -  Mod manager [EXPERIMENTAL]
 echo.
+echo 5  -  Change server language (%serverlanguage%)
+echo.
 echo X  -  Shutdown all servers
 echo.
 set /P menu=Enter a number: 
@@ -274,6 +289,7 @@ if "%menu%"=="1" (goto realm_menu)
 if "%menu%"=="2" (goto account_tool)
 if "%menu%"=="3" (goto save_menu)
 if "%menu%"=="4" (goto modmanager_menu)
+if "%menu%"=="5" (goto server_language)
 if "%menu%"=="x" (goto shutdown_servers)
 if "%menu%"=="" (goto menu)
 
@@ -293,24 +309,34 @@ if exist "%mainfolder%\Realms\7\name.txt" set /p realmname7=<"%mainfolder%\Realm
 if exist "%mainfolder%\Realms\8\name.txt" set /p realmname8=<"%mainfolder%\Realms\8\name.txt"
 if exist "%mainfolder%\Realms\9\name.txt" set /p realmname9=<"%mainfolder%\Realms\9\name.txt"
 
+if exist "%mainfolder%\Realms\1\serverlanguage.txt" set /p realmlanguage1=<"%mainfolder%\Realms\1\serverlanguage.txt"
+if exist "%mainfolder%\Realms\2\serverlanguage.txt" set /p realmlanguage2=<"%mainfolder%\Realms\2\serverlanguage.txt"
+if exist "%mainfolder%\Realms\3\serverlanguage.txt" set /p realmlanguage3=<"%mainfolder%\Realms\3\serverlanguage.txt"
+if exist "%mainfolder%\Realms\4\serverlanguage.txt" set /p realmlanguage4=<"%mainfolder%\Realms\4\serverlanguage.txt"
+if exist "%mainfolder%\Realms\5\serverlanguage.txt" set /p realmlanguage5=<"%mainfolder%\Realms\5\serverlanguage.txt"
+if exist "%mainfolder%\Realms\6\serverlanguage.txt" set /p realmlanguage6=<"%mainfolder%\Realms\6\serverlanguage.txt"
+if exist "%mainfolder%\Realms\7\serverlanguage.txt" set /p realmlanguage7=<"%mainfolder%\Realms\7\serverlanguage.txt"
+if exist "%mainfolder%\Realms\8\serverlanguage.txt" set /p realmlanguage8=<"%mainfolder%\Realms\8\serverlanguage.txt"
+if exist "%mainfolder%\Realms\9\serverlanguage.txt" set /p realmlanguage9=<"%mainfolder%\Realms\9\serverlanguage.txt"
+
 echo Single Player Project realm starter menu.
 echo Select a slot where you want to save your characters.
 echo.
 echo -----------------------
-echo Realm 1  -  [%realmname1%]
-echo Realm 2  -  [%realmname2%]
-echo Realm 3  -  [%realmname3%]
-echo Realm 4  -  [%realmname4%]
-echo Realm 5  -  [%realmname5%]
-echo Realm 6  -  [%realmname6%]
-echo Realm 7  -  [%realmname7%]
-echo Realm 8  -  [%realmname8%]
-echo Realm 9  -  [%realmname9%]
+echo Realm 1  -  [%realmname1%] [%realmlanguage1%]
+echo Realm 2  -  [%realmname2%] [%realmlanguage2%]
+echo Realm 3  -  [%realmname3%] [%realmlanguage3%]
+echo Realm 4  -  [%realmname4%] [%realmlanguage4%]
+echo Realm 5  -  [%realmname5%] [%realmlanguage5%]
+echo Realm 6  -  [%realmname6%] [%realmlanguage6%]
+echo Realm 7  -  [%realmname7%] [%realmlanguage7%]
+echo Realm 8  -  [%realmname8%] [%realmlanguage8%]
+echo Realm 9  -  [%realmname9%] [%realmlanguage9%]
 echo -----------------------
 echo.
 echo 1 - Start Server
 echo.
-echo 2 - Add/rename realm
+echo 2 - Add/modify realm
 echo 3 - Delete realm
 echo.
 echo 4 - Open realm settings
@@ -362,11 +388,55 @@ goto menu
 echo.
 set /P realmname=Enter the realm name: 
 set /P realmaddress=Enter the realm address (127.0.0.1 for offline play): 
+echo.
+echo 0  - (English)
+echo 1  - (Korean)
+echo 2  - (French)
+echo 3  - (German)
+echo 4  - (Chinese)
+echo 5  - (Taiwanese)
+echo 6  - (Spanish)
+echo 7  - (Spanish Mexico)
+echo 8  - (Russian)
+echo 9  - (none)
+echo 10 - (ptBR)
+echo 11 - (itIT)
+echo.
+set /P serverlanguageselect=Select the realm language: 
+
 echo %realmname%>"%mainfolder%\Realms\%realmslot%\name.txt"
 "%mainfolder%\Server\tools\fart.exe"  -r -c -- "%mainfolder%\Realms\%realmslot%\Settings\login.conf" LoginREST.ExternalAddress=127.0.0.1 LoginREST.ExternalAddress=%realmaddress%
 echo REPLACE INTO `realmlist` VALUES (%realmslot%,'%realmname%','%realmaddress%','127.0.0.1','255.255.255.0',%realmport%,0,0,1,0,0,%gameversion%,2,1); > "%mainfolder%\Realms\%realmslot%\realmlist.sql"
 "%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%login% < "%mainfolder%\Realms\%realmslot%\realmlist.sql"
 set realmname%realmslot%=%realmname%
+echo.
+
+"%mainfolder%\Server\tools\fart.exe" -r -c -- "%mainfolder%\Realms\%realmslot%\Settings\world.conf" "DBC.Locale = 0" "DBC.Locale = %serverlanguageselect%"
+"%mainfolder%\Server\tools\fart.exe" -r -c -- "%mainfolder%\Realms\%realmslot%\Settings\world.conf" "DBC.Locale = 1" "DBC.Locale = %serverlanguageselect%"
+"%mainfolder%\Server\tools\fart.exe" -r -c -- "%mainfolder%\Realms\%realmslot%\Settings\world.conf" "DBC.Locale = 2" "DBC.Locale = %serverlanguageselect%"
+"%mainfolder%\Server\tools\fart.exe" -r -c -- "%mainfolder%\Realms\%realmslot%\Settings\world.conf" "DBC.Locale = 3" "DBC.Locale = %serverlanguageselect%"
+"%mainfolder%\Server\tools\fart.exe" -r -c -- "%mainfolder%\Realms\%realmslot%\Settings\world.conf" "DBC.Locale = 4" "DBC.Locale = %serverlanguageselect%"
+"%mainfolder%\Server\tools\fart.exe" -r -c -- "%mainfolder%\Realms\%realmslot%\Settings\world.conf" "DBC.Locale = 5" "DBC.Locale = %serverlanguageselect%"
+"%mainfolder%\Server\tools\fart.exe" -r -c -- "%mainfolder%\Realms\%realmslot%\Settings\world.conf" "DBC.Locale = 6" "DBC.Locale = %serverlanguageselect%"
+"%mainfolder%\Server\tools\fart.exe" -r -c -- "%mainfolder%\Realms\%realmslot%\Settings\world.conf" "DBC.Locale = 7" "DBC.Locale = %serverlanguageselect%"
+"%mainfolder%\Server\tools\fart.exe" -r -c -- "%mainfolder%\Realms\%realmslot%\Settings\world.conf" "DBC.Locale = 8" "DBC.Locale = %serverlanguageselect%"
+"%mainfolder%\Server\tools\fart.exe" -r -c -- "%mainfolder%\Realms\%realmslot%\Settings\world.conf" "DBC.Locale = 9" "DBC.Locale = %serverlanguageselect%"
+"%mainfolder%\Server\tools\fart.exe" -r -c -- "%mainfolder%\Realms\%realmslot%\Settings\world.conf" "DBC.Locale = 10" "DBC.Locale = %serverlanguageselect%"
+"%mainfolder%\Server\tools\fart.exe" -r -c -- "%mainfolder%\Realms\%realmslot%\Settings\world.conf" "DBC.Locale = 11" "DBC.Locale = %serverlanguageselect%"
+
+if "%serverlanguageselect%"=="0" (echo English> "%mainfolder%\Realms\%realmslot%\serverlanguage.txt")
+if "%serverlanguageselect%"=="1" (echo Korean> "%mainfolder%\Realms\%realmslot%\serverlanguage.txt")
+if "%serverlanguageselect%"=="2" (echo French> "%mainfolder%\Realms\%realmslot%\serverlanguage.txt")
+if "%serverlanguageselect%"=="3" (echo German> "%mainfolder%\Realms\%realmslot%\serverlanguage.txt")
+if "%serverlanguageselect%"=="4" (echo Chinese> "%mainfolder%\Realms\%realmslot%\serverlanguage.txt")
+if "%serverlanguageselect%"=="5" (echo Taiwanese> "%mainfolder%\Realms\%realmslot%\serverlanguage.txt")
+if "%serverlanguageselect%"=="6" (echo Spanish> "%mainfolder%\Realms\%realmslot%\serverlanguage.txt")
+if "%serverlanguageselect%"=="7" (echo Spanish Mexico> "%mainfolder%\Realms\%realmslot%\serverlanguage.txt")
+if "%serverlanguageselect%"=="8" (echo Russian> "%mainfolder%\Realms\%realmslot%\serverlanguage.txt")
+if "%serverlanguageselect%"=="9" (echo none> "%mainfolder%\Realms\%realmslot%\serverlanguage.txt")
+if "%serverlanguageselect%"=="10" (echo ptBR> "%mainfolder%\Realms\%realmslot%\serverlanguage.txt")
+if "%serverlanguageselect%"=="11" (echo itIT> "%mainfolder%\Realms\%realmslot%\serverlanguage.txt")
+
 echo.
 echo %realmname% (%realmaddress%) added to the realm list.
 pause
@@ -375,6 +445,7 @@ goto realm_menu
 :realm_remove
 echo.
 del /s "%mainfolder%\Realms\%realmslot%\name.txt"
+del /s "%mainfolder%\Realms\%realmslot%\serverlanguage.txt"
 del /s "%mainfolder%\Realms\%realmslot%\Settings\login.conf"
 del /s "%mainfolder%\Realms\%realmslot%\Settings\realmlist.sql"
 copy "%mainfolder%\Realms\login.conf" "%mainfolder%\Realms\%realmslot%\Settings\login.conf"
@@ -757,6 +828,159 @@ echo.
 pause
 cd ..\..
 goto service_menu
+
+:install_deDE
+cls
+set dbclang=deDE.7z
+echo Installing language for the servers...
+echo.
+cd "%mainfolder%\Server\Data\dbc"
+..\..\Tools\wget.exe -N --no-check-certificate https://github.com/conan513/SingleCore_TC/raw/AshamaneCore-dmca/data/%dbclang%
+rmdir /S /Q deDE
+..\..\Tools\7za.exe e -y -spf %dbclang%
+
+echo.
+cd %mainfolder%
+goto start_database
+
+:install_enUS
+cls
+set dbclang=enUS.7z
+echo Installing language for the servers...
+echo.
+cd "%mainfolder%\Server\Data\dbc"
+..\..\Tools\wget.exe -N --no-check-certificate https://github.com/conan513/SingleCore_TC/raw/AshamaneCore-dmca/data/%dbclang%
+rmdir /S /Q enUS
+..\..\Tools\7za.exe e -y -spf %dbclang%
+
+echo.
+cd %mainfolder%
+goto start_database
+
+:install_esES
+cls
+set dbclang=esES.7z
+echo Installing language for the servers...
+echo.
+cd "%mainfolder%\Server\Data\dbc"
+..\..\Tools\wget.exe -N --no-check-certificate https://github.com/conan513/SingleCore_TC/raw/AshamaneCore-dmca/data/%dbclang%
+rmdir /S /Q esES
+..\..\Tools\7za.exe e -y -spf %dbclang%
+
+echo.
+cd %mainfolder%
+goto start_database
+
+:install_esMX
+cls
+set dbclang=esMX.7z
+echo Installing language for the servers...
+echo.
+cd "%mainfolder%\Server\Data\dbc"
+..\..\Tools\wget.exe -N --no-check-certificate https://github.com/conan513/SingleCore_TC/raw/AshamaneCore-dmca/data/%dbclang%
+rmdir /S /Q esMX
+..\..\Tools\7za.exe e -y -spf %dbclang%
+
+echo.
+cd %mainfolder%
+goto start_database
+
+:install_frFR
+cls
+set dbclang=frFR.7z
+echo Installing language for the servers...
+echo.
+cd "%mainfolder%\Server\Data\dbc"
+..\..\Tools\wget.exe -N --no-check-certificate https://github.com/conan513/SingleCore_TC/raw/AshamaneCore-dmca/data/%dbclang%
+rmdir /S /Q frFR
+..\..\Tools\7za.exe e -y -spf %dbclang%
+echo.
+cd %mainfolder%
+goto start_database
+
+:install_itIT
+cls
+set dbclang=itIT.7z
+echo Installing language for the servers...
+echo.
+cd "%mainfolder%\Server\Data\dbc"
+..\..\Tools\wget.exe -N --no-check-certificate https://github.com/conan513/SingleCore_TC/raw/AshamaneCore-dmca/data/%dbclang%
+rmdir /S /Q itIT
+..\..\Tools\7za.exe e -y -spf %dbclang%
+
+echo.
+cd %mainfolder%
+goto start_database
+
+:install_koKR
+cls
+set dbclang=koKR.7z
+echo Installing language for the servers...
+echo.
+cd "%mainfolder%\Server\Data\dbc"
+..\..\Tools\wget.exe -N --no-check-certificate https://github.com/conan513/SingleCore_TC/raw/AshamaneCore-dmca/data/%dbclang%
+rmdir /S /Q koKR
+..\..\Tools\7za.exe e -y -spf %dbclang%
+
+echo.
+cd %mainfolder%
+goto start_database
+
+:install_ptBR
+cls
+set dbclang=ptBR.7z
+echo Installing language for the servers...
+echo.
+cd "%mainfolder%\Server\Data\dbc"
+..\..\Tools\wget.exe -N --no-check-certificate https://github.com/conan513/SingleCore_TC/raw/AshamaneCore-dmca/data/%dbclang%
+rmdir /S /Q ptBR
+..\..\Tools\7za.exe e -y -spf %dbclang%
+
+echo.
+cd %mainfolder%
+goto start_database
+
+:install_ruRU
+cls
+set dbclang=ruRU.7z
+echo Installing language for the servers...
+echo.
+cd "%mainfolder%\Server\Data\dbc"
+..\..\Tools\wget.exe -N --no-check-certificate https://github.com/conan513/SingleCore_TC/raw/AshamaneCore-dmca/data/%dbclang%
+rmdir /S /Q ruRU
+..\..\Tools\7za.exe e -y -spf %dbclang%
+
+echo.
+cd %mainfolder%
+goto start_database
+
+:install_zhCN
+cls
+set dbclang=zhCN.7z
+echo Installing language for the servers...
+echo.
+cd "%mainfolder%\Server\Data\dbc"
+..\..\Tools\wget.exe -N --no-check-certificate https://github.com/conan513/SingleCore_TC/raw/AshamaneCore-dmca/data/%dbclang%
+rmdir /S /Q zhCN
+..\..\Tools\7za.exe e -y -spf %dbclang%
+
+echo.
+cd %mainfolder%
+goto start_database
+
+:install_zhTW
+cls
+set dbclang=zhTW.7z
+echo Installing language for the servers...
+echo.
+cd "%mainfolder%\Server\Data\dbc"
+..\..\Tools\wget.exe -N --no-check-certificate https://github.com/conan513/SingleCore_TC/raw/AshamaneCore-dmca/data/%dbclang%
+rmdir /S /Q zhTW
+..\..\Tools\7za.exe e -y -spf %dbclang%
+
+echo.
+cd %mainfolder%
+goto start_database
 
 :update_vmaps
 cls
