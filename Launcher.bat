@@ -58,6 +58,9 @@ del "%mainfolder%\sql\ashamane\characters\2017_05_15_char_world_quest.sql"
 del "%mainfolder%\sql\ashamane\characters\2017_05_20_char_world_quest.sql"
 del "%mainfolder%\sql\ashamane\characters\2018_01_05_01_characters_world_quest.sql"
 del "%mainfolder%\sql\ashamane\characters\2018_01_14_01_charactes_world_quest.sql"
+del "%mainfolder%\Server\Tools\server_database.bat"
+del "%mainfolder%\Server\Tools\server_web.bat"
+del "%mainfolder%\Server\Tools\start.bat"
 copy "%mainfolder%\sql\2017_05_15_char_world_quest.sql" "%mainfolder%\sql\ashamane\characters
 cls
 
