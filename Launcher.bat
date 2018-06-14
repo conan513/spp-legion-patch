@@ -279,8 +279,6 @@ echo 2  -  Create/Manage Accounts (Website)
 echo 3  -  Character save manager
 echo 4  -  Mod manager [EXPERIMENTAL]
 echo.
-echo 5  -  Change server language (%serverlanguage%)
-echo.
 echo X  -  Shutdown all servers
 echo.
 set /P menu=Enter a number: 
@@ -289,7 +287,6 @@ if "%menu%"=="1" (goto realm_menu)
 if "%menu%"=="2" (goto account_tool)
 if "%menu%"=="3" (goto save_menu)
 if "%menu%"=="4" (goto modmanager_menu)
-if "%menu%"=="5" (goto server_language)
 if "%menu%"=="x" (goto shutdown_servers)
 if "%menu%"=="" (goto menu)
 
