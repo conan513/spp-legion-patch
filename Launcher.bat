@@ -378,7 +378,7 @@ if "%realmslot%"=="9" (set realmport=8885)
 
 if "%realmslot%"=="" (goto realm_menu)
 
-if "%realmmenu%"=="1" (goto check_autosave_start)
+if "%realmmenu%"=="1" (goto servers_start)
 if "%realmmenu%"=="2" (goto realm_add)
 if "%realmmenu%"=="3" (goto realm_remove)
 if "%realmmenu%"=="4" (start explorer.exe "%mainfolder%\Realms\%realmslot%\Settings")
@@ -457,7 +457,8 @@ goto realm_menu
 
 :check_autosave_start
 if exist %mainfolder%\autosave.on goto autosave_start
-goto servers_start
+if "%serverstartoption%"=="1" (goto server_x86)
+if "%serverstartoption%"=="2" (goto server_x64)
 
 :autosave_start
 cls
@@ -478,7 +479,8 @@ echo.
 echo Exporting website data...please wait...
 "%mainfolder%\Server\Database\bin\mysqldump.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 %website% > "%mainfolder%\Saves\%saveslot%\%website%.sql"
 echo Done!
-goto servers_start
+if "%serverstartoption%"=="1" (goto server_x86)
+if "%serverstartoption%"=="2" (goto server_x64)
 
 :servers_start
 cls
@@ -490,9 +492,8 @@ echo.
 echo 1 - Win32
 echo 2 - Win64
 echo.
-set /P savemenu=Select your option: 
-if "%savemenu%"=="1" (goto server_x86)
-if "%savemenu%"=="2" (goto server_x64)
+set /P serverstartoption=Select your option: 
+goto check_autosave_start
 
 :server_x86
 cd "%mainfolder%\Realms\%realmslot%"
