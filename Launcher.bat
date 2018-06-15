@@ -378,7 +378,7 @@ if "%realmslot%"=="9" (set realmport=8885)
 
 if "%realmslot%"=="" (goto realm_menu)
 
-if "%realmmenu%"=="1" (goto servers_start)
+if "%realmmenu%"=="1" (goto check_autosave_start)
 if "%realmmenu%"=="2" (goto realm_add)
 if "%realmmenu%"=="3" (goto realm_remove)
 if "%realmmenu%"=="4" (start explorer.exe "%mainfolder%\Realms\%realmslot%\Settings")
@@ -454,6 +454,31 @@ echo DELETE FROM `realmlist` WHERE `ID` IN (%realmslot%); > "%mainfolder%\Realms
 set realmname%realmslot%=
 echo.
 goto realm_menu
+
+:check_autosave_start
+if exist %mainfolder%\autosave.on goto autosave_start
+goto servers_start
+
+:autosave_start
+cls
+set saveslot=autosave
+echo.
+echo ###################
+echo # Autosave is on! #
+echo ###################
+echo.
+echo Exporting accounts...please wait...
+"%mainfolder%\Server\Database\bin\mysqldump.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 %login% > "%mainfolder%\Saves\%saveslot%\%login%.sql"
+echo Done!
+echo.
+echo Exporting characters...please wait...
+"%mainfolder%\Server\Database\bin\mysqldump.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 %characters% > "%mainfolder%\Saves\%saveslot%\%characters%.sql"
+echo Done!
+echo.
+echo Exporting website data...please wait...
+"%mainfolder%\Server\Database\bin\mysqldump.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 %website% > "%mainfolder%\Saves\%saveslot%\%website%.sql"
+echo Done!
+goto servers_start
 
 :servers_start
 cls
@@ -697,7 +722,7 @@ cls
 taskkill /f /im bnetserver.exe
 taskkill /f /im worldserver.exe
 taskkill /f /im spp-httpd.exe
-if exist autosave.on goto autosave_shutdown
+if exist %mainfolder%\autosave.on goto autosave_shutdown
 "%mainfolder%\Server\Database\bin\mysqladmin.exe" -u root -p123456 --port=3310 shutdown
 goto exit
 
