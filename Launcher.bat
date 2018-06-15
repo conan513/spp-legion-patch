@@ -27,7 +27,7 @@ set worldfile=ADB_world_735.00.sql
 set hotfixesfile=ADB_hotfixes_735.00.sql
 set world_clean=world_clean
 set hotfixes_clean=hotfixes_clean
-set gameversion=26654
+set gameversion=26822
 
 REM --- Settings ---
 
@@ -282,6 +282,8 @@ echo 2  -  Create/Manage Accounts (Website)
 echo 3  -  Character save manager
 echo 4  -  Mod manager [EXPERIMENTAL]
 echo.
+echo 5  -  Patched exe files for the game (%gameversion%)
+echo.
 echo X  -  Shutdown all servers
 echo.
 set /P menu=Enter a number: 
@@ -290,6 +292,7 @@ if "%menu%"=="1" (goto realm_menu)
 if "%menu%"=="2" (goto account_tool)
 if "%menu%"=="3" (goto save_menu)
 if "%menu%"=="4" (goto modmanager_menu)
+if "%menu%"=="5" (explorer.exe %mainfolder%\Addons\Patched_Exe_%gameversion%)
 if "%menu%"=="x" (goto shutdown_servers)
 if "%menu%"=="" (goto menu)
 
