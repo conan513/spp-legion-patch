@@ -277,26 +277,35 @@ echo #######################################################
 echo.
 echo 0  -  Service Menu (you can fix problems here)
 echo.
-echo 1  -  Start Servers
-echo 2  -  Create/Manage Accounts (Website)
-echo 3  -  Character save manager
-echo 4  -  Mod manager [EXPERIMENTAL]
+echo 1  -  Quick start the servers 
+echo       (First realm, Win32)
 echo.
-echo 5  -  Patched exe files for the game (%gameversion%)
+echo 2  -  Start custom Servers
+echo 3  -  Create/Manage Accounts (Website)
+echo 4  -  Character save manager
+echo 5  -  Mod manager [EXPERIMENTAL]
+echo.
+echo 6  -  Patched exe files for the game (%gameversion%)
 echo.
 echo X  -  Shutdown all servers
 echo.
 set /P menu=Enter a number: 
 if "%menu%"=="0" (goto service_menu)
-if "%menu%"=="1" (goto realm_menu)
-if "%menu%"=="2" (goto account_tool)
-if "%menu%"=="3" (goto save_menu)
-if "%menu%"=="4" (goto modmanager_menu)
-if "%menu%"=="5" (explorer.exe %mainfolder%\Addons\Patched_Exe_%gameversion%)
+if "%menu%"=="1" (goto quick_start_servers)
+if "%menu%"=="2" (goto realm_menu)
+if "%menu%"=="3" (goto account_tool)
+if "%menu%"=="4" (goto save_menu)
+if "%menu%"=="5" (goto modmanager_menu)
+if "%menu%"=="6" (explorer.exe %mainfolder%\Addons\Patched_Exe_%gameversion%)
 if "%menu%"=="x" (goto shutdown_servers)
 if "%menu%"=="" (goto menu)
 
 goto menu
+
+:quick_start_servers
+set realmslot=1
+set serverstartoption=1
+goto autosave_start
 
 :realm_menu
 cls
