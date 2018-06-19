@@ -768,7 +768,7 @@ echo Are you sure want to reset your world and hotfix database?
 echo You must do this on first start to get the latest AshamaneCore database.
 echo.
 pause
-"%mainfolder%\Server\Tools\7za.exe e -y "%mainfolder%\sql\ADB735.00.7z
+"%mainfolder%\Server\Tools\7za.exe" e -y "%mainfolder%\sql\ADB735.00.7z"
 echo.
 echo Clear %world% and %hotfixes% database.
 echo.
@@ -777,11 +777,11 @@ echo.
 echo.
 echo Importing %worldfile% into %world% database.
 echo.
-"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%world% < %worldfile%
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%world% < "%mainfolder%\%worldfile%"
 echo.
 echo Importing %hotfixesfile% into %hotfixes% database.
 echo.
-"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%hotfixes% < %hotfixesfile%
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%hotfixes% < "%mainfolder%\%hotfixesfile%"
 echo.
 echo Done!
 pause
@@ -1091,7 +1091,7 @@ echo.
 echo.
 echo Importing %worldfile% into %world_clean% database.
 echo.
-"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%world_clean% < %worldfile%
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%world_clean% < "%mainfolder%\%worldfile%"
 echo.
 echo Importing %world% updates...
 for %%i in ("%mainfolder%\sql\ashamane\world\*sql") do if %%i neq "%mainfolder%\sql\ashamane\world\*sql" if %%i neq "%mainfolder%\sql\ashamane\world\*sql" if %%i neq "%mainfolder%\sql\ashamane\world\*sql" echo %%i & "%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%world_clean% < %%i
