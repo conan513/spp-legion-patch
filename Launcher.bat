@@ -285,7 +285,7 @@ echo 3  -  Create/Manage Accounts (Website)
 echo 4  -  Character save manager
 echo 5  -  Mod manager [EXPERIMENTAL]
 echo.
-echo 6  -  Patched exe files for the game (%gameversion%)
+echo 6  -  Patched exe files for the game (7.3.5.%gameversion%)
 echo.
 echo X  -  Shutdown all servers
 echo.
