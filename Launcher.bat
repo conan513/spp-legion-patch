@@ -393,7 +393,7 @@ if "%realmslot%"=="" (goto realm_menu)
 if "%realmmenu%"=="1" (goto servers_start)
 if "%realmmenu%"=="2" (goto realm_add)
 if "%realmmenu%"=="3" (goto realm_remove)
-if "%realmmenu%"=="4" (start explorer.exe "%mainfolder%\Realms\%realmslot%\Settings")
+if "%realmmenu%"=="4" (start notepad.exe "%mainfolder%\Realms\%realmslot%\Settings\world.conf")
 goto menu
 
 :realm_add
