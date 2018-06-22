@@ -280,7 +280,7 @@ echo.
 echo 1  -  Start the servers (Win32)
 echo 2  -  Start the servers (Win64)
 echo.
-echo 3  -  Start custom Servers
+echo 3  -  Start custom realm servers
 echo.
 echo 4  -  Create/Manage Accounts (Website)
 echo 5  -  Character save manager
@@ -401,7 +401,7 @@ if "%realmmenu%"=="1" (goto servers_start)
 if "%realmmenu%"=="2" (goto realm_add)
 if "%realmmenu%"=="3" (goto realm_remove)
 if "%realmmenu%"=="4" (start notepad.exe "%mainfolder%\Realms\%realmslot%\Settings\world.conf")
-goto menu
+goto realm_menu
 
 :realm_add
 echo.
