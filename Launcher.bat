@@ -305,13 +305,33 @@ if "%menu%"=="" (goto menu)
 goto menu
 
 :quick_start_servers_x86
+cls
 set realmslot=1
 set serverstartoption=1
+set /p realmname1=<"%mainfolder%\Realms\%realmslot%\name.txt
+set /p realmlanguage1=<"%mainfolder%\Realms\%realmslot%\serverlanguage.txt"
+
+echo Starting the first realm...
+echo.
+echo Name:     %realmname1%
+echo Language: %realmlanguage1%
+echo.
+ping -n 5 127.0.0.1>nul
 goto autosave_start
 
 :quick_start_servers_x64
+cls
 set realmslot=1
 set serverstartoption=2
+set /p realmname1=<"%mainfolder%\Realms\%realmslot%\name.txt
+set /p realmlanguage1=<"%mainfolder%\Realms\%realmslot%\serverlanguage.txt"
+
+echo Starting the first realm...
+echo.
+echo Name:     %realmname1%
+echo Language: %realmlanguage1%
+echo.
+ping -n 5 127.0.0.1>nul
 goto autosave_start
 
 :realm_menu
