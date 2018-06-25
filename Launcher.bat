@@ -4,6 +4,7 @@ TITLE %NAME%
 COLOR 0A
 set mod=%1
 set mainfolder=%CD%
+set gameversion=26899
 
 REM --- Settings ---
 
@@ -27,7 +28,6 @@ set worldfile=ADB_world_735.00.sql
 set hotfixesfile=ADB_hotfixes_735.00.sql
 set world_clean=world_clean
 set hotfixes_clean=hotfixes_clean
-set gameversion=26822
 
 REM --- Settings ---
 
