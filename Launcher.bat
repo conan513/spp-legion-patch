@@ -280,13 +280,14 @@ echo.
 echo 1  -  Start the servers (Win32)
 echo 2  -  Start the servers (Win64)
 echo.
-echo 3  -  Start custom realm servers
+echo 3  -  Setup and start custom servers
 echo.
 echo 4  -  Create/Manage Accounts (Website)
 echo 5  -  Character save manager
 echo 6  -  Mod manager [EXPERIMENTAL]
-echo.
 echo 7  -  Patched exe files for the game (7.3.5.%gameversion%)
+echo.
+echo 8  -  Report issues
 echo.
 echo X  -  Shutdown all servers
 echo.
@@ -299,9 +300,20 @@ if "%menu%"=="4" (goto account_tool)
 if "%menu%"=="5" (goto save_menu)
 if "%menu%"=="6" (goto modmanager_menu)
 if "%menu%"=="7" (explorer.exe %mainfolder%\Addons\Patched_Exe_%gameversion%)
+if "%menu%"=="8" (goto report_issue)
 if "%menu%"=="x" (goto shutdown_servers)
 if "%menu%"=="" (goto menu)
 
+goto menu
+
+:report_issue
+cls
+echo Please check the issue on official AshamaneCore server, before report it.
+echo.
+echo http://www.ashamane.com/
+echo.
+pause
+start https://bt.ashamane.com/my_view_page.php
 goto menu
 
 :quick_start_servers_x86
