@@ -21,6 +21,12 @@ echo.
 ..\git\cmd\git.exe commit -m "Custom Changes"
 cls
 echo.
+echo Clear git caches...
+echo.
+..\git\cmd\git.exe gc
+echo.
+cls
+echo.
 echo Downloading the latest update...
 echo.
 ..\git\cmd\git.exe pull https://github.com/conan513/spp-legion-patch.git 735-v3
