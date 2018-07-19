@@ -848,11 +848,10 @@ echo 2 - VMaps (1.9G)
 echo 3 - MMaps (1.5G)
 echo.
 echo 4 - Reset world and hotfix database
-echo.
 echo 5 - Opern worldserver log file
-echo.
 echo 6 - Install vcredists x86 (2005-2017)
 echo 7 - Install vcredists x64 (2005-2017)
+echo 8 - Clear updates cache and reduce the server size (10-30 minutes)
 echo.
 echo 0 - Go back to main menu
 echo.
@@ -864,8 +863,18 @@ if "%menu%"=="4" (goto reset_world)
 if "%menu%"=="5" (goto log_file)
 if "%menu%"=="6" (goto vcredist_install_x86)
 if "%menu%"=="7" (goto vcredist_install_x64)
+if "%menu%"=="8" (goto clear_cache)
 if "%menu%"=="0" (goto menu)
 if "%menu%"=="" (goto menu)
+
+:clear_cache
+cls
+echo.
+echo Clear git caches...
+echo.
+..\git\cmd\git.exe gc
+echo.
+goto service_menu
 
 :vcredist_install_x86
 cls
