@@ -329,7 +329,7 @@ echo Name:     %realmname1%
 echo Language: %realmlanguage1%
 echo.
 ping -n 5 127.0.0.1>nul
-goto autosave_start
+goto check_autosave_start
 
 :quick_start_servers_x64
 cls
@@ -344,7 +344,7 @@ echo Name:     %realmname1%
 echo Language: %realmlanguage1%
 echo.
 ping -n 5 127.0.0.1>nul
-goto autosave_start
+goto check_autosave_start
 
 :realm_menu
 cls
@@ -510,6 +510,7 @@ goto realm_menu
 if exist %mainfolder%\autosave.on goto autosave_start
 if "%serverstartoption%"=="1" (goto server_x86)
 if "%serverstartoption%"=="2" (goto server_x64)
+goto menu
 
 :autosave_start
 cls
