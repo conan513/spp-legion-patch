@@ -556,6 +556,11 @@ set /P serverstartoption=Select your option:
 goto check_autosave_start
 
 :server_x86
+echo.
+echo Clearing ahbot's auctions from database...
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%characters% < "%mainfolder%\sql\clear_auction.sql"
+echo Done.
+ping -n 5 127.0.0.1>nul
 cd "%mainfolder%\Realms\%realmslot%"
 start ..\..\Server\Bin\bnetserver.exe
 Start ..\..\Server\Bin\worldserver.exe
@@ -563,7 +568,12 @@ REM start Server\Tools\server_check.bat"
 goto menu
 
 :server_x64
+echo.
 cd "%mainfolder%\Realms\%realmslot%"
+echo Clearing ahbot's auctions from database...
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%characters% < "%mainfolder%\sql\clear_auction.sql"
+echo Done.
+ping -n 5 127.0.0.1>nul
 start ..\..\Server\Bin64\bnetserver.exe
 Start ..\..\Server\Bin64\worldserver.exe
 REM start Server\Tools\server_check.bat"
