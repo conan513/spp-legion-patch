@@ -329,6 +329,10 @@ echo Name:     %realmname1%
 echo Language: %realmlanguage1%
 echo.
 ping -n 5 127.0.0.1>nul
+echo Clearing ahbot's auctions from database...
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%characters% < "%mainfolder%\sql\clear_auction.sql"
+echo Done.
+ping -n 5 127.0.0.1>nul
 goto check_autosave_start
 
 :quick_start_servers_x64
@@ -343,6 +347,10 @@ echo.
 echo Name:     %realmname1%
 echo Language: %realmlanguage1%
 echo.
+ping -n 5 127.0.0.1>nul
+echo Clearing ahbot's auctions from database...
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%characters% < "%mainfolder%\sql\clear_auction.sql"
+echo Done.
 ping -n 5 127.0.0.1>nul
 goto check_autosave_start
 

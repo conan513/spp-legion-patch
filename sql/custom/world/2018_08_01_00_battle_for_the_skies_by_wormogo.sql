@@ -1,0 +1,1 @@
+UPDATE creature SET curhealth='4056' WHERE  guid=21001459;
