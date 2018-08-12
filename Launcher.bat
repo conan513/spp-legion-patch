@@ -277,7 +277,7 @@ echo 0  -  Service Menu (you can fix problems here)
 echo.
 echo 1  -  Start servers (Win32)
 echo 2  -  Start servers (Win64)
-echo 3  -  Start & setup custom servers
+echo 3  -  Start and setup custom servers
 echo.
 echo 4  -  Create/Manage Accounts (Website)
 echo 5  -  Character save manager
