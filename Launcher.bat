@@ -8,12 +8,10 @@ set gameversion=26972
 
 REM --- Settings ---
 
-REM SingleCore files name
 set dbc_maps=dbc_gt_maps_cameras.zip
 set mmaps=mmaps.rar
 set vmaps=vmaps.rar
 
-REM Default MySQL settings
 set host=127.0.0.1
 set port=3310
 set user=root
@@ -272,15 +270,14 @@ echo.
 cls
 echo #######################################################
 echo # Single Player Project - AshamaneCore                #
-echo # https://github.com/AshamaneProject/AshamaneCore.git #
+echo # https://www.patreon.com/conan513                    #
 echo #######################################################
 echo.
 echo 0  -  Service Menu (you can fix problems here)
 echo.
-echo 1  -  Start the servers (Win32)
-echo 2  -  Start the servers (Win64)
-echo.
-echo 3  -  Setup and start custom servers
+echo 1  -  Start servers (Win32)
+echo 2  -  Start servers (Win64)
+echo 3  -  Start & setup custom servers
 echo.
 echo 4  -  Create/Manage Accounts (Website)
 echo 5  -  Character save manager
@@ -439,6 +436,7 @@ goto realm_menu
 echo.
 set /P realmname=Enter the realm name: 
 set /P realmaddress=Enter the realm address (127.0.0.1 for offline play): 
+
 echo.
 echo 0  - (English)
 echo 1  - (Korean)
@@ -455,13 +453,45 @@ echo 11 - (itIT)
 echo.
 set /P serverlanguageselect=Select the realm language: 
 
+echo.
+echo You can change the website port.
+echo In default I use 8099 to avoid the isssue if the port 80 is already in use.
+echo Leave this line empty if you want to use the standard port 80.
+echo.
+set /P websiteport=Enter the website port number (8099 is the default): 
+set websiteportwithdot=:%websiteport%
+if "%websiteport%"=="" (set websiteportwithdot=)
+
+echo.
+echo Changing Realm %realmslot% name to %realmname%.
+echo.
 echo %realmname%>"%mainfolder%\Realms\%realmslot%\name.txt"
+
+echo.
+echo Changing the realm server IP address to %realmaddress% in login.conf.
+echo.
+del /s "%mainfolder%\Realms\%realmslot%\Settings\login.conf"
+copy "%mainfolder%\Realms\login.conf" "%mainfolder%\Realms\%realmslot%\Settings\login.conf"
 "%mainfolder%\Server\tools\fart.exe"  -r -c -- "%mainfolder%\Realms\%realmslot%\Settings\login.conf" LoginREST.ExternalAddress=127.0.0.1 LoginREST.ExternalAddress=%realmaddress%
+
+echo.
+echo Changing the website address to %realmaddress%
+echo.
+del /s "%mainfolder%\Website\application\config\config.php"
+copy "%mainfolder%\Server\Tools\config.php" "%mainfolder%\Website\application\config\config.php"
+"%mainfolder%\Server\tools\fart.exe"  -r -c -- "%mainfolder%\Website\application\config\config.php" http://127.0.0.1:8099/ http://%realmaddress%%websiteportwithdot%/
+
+echo.
+echo Changing the realm server IP address to %realmaddress% in database.
+echo.
 echo REPLACE INTO `realmlist` VALUES (%realmslot%,'%realmname%','%realmaddress%','127.0.0.1','255.255.255.0',%realmport%,0,0,1,0,0,%gameversion%,2,1); > "%mainfolder%\Realms\%realmslot%\realmlist.sql"
 "%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%login% < "%mainfolder%\Realms\%realmslot%\realmlist.sql"
 set realmname%realmslot%=%realmname%
 echo.
 
+echo.
+echo Changing server language to %serverlanguageselect% in world.conf.
+echo.
 "%mainfolder%\Server\tools\fart.exe" -r -c -- "%mainfolder%\Realms\%realmslot%\Settings\world.conf" "DBC.Locale = 0" "DBC.Locale = %serverlanguageselect%"
 "%mainfolder%\Server\tools\fart.exe" -r -c -- "%mainfolder%\Realms\%realmslot%\Settings\world.conf" "DBC.Locale = 1" "DBC.Locale = %serverlanguageselect%"
 "%mainfolder%\Server\tools\fart.exe" -r -c -- "%mainfolder%\Realms\%realmslot%\Settings\world.conf" "DBC.Locale = 2" "DBC.Locale = %serverlanguageselect%"
