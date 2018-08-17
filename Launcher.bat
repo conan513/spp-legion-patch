@@ -436,6 +436,7 @@ goto realm_menu
 echo.
 set /P realmname=Enter the realm name: 
 set /P realmaddress=Enter the realm address (127.0.0.1 for offline play): 
+if "%realmaddress%"=="" (set realmaddress=127.0.0.1)
 
 echo.
 echo 0  - (English)
@@ -452,6 +453,7 @@ echo 10 - (ptBR)
 echo 11 - (itIT)
 echo.
 set /P serverlanguageselect=Select the realm language: 
+if "%serverlanguageselect%"=="" (set serverlanguageselect=0)
 
 echo.
 echo You can change the website port.
@@ -460,7 +462,9 @@ echo Leave this line empty if you want to use the standard port 80.
 echo.
 set /P websiteport=Enter the website port number (8099 is the default): 
 set websiteportwithdot=:%websiteport%
+set httpport=%websiteport%
 if "%websiteport%"=="" (set websiteportwithdot=)
+if "%websiteport%"=="" (set httpport=80)
 
 echo.
 echo Changing Realm %realmslot% name to %realmname%.
@@ -480,6 +484,24 @@ echo.
 del /s "%mainfolder%\Website\application\config\config.php"
 copy "%mainfolder%\Server\Tools\config.php" "%mainfolder%\Website\application\config\config.php"
 "%mainfolder%\Server\tools\fart.exe"  -r -c -- "%mainfolder%\Website\application\config\config.php" http://127.0.0.1:8099/ http://%realmaddress%%websiteportwithdot%/
+
+echo.
+echo Configure the webserver... 
+taskkill /f /im spp-httpd.exe
+ping -n 5 127.0.0.1>nul
+echo.
+echo Changing the webserver address to %realmaddress%
+echo.
+del /s "%mainfolder%\Server\Apache24\conf\httpd.conf"
+copy "%mainfolder%\Server\Tools\httpd.conf" "%mainfolder%\Server\Apache24\conf\httpd.conf"
+"%mainfolder%\Server\tools\fart.exe"  -r -c -- "%mainfolder%\Server\Apache24\conf\httpd.conf" "Listen 8099" "Listen %httpport%"
+
+del /s "%mainfolder%\Server\Apache24\apache_start.bat"
+copy "%mainfolder%\Server\Tools\apache_start.bat" "%mainfolder%\Server\Apache24\apache_start.bat"
+"%mainfolder%\Server\tools\fart.exe"  -r -c -- "%mainfolder%\Server\Apache24\apache_start.bat" http://127.0.0.1:8099 http://%realmaddress%:%httpport%
+cd "%mainfolder%\Server\Apache24"
+start "" /min apache_start.bat
+cd ..\..
 
 echo.
 echo Changing the realm server IP address to %realmaddress% in database.
