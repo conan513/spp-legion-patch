@@ -22,8 +22,8 @@ set world=world
 set hotfixes=hotfixes
 set login=realmd
 set website=blizzcms
-set worldfile=ADB_world_735.00.sql
-set hotfixesfile=ADB_hotfixes_735.00.sql
+set worldfile=ADB_735.10_world.sql
+set hotfixesfile=ADB_735.10_hotfix.sql
 set world_clean=world_clean
 set hotfixes_clean=hotfixes_clean
 
@@ -262,7 +262,7 @@ goto webserver
 cd "%mainfolder%\Server\Apache24"
 start "" /min apache_start.bat
 cd ..\..
-if exist "%mainfolder%\ADB_world_735.00.sql" goto menu
+if exist "%mainfolder%\%worldfile%" goto menu
 goto reset_world
 
 :menu
@@ -572,6 +572,10 @@ echo ###################
 echo # Autosave is on! #
 echo ###################
 echo.
+echo Clearing ahbot's auctions from database...
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%characters% < "%mainfolder%\sql\clear_auction.sql"
+echo Done.
+echo.
 echo Exporting accounts...please wait...
 "%mainfolder%\Server\Database\bin\mysqldump.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 %login% > "%mainfolder%\Saves\%saveslot%\%login%.sql"
 echo Done!
@@ -763,6 +767,10 @@ echo.
 set /P slotname=Add a name for the selected save slot: 
 echo %slotname%>"%mainfolder%\Saves\%saveslot%\name.txt"
 echo.
+echo Clearing ahbot's auctions from database...
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%characters% < "%mainfolder%\sql\clear_auction.sql"
+echo Done.
+echo.
 echo Exporting accounts...please wait...
 "%mainfolder%\Server\Database\bin\mysqldump.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 %login% > "%mainfolder%\Saves\%saveslot%\%login%.sql"
 echo Done!
@@ -816,6 +824,10 @@ echo Importing Website data from the selected save file...please wait...
 "%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%website% < "%mainfolder%\Saves\%saveslot%\%website%.sql"
 echo Done!
 echo.
+echo Clearing ahbot's auctions from database...
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%characters% < "%mainfolder%\sql\clear_auction.sql"
+echo Done.
+echo.
 echo Every user data import completed.
 echo.
 pause
@@ -847,6 +859,10 @@ echo.
 echo ###################
 echo # Autosave is on! #
 echo ###################
+echo.
+echo Clearing ahbot's auctions from database...
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%characters% < "%mainfolder%\sql\clear_auction.sql"
+echo Done.
 echo.
 echo Exporting accounts...please wait...
 "%mainfolder%\Server\Database\bin\mysqldump.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 %login% > "%mainfolder%\Saves\%saveslot%\%login%.sql"
