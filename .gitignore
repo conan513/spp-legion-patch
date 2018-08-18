@@ -15,3 +15,5 @@ Server/Apache24/temp
 Website/temp
 composer.*
 autosave.*
+Server/Apache24/conf/httpd.conf
+Server/Apache24/apache_start.bat
