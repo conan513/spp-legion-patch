@@ -72,4 +72,4 @@ INSERT INTO spell_area (`spell`, `area`, `quest_start`, `quest_end`, `quest_star
 VALUES (49416, 4755, 14293, 14294, 74, 64);
 
 -- Lord Godfrey 35906 Quest Ender for Save Krennan Aranas
-UPDATE creature SET PhaseID = 171 where GUID = 210115272 and PhaseID = 170;
+UPDATE creature SET PhaseID = 172 where GUID = 210115272 and PhaseID = 171;
