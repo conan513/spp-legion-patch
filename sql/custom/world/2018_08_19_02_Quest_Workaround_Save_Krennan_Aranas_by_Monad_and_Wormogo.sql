@@ -55,6 +55,7 @@ INSERT INTO `waypoints` VALUES
 (35905, 1, -1800.37, 1407.18, 20.0265, '');
 
 -- Save Krennan Spell Focus
+DELETE FROM gameobject_template WHERE entry = 195660;
 INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `size`, `Data0`, `Data1`, `Data2`, `Data3`, `Data4`, `Data5`, `Data6`, `Data7`, `Data8`, `Data9`, `Data10`, `Data11`, `Data12`, `Data13`, `Data14`, `Data15`, `Data16`, `Data17`, `Data18`, `Data19`, `Data20`, `Data21`, `Data22`, `Data23`, `Data24`, `Data25`, `Data26`, `Data27`, `Data28`, `Data29`, `Data30`, `Data31`, `Data32`, `RequiredLevel`, `AIName`, `ScriptName`, `VerifiedBuild`) 
 VALUES (195660, 8, 299, 'Krennan Aranas Spell Focus', '', '', '', 1, 1630, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 1);
 
@@ -68,9 +69,13 @@ INSERT INTO `gameobject_addon` (`guid`, `parent_rotation0`, `parent_rotation1`, 
 (301027, 0, 0, 0, 1, 8, 1000, 0),
 (195660, 0, 0, 0, 1, 8, 1000, 0);
 
+DELETE FROM spell_area WHERE spell = 49416 AND area = 4755;
 INSERT INTO spell_area (`spell`, `area`, `quest_start`, `quest_end`, `quest_start_status`, `quest_end_status`) 
 VALUES (49416, 4755, 14293, 14294, 74, 64);
 
 -- Lord Godfrey 35906 Quest Ender for Save Krennan Aranas
 UPDATE creature SET PhaseID = 172 where GUID = 210115272 and PhaseID = 171;
 UPDATE creature SET PhaseID = 170 where GUID = 210115271 and PhaseID = 0;
+
+-- NPC commandered Cannon
+UPDATE `creature_template` SET `AIName`='', `ScriptName`='npc_commandeered_cannon_35914' WHERE `entry` IN (35914);
