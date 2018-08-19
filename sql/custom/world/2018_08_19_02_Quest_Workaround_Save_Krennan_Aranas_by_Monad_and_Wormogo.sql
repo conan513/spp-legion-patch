@@ -71,5 +71,5 @@ INSERT INTO `gameobject_addon` (`guid`, `parent_rotation0`, `parent_rotation1`, 
 INSERT INTO spell_area (`spell`, `area`, `quest_start`, `quest_end`, `quest_start_status`, `quest_end_status`) 
 VALUES (49416, 4755, 14293, 14294, 74, 64);
 
-INSERT INTO spell_area (`spell`, `area`, `quest_start`, `quest_end`, `quest_start_status`, `quest_end_status`) 
-VALUES (49416, 4755, 14293, 14294, 74, 64);
+-- Lord Godfrey 35906 Quest Ender for Save Krennan Aranas
+UPDATE creature SET PhaseID = 171 where GUID = 210115272 and PhaseID = 170;
