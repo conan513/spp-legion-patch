@@ -1,12 +1,12 @@
 -- VEHICLE TEMPLATE ACCESSORIES
 
-DELETE FROM vehicle_template_accessory WHERE npc_entry IN (36283, 35905, 35231);
+DELETE FROM vehicle_template_accessory WHERE entry IN (36283, 35905, 35231);
 INSERT INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`, `minion`, `description`, `summontype`, `summontimer`) VALUES
 (36283, 36292, 2, 0, '36283 - 36292', 0, 0), -- 36283 - 36292
 (35905, 35907, 1, 0, '35905 - 35907', 3, 5000), -- 35905 - 35907
 (35231, 35230, 1, 0, '35231 - 35230', 3, 5000); -- 35231 - 35230
 
-DELETE FROM vehicle_template_accessory WHERE npc_entry IN (37939, 38363, 44928, 38755, 43336, 43337);
+DELETE FROM vehicle_template_accessory WHERE entry IN (37939, 38363, 44928, 38755, 43336, 43337);
 INSERT INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`, `minion`, `description`, `summontype`, `summontimer`) VALUES
 (37939, 37938, 0, 0, '37939 - 37938', 0, 0), -- 37939 - 37938
 (38363, 38366, 0, 0, '38363 - 38366', 0, 0), -- 38363 - 38366
