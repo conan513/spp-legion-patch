@@ -48,16 +48,16 @@ INSERT INTO `waypoints`(`entry`,`pointid`,`position_x`,`position_y`,`position_z`
 
 
 -- Chen Stormstout 56343 creature_text
-DELETE FROM `creature_text` WHERE `entry`=56343;
-INSERT INTO `creature_text` (`entry`,`groupid`,`id`,`text`,`type`,`language`,`probability`,`emote`,`duration`,`sound`,`comment`) VALUES
+DELETE FROM `creature_text` WHERE `CreatureID`=56343;
+INSERT INTO `creature_text` (`CreatureID`,`groupid`,`id`,`text`,`type`,`language`,`probability`,`emote`,`duration`,`sound`,`comment`) VALUES
 (56343,0,0,'I''m called Chen, and this is my niece, Li Li.',12,0,100,0,0,0,'Chen Stormstout'),
 (56343,1,0,'May we stay here at your farmhouse for a while? We do not have much in the way of money, but I will gladly share some of my famous ale with you.',12,0,100,0,0,0,'Chen Stormstout'),
 (56343,2,0,'Thanks you! We will not trouble you for long.',12,0,100,0,0,0,'Chen Stormstout'),
 (56343,3,0,'Interesting, He does not like beer?, A very strange Land, indeed.',12,0,100,0,0,0,'Chen Stormstout');
 
 -- Pang Thunderfoot 56204 creature_text
-DELETE FROM `creature_text` WHERE `entry`=56204;
-INSERT INTO `creature_text` (`entry`,`groupid`,`id`,`text`,`type`,`language`,`probability`,`emote`,`duration`,`sound`,`comment`) VALUES
+DELETE FROM `creature_text` WHERE `CreatureID`=56204;
+INSERT INTO `creature_text` (`CreatureID`,`groupid`,`id`,`text`,`type`,`language`,`probability`,`emote`,`duration`,`sound`,`comment`) VALUES
 (56204,0,0,'Greetings, Chen, Li li. You may stay, but I do not need any of your ale.',12,0,100,0,0,0,'Pang Thunderfoot');
 
 
@@ -78,7 +78,7 @@ INSERT INTO `waypoints`(`entry`,`pointid`,`position_x`,`position_y`,`position_z`
 
 
 -- Li Li 56344 creature_text
-DELETE FROM `creature_text` WHERE `entry`=56344;
-INSERT INTO `creature_text` (`entry`,`groupid`,`id`,`text`,`type`,`language`,`probability`,`emote`,`duration`,`sound`,`comment`) VALUES
+DELETE FROM `creature_text` WHERE `creatureID`=56344;
+INSERT INTO `creature_text` (`creatureID`,`groupid`,`id`,`text`,`type`,`language`,`probability`,`emote`,`duration`,`sound`,`comment`) VALUES
 (56344,0,0,'Finally!',12,0,100,0,0,0,'Li Li'),
 (56344,1,0,'Really, uncle? We''are stoping already? We only moved, like, ten feet?',12,0,100,0,0,0,'Li Li');
