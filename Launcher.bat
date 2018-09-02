@@ -49,6 +49,12 @@ IF NOT EXIST "%mainfolder%\autosave.on" (
   )
 )
 
+IF NOT EXIST "%mainfolder%\testbranch.on" (
+  IF NOT EXIST "%mainfolder%\testbranch.off" (
+    echo testbranch > "%mainfolder%\testbranch.off"
+  )
+)
+
 IF NOT EXIST "%mainfolder%\Realms\1\serverlanguage.txt" echo English> "%mainfolder%\Realms\1\serverlanguage.txt"
 
 del "%mainfolder%\..\Update.bat"
@@ -266,6 +272,8 @@ if exist "%mainfolder%\%worldfile%" goto menu
 goto reset_world
 
 :menu
+if exist "%mainfolder%\testbranch.on" set testbranch=Enabled
+if exist "%mainfolder%\testbranch.off" set testbranch=Disabled
 echo.
 cls
 echo #######################################################
@@ -285,6 +293,8 @@ echo 6  -  Mod manager [EXPERIMENTAL]
 echo 7  -  Patched exe files for the game (7.3.5.%gameversion%)
 echo.
 echo 8  -  Report issues
+echo 9  -  Enable/disable test updates (%testbranch%)
+echo       Apply the latest, under development and maybe un-tested updates
 echo.
 echo X  -  Shutdown all servers
 echo.
@@ -298,6 +308,7 @@ if "%menu%"=="5" (goto save_menu)
 if "%menu%"=="6" (goto modmanager_menu)
 if "%menu%"=="7" (explorer.exe %mainfolder%\Addons\Patched_Exe_%gameversion%)
 if "%menu%"=="8" (goto report_issue)
+if "%menu%"=="9" (goto testbranch_switch)
 if "%menu%"=="x" (goto shutdown_servers)
 if "%menu%"=="" (goto menu)
 
@@ -310,7 +321,7 @@ echo.
 echo http://www.ashamane.com/
 echo.
 pause
-start https://bt.ashamane.com/my_view_page.php
+start https://github.com/wormogo/wow_fixes_for_SPP/issues
 goto menu
 
 :quick_start_servers_x86
@@ -608,6 +619,22 @@ echo.
 echo Clearing ahbot's auctions from database...
 "%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%characters% < "%mainfolder%\sql\clear_auction.sql"
 echo Done.
+echo.
+echo Checking test updates status...
+if exist "%mainfolder%\testbranch.on" goto testbranch_start_on
+if exist "%mainfolder%\testbranch.off" goto testbranch_start_off
+
+:testbranch_start_on
+echo Test updates: ENABLED
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%world% < "%mainfolder%\sql\enable_world_test_updates.sql"
+goto server_x86_after_testbranch
+
+:testbranch_start_off
+echo Test updates: DISABLED
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%world% < "%mainfolder%\sql\disable_world_test_updates.sql"
+goto server_x86_after_testbranch
+
+:server_x86_after_testbranch
 ping -n 5 127.0.0.1>nul
 cd "%mainfolder%\Realms\%realmslot%"
 start ..\..\Server\Bin\bnetserver.exe
@@ -621,6 +648,22 @@ cd "%mainfolder%\Realms\%realmslot%"
 echo Clearing ahbot's auctions from database...
 "%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%characters% < "%mainfolder%\sql\clear_auction.sql"
 echo Done.
+echo.
+echo Checking test updates status...
+if exist "%mainfolder%\testbranch.on" goto testbranch_start_on
+if exist "%mainfolder%\testbranch.off" goto testbranch_start_off
+
+:testbranch_start_on
+echo Test updates: ENABLED
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%world% < "%mainfolder%\sql\enable_world_test_updates.sql"
+goto server_x64_after_testbranch
+
+:testbranch_start_off
+echo Test updates: DISABLED
+"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%world% < "%mainfolder%\sql\disable_world_test_updates.sql"
+goto server_x64_after_testbranch
+
+:server_x64_after_testbranch
 ping -n 5 127.0.0.1>nul
 start ..\..\Server\Bin64\bnetserver.exe
 Start ..\..\Server\Bin64\worldserver.exe
@@ -1252,6 +1295,21 @@ goto save_menu
 del "%mainfolder%\autosave.off"
 echo autosave > "%mainfolder%\autosave.on"
 goto save_menu
+
+:testbranch_switch
+if exist "%mainfolder%\testbranch.on" goto testbranch_off
+if exist "%mainfolder%\testbranch.off" goto testbranch_on
+
+:testbranch_off
+cls
+del "%mainfolder%\testbranch.on"
+echo testbranch > "%mainfolder%\testbranch.off"
+goto menu
+
+:testbranch_on
+del "%mainfolder%\testbranch.off"
+echo testbranch > "%mainfolder%\testbranch.on"
+goto menu
 
 :exit
 exit
