@@ -162,4 +162,6 @@ VALUES (69484, 4734, 14467, 0, 0, -1, 0, 2, 3, 64, 0);
 
 DELETE FROM `spell_area` WHERE `spell`=69484 AND `area`=4842;
 INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
-VALUES (69484, 4482, 14467, 0, 0, -1, 0, 2, 3, 64, 0);
+VALUES (69484, 4842, 14467, 0, 0, -1, 0, 2, 3, 64, 0);
+
+DELETE FROM `spell_area` WHERE `spell`=69484 AND `area`=4482;
