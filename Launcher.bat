@@ -640,7 +640,7 @@ cd "%mainfolder%\Realms\%realmslot%"
 start ..\..\Server\Bin\bnetserver.exe
 Start ..\..\Server\Bin\worldserver.exe
 REM start Server\Tools\server_check.bat"
-goto menu
+goto checking_worldserver_startup
 
 :server_x64
 echo.
@@ -668,7 +668,29 @@ ping -n 5 127.0.0.1>nul
 start ..\..\Server\Bin64\bnetserver.exe
 Start ..\..\Server\Bin64\worldserver.exe
 REM start Server\Tools\server_check.bat"
-goto menu
+goto checking_worldserver_startup
+
+:checking_worldserver_startup
+echo.
+echo Checking the worldserver status..
+ping -n 10 127.0.0.1>nul
+tasklist /FI "IMAGENAME eq worldserver.exe" 2>NUL | find /I /N "worldserver.exe">NUL
+if "%ERRORLEVEL%"=="0" echo Check pass && goto menu
+if "%ERRORLEVEL%"=="1" goto checking_worldserver_fail
+
+:checking_worldserver_fail
+echo.
+echo Looks like the worldserver can't start up.
+echo We recommend to reset your world database to fix this issue.
+echo Want to do this now?
+echo.
+echo 1 - Reset world database
+echo 2 - Back to menu
+echo.
+
+set /P savemenu=Select a number: 
+if "%savemenu%"=="1" (goto reset_world)
+if "%savemenu%"=="2" (goto menu)
 
 :save_menu
 cls
@@ -926,7 +948,8 @@ goto exit
 cls
 echo.
 echo Are you sure want to reset your world and hotfix database?
-echo You must do this on first start to get the latest AshamaneCore database.
+echo You may be lost all of your custom changes in the world database.
+echo (Your characters is in safe)
 echo.
 pause
 "%mainfolder%\Server\Tools\7za.exe" e -y "%mainfolder%\sql\ADB735.00.7z"
