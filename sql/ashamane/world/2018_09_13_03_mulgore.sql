@@ -18,7 +18,7 @@ DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHER
 DELETE FROM `gameobject` WHERE `id`=186265;
 
 DELETE FROM `creature` WHERE `id` IN (@KYLE);
-INSERT INTO `creature` (`id`, `map`, `zoneId`, `areaId`, `spawnMask`, `PhaseId`, `PhaseGroup`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`) VALUES 
+REPLACE INTO `creature` (`id`, `map`, `zoneId`, `areaId`, `spawnMask`, `PhaseId`, `PhaseGroup`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`) VALUES 
 (@KYLE, 1, 215, 222, 1, 169, 0, 0, 0, -2257, -413, -9, 3.18259, 10, 0, 0, 1, 0, 0, 0, 0, 0);
 
 -- Conditions
