@@ -28,7 +28,7 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 ('3520', '0', '1', '0', '1', '0', '100', '0', '60000', '60000', '180000', '180000', '', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', 'Ol\' Emma - Out of Combat - Say Line 1 (No Repeat)'); 
 
 DELETE FROM creature WHERE  `id` = @ENTRY;
-INSERT INTO `creature` ( `guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`,`VerifiedBuild`) VALUES 
+INSERT INTO `creature` ( `guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`,`VerifiedBuild`) VALUES 
 (188529, @ENTRY, '0', '1519', '5148', '1', '0', '0', '0', '-1', '1544', '0', '-8774.43', '666.457', '103.414', '3.91594', '120', '0', '0', '1', '0', '2', '0', '0', '0', '0', '0', '', '0'); 
 
 SET @GUID := (SELECT `guid` FROM `creature` WHERE `position_x` REGEXP '-8774.43' AND `position_y` REGEXP '666.457' AND `position_z` REGEXP '103.414' AND `PhaseId` = '0' AND `map` = '0');
