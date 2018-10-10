@@ -19,7 +19,7 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 
 
 DELETE FROM creature WHERE  `id` = @ENTRY;
-INSERT INTO `creature` ( `guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`,`VerifiedBuild`) VALUES 
+INSERT INTO `creature` ( `guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`,`VerifiedBuild`) VALUES 
 (189422, @ENTRY, '0', '1519', '5390', '1', '0', '169', '0', '-1', '0', '0', '-8720.09', '846.207', '96.4861', '1.06465', '120', '0', '0', '0', '0', '2', '0', '0', '0', '0', '0', '', '23360'), 
 (188620, @ENTRY, '0', '1519', '4411', '1', '0', '0', '0', '-1', '0', '1', '-8251.76', '968.828', '116.843', '2.24694', '120', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '', '0'), 
 (188767, @ENTRY, '0', '1519', '5346', '1', '0', '0', '0', '-1', '0', '1', '-8462.83', '902.264', '99.102', '5.92122', '120', '0', '0', '1', '0', '2', '0', '0', '0', '0', '0', '', '0'), 
