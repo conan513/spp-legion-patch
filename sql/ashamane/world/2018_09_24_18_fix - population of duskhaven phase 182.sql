@@ -10,7 +10,7 @@ DELETE FROM `creature` WHERE `guid` in
  @CGUID+61, @CGUID+62, @CGUID+63, @CGUID+64, @CGUID+65, @CGUID+66, @CGUID+67, @CGUID+68, @CGUID+69, @CGUID+70,
  @CGUID+71, @CGUID+72, @CGUID+73, @CGUID+74, @CGUID+75, @CGUID+76, @CGUID+77, @CGUID+78, @CGUID+79, @CGUID+80);
 
-INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) 
+INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) 
 VALUES 
 (@CGUID+1, 4075, 654, 4714, 4786, 3, 0, 182, 0, -1, 0, 0, -1908.89, 2294.2, 42.4302, 4.33124, 7200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 25549),
 (@CGUID+2, 4075, 654, 4714, 4786, 3, 0, 182, 0, -1, 0, 0, -1821.14, 2287.42, 42.3269, 5.92199, 7200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 25549),

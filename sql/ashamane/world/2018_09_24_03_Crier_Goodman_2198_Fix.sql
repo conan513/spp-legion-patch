@@ -17,7 +17,7 @@ DELETE FROM  `creature_text` WHERE `CreatureID`= @ENTRY;
 DELETE FROM smart_scripts WHERE `entryorguid` = 2198 AND `source_type`= 0;
 
 DELETE FROM creature WHERE  `id` = @ENTRY;
-INSERT INTO `creature` ( `guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`,`VerifiedBuild`) VALUES 
+INSERT INTO `creature` ( `guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`,`VerifiedBuild`) VALUES 
 (188539, @ENTRY, '0', '1519', '5149', '1', '0', '0', '0', '-1', '0', '0', '-8714.75', '421.858', '98.3812', '0.565084', '120', '0', '0', '1', '0', '2', '0', '0', '0', '0', '0', '', '0'); 
 
 SET @GUID := (SELECT `guid` FROM `creature` WHERE `position_x` REGEXP '-8714.75' AND `position_y` REGEXP '421.858' AND `position_z` REGEXP '98.3812' AND `PhaseId` = '0' AND `map` = '0');
