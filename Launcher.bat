@@ -258,6 +258,8 @@ del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_05_04_hotfixes.sql" >nul 2>&1
 del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_05_05_hotfixes.sql" >nul 2>&1
 del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_05_06_hotfixes.sql" >nul 2>&1
 del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_07_00_hotfixes_pvp_talents.sql" >nul 2>&1
+del /s "%mainfolder%\sql\custom\world\2017_01_01_01_artifact_weapon_vendor.sql" >nul 2>&1
+del /s "%mainfolder%\sql\custom\world\2017_03_10_item_enchatment_random_tiers.sql" >nul 2>&1
 rmdir /S /Q "%mainfolder%\Settings
 
 copy "%mainfolder%\Server\Tools\Update.bat" ..
