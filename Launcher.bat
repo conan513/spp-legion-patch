@@ -22,8 +22,8 @@ set world=world
 set hotfixes=hotfixes
 set login=realmd
 set website=blizzcms
-set worldfile=ADB_735.10_world.sql
-set hotfixesfile=ADB_735.10_hotfix.sql
+set worldfile=SPP_735.11_world.sql
+set hotfixesfile=SPP_735.11_hotfix.sql
 set world_clean=world_clean
 set hotfixes_clean=hotfixes_clean
 
@@ -949,12 +949,11 @@ goto exit
 :reset_world
 cls
 echo.
-echo Are you sure want to reset your world and hotfix database?
-echo You may be lost all of your custom changes in the world database.
-echo (Your characters is in safe)
+echo World database reset required.
+echo Please wait...
 echo.
-pause
-"%mainfolder%\Server\Tools\7za.exe" e -y "%mainfolder%\sql\ADB735.00.7z"
+ping -n 15 127.0.0.1>nul
+"%mainfolder%\Server\Tools\7za.exe" e -y "%mainfolder%\sql\SPP_Full_DB.7z"
 echo.
 echo Clear %world% and %hotfixes% database.
 echo.
@@ -969,8 +968,7 @@ echo Importing %hotfixesfile% into %hotfixes% database.
 echo.
 "%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%hotfixes% < "%mainfolder%\%hotfixesfile%"
 echo.
-echo Done!
-pause
+
 goto menu
 
 :service_menu
