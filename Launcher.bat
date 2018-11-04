@@ -270,8 +270,22 @@ goto webserver
 cd "%mainfolder%\Server\Apache24"
 start "" /min apache_start.bat
 cd ..\..
-if exist "%mainfolder%\%worldfile%" goto menu
+cd "%mainfolder%\Server\SPP_Hub"
+start "" /min spp_hub.bat
+if exist "%mainfolder%\%worldfile%" goto check_node_modules
+"%mainfolder%\Server\Tools\7za.exe" e -y "%mainfolder%\sql\SPP_Full_DB.7z"
 goto reset_world
+
+:check_node_modules
+if exist "%mainfolder%\Server\SPP_Hub\node_modules\yallist\package.json" goto menu
+cls
+echo.
+echo Extracting NodeJS modules for WorldToDiscord server...
+echo.
+cd "%mainfolder%\Server\SPP_Hub"
+"%mainfolder%\Server\Tools\7za.exe" x -y "%mainfolder%\Server\SPP_Hub\node_modules.7z"
+cd ..\..
+goto start_database
 
 :menu
 if exist "%mainfolder%\testbranch.on" set testbranch=Enabled
@@ -916,6 +930,7 @@ cls
 taskkill /f /im bnetserver.exe
 taskkill /f /im worldserver.exe
 taskkill /f /im spp-httpd.exe
+taskkill /f /im node.exe
 if exist %mainfolder%\autosave.on goto autosave_shutdown
 "%mainfolder%\Server\Database\bin\mysqladmin.exe" -u root -p123456 --port=3310 shutdown
 goto exit
