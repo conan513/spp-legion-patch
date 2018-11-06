@@ -255,7 +255,7 @@ del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_05_06_hotfixes.sql" >nul 2>&1
 del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_07_00_hotfixes_pvp_talents.sql" >nul 2>&1
 del /s "%mainfolder%\sql\custom\world\2017_01_01_01_artifact_weapon_vendor.sql" >nul 2>&1
 del /s "%mainfolder%\sql\custom\world\2017_03_10_item_enchatment_random_tiers.sql" >nul 2>&1
-if exist "%mainfolder%\Settings\world.conf rmdir /S /Q "%mainfolder%\Settings
+if exist %mainfolder%\Settings\world.conf rmdir /S /Q %mainfolder%\Settings
 del /s "%mainfolder%\testbranch.on" >nul 2>&1
 del /s "%mainfolder%\testbranch.off" >nul 2>&1
 
@@ -271,7 +271,6 @@ cd "%mainfolder%\Server\SPP_Hub"
 start "" /min spp_hub.bat
 cd "%mainfolder%"
 if exist "%mainfolder%\%worldfile%" goto check_node_modules
-"%mainfolder%\Server\Tools\7za.exe" e -y "%mainfolder%\sql\SPP_Full_DB.7z"
 goto reset_world
 
 :check_node_modules
