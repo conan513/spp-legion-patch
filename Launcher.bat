@@ -49,12 +49,6 @@ IF NOT EXIST "%mainfolder%\autosave.on" (
   )
 )
 
-IF NOT EXIST "%mainfolder%\testbranch.on" (
-  IF NOT EXIST "%mainfolder%\testbranch.off" (
-    echo testbranch > "%mainfolder%\testbranch.off"
-  )
-)
-
 IF NOT EXIST "%mainfolder%\Realms\1\serverlanguage.txt" echo English> "%mainfolder%\Realms\1\serverlanguage.txt"
 
 del "%mainfolder%\..\Update.bat"
@@ -67,6 +61,7 @@ del "%mainfolder%\Server\Tools\server_web.bat"
 del "%mainfolder%\Server\Tools\start.bat"
 copy "%mainfolder%\sql\2017_05_15_char_world_quest.sql" "%mainfolder%\sql\ashamane\characters
 cls
+echo Starting the launcher...
 
 del /s "%mainfolder%\sql\ashamane\world\2017_11_12_world_areatrigger.sql" >nul 2>&1
 del /s "%mainfolder%\sql\ashamane\world\2017_11_17_01_alter_gossip.sql" >nul 2>&1
@@ -260,7 +255,9 @@ del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_05_06_hotfixes.sql" >nul 2>&1
 del /s "%mainfolder%\sql\ashamane\hotfixes\2018_01_07_00_hotfixes_pvp_talents.sql" >nul 2>&1
 del /s "%mainfolder%\sql\custom\world\2017_01_01_01_artifact_weapon_vendor.sql" >nul 2>&1
 del /s "%mainfolder%\sql\custom\world\2017_03_10_item_enchatment_random_tiers.sql" >nul 2>&1
-rmdir /S /Q "%mainfolder%\Settings
+if exist "%mainfolder%\Settings\world.conf rmdir /S /Q "%mainfolder%\Settings
+del /s "%mainfolder%\testbranch.on" >nul 2>&1
+del /s "%mainfolder%\testbranch.off" >nul 2>&1
 
 copy "%mainfolder%\Server\Tools\Update.bat" ..
 start "" /min "%mainfolder%\Server\Database\start.bat"
@@ -269,9 +266,10 @@ goto webserver
 :webserver
 cd "%mainfolder%\Server\Apache24"
 start "" /min apache_start.bat
-cd ..\..
+cd "%mainfolder%"
 cd "%mainfolder%\Server\SPP_Hub"
 start "" /min spp_hub.bat
+cd "%mainfolder%"
 if exist "%mainfolder%\%worldfile%" goto check_node_modules
 "%mainfolder%\Server\Tools\7za.exe" e -y "%mainfolder%\sql\SPP_Full_DB.7z"
 goto reset_world
@@ -284,12 +282,10 @@ echo Extracting NodeJS modules for WorldToDiscord server...
 echo.
 cd "%mainfolder%\Server\SPP_Hub"
 "%mainfolder%\Server\Tools\7za.exe" x -y "%mainfolder%\Server\SPP_Hub\node_modules.7z"
-cd ..\..
+cd "%mainfolder%"
 goto start_database
 
 :menu
-if exist "%mainfolder%\testbranch.on" set testbranch=Enabled
-if exist "%mainfolder%\testbranch.off" set testbranch=Disabled
 echo.
 cls
 echo #######################################################
@@ -525,7 +521,7 @@ copy "%mainfolder%\Server\Tools\apache_start.bat" "%mainfolder%\Server\Apache24\
 "%mainfolder%\Server\tools\fart.exe"  -r -c -- "%mainfolder%\Server\Apache24\apache_start.bat" http://127.0.0.1:8099 http://%realmaddress%:%httpport%
 cd "%mainfolder%\Server\Apache24"
 start "" /min apache_start.bat
-cd ..\..
+cd "%mainfolder%"
 
 echo.
 echo Changing the realm server IP address to %realmaddress% in database.
@@ -583,7 +579,7 @@ echo.
 goto realm_menu
 
 :check_autosave_start
-if exist %mainfolder%\autosave.on goto autosave_start
+if exist "%mainfolder%\autosave.on" goto autosave_start
 if "%serverstartoption%"=="1" (goto server_x86)
 if "%serverstartoption%"=="2" (goto server_x64)
 goto menu
@@ -633,21 +629,6 @@ echo Clearing ahbot's auctions from database...
 "%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%characters% < "%mainfolder%\sql\clear_auction.sql"
 echo Done.
 echo.
-echo Checking test updates status...
-if exist "%mainfolder%\testbranch.on" goto testbranch_start_on
-if exist "%mainfolder%\testbranch.off" goto testbranch_start_off
-
-:testbranch_start_on
-echo Test updates: ENABLED
-"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%world% < "%mainfolder%\sql\enable_world_test_updates.sql"
-goto server_x86_after_testbranch
-
-:testbranch_start_off
-echo Test updates: DISABLED
-"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%world% < "%mainfolder%\sql\disable_world_test_updates.sql"
-goto server_x86_after_testbranch
-
-:server_x86_after_testbranch
 ping -n 5 127.0.0.1>nul
 cd "%mainfolder%\Realms\%realmslot%"
 start ..\..\Server\Bin\bnetserver.exe
@@ -662,21 +643,6 @@ echo Clearing ahbot's auctions from database...
 "%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%characters% < "%mainfolder%\sql\clear_auction.sql"
 echo Done.
 echo.
-echo Checking test updates status...
-if exist "%mainfolder%\testbranch.on" goto testbranch_start_on
-if exist "%mainfolder%\testbranch.off" goto testbranch_start_off
-
-:testbranch_start_on
-echo Test updates: ENABLED
-"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%world% < "%mainfolder%\sql\enable_world_test_updates.sql"
-goto server_x64_after_testbranch
-
-:testbranch_start_off
-echo Test updates: DISABLED
-"%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%world% < "%mainfolder%\sql\disable_world_test_updates.sql"
-goto server_x64_after_testbranch
-
-:server_x64_after_testbranch
 ping -n 5 127.0.0.1>nul
 start ..\..\Server\Bin64\bnetserver.exe
 Start ..\..\Server\Bin64\worldserver.exe
@@ -964,7 +930,7 @@ echo.
 echo World database reset required.
 echo Please wait...
 echo.
-ping -n 15 127.0.0.1>nul
+ping -n 30 127.0.0.1>nul
 "%mainfolder%\Server\Tools\7za.exe" e -y "%mainfolder%\sql\SPP_Full_DB.7z"
 echo.
 echo Clear %world% and %hotfixes% database.
@@ -1069,7 +1035,7 @@ rmdir /S /Q maps
 del %dbc_maps%
 echo.
 pause
-cd ..\..
+cd "%mainfolder%"
 goto service_menu
 
 :install_deDE
@@ -1083,7 +1049,7 @@ rmdir /S /Q deDE
 ..\..\Tools\7za.exe e -y -spf %dbclang%
 
 echo.
-cd %mainfolder%
+cd "%mainfolder%"
 goto start_database
 
 :install_enUS
@@ -1097,7 +1063,7 @@ rmdir /S /Q enUS
 ..\..\Tools\7za.exe e -y -spf %dbclang%
 
 echo.
-cd %mainfolder%
+cd "%mainfolder%"
 goto start_database
 
 :install_esES
@@ -1111,7 +1077,7 @@ rmdir /S /Q esES
 ..\..\Tools\7za.exe e -y -spf %dbclang%
 
 echo.
-cd %mainfolder%
+cd "%mainfolder%"
 goto start_database
 
 :install_esMX
@@ -1125,7 +1091,7 @@ rmdir /S /Q esMX
 ..\..\Tools\7za.exe e -y -spf %dbclang%
 
 echo.
-cd %mainfolder%
+cd "%mainfolder%"
 goto start_database
 
 :install_frFR
@@ -1138,7 +1104,7 @@ cd "%mainfolder%\Server\Data\dbc"
 rmdir /S /Q frFR
 ..\..\Tools\7za.exe e -y -spf %dbclang%
 echo.
-cd %mainfolder%
+cd "%mainfolder%"
 goto start_database
 
 :install_itIT
@@ -1152,7 +1118,7 @@ rmdir /S /Q itIT
 ..\..\Tools\7za.exe e -y -spf %dbclang%
 
 echo.
-cd %mainfolder%
+cd "%mainfolder%"
 goto start_database
 
 :install_koKR
@@ -1166,7 +1132,7 @@ rmdir /S /Q koKR
 ..\..\Tools\7za.exe e -y -spf %dbclang%
 
 echo.
-cd %mainfolder%
+cd "%mainfolder%"
 goto start_database
 
 :install_ptBR
@@ -1180,7 +1146,7 @@ rmdir /S /Q ptBR
 ..\..\Tools\7za.exe e -y -spf %dbclang%
 
 echo.
-cd %mainfolder%
+cd "%mainfolder%"
 goto start_database
 
 :install_ruRU
@@ -1194,7 +1160,7 @@ rmdir /S /Q ruRU
 ..\..\Tools\7za.exe e -y -spf %dbclang%
 
 echo.
-cd %mainfolder%
+cd "%mainfolder%"
 goto start_database
 
 :install_zhCN
@@ -1208,7 +1174,7 @@ rmdir /S /Q zhCN
 ..\..\Tools\7za.exe e -y -spf %dbclang%
 
 echo.
-cd %mainfolder%
+cd "%mainfolder%"
 goto start_database
 
 :install_zhTW
@@ -1222,7 +1188,7 @@ rmdir /S /Q zhTW
 ..\..\Tools\7za.exe e -y -spf %dbclang%
 
 echo.
-cd %mainfolder%
+cd "%mainfolder%"
 goto start_database
 
 :update_vmaps
@@ -1234,7 +1200,7 @@ rmdir /S /Q vmaps
 del %vmaps%
 echo.
 pause
-cd ..\..
+cd "%mainfolder%"
 goto service_menu
 
 :update_mmaps
@@ -1246,7 +1212,7 @@ rmdir /S /Q mmaps
 del %mmaps%
 echo.
 pause
-cd ..\..
+cd "%mainfolder%"
 goto service_menu
 
 :log_file
@@ -1330,21 +1296,6 @@ goto save_menu
 del "%mainfolder%\autosave.off"
 echo autosave > "%mainfolder%\autosave.on"
 goto save_menu
-
-:testbranch_switch
-if exist "%mainfolder%\testbranch.on" goto testbranch_off
-if exist "%mainfolder%\testbranch.off" goto testbranch_on
-
-:testbranch_off
-cls
-del "%mainfolder%\testbranch.on"
-echo testbranch > "%mainfolder%\testbranch.off"
-goto menu
-
-:testbranch_on
-del "%mainfolder%\testbranch.off"
-echo testbranch > "%mainfolder%\testbranch.on"
-goto menu
 
 :exit
 exit
