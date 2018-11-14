@@ -7,6 +7,16 @@ set mainfolder=%CD%
 
 taskkill /f /im bnetserver.exe
 taskkill /f /im worldserver.exe
+
+:install
+if exist "%mainfolder%\launcher.bat" goto update
+cls
+echo Downloading the base files for the repack...
+echo.
+"%mainfolder%\git\cmd\git.exe" clone --depth=1 https://github.com/conan513/spp-legion-patch.git spp-legion
+goto update
+
+:update
 cls
 echo.
 echo Create local git config file...
@@ -25,4 +35,7 @@ echo Downloading the latest update...
 echo.
 ..\git\cmd\git.exe pull https://github.com/conan513/spp-legion-patch.git 735-v3
 echo.
+copy "%mainfolder%\spp-legion\Server\Tools\Update.bat" . /Y
+copy "%mainfolder%\spp-legion\Server\Tools\Update_fix_if_error.bat" . /Y
+copy "%mainfolder%\spp-legion\Server\Tools\Launch_Servers.bat" . /Y
 pause
