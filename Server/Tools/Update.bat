@@ -35,7 +35,8 @@ echo Downloading the latest update...
 echo.
 ..\git\cmd\git.exe pull https://github.com/conan513/spp-legion-patch.git 735-v3
 echo.
-copy "%mainfolder%\spp-legion\Server\Tools\Update.bat" . /Y
+cd "%mainfolder%"
 copy "%mainfolder%\spp-legion\Server\Tools\Update_fix_if_error.bat" . /Y
 copy "%mainfolder%\spp-legion\Server\Tools\Launch_Servers.bat" . /Y
+copy "%mainfolder%\spp-legion\Server\Tools\Update.bat" . /Y
 pause
