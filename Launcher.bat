@@ -763,6 +763,7 @@ goto exit
 
 :reset_world
 cls
+cd "%mainfolder%"
 echo.
 echo World database reset required.
 echo Please wait...
