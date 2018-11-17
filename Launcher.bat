@@ -54,7 +54,6 @@ IF NOT EXIST "%mainfolder%\autosave.on" (
 
 IF NOT EXIST "%mainfolder%\Realms\1\serverlanguage.txt" echo English> "%mainfolder%\Realms\1\serverlanguage.txt"
 
-del "%mainfolder%\..\Update.bat"
 del "%mainfolder%\sql\ashamane\characters\2017_05_15_char_world_quest.sql"
 del "%mainfolder%\sql\ashamane\characters\2017_05_20_char_world_quest.sql"
 del "%mainfolder%\sql\ashamane\characters\2018_01_05_01_characters_world_quest.sql"
@@ -88,7 +87,7 @@ ping -n 5 127.0.0.1>nul
 if not exist "%mainfolder%\Server\Data\vmaps" goto update_vmaps
 echo.
 
-copy "%mainfolder%\Server\Tools\Update.bat" ..
+copy "%mainfolder%\Server\Tools\Update.bat" .. /Y
 start "" /min "%mainfolder%\Server\Database\start.bat"
 goto webserver
 
