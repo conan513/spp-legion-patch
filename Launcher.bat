@@ -98,6 +98,7 @@ cd "%mainfolder%"
 goto start_database
 
 :webserver
+mkdir "%mainfolder%\Server\Apache24\logs"
 cd "%mainfolder%\Server\Apache24"
 start "" /min apache_start.bat
 cd "%mainfolder%\Server\SPP_Hub"
