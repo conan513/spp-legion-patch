@@ -22,10 +22,11 @@ set world=world
 set hotfixes=hotfixes
 set login=realmd
 set website=blizzcms
-set worldfile=SPP_735.11_world.sql
-set hotfixesfile=SPP_735.11_hotfix.sql
+set worldfile=ADB_world_735.00.sql
+set hotfixesfile=ADB_hotfixes_735.00.sql
 set world_clean=world_clean
 set hotfixes_clean=hotfixes_clean
+set fulldb_zip=ADB_735.00.7z
 
 REM --- Settings ---
 
@@ -765,7 +766,7 @@ echo World database reset required.
 echo Please wait...
 echo.
 ping -n 30 127.0.0.1>nul
-"%mainfolder%\Server\Tools\7za.exe" e -y "%mainfolder%\sql\SPP_Full_DB.7z"
+"%mainfolder%\Server\Tools\7za.exe" e -y "%mainfolder%\sql\%fulldb_zip%"
 echo.
 echo Clear %world% and %hotfixes% database.
 echo.
