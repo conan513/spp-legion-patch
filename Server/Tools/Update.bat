@@ -33,7 +33,7 @@ cls
 echo.
 echo Downloading the latest update...
 echo.
-..\git\cmd\git.exe pull https://github.com/conan513/spp-legion-patch.git 735-v3
+..\git\cmd\git.exe pull https://github.com/conan513/spp-legion-patch.git bestcore
 echo.
 cd "%mainfolder%"
 copy "%mainfolder%\spp-legion\Server\Tools\Update_fix_if_error.bat" . /Y
