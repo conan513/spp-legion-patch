@@ -1122,59 +1122,6 @@ INSERT INTO `creature_template_addon` (`entry`, `path_id`, `mount`, `bytes1`, `b
 UPDATE `creature_template_addon` SET `auras`='57886' WHERE `entry`=30837; -- 30837 (Defense System)
 UPDATE `creature_template_addon` SET `auras`='29266' WHERE `entry`=30659; -- 30659 (Violet Hold Guard)
 
-DELETE FROM `creature_template_scaling` WHERE `Entry` IN (112742, 102370, 101976, 102282, 102368, 102369, 102043, 101994, 102279, 103561, 102084, 103609, 102085, 102302, 102136, 102372, 102044, 102103, 102434, 112732, 112733, 103146, 102397, 102137, 103450, 102398, 102337, 102267, 102376, 102387, 102380, 102400, 101995, 102377, 102373, 101950, 102040, 103312, 102139, 101951, 102269, 102281, 102335, 112738, 102336, 102272, 102395, 102246, 104529, 102431);
-INSERT INTO `creature_template_scaling` (`Entry`, `LevelScalingDelta`, `VerifiedBuild`) VALUES
-(112742, 0, 22908),
-(102370, 0, 22908),
-(101976, 2, 22908),
-(102282, 1, 22908),
-(102368, 0, 22908),
-(102369, 0, 22908),
-(102043, 0, 22908),
-(101994, 1, 22908),
-(102279, 0, 22908),
-(103561, 0, 22908),
-(102084, 0, 22908),
-(103609, 0, 22908),
-(102085, 0, 22908),
-(102302, 1, 22908),
-(102136, 0, 22908),
-(102372, 0, 22908),
-(102044, 0, 22908),
-(102103, 0, 22908),
-(102434, 0, 22908),
-(112732, 1, 22908),
-(112733, 1, 22908),
-(103146, 0, 22908),
-(102397, 1, 22908),
-(102137, 0, 22908),
-(103450, 0, 22908),
-(102398, 1, 22908),
-(102337, 1, 22908),
-(102267, 0, 22908),
-(102376, 0, 22908),
-(102387, 2, 22908),
-(102380, 0, 22908),
-(102400, 0, 22908),
-(101995, 2, 22908),
-(102377, 0, 22908),
-(102373, 0, 22908),
-(101950, 2, 22908),
-(102040, 2, 22908),
-(103312, 0, 22908),
-(102139, 0, 22908),
-(101951, 2, 22908),
-(102269, 0, 22908),
-(102281, 0, 22908),
-(102335, 1, 22908),
-(112738, 1, 22908),
-(102336, 1, 22908),
-(102272, 0, 22908),
-(102395, 0, 22908),
-(102246, 2, 22908),
-(104529, 0, 22908),
-(102431, 2, 22908);
-
 
 
 UPDATE `creature_model_info` SET `VerifiedBuild`=22908 WHERE `DisplayID`=65920;
@@ -1281,7 +1228,7 @@ UPDATE `creature_template` SET `minlevel`=100, `maxlevel`=100, `faction`=14, `Ba
 UPDATE `creature_template` SET `minlevel`=102, `maxlevel`=110, `faction`=1720, `speed_run`=1, `BaseAttackTime`=2000, `RangeAttackTime`=2000, `unit_flags`=570688256, `unit_flags2`=2049 WHERE `entry`=102272; -- Felguard Destroyer
 
 DELETE FROM `gameobject_template` WHERE `entry` IN (246993 /*Cell*/, 246992 /*Cell*/, 246994 /*Cell*/, 247385 /*Cell*/, 246998 /*Cell*/, 247544 /*Doodad_7DU_VioletHold_trapdoor001*/, 247000 /*Cell*/, 247005 /*Prison Barrier*/, 246996 /*Cell*/, 246990 /*Cell*/, 247002 /*Prison Seal*/, 246995 /*Cell*/, 246999 /*Cell*/, 246997 /*Cell*/);
-INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `IconName`, `unk1`, `size`, `Data0`, `Data1`, `Data2`, `Data3`, `Data4`, `Data5`, `Data6`, `Data7`, `Data8`, `Data9`, `Data10`, `Data11`, `Data12`, `Data13`, `Data14`, `Data15`, `Data16`, `Data17`, `Data18`, `Data19`, `Data20`, `Data21`, `Data22`, `Data23`, `Data24`, `Data25`, `Data26`, `Data27`, `Data28`, `Data29`, `Data30`, `Data31`, `Data32`, `RequiredLevel`, `VerifiedBuild`) VALUES
+INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `Name`, `unk1`, `size`, `Data0`, `Data1`, `Data2`, `Data3`, `Data4`, `Data5`, `Data6`, `Data7`, `Data8`, `Data9`, `Data10`, `Data11`, `Data12`, `Data13`, `Data14`, `Data15`, `Data16`, `Data17`, `Data18`, `Data19`, `Data20`, `Data21`, `Data22`, `Data23`, `Data24`, `Data25`, `Data26`, `Data27`, `Data28`, `Data29`, `Data30`, `Data31`, `Data32`, `RequiredLevel`, `VerifiedBuild`) VALUES
 (246993, 0, 8112, 'Cell', '', 0.5146566, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22908), -- Cell
 (246992, 0, 8112, 'Cell', '', 0.5146625, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22908), -- Cell
 (246994, 0, 8112, 'Cell', '', 0.5097218, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22908), -- Cell
