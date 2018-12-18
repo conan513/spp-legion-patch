@@ -40,7 +40,7 @@ UPDATE `conversation_actor_template` SET `CreatureId`=98548, `CreatureModelId`=6
 UPDATE `conversation_actor_template` SET `CreatureId`=115100, `CreatureModelId`=39623 WHERE `Id`=53609;
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (6478, 6477, 6476, 9141, 5619, 5622, 6475, 4475, 1797, 1796, 5621);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (6478, 14561, 60426805, 1, 0, 26365),
 (6477, 5337, 60426805, 1, 0, 26365),
 (6476, 0, 60426805, 0, 0, 26365),

@@ -59,7 +59,7 @@ INSERT INTO `conversation_actors` (`ConversationId`, `ConversationActorId`, `Idx
 UPDATE `conversation_actor_template` SET `CreatureId`=113526, `CreatureModelId`=63690 WHERE `Id`=52393;
 
 DELETE FROM `conversation_line_template` WHERE `Id`=2013;
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (2013, 0, 0, 0, 0, 26124);
 
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26124 WHERE `Id`=2010;

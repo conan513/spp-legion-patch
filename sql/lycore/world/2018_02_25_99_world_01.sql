@@ -1,4 +1,3 @@
-
 # File name: 7.3.5_25996_二月-25-1305 - WoWDump.awps.pkt
 # Parsing date: 02/25/2018 15:24:40
 
@@ -194,7 +193,7 @@ UPDATE `conversation_actor_template` SET `CreatureId`=98012, `CreatureModelId`=6
 */
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (9902, 10017, 3291, 10267, 4497, 10373, 6947, 10019, 5405, 6865, 3140, 9975, 3883, 9967, 10370, 10235, 6605, 6363, 6362, 6361, 6360, 9213, 9212, 9182, 3459, 9971, 9538, 6506, 6512, 5862, 6603, 10074, 9942, 6443, 6426, 9371, 9370, 6516, 10282, 4473, 5859, 7245, 7241, 5861, 10361);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (9902, 0, 82, 0, 0, 25996),
 (10017, 0, 106, 0, 0, 25996),
 (3291, 0, 606, 0, 0, 25996),

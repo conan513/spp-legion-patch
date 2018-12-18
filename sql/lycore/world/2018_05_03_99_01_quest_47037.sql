@@ -121,7 +121,7 @@ INSERT INTO `conversation_actors` (`ConversationId`, `ConversationActorId`, `Idx
 
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (9390, 9397, 9398, 9407, 9406, 9405, 9335, 9334);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (9390, 1000, 0, 1, 0, 26365),
 (9397, 0, 0, 0, 0, 26365),
 (9398, 0, 0, 0, 0, 26365),

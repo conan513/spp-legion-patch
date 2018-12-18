@@ -1,8 +1,3 @@
-
-UPDATE `conversation_line_template` SET `StartTime`=4970, `Unk`=9264, `VerifiedBuild`=26124 WHERE `Id`=4840;
-UPDATE `conversation_line_template` SET `Unk`=8240, `VerifiedBuild`=26124 WHERE `Id`=4838;
-
-
 UPDATE `conversation_template` SET `FirstLineID`=4839, `LastLineEndTime`=12506, `VerifiedBuild`=26124 WHERE `Id`=2292;
 
 
@@ -281,7 +276,7 @@ INSERT INTO `conversation_actors` (`ConversationId`, `ConversationActorId`, `Idx
 
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (4471, 6935, 9952, 4859, 4797, 4799, 7076);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (4471, 0, 149, 0, 0, 26124),
 (6935, 0, 793, 0, 0, 26124),
 (9952, 0, 795, 0, 0, 26124),
@@ -1088,7 +1083,6 @@ INSERT INTO `areatrigger_template` (`Id`, `Type`, `Flags`, `Data0`, `Data1`, `Da
 
 
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26124 WHERE `Id`=9440;
-UPDATE `conversation_line_template` SET `UiCameraID`=0, `Unk`=8253, `VerifiedBuild`=26124 WHERE `Id`=9439;
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26124 WHERE `Id`=9438;
 UPDATE `conversation_line_template` SET `UiCameraID`=2382291072, `VerifiedBuild`=26124 WHERE `Id`=9201;
 UPDATE `conversation_line_template` SET `UiCameraID`=2382291072, `VerifiedBuild`=26124 WHERE `Id`=9200;

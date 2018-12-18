@@ -150,7 +150,7 @@ UPDATE `conversation_actor_template` SET `CreatureId`=117639, `CreatureModelId`=
 UPDATE `conversation_actor_template` SET `CreatureId`=119178, `CreatureModelId`=63719 WHERE `Id`=51642;
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (10229, 10228, 10386, 10385, 10264, 10477, 10476, 11042, 10376, 10270, 10175, 10202, 10174, 9374, 9372, 9136, 9135, 9134, 9133, 9132, 3931, 10177, 13447, 3932, 9369, 9368, 10184, 10285, 6915, 10173, 6337, 6338, 7113, 10034, 6842, 9931, 9194, 6433, 6431, 6430, 10703, 9934, 10076, 3871, 10185, 9969, 6841, 6336, 6335, 6334, 10176, 9145, 9138, 9137, 11041, 9970, 6916, 10363, 10291, 10289, 5857, 10164, 9193, 7112, 3870, 9834, 9690, 10075, 10035, 11889, 10501, 10165);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (10229, 11101, 108, 1, 0, 26124),
 (10228, 0, 126, 0, 0, 26124),
 (10386, 10178, 0, 1, 0, 26124),
@@ -240,7 +240,7 @@ UPDATE `conversation_line_template` SET `UiCameraID`=163212, `VerifiedBuild`=261
 UPDATE `conversation_line_template` SET `UiCameraID`=163212, `VerifiedBuild`=26124 WHERE `Id`=12597;
 UPDATE `conversation_line_template` SET `UiCameraID`=163212, `VerifiedBuild`=26124 WHERE `Id`=12596;
 UPDATE `conversation_line_template` SET `UiCameraID`=2673794320, `VerifiedBuild`=26124 WHERE `Id`=12609;
-UPDATE `conversation_line_template` SET `UiCameraID`=2673794320, `Unk`=0, `VerifiedBuild`=26124 WHERE `Id`=12608;
+UPDATE `conversation_line_template` SET `UiCameraID`=2673794320, `Flags`=0, `VerifiedBuild`=26124 WHERE `Id`=12608;
 UPDATE `conversation_line_template` SET `UiCameraID`=2673794320, `VerifiedBuild`=26124 WHERE `Id`=12607;
 UPDATE `conversation_line_template` SET `VerifiedBuild`=26124 WHERE `Id`=11852;
 UPDATE `conversation_line_template` SET `VerifiedBuild`=26124 WHERE `Id`=11851;

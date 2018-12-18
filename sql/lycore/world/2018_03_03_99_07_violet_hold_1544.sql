@@ -1,4 +1,3 @@
-
 # File name: 7.3.5_26124_三月-02-2035 -监狱.awps.pkt
 # Detected build: V7_3_5_26124
 # Detected locale: zhCN
@@ -32,7 +31,7 @@ INSERT INTO `conversation_actors` (`ConversationId`, `ConversationActorId`, `Idx
 
 
 DELETE FROM `conversation_line_template` WHERE `Id`=7171;
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (7171, 0, 86, 0, 0, 26124);
 
 

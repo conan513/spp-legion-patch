@@ -29,13 +29,11 @@ INSERT INTO `conversation_actor_template` (`Id`, `CreatureId`, `CreatureModelId`
 
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26654 WHERE `Id`=15049;
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26654 WHERE `Id`=15048;
-UPDATE `conversation_line_template` SET `UiCameraID`=0, `Unk`=8241, `VerifiedBuild`=26654 WHERE `Id`=15047;
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26654 WHERE `Id`=15046;
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26654 WHERE `Id`=15066;
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26654 WHERE `Id`=15065;
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26654 WHERE `Id`=15064;
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26654 WHERE `Id`=15063;
-UPDATE `conversation_line_template` SET `UiCameraID`=0, `Unk`=0, `VerifiedBuild`=26654 WHERE `Id`=15062;
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26654 WHERE `Id`=15061;
 
 SET NAMES 'latin1';

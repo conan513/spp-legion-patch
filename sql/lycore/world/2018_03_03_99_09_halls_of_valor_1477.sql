@@ -357,7 +357,7 @@ UPDATE `conversation_actor_template` SET `VerifiedBuild`=26124 WHERE `Id`=48842;
 UPDATE `conversation_actor_template` SET `VerifiedBuild`=26124 WHERE `Id`=48842;
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (4662, 4661);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (4662, 0, 680, 0, 0, 26124),
 (4661, 0, 680, 0, 0, 26124);
 

@@ -49,7 +49,7 @@ INSERT INTO `conversation_actor_template` (`Id`, `CreatureId`, `CreatureModelId`
 
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (8611, 2543, 2541, 2539, 2737, 8670, 2464, 3422, 3421, 3566, 2633, 2632, 3364, 3183, 2631, 3427, 2659, 2658, 2630, 2625, 8486, 8485, 8484, 8478, 8477, 8476, 8475, 8474);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (8611, 30950, 1011433352, 1, 0, 26124),
 (2543, 16904, 1011433352, 0, 0, 26124),
 (2541, 11874, 1011433352, 1, 0, 26124),

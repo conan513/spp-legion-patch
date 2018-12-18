@@ -9,7 +9,7 @@ INSERT INTO `conversation_actors` (`ConversationId`, `ConversationActorId`, `Idx
 (1191, 51080, 0, 26124);
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (2705, 2704);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (2705, 2706, 17800, 1, 0, 26124),
 (2704, 82, 2705, 0, 0, 26124);
 

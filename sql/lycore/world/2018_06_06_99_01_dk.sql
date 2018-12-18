@@ -48,7 +48,7 @@ INSERT INTO `conversation_actor_template` (`Id`, `CreatureId`, `CreatureModelId`
 (101539, 101539, 69901, 26654);
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (8734, 8728, 8727, 8732, 8726, 1774, 2941, 2940, 2939, 2869, 2864, 2863, 2862, 1784, 8742, 8741, 8740, 8739, 8738, 8737, 1789, 1788, 1787, 1786);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (8734, 41475, 1917690128, 2, 0, 26654),
 (8728, 24412, 1917690128, 1, 0, 26654),
 (8727, 14655, 1917690128, 1, 0, 26654),
@@ -408,12 +408,12 @@ INSERT INTO `gossip_menu_option` (`MenuId`, `OptionIndex`, `OptionIcon`, `Option
 (19169, 0, 0, '我改变主意了，我要选其他神器。', 0);
 
 DELETE FROM `gossip_menu_option_locale` WHERE (`locale`='zhCN' AND `MenuId`=20554 AND `OptionIndex`=0) OR (`locale`='zhCN' AND `MenuId`=19169 AND `OptionIndex`=0);
-INSERT INTO `gossip_menu_option_locale` (`MenuId`, `OptionIndex`, `locale`, `OptionText`, `BoxText`) VALUES
+REPLACE INTO `gossip_menu_option_locale` (`MenuId`, `OptionIndex`, `locale`, `OptionText`, `BoxText`) VALUES
 (20352, 0, 'zhCN', '让我看看你有些什么。', NULL),
 (20457, 0, 'zhCN', '我准备好了，开始把达拉然传送到破碎群岛吧。', NULL);
 
 DELETE FROM `gossip_menu_option_locale` WHERE (`locale`='zhCN' AND `MenuId`=20554 AND `OptionIndex`=0) OR (`locale`='zhCN' AND `MenuId`=19169 AND `OptionIndex`=0);
-INSERT INTO `gossip_menu_option_locale` (`MenuId`, `OptionIndex`, `locale`, `OptionText`, `BoxText`) VALUES
+REPLACE INTO `gossip_menu_option_locale` (`MenuId`, `OptionIndex`, `locale`, `OptionText`, `BoxText`) VALUES
 (20554, 0, 'zhCN', '告诉我可以飞到哪里去。', NULL),
 (19169, 0, 'zhCN', '我改变主意了，我要选其他神器。', NULL);
 
@@ -519,7 +519,7 @@ SET @GROUP_ID=0;
 SET @ID=0;
 
 DELETE FROM `creature_text` WHERE (`CreatureID`=93471) OR (`CreatureID`=93550) OR (`CreatureID`=97111) OR (`CreatureID`=97134) OR (`CreatureID`=101441) OR (`CreatureID`=101539)  OR (`CreatureID`=101778) OR (`CreatureID`=102244) OR (`CreatureID`=102245) OR (`CreatureID`=102304)  OR (`CreatureID`=102362) OR (`CreatureID`=102560) OR (`CreatureID`=102973) OR (`CreatureID`=102977) OR (`CreatureID`=111109) ;
-INSERT INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `BroadcastTextId`, `comment`) VALUES
+REPLACE INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `BroadcastTextId`, `comment`) VALUES
 (93471, @GROUP_ID+0, @ID+0, '$ct来了！骑士们，敬礼！', 12, 0, 100, 1, 0, 0, 0, '黑锋骑士 to Player'),
 (93550, @GROUP_ID+0, @ID+0, '主人！我这儿有好货。来看看吧。', 12, 0, 100, 0, 0, 0, 0, '军需官奥佐格 to Player'),
 (97111, @GROUP_ID+0, @ID+0, '死亡领主，我必须跟你谈谈。', 12, 0, 100, 396, 0, 0, 0, '伊兰娜·达德摩尔 to Player'),
@@ -562,7 +562,7 @@ INSERT INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Lan
 
 
 DELETE FROM `creature_text_locale` WHERE ( (`CreatureID`=93471) OR (`CreatureID`=93550) OR (`CreatureID`=97111) OR (`CreatureID`=97134) OR (`CreatureID`=101441) OR (`CreatureID`=101539)  OR (`CreatureID`=101778) OR (`CreatureID`=102244) OR (`CreatureID`=102245) OR (`CreatureID`=102304)  OR (`CreatureID`=102362) OR (`CreatureID`=102560) OR (`CreatureID`=102973) OR (`CreatureID`=102977) OR (`CreatureID`=111109)  ) AND (`locale`='zhCN');
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `locale`, `Text`) VALUES
+REPLACE INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `locale`, `Text`) VALUES
 (93471, @GROUP_ID+0, @ID+0, 'zhCN', '$ct来了！骑士们，敬礼！'),
 (93550, @GROUP_ID+0, @ID+0, 'zhCN', '主人！我这儿有好货。来看看吧。'),
 (97111, @GROUP_ID+0, @ID+0, 'zhCN', '死亡领主，我必须跟你谈谈。'),
@@ -604,7 +604,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `locale`, `Te
 (111109, @GROUP_ID+2, @ID+0, 'zhCN', '现在，我得去招呼其他访客了。祝你好运，$n！');
 
 DELETE FROM `npc_spellclick_spells` WHERE (`npc_entry`=42339 AND `spell_id`=78974) OR (`npc_entry`=102473 AND `spell_id`=202413) OR (`npc_entry`=115027 AND `spell_id`=228208) OR (`npc_entry`=115414 AND `spell_id`=229466) OR (`npc_entry`=107772 AND `spell_id`=234590) OR (`npc_entry`=113901 AND `spell_id`=234595) OR (`npc_entry`=116419 AND `spell_id`=231849) OR (`npc_entry`=116408 AND `spell_id`=231849) OR (`npc_entry`=116420 AND `spell_id`=231849) OR (`npc_entry`=102403 AND `spell_id`=227226) OR (`npc_entry`=123230 AND `spell_id`=245498) OR (`npc_entry`=102416 AND `spell_id`=227230) OR (`npc_entry`=102560 AND `spell_id`=202595) OR (`npc_entry`=102959 AND `spell_id`=203489);
-INSERT INTO `npc_spellclick_spells` (`npc_entry`, `spell_id`, `cast_flags`, `user_type`) VALUES
+REPLACE INTO `npc_spellclick_spells` (`npc_entry`, `spell_id`, `cast_flags`, `user_type`) VALUES
 (42339, 78974, 0, 0),
 (102473, 202413, 0, 0),
 (115027, 228208, 0, 0),
@@ -631,14 +631,14 @@ UPDATE `creature_template` SET `HealthScalingExpansion`=6, `type`=3, `HealthModi
 
 SET NAMES 'utf8';
 DELETE FROM `gameobject_template` WHERE `entry` IN (268618 /*通讯符文*/, 268616 /*阿彻鲁斯传送门*/);
-INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `unk1`, `size`, `Data0`, `Data1`, `Data2`, `Data3`, `Data4`, `Data5`, `Data6`, `Data7`, `Data8`, `Data9`, `Data10`, `Data11`, `Data12`, `Data13`, `Data14`, `Data15`, `Data16`, `Data17`, `Data18`, `Data19`, `Data20`, `Data21`, `Data22`, `Data23`, `Data24`, `Data25`, `Data26`, `Data27`, `Data28`, `Data29`, `Data30`, `Data31`, `Data32`, `RequiredLevel`, `VerifiedBuild`) VALUES
+REPLACE INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `unk1`, `size`, `Data0`, `Data1`, `Data2`, `Data3`, `Data4`, `Data5`, `Data6`, `Data7`, `Data8`, `Data9`, `Data10`, `Data11`, `Data12`, `Data13`, `Data14`, `Data15`, `Data16`, `Data17`, `Data18`, `Data19`, `Data20`, `Data21`, `Data22`, `Data23`, `Data24`, `Data25`, `Data26`, `Data27`, `Data28`, `Data29`, `Data30`, `Data31`, `Data32`, `RequiredLevel`, `VerifiedBuild`) VALUES
 (268618, 5, 41284, '通讯符文', '', 0.75, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26654), -- 通讯符文
 (268616, 5, 6788, '阿彻鲁斯传送门', '', 0.5, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26654); -- 阿彻鲁斯传送门
 
 UPDATE `gameobject_template` SET `type`=45, `displayId`=9510, `Data0`=225, `VerifiedBuild`=26654 WHERE `entry`=268608; -- Training Troops
 
 DELETE FROM `npc_text` WHERE `ID` IN (30027 /*30027*/, 28097 /*28097*/);
-INSERT INTO `npc_text` (`ID`, `Probability0`, `Probability1`, `Probability2`, `Probability3`, `Probability4`, `Probability5`, `Probability6`, `Probability7`, `BroadcastTextId0`, `BroadcastTextId1`, `BroadcastTextId2`, `BroadcastTextId3`, `BroadcastTextId4`, `BroadcastTextId5`, `BroadcastTextId6`, `BroadcastTextId7`, `VerifiedBuild`) VALUES
+REPLACE INTO `npc_text` (`ID`, `Probability0`, `Probability1`, `Probability2`, `Probability3`, `Probability4`, `Probability5`, `Probability6`, `Probability7`, `BroadcastTextId0`, `BroadcastTextId1`, `BroadcastTextId2`, `BroadcastTextId3`, `BroadcastTextId4`, `BroadcastTextId5`, `BroadcastTextId6`, `BroadcastTextId7`, `VerifiedBuild`) VALUES
 (30027, 1, 0, 0, 0, 0, 0, 0, 0, 120265, 0, 0, 0, 0, 0, 0, 0, 26654), -- 30027
 (28097, 1, 0, 0, 0, 0, 0, 0, 0, 103822, 0, 0, 0, 0, 0, 0, 0, 26654); -- 28097
 

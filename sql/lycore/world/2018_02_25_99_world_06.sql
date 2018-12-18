@@ -1,4 +1,3 @@
-
 # File name: multi
 # Detected build: V7_3_5_25996
 # Parsing date: 02/28/2018 22:01:59
@@ -323,7 +322,7 @@ UPDATE `conversation_actor_template` SET `CreatureId`=117867, `CreatureModelId`=
 UPDATE `conversation_actor_template` SET `CreatureId`=100700, `CreatureModelId`=69863 WHERE `Id`=52393;
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (2208, 2729, 10831, 5844, 2916, 4058, 4057, 8135, 3852, 8137, 8139, 4060, 8138, 7173, 9440, 9439, 9438, 10203, 2207, 10037, 4043, 6819, 8706, 6818, 6817, 6816, 6585, 9287, 9286, 9285, 9022, 6411, 6410, 5838, 6413, 6412, 9019, 2915, 4038, 4036, 4037, 13822, 5368, 2203, 10020, 6580, 9289, 9288, 8993, 12661, 12660, 12659, 12658, 12657, 10036, 9201, 9200, 9199, 9903, 9936, 11088, 11853, 13082, 11089, 13823, 2010, 11948, 11947, 4304, 4303, 4302, 4301, 4300, 4299, 10201, 10200, 13449, 10097, 13083, 10113, 13453, 10018, 13250, 8190, 8189, 8188, 8187, 4308, 4307, 4306, 4305, 9023, 15077, 15076, 15075, 15074, 15073, 15072, 15071, 15070, 11275, 11274, 11255, 11261);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (2208, 0, 3086398016, 0, 0, 25996),
 (2729, 0, 1459539856, 0, 0, 25996),
 (10831, 0, 381489168, 0, 0, 25996),
@@ -429,96 +428,7 @@ INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `Acto
 (11255, 2500, 106, 1, 0, 25996),
 (11261, 0, 2433700004, 0, 0, 25996);
 
-UPDATE `conversation_line_template` SET `StartTime`=22257, `UiCameraID`=381489168 WHERE `Id`=10835;
-UPDATE `conversation_line_template` SET `StartTime`=17033, `UiCameraID`=381489168 WHERE `Id`=10834;
-UPDATE `conversation_line_template` SET `StartTime`=7794, `UiCameraID`=381489168 WHERE `Id`=10833;
-UPDATE `conversation_line_template` SET `UiCameraID`=65536 WHERE `Id`=3968;
-UPDATE `conversation_line_template` SET `StartTime`=7080, `UiCameraID`=1459567105 WHERE `Id`=4025;
-UPDATE `conversation_line_template` SET `StartTime`=3524, `UiCameraID`=1459567105 WHERE `Id`=4024;
-UPDATE `conversation_line_template` SET `UiCameraID`=1459567105 WHERE `Id`=4023;
-UPDATE `conversation_line_template` SET `UiCameraID`=35587632 WHERE `Id`=10918;
-UPDATE `conversation_line_template` SET `UiCameraID`=35587632 WHERE `Id`=10917;
-UPDATE `conversation_line_template` SET `UiCameraID`=3078532912 WHERE `Id`=12626;
-UPDATE `conversation_line_template` SET `UiCameraID`=3078532912 WHERE `Id`=12625;
-UPDATE `conversation_line_template` SET `UiCameraID`=3078532912 WHERE `Id`=12624;
-UPDATE `conversation_line_template` SET `StartTime`=8300 WHERE `Id`=4842;
-UPDATE `conversation_line_template` SET `UiCameraID`=1 WHERE `Id`=12598;
-UPDATE `conversation_line_template` SET `UiCameraID`=1 WHERE `Id`=12597;
-UPDATE `conversation_line_template` SET `UiCameraID`=1 WHERE `Id`=12596;
-UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=11252;
-UPDATE `conversation_line_template` SET `StartTime`=13943, `UiCameraID`=534115012 WHERE `Id`=3992;
-UPDATE `conversation_line_template` SET `StartTime`=7050, `UiCameraID`=534115012 WHERE `Id`=3991;
-UPDATE `conversation_line_template` SET `UiCameraID`=534115012 WHERE `Id`=3990;
-UPDATE `conversation_line_template` SET `UiCameraID`=2726847040 WHERE `Id`=11252;
-UPDATE `conversation_line_template` SET `StartTime`=5343 WHERE `Id`=8132;
-UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=6077;
-UPDATE `conversation_line_template` SET `StartTime`=3248, `Unk`=8253 WHERE `Id`=4840;
-UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=10916;
-UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=10915;
-UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=10914;
-UPDATE `conversation_line_template` SET `UiCameraID`=2513283072 WHERE `Id`=6077;
-UPDATE `conversation_line_template` SET `StartTime`=13560, `UiCameraID`=3057698855 WHERE `Id`=8133;
-UPDATE `conversation_line_template` SET `StartTime`=8724, `UiCameraID`=3057698855 WHERE `Id`=4019;
-UPDATE `conversation_line_template` SET `UiCameraID`=3057698855 WHERE `Id`=3849;
-UPDATE `conversation_line_template` SET `StartTime`=13943, `UiCameraID`=4257249583 WHERE `Id`=3992;
-UPDATE `conversation_line_template` SET `StartTime`=7050, `UiCameraID`=4257249583 WHERE `Id`=3991;
-UPDATE `conversation_line_template` SET `UiCameraID`=4257249583 WHERE `Id`=3990;
-UPDATE `conversation_line_template` SET `StartTime`=13560, `UiCameraID`=0 WHERE `Id`=8133;
-UPDATE `conversation_line_template` SET `StartTime`=8724, `UiCameraID`=0 WHERE `Id`=4019;
-UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=3849;
-UPDATE `conversation_line_template` SET `VerifiedBuild`=25996 WHERE `Id`=12168;
-UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=10916;
-UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=10915;
-UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=10914;
-UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=12190;
-UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=12174;
-UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=12173;
-UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=12172;
-UPDATE `conversation_line_template` SET `StartTime`=4970, `Unk`=8241 WHERE `Id`=4840;
-UPDATE `conversation_line_template` SET `UiCameraID`=1 WHERE `Id`=10918;
-UPDATE `conversation_line_template` SET `UiCameraID`=1 WHERE `Id`=10917;
-UPDATE `conversation_line_template` SET `UiCameraID`=3967840688 WHERE `Id`=11062;
-UPDATE `conversation_line_template` SET `UiCameraID`=3967840688 WHERE `Id`=11061;
-UPDATE `conversation_line_template` SET `UiCameraID`=3967840688 WHERE `Id`=11060;
-UPDATE `conversation_line_template` SET `UiCameraID`=3967840688 WHERE `Id`=11059;
-UPDATE `conversation_line_template` SET `UiCameraID`=3967840688 WHERE `Id`=11058;
-UPDATE `conversation_line_template` SET `UiCameraID`=3967840688 WHERE `Id`=11057;
-UPDATE `conversation_line_template` SET `UiCameraID`=3967840688 WHERE `Id`=11056;
-UPDATE `conversation_line_template` SET `UiCameraID`=3967840688 WHERE `Id`=11055;
-UPDATE `conversation_line_template` SET `StartTime`=10138, `Unk`=0 WHERE `Id`=4838;
-UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=12190;
-UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=12174;
-UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=12173;
-UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=12172;
-UPDATE `conversation_line_template` SET `StartTime`=10138, `Unk`=49024 WHERE `Id`=4838;
-UPDATE `conversation_line_template` SET `StartTime`=5343 WHERE `Id`=8132;
-UPDATE `conversation_line_template` SET `Unk`=8253 WHERE `Id`=12608;
-UPDATE `conversation_line_template` SET `UiCameraID`=257 WHERE `Id`=12598;
-UPDATE `conversation_line_template` SET `UiCameraID`=257 WHERE `Id`=12597;
-UPDATE `conversation_line_template` SET `UiCameraID`=257 WHERE `Id`=12596;
-UPDATE `conversation_line_template` SET `UiCameraID`=3967821024 WHERE `Id`=11062;
-UPDATE `conversation_line_template` SET `UiCameraID`=3967821024 WHERE `Id`=11061;
-UPDATE `conversation_line_template` SET `UiCameraID`=3967821024 WHERE `Id`=11060;
-UPDATE `conversation_line_template` SET `UiCameraID`=3967821024 WHERE `Id`=11059;
-UPDATE `conversation_line_template` SET `UiCameraID`=3967821024 WHERE `Id`=11058;
-UPDATE `conversation_line_template` SET `UiCameraID`=3967821024 WHERE `Id`=11057;
-UPDATE `conversation_line_template` SET `UiCameraID`=3967821024 WHERE `Id`=11056;
-UPDATE `conversation_line_template` SET `UiCameraID`=3967821024 WHERE `Id`=11055;
-UPDATE `conversation_line_template` SET `VerifiedBuild`=25996 WHERE `Id`=12168;
-UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=6077;
-UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=3968;
-UPDATE `conversation_line_template` SET `StartTime`=22257 WHERE `Id`=10835;
-UPDATE `conversation_line_template` SET `StartTime`=17033 WHERE `Id`=10834;
-UPDATE `conversation_line_template` SET `StartTime`=7794 WHERE `Id`=10833;
-UPDATE `conversation_line_template` SET `StartTime`=10138, `Unk`=49024 WHERE `Id`=4838;
-UPDATE `conversation_line_template` SET `UiCameraID`=2411639728 WHERE `Id`=12626;
-UPDATE `conversation_line_template` SET `UiCameraID`=2411639728 WHERE `Id`=12625;
-UPDATE `conversation_line_template` SET `UiCameraID`=2411639728 WHERE `Id`=12624;
-UPDATE `conversation_line_template` SET `Unk`=8239 WHERE `Id`=12608;
-UPDATE `conversation_line_template` SET `StartTime`=4970, `Unk`=9277 WHERE `Id`=4840;
-UPDATE `conversation_line_template` SET `StartTime`=7080 WHERE `Id`=4025;
-UPDATE `conversation_line_template` SET `StartTime`=3524 WHERE `Id`=4024;
-UPDATE `conversation_line_template` SET `StartTime`=8300 WHERE `Id`=4842;
+
 
 DELETE FROM `conversation_template` WHERE `Id` IN (3232, 3031, 3030, 6624, 4498, 4510, 4454, 4453, 1918, 1116, 3632, 1917, 1807, 1914, 1909, 874, 878, 822, 5052, 5342, 5044, 5918, 3946, 3943, 4052, 4034, 2543, 2041, 3117, 2040, 3637, 3112, 5660, 5307, 6201, 1232, 1231, 3420, 5837, 6202, 5836, 879, 3947, 4117, 3937, 4367, 4570, 4569, 4980, 4437, 4979, 4435, 4348, 2803, 2809, 6060, 6056);
 INSERT INTO `conversation_template` (`Id`, `FirstLineID`, `LastLineEndTime`, `VerifiedBuild`) VALUES

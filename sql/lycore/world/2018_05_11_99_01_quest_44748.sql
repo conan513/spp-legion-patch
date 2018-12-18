@@ -76,9 +76,6 @@ UPDATE `creature_model_info` SET `BoundingRadius`=0.5056454, `VerifiedBuild`=263
 
 
 
-UPDATE `conversation_line_template` SET `Unk`=16448, `VerifiedBuild`=26365 WHERE `Id`=10201;
-
-
 UPDATE `gameobject_template_addon` SET `flags`=2113540 WHERE `entry`=265554; -- Shipwrecked Supplies
 UPDATE `gameobject_template_addon` SET `flags`=2113540 WHERE `entry`=265552; -- Shipwrecked Supplies
 UPDATE `gameobject_template_addon` SET `flags`=2113540 WHERE `entry`=265551; -- Shipwrecked Supplies

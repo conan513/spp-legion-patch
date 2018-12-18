@@ -5,7 +5,6 @@ INSERT INTO `conversation_actors` (`ConversationId`, `ConversationActorId`, `Idx
 (6607, 62294, 0, 26654); -- summons-to-stormwind On quest 50371 accept
 
 
-UPDATE `conversation_line_template` SET `Unk`=8239, `VerifiedBuild`=26654 WHERE `Id`=15022;
 
 UPDATE `gameobject_template_addon` SET `faction`=35 WHERE `entry`=259114; -- [DNT] Command Table Collision Cylinder
 UPDATE `quest_template` SET `RewardBonusMoney`=18350, `VerifiedBuild`=26654 WHERE `ID`=49976; -- Gifts of the Fallen

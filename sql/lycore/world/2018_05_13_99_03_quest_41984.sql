@@ -30,7 +30,7 @@ INSERT INTO `conversation_actors` (`ConversationId`, `ConversationActorId`, `Idx
 
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (3965, 3966);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (3965, 0, 137, 0, 0, 26365),
 (3966, 0, 137, 0, 0, 26365);
 
@@ -133,7 +133,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `P
 
 
 DELETE FROM `creature_addon` WHERE `guid` BETWEEN @CGUID+0 AND @CGUID+51;
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
 (@CGUID+0, 0, 0, 1, 1, 0, 0, 0, 0, ''), -- 恐惧飞鹰
 (@CGUID+1, 0, 0, 0, 1, 0, 0, 0, 0, '182476'), -- 锚点 - 182476 - -Unknown-
 (@CGUID+2, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 冥口唤雾者
@@ -336,7 +336,7 @@ SET NAMES 'utf8';
 SET @GROUP_ID =0;
 SET @ID =0;
 DELETE FROM `creature_text` WHERE (`CreatureID`=94930 AND `GroupID`='@GROUP_ID+0' AND `ID`='@ID+0') OR (`CreatureID`=105502 AND `GroupID`='@GROUP_ID+0' AND `ID`='@ID+0') OR (`CreatureID`=105502 AND `GroupID`='@GROUP_ID+1' AND `ID`='@ID+0') OR (`CreatureID`=105502 AND `GroupID`='@GROUP_ID+2' AND `ID`='@ID+0') OR (`CreatureID`=105710 AND `GroupID`='@GROUP_ID+0' AND `ID`='@ID+0');
-INSERT INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `BroadcastTextId`, `comment`) VALUES
+REPLACE INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `BroadcastTextId`, `comment`) VALUES
 (94930, @GROUP_ID+0, @ID+0, '这只渡鸦不悦地冲你叫了两声。', 16, 0, 100, 0, 0, 19174, 0, '穆宁 to Player'),
 (105502, @GROUP_ID+0, @ID+0, '诅咒……解除了？', 12, 0, 100, 0, 0, 52493, 0, '冥口唤雾者 to 瓦尔基拉候选者'),
 (105502, @GROUP_ID+1, @ID+0, '你休想赢得这场战斗！', 12, 0, 100, 0, 0, 51703, 0, '冥口唤雾者 to Player'),

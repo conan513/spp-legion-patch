@@ -43,7 +43,7 @@ UPDATE `conversation_actor_template` SET `VerifiedBuild`=26365 WHERE `Id`=48975;
 UPDATE `conversation_actor_template` SET `VerifiedBuild`=26365 WHERE `Id`=48975;
 
 DELETE FROM `conversation_line_template` WHERE `Id`=5863;
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (5863, 0, 813, 0, 0, 26365);
 
 UPDATE `conversation_line_template` SET `VerifiedBuild`=26365 WHERE `Id`=5861;
@@ -271,7 +271,7 @@ INSERT INTO `conversation_actor_template` (`Id`, `CreatureId`, `CreatureModelId`
 
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (4276, 4275);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (4276, 0, 101, 0, 0, 26365),
 (4275, 0, 101, 0, 0, 26365);
 
@@ -784,7 +784,7 @@ INSERT INTO `conversation_actors` (`ConversationId`, `ConversationActorId`, `Idx
 UPDATE `conversation_actor_template` SET `CreatureId`=89009, `CreatureModelId`=60845, `VerifiedBuild`=26365 WHERE `Id`=51642;
 -- 4802
 DELETE FROM `conversation_line_template` WHERE `Id`=4803;
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (4803, 0, 99, 0, 0, 26365);
 
 
@@ -1026,7 +1026,7 @@ UPDATE `conversation_actor_template` SET `CreatureId`=89009, `CreatureModelId`=6
 UPDATE `conversation_actor_template` SET `CreatureId`=89009, `CreatureModelId`=60845, `VerifiedBuild`=26365 WHERE `Id`=51642;
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (4857, 4858);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (4857, 0, 99, 0, 0, 26365),
 (4858, 0, 99, 0, 0, 26365);
 
@@ -1174,7 +1174,7 @@ UPDATE `conversation_actor_template` SET `CreatureId`=96469, `CreatureModelId`=6
 UPDATE `conversation_actor_template` SET `CreatureId`=96469, `CreatureModelId`=67230, `VerifiedBuild`=26365 WHERE `Id`=53609;
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (8856, 8855);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (8856, 0, 681, 0, 0, 26365),
 (8855, 0, 680, 0, 0, 26365);
 
@@ -1434,7 +1434,7 @@ UPDATE `conversation_actor_template` SET `VerifiedBuild`=26365 WHERE `Id`=48975;
 UPDATE `conversation_actor_template` SET `VerifiedBuild`=26365 WHERE `Id`=48975;
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (9079, 9074);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (9079, 0, 813, 0, 0, 26365),
 (9074, 0, 813, 0, 0, 26365);
 
@@ -1619,7 +1619,7 @@ UPDATE `conversation_actor_template` SET `CreatureId`=90417, `CreatureModelId`=6
 UPDATE `conversation_actor_template` SET `CreatureId`=90417, `CreatureModelId`=65834, `VerifiedBuild`=26365 WHERE `Id`=53609;
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (9032, 9031);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (9032, 0, 82, 0, 0, 26365),
 (9031, 0, 82, 0, 0, 26365);
 
@@ -1820,7 +1820,7 @@ UPDATE `conversation_actor_template` SET `VerifiedBuild`=26365 WHERE `Id`=48975;
 UPDATE `conversation_actor_template` SET `VerifiedBuild`=26365 WHERE `Id`=48975;
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (5866, 5858);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
 (5866, 0, 813, 0, 0, 26365),
 (5858, 0, 813, 0, 0, 26365);
 
