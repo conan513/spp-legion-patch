@@ -2,7 +2,7 @@
 SET NAME=SingleCore_TC Updater
 TITLE %NAME%
 COLOR 0A
-set mod=%1
+set mainfolder=%CD%
 
 :menu
 taskkill /f /im bnetserver.exe

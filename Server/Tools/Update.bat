@@ -63,9 +63,9 @@ echo.
 ..\git\cmd\git.exe pull https://github.com/conan513/spp-legion-patch.git %branch%
 echo.
 cd "%mainfolder%"
-copy "%mainfolder%\spp-legion\Server\Tools\Update_fix_if_error.bat" . /Y
-copy "%mainfolder%\spp-legion\Server\Tools\Launch_Servers.bat" . /Y
-copy "%mainfolder%\spp-legion\Server\Tools\Update.bat" . /Y
+copy "%mainfolder%\%installpath%\Server\Tools\Update_fix_if_error.bat" . /Y
+copy "%mainfolder%\%installpath%\Server\Tools\Launch_Servers.bat" . /Y
+copy "%mainfolder%\%installpath%\Server\Tools\Update.bat" . /Y
 echo.
 echo Please run the Update_fix_if_error.bat file if you see any error message above.
 echo You can start the servers with the Launch_Servers.bat file.
