@@ -123,7 +123,7 @@ goto start_database
 echo.
 cls
 echo #######################################################
-echo # Single Player Project - AshamaneCore                #
+echo # Single Player Project - BestCore (made by Thordekk) #
 echo # https://www.patreon.com/conan513                    #
 echo #######################################################
 echo.
