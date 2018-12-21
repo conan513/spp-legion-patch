@@ -29,18 +29,20 @@ cls
 set name=AshamaneCore
 set installpath=spp-legion
 set branch=735-v3
+goto install
 
 :bestcore
 set name=BestCore
 set installpath=spp-bestcore
 set branch=bestcore
+goto install
 
 :install
 if exist "%mainfolder%\launcher.bat" goto update_process
 cls
 echo Downloading the base files for the repack...
 echo.
-"%mainfolder%\git\cmd\git.exe" clone --depth=1 https://github.com/conan513/spp-legion-patch.git %installpath%
+"%mainfolder%\git\cmd\git.exe" clone --depth=1 https://github.com/conan513/spp-legion-patch.git %installpath% --branch=%branch%
 goto update_process
 
 :update_process
