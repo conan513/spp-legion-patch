@@ -22,15 +22,17 @@ set world=world
 set hotfixes=hotfixes
 set login=realmd
 set website=blizzcms
-set worldfile=ADB_world_735.00.sql
-set hotfixesfile=ADB_hotfixes_735.00.sql
+set worldfile=LDB_world_735.00.sql
+set hotfixesfile=LDB_hotfixes_735.00.sql
 set world_clean=world_clean
 set hotfixes_clean=hotfixes_clean
-set fulldb_zip=ADB_735.00.7z
+set fulldb_zip=LDB_735.00.7z
 
 REM --- Settings ---
 
 :start_database
+if exist "%mainfolder%\ADB_hotfixes_735.00.sql" del /s "%mainfolder%\ADB_hotfixes_735.00.sql"
+if exist "%mainfolder%\ADB_world_735.00.sql" del /s "%mainfolder%\ADB_world_735.00.sql"
 mkdir "%mainfolder%\Server\Data"
 if not exist "%mainfolder%\Server\Data\maps" goto update_dbc_maps
 mkdir "%mainfolder%\Server\Data\dbc"
@@ -63,7 +65,7 @@ echo Starting the launcher...
 
 del /s "%mainfolder%\sql\custom\world\2017_01_01_01_artifact_weapon_vendor.sql" >nul 2>&1
 del /s "%mainfolder%\sql\custom\world\2017_03_10_item_enchatment_random_tiers.sql" >nul 2>&1
-if exist %mainfolder%\Settings\world.conf rmdir /S /Q %mainfolder%\Settings
+if exist "%mainfolder%\Settings\world.conf" rmdir /S /Q "%mainfolder%\Settings"
 del /s "%mainfolder%\testbranch.on" >nul 2>&1
 del /s "%mainfolder%\testbranch.off" >nul 2>&1
 cls
@@ -781,7 +783,7 @@ echo Importing %hotfixesfile% into %hotfixes% database.
 echo.
 "%mainfolder%\Server\Database\bin\mysql.exe" --defaults-extra-file="%mainfolder%\Server\Database\connection.cnf" --default-character-set=utf8 --database=%hotfixes% < "%mainfolder%\%hotfixesfile%"
 echo.
-goto menu
+goto start_database
 
 :service_menu
 cls
