@@ -8,8 +8,8 @@ Website/application/cache
 Server/Apache24/logs
 Backup
 vendor
-ADB_hotfixes_735.00.sql
-ADB_world_735.00.sql
+LDB_hotfixes_735.00.sql
+LDB_world_735.00.sql
 Saves
 Server/Apache24/temp
 Website/temp
@@ -17,3 +17,4 @@ composer.*
 autosave.*
 Server/Apache24/conf/httpd.conf
 Server/Apache24/apache_start.bat
+*.txt
