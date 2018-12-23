@@ -61,7 +61,7 @@ echo Add realm settings to git system...
 echo.
 ..\git\cmd\git.exe add Realms
 ..\git\cmd\git.exe commit -m "Custom Changes"
-
+cls
 echo.
 echo Downloading the latest %name% update...
 echo.
