@@ -45,6 +45,7 @@ cd "%mainfolder%\%installpath%"
 ..\git\cmd\git.exe reset --hard
 echo.
 pause
+exit
 
 :not_installed_error
 cls

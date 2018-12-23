@@ -38,6 +38,7 @@ goto start_server
 if not exist "%mainfolder%\%installpath%\launcher.bat" goto not_installed_error
 cd "%mainfolder%\%installpath%"
 Launcher.bat
+exit
 
 :not_installed_error
 cls
