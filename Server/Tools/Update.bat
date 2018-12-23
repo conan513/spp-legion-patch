@@ -10,14 +10,18 @@ taskkill /f /im spp-httpd.exe
 taskkill /f /im node.exe
 
 :menu
+if exist "%mainfolder%\spp-legion\launcher.bat" set ashamane_installed=Installed
+if not exist "%mainfolder%\spp-legion\launcher.bat" set ashamane_installed=Not installed
+if exist "%mainfolder%\spp-bestcore\launcher.bat" set bestcore_installed=Installed
+if not exist "%mainfolder%\spp-bestcore\launcher.bat" set bestcore_installed=Not installed
 cls
 echo #######################################################
 echo # Single Player Project - Server Updater              #
 echo # https://www.patreon.com/conan513                    #
 echo #######################################################
 echo.
-echo 1 - Install/Update AshamaneCore
-echo 2 - Install/Update BestCore (made by Thordekk)
+echo 1 - Install/Update AshamaneCore (%ashamane_installed%)
+echo 2 - Install/Update BestCore     (%bestcore_installed%)
 echo.
 set /P menu=Enter a number: 
 if "%menu%"=="1" (goto ashamanecore)
@@ -25,7 +29,6 @@ if "%menu%"=="2" (goto bestcore)
 goto install
 
 :ashamanecore
-cls
 set name=AshamaneCore
 set installpath=spp-legion
 set branch=735-v3
