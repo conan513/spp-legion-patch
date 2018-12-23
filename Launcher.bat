@@ -161,12 +161,7 @@ goto menu
 
 :report_issue
 cls
-echo Please check the issue on official AshamaneCore server, before report it.
-echo.
-echo http://www.ashamane.com/
-echo.
-pause
-start https://github.com/wormogo/wow_fixes_for_SPP/issues
+start https://github.com/Thordekk/Spp-BestCore-Bugtracker
 goto menu
 
 :quick_start_servers_x86
