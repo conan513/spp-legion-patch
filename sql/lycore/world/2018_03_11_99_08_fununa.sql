@@ -25,7 +25,7 @@ INSERT INTO `conversation_actor_template` (`Id`, `CreatureId`, `CreatureModelId`
 
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (11690, 11689);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
 (11690, 2000, 106, 1, 0, 26124),
 (11689, 0, 0, 0, 0, 26124);
 

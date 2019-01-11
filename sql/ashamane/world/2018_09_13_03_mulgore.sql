@@ -21,7 +21,7 @@ SET @MULL_THUNDERHORN := 2948;
 UPDATE `creature_template` SET `AIName`='SmartAI' WHERE `entry` IN (@MULL_THUNDERHORN);
 
 DELETE FROM `creature_text` WHERE `CreatureID` IN (@MULL_THUNDERHORN);
-REPLACE INTO `creature_text` (`CreatureID`, `groupid`, `id`, `text`, `type`, `language`, `probability`, `emote`, `duration`, `sound`, `TextRange`, `comment`) VALUES 
+INSERT INTO `creature_text` (`CreatureID`, `groupid`, `id`, `text`, `type`, `language`, `probability`, `emote`, `duration`, `sound`, `TextRange`, `comment`) VALUES 
 (@MULL_THUNDERHORN, 0, 0, '%s uses $n\'s offering in a ritual...', 16, 0, 100, 0, 0, 0, 0, 'Mull Thunderhorn to Player'),
 (@MULL_THUNDERHORN, 0, 1, '%s begins a rite of creation...', 16, 0, 100, 0, 0, 0, 0, 'Mull Thunderhorn to Player'),
 (@MULL_THUNDERHORN, 0, 2, '%s holds high the items $n gave him...', 16, 0, 100, 0, 0, 0, 0, 'Mull Thunderhorn to Player'),
@@ -33,7 +33,7 @@ REPLACE INTO `creature_text` (`CreatureID`, `groupid`, `id`, `text`, `type`, `la
 
 DELETE FROM `smart_scripts` WHERE `entryorguid` IN (@MULL_THUNDERHORN)  AND `source_type`=0;
 DELETE FROM `smart_scripts` WHERE `entryorguid` IN (@MULL_THUNDERHORN*100) AND `source_type`=9;
-REPLACE INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES 
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES 
 (@MULL_THUNDERHORN, 0, 0, 1, 20, 0, 100, 0, 20440, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Mull Thunderhorn - On Quest \'Poison Water\' Finished - Say 0'),
 (@MULL_THUNDERHORN, 0, 1, 0, 61, 0, 100, 0, 20440, 0, 0, 0, 80, @MULL_THUNDERHORN*100, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Mull Thunderhorn - On Quest \'Poison Water\' Finished - Run Script'),
 (@MULL_THUNDERHORN, 0, 2, 3, 20, 0, 100, 0, 24441, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Mull Thunderhorn - On Quest \'Thunderhorn Totem\' Finished - Say 0'),
@@ -47,14 +47,14 @@ SET @ZARLMAN_TWO_MOONS := 3054;
 UPDATE `creature_template` SET `AIName`='SmartAI' WHERE `entry` IN (@ZARLMAN_TWO_MOONS);
 
 DELETE FROM `creature_text` WHERE `CreatureID` IN (@ZARLMAN_TWO_MOONS);
-REPLACE INTO `creature_text` (`CreatureID`, `groupid`, `id`, `text`, `type`, `language`, `probability`, `emote`, `duration`, `sound`, `TextRange`, `comment`) VALUES 
+INSERT INTO `creature_text` (`CreatureID`, `groupid`, `id`, `text`, `type`, `language`, `probability`, `emote`, `duration`, `sound`, `TextRange`, `comment`) VALUES 
 (@ZARLMAN_TWO_MOONS, 0, 0, 'Zarlman Two-Moons begins chanting as he mixes the well stones and ambercom before the Tribal Fire.', 16, 1, 100, 0, 0, 0, 0, 'Zarlman Two-Moons'),
 (@ZARLMAN_TWO_MOONS, 1, 0, 'The Water of the Seers is ready for your consumption, $N.', 12, 1, 100, 0, 0, 0, 0, 'Zarlman Two-Moons');
 
 
 DELETE FROM `smart_scripts` WHERE `entryorguid` IN (@ZARLMAN_TWO_MOONS)  AND `source_type`=0;
 DELETE FROM `smart_scripts` WHERE `entryorguid` IN (@ZARLMAN_TWO_MOONS*100) AND `source_type`=9;
-REPLACE INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES 
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES 
 (@ZARLMAN_TWO_MOONS, 0, 1, 0, 20, 0, 100, 0, 0, 0, 0, 0, 80, @ZARLMAN_TWO_MOONS*100, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Zarlman Two-Moons: On quest "" Rewarded - call script'),
 (@ZARLMAN_TWO_MOONS*100, 9, 0, 0, 1, 0, 100, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Script - Say 1'),
 (@ZARLMAN_TWO_MOONS*100, 9, 1, 0, 0, 0, 100, 0, 1000, 1000, 0, 0, 11, 5026, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Script - Cast Spell'),
@@ -66,7 +66,7 @@ SET @WOLF_SPIRIT := 36834;
 UPDATE `creature_template` SET `speed_run`=1, `VehicleId`=552, `AIName`='SmartAI' WHERE `entry` IN (@WOLF_SPIRIT);
 
 DELETE FROM `smart_scripts` WHERE `entryorguid` IN (@WOLF_SPIRIT)  AND `source_type`=0;
-REPLACE INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES 
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES 
 (@WOLF_SPIRIT, 0, 0, 0, 54, 0, 100, 512, 0, 0, 0, 0, 53, 1, @WOLF_SPIRIT*10, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Wolf Spirit - On Just Summoned - Start WP'),
 (@WOLF_SPIRIT, 0, 1, 2, 40, 0, 100, 512, 6, @WOLF_SPIRIT*10, 0, 0, 54, 3000, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Wolf Spirit - On WP Reached - Stop WP'),
 (@WOLF_SPIRIT, 0, 2, 0, 61, 0, 100, 512, 0, 0, 0, 0, 97, 30, 40, 2, 0, 0, 0, 1, 0, 0, 0, -1974.44, -460.366, -8.1413, 0, 'Wolf Spirit - On WP Reached - Jump To Pos'),
@@ -74,7 +74,7 @@ REPLACE INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event
 (@WOLF_SPIRIT, 0, 4, 0, 28, 0, 100, 512, 0, 0, 0, 0, 41, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Wolf Spirit - On Passenger Removed - Despawn');
 
 DELETE FROM `waypoints` WHERE `entry` IN (@WOLF_SPIRIT*10);
-REPLACE INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES 
+INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES 
 (@WOLF_SPIRIT*10, 1, -2222.39, -416.3, -9.20674, 'Wolf Spirit WP 1'),
 (@WOLF_SPIRIT*10, 2, -2196.75, -442.034, -5.21502, 'Wolf Spirit WP 2'),
 (@WOLF_SPIRIT*10, 3, -2165.83, -450.635, -6.01789, 'Wolf Spirit WP 3'),
@@ -125,11 +125,11 @@ SET @BRAVE_WILDRUNNER := (SELECT `guid` FROM `creature` WHERE `id`=3222);
 UPDATE `creature` SET `spawndist`=0, `MovementType`=2 WHERE `guid`=@BRAVE_WILDRUNNER;
 
 DELETE FROM `creature_addon` WHERE `guid` IN (@BRAVE_WILDRUNNER);
-REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES 
+INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES 
 (@BRAVE_WILDRUNNER, @BRAVE_WILDRUNNER*10, 0, 0, 0, 0, 0, 0, 0, NULL);
 
 DELETE FROM `waypoint_data` WHERE `id` IN (@BRAVE_WILDRUNNER*10);
-REPLACE INTO `waypoint_data` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `delay`, `move_type`, `action`, `action_chance`, `wpguid`) VALUES 
+INSERT INTO `waypoint_data` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `delay`, `move_type`, `action`, `action_chance`, `wpguid`) VALUES 
 (@BRAVE_WILDRUNNER*10, 1, -2330.8, -397.987, -8.131, 0, 0, 0, 0, 100, 0),
 (@BRAVE_WILDRUNNER*10, 2, -2333.88, -399.423, -8.229, 0, 0, 0, 0, 100, 0),
 (@BRAVE_WILDRUNNER*10, 3, -2340.87, -403.078, -8.657, 0, 0, 0, 0, 100, 0),
@@ -162,7 +162,7 @@ REPLACE INTO `waypoint_data` (`id`, `point`, `position_x`, `position_y`, `positi
 SET @GUID :=144540;
 
 DELETE FROM `creature` WHERE `id` IN (2978,2979);
-REPLACE INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `PhaseId`, `PhaseGroup`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`) VALUES 
+INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `PhaseId`, `PhaseGroup`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`) VALUES 
 (@GUID, 2978, 1, 215, 360, 1, 169, 0, 0, 0, -1629.69, -1356.99, 132.706, 3.94444, 120, 0, 0, 1, 0, 0, 0, 0, 0),
 (@GUID+1, 2978, 1, 215, 360, 1, 169, 0, 0, 0, -1629.39, -1363.92, 132.363, 2.67035, 120, 0, 0, 1, 0, 0, 0, 0, 0),
 (@GUID+2, 2978, 1, 215, 360, 1, 169, 0, 0, 0, -1656.55, -1242.14, 129.325, 5.50372, 120, 0, 0, 1, 0, 0, 0, 0, 0),
@@ -333,7 +333,7 @@ REPLACE INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `
 (@GUID+167, 2979, 1, 215, 215, 1, 169, 0, 0, 0, -1496.3, -972.343, 146.901, 4.04504, 120, 4, 0, 1, 0, 1, 0, 0, 0);
 
 DELETE FROM `creature_addon` WHERE `guid` BETWEEN @GUID AND @GUID+167;
-REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `auras`) VALUES 
+INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `auras`) VALUES 
 (@GUID, 0, 0, 0, 1, 233, ''),
 (@GUID+1, 0, 0, 0, 1, 233, ''),
 (@GUID+2, 0, 0, 0, 1, 233, ''),
@@ -425,7 +425,7 @@ REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `
 
 DELETE FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHERE `id` IN (2949,2950,2951,5786,2956,2957,2958,2959,2960,2962,2963,2964,2965,2969,2970,2971,2972,2973,2974,2976,2977,3035,3232,3566,5787,36825,36827,36828,36832,36845,37062,37175,37178,37185));
 DELETE FROM `creature` WHERE `id` IN (2949,2950,2951,5786,2956,2957,2958,2959,2960,2962,2963,2964,2965,2969,2970,2971,2972,2973,2974,2976,2977,3035,3232,3566,5787,36825,36827,36828,36832,36845,37062,37175,37178,37185);
-REPLACE INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `PhaseId`, `PhaseGroup`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`) VALUES
+INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `PhaseId`, `PhaseGroup`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`) VALUES
 (@GUID+168, 2959, 1, 215, 215, 1, 169, 0, 0, 0, -1515.33, 86.7874, 3.40662, 2.84022, 120, 10, 0, 1, 0, 1, 0, 0, 0),
 (@GUID+169, 2959, 1, 215, 215, 1, 169, 0, 0, 0, -1613.52, -88.1751, -0.127444, 5.25486, 120, 10, 0, 1, 0, 1, 0, 0, 0),
 (@GUID+170, 2959, 1, 215, 215, 1, 169, 0, 0, 0, -1717.88, -50.5209, -2.53785, 3.41635, 120, 10, 0, 1, 0, 1, 0, 0, 0),
@@ -1450,7 +1450,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 (@GUID+273, @GUID+273*10, 0, 0, 1, 0, '');
 
 DELETE FROM `waypoint_data` WHERE `id` IN (@GUID+203*10,@GUID+217*10,@GUID+253*10,@GUID+261*10,@GUID+273*10);
-REPLACE INTO `waypoint_data` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `delay`, `move_type`, `action`, `action_chance`, `wpguid`) VALUES 
+INSERT INTO `waypoint_data` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `delay`, `move_type`, `action`, `action_chance`, `wpguid`) VALUES 
 ((@GUID+273)*10, 1, -1932.14, -459.797, -7.24711, 0, 0, 0, 0, 100, 0),
 ((@GUID+273)*10, 2, -1985.85, -387.735, -4.18228, 0, 0, 0, 0, 100, 0),
 ((@GUID+273)*10, 3, -1940.81, -332.337, -3.40891, 0, 0, 0, 0, 100, 0),

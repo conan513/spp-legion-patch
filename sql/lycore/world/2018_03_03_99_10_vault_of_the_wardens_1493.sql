@@ -76,12 +76,27 @@ UPDATE `conversation_actor_template` SET `CreatureId`=103959, `CreatureModelId`=
 UPDATE `conversation_actor_template` SET `CreatureId`=103959, `CreatureModelId`=68431 WHERE `Id`=51642;
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (6032, 6025, 6024);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
 (6032, 0, 684, 0, 0, 26124),
 (6025, 8886, 686, 0, 0, 26124),
 (6024, 0, 686, 0, 0, 26124);
 
 UPDATE `conversation_line_template` SET `UiCameraID`=1333725120, `VerifiedBuild`=26124 WHERE `Id`=2147;
+UPDATE `conversation_line_template` SET `StartTime`=6936, `UiCameraID`=1333740896, `Unk`=8240, `VerifiedBuild`=26124 WHERE `Id`=2188;
+UPDATE `conversation_line_template` SET `UiCameraID`=1333740896, `VerifiedBuild`=26124 WHERE `Id`=2187;
+UPDATE `conversation_line_template` SET `VerifiedBuild`=26124 WHERE `Id`=2134;
+UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26124 WHERE `Id`=2108;
+UPDATE `conversation_line_template` SET `VerifiedBuild`=26124 WHERE `Id`=2160;
+UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=6077;
+UPDATE `conversation_line_template` SET `StartTime`=6709, `UiCameraID`=1333725120, `VerifiedBuild`=26124 WHERE `Id`=2174;
+UPDATE `conversation_line_template` SET `UiCameraID`=1333725120, `VerifiedBuild`=26124 WHERE `Id`=2173;
+UPDATE `conversation_line_template` SET `UiCameraID`=1333740896, `VerifiedBuild`=26124 WHERE `Id`=1447;
+UPDATE `conversation_line_template` SET `StartTime`=5402, `UiCameraID`=1333740896, `Unk`=0, `VerifiedBuild`=26124 WHERE `Id`=2202;
+UPDATE `conversation_line_template` SET `UiCameraID`=1333740896, `VerifiedBuild`=26124 WHERE `Id`=2201;
+UPDATE `conversation_line_template` SET `StartTime`=16652, `UiCameraID`=0, `VerifiedBuild`=26124 WHERE `Id`=2040;
+UPDATE `conversation_line_template` SET `StartTime`=6116, `UiCameraID`=0, `Unk`=8240, `VerifiedBuild`=26124 WHERE `Id`=2039;
+UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26124 WHERE `Id`=2038;
+UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26124 WHERE `Id`=2121;
 
 DELETE FROM `conversation_template` WHERE `Id` IN (2700, 2690);
 INSERT INTO `conversation_template` (`Id`, `FirstLineID`, `LastLineEndTime`, `VerifiedBuild`) VALUES

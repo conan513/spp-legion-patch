@@ -11,7 +11,7 @@ INSERT INTO `conversation_actors` (`ConversationId`, `ConversationActorId`, `Idx
 
 
 DELETE FROM `conversation_line_template` WHERE `Id`=15028;
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
 (15028, 0, 0, 0, 0, 26654);
 
 

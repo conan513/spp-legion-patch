@@ -38,14 +38,18 @@ INSERT INTO `conversation_actors` (`ConversationId`, `ConversationActorId`, `Idx
 
 
 DELETE FROM `conversation_line_template` WHERE `Id`=13452;
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
 (13452, 0, 121, 0, 0, 26124);
 
 UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=12598;
 UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=12597;
 UPDATE `conversation_line_template` SET `UiCameraID`=0 WHERE `Id`=12596;
 UPDATE `conversation_line_template` SET `UiCameraID`=4166966544 WHERE `Id`=12609;
-
+UPDATE `conversation_line_template` SET `UiCameraID`=4166966544, `Unk`=8241 WHERE `Id`=12608;
+UPDATE `conversation_line_template` SET `UiCameraID`=4166966544 WHERE `Id`=12607;
+UPDATE `conversation_line_template` SET `UiCameraID`=4166950704 WHERE `Id`=12626;
+UPDATE `conversation_line_template` SET `UiCameraID`=4166950704 WHERE `Id`=12625;
+UPDATE `conversation_line_template` SET `UiCameraID`=4166950704 WHERE `Id`=12624;
 
 DELETE FROM `conversation_template` WHERE `Id`=6059;
 INSERT INTO `conversation_template` (`Id`, `FirstLineID`, `LastLineEndTime`, `VerifiedBuild`) VALUES

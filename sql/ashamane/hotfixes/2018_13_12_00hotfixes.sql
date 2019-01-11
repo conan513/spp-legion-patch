@@ -1,1 +1,0 @@
-DELETE FROM `broadcast_text_locale` WHERE `locale` = 'zhCN';

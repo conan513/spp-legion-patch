@@ -193,3 +193,6 @@ UPDATE `gameobject_template` SET `VerifiedBuild`=26654 WHERE `entry`=252247; -- 
 
 UPDATE creature_template SET inhabitType = 4 WHERE entry IN (39375);
 
+DELETE FROM scenarios WHERE map = 1466;
+INSERT INTO scenarios VALUES
+(1466, 0, 1172, 1172, 0);

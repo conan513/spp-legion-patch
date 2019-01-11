@@ -1,3 +1,4 @@
+
 # File name: 7.3.5_25996_二月-24-1217 - WoWDump.awps.pkt
 # Detected build: V7_3_5_25996
 # Parsing date: 02/28/2018 15:03:14
@@ -77,7 +78,7 @@ INSERT INTO `conversation_actor_template` (`Id`, `CreatureId`, `CreatureModelId`
 
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (10238, 10840, 15066, 15065, 15064, 15063, 15062, 15061, 15024, 10841, 15343, 15342, 15341, 15340, 15339, 15351, 15338, 15337, 15350, 15335, 15334, 15333, 15332, 12715, 12714, 12713, 12712, 12711, 15049, 15048, 15047, 15046, 10096, 15023, 15022, 15021, 10691, 10240, 9935, 9968, 10690, 10934, 10907, 10098, 15330, 10871, 10870, 10550);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
 (10238, 0, 680, 0, 0, 25996),
 (10840, 0, 82, 0, 0, 25996),
 (15066, 63969, 17309324, 0, 0, 25996),

@@ -31,6 +31,7 @@ UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26365 WH
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26365 WHERE `Id`=2277;
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26365 WHERE `Id`=2276;
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26365 WHERE `Id`=2275;
+UPDATE `conversation_line_template` SET `UiCameraID`=0, `Unk`=16444, `VerifiedBuild`=26365 WHERE `Id`=2274;
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26365 WHERE `Id`=2273;
 
 DELETE FROM `gameobject_template_addon` WHERE `entry` IN (249460 /*Crate of Sabelite Sulfate*/, 252855 /*The False Keeper*/);

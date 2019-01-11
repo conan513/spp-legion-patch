@@ -22,11 +22,11 @@ set world=world
 set hotfixes=hotfixes
 set login=realmd
 set website=blizzcms
-set worldfile=LDB_world_735.00.sql
-set hotfixesfile=LDB_hotfixes_735.00.sql
+set worldfile=LDB_world_735.01.sql
+set hotfixesfile=LDB_hotfixes_735.01.sql
 set world_clean=world_clean
 set hotfixes_clean=hotfixes_clean
-set fulldb_zip=LDB_735.00.7z
+set fulldb_zip=LDB_735.01.7z
 
 REM --- Settings ---
 

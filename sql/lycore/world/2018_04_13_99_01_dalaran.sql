@@ -1763,7 +1763,7 @@ INSERT INTO `conversation_actor_template` (`Id`, `CreatureId`, `CreatureModelId`
 
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (10837, 10774, 10768, 10874, 10137, 10136, 10135, 10134, 10892, 10770, 10769, 10855, 11329, 11328, 11327, 11326, 11325, 11324, 11323, 10869, 10725, 10631, 10878, 10877, 10771, 10858, 10863, 10862, 10861, 10860, 10859, 10836, 10776, 10775, 10856, 10854);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
 (10837, 0, 79632640, 0, 0, 26365),
 (10774, 0, 83, 0, 0, 26365),
 (10768, 0, 83, 0, 0, 26365),
@@ -2191,6 +2191,34 @@ INSERT INTO `conversation_actors` (`ConversationId`, `ConversationActorId`, `Idx
 (5632, 8031488, 1, 26365);
 
 
+
+
+UPDATE `conversation_line_template` SET `UiCameraID`=3799969040 WHERE `Id`=12609;
+UPDATE `conversation_line_template` SET `UiCameraID`=3799969040, `Unk`=8240 WHERE `Id`=12608;
+UPDATE `conversation_line_template` SET `UiCameraID`=3799969040 WHERE `Id`=12607;
+UPDATE `conversation_line_template` SET `UiCameraID`=5176, `VerifiedBuild`=26365 WHERE `Id`=12661;
+UPDATE `conversation_line_template` SET `UiCameraID`=5176, `VerifiedBuild`=26365 WHERE `Id`=12660;
+UPDATE `conversation_line_template` SET `UiCameraID`=5176, `VerifiedBuild`=26365 WHERE `Id`=12659;
+UPDATE `conversation_line_template` SET `UiCameraID`=5176, `VerifiedBuild`=26365 WHERE `Id`=12658;
+UPDATE `conversation_line_template` SET `UiCameraID`=5176, `VerifiedBuild`=26365 WHERE `Id`=12657;
+
+
+UPDATE `conversation_line_template` SET `VerifiedBuild`=26365 WHERE `Id`=11850;
+UPDATE `conversation_line_template` SET `UiCameraID`=3799953200 WHERE `Id`=12626;
+UPDATE `conversation_line_template` SET `UiCameraID`=3799953200 WHERE `Id`=12625;
+UPDATE `conversation_line_template` SET `UiCameraID`=3799953200 WHERE `Id`=12624;
+UPDATE `conversation_line_template` SET `UiCameraID`=3799969040 WHERE `Id`=12598;
+UPDATE `conversation_line_template` SET `UiCameraID`=3799969040 WHERE `Id`=12597;
+UPDATE `conversation_line_template` SET `UiCameraID`=3799969040 WHERE `Id`=12596;
+
+UPDATE `conversation_template` SET `VerifiedBuild`=26365 WHERE `Id`=5660;
+UPDATE `conversation_template` SET `VerifiedBuild`=26365 WHERE `Id`=5647;
+UPDATE `conversation_template` SET `VerifiedBuild`=26365 WHERE `Id`=5430;
+UPDATE `conversation_template` SET `VerifiedBuild`=26365 WHERE `Id`=5639;
+UPDATE `conversation_template` SET `VerifiedBuild`=26365 WHERE `Id`=5307;
+UPDATE `conversation_template` SET `VerifiedBuild`=26365 WHERE `Id`=5305;
+UPDATE `conversation_template` SET `LastLineEndTime`=9256, `VerifiedBuild`=26365 WHERE `Id`=5304;
+UPDATE `conversation_template` SET `VerifiedBuild`=26365 WHERE `Id`=5632;
 
 DELETE FROM  `instance_template` WHERE `map` IN (1511,1666);
 INSERT INTO `instance_template` (`map`, `parent`, `script`, `allowMount`, `insideResurrection`) VALUES 

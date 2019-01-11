@@ -45,7 +45,7 @@ UPDATE `conversation_actor_template` SET `CreatureId`=120218, `CreatureModelId`=
 
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (12994, 12999, 13668);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
 (12994, 0, 296, 0, 0, 26124),
 (12999, 0, 296, 0, 0, 26124),
 (13668, 0, 1323671568, 0, 0, 26124);

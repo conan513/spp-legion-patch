@@ -28,7 +28,7 @@ INSERT INTO `conversation_actor_template` (`Id`, `CreatureId`, `CreatureModelId`
 
 
 DELETE FROM `conversation_line_template` WHERE `Id`=9897;
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
 (9897, 0, 687, 0, 0, 26822);
 
 
@@ -291,12 +291,12 @@ INSERT INTO `conversation_actors` (`ConversationId`, `ConversationActorId`, `Idx
 
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (5406, 5407);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
 (5406, 0, 576, 0, 0, 26822),
 (5407, 0, 576, 0, 0, 26822);
 
-UPDATE `conversation_line_template` SET `Flags`=0, `VerifiedBuild`=26822 WHERE `Id`=4840;
-UPDATE `conversation_line_template` SET `Flags`=0, `VerifiedBuild`=26822 WHERE `Id`=4838;
+UPDATE `conversation_line_template` SET `Unk`=0, `VerifiedBuild`=26822 WHERE `Id`=4840;
+UPDATE `conversation_line_template` SET `Unk`=0, `VerifiedBuild`=26822 WHERE `Id`=4838;
 
 DELETE FROM `conversation_template` WHERE `Id` IN (2570, 2569);
 INSERT INTO `conversation_template` (`Id`, `FirstLineID`, `LastLineEndTime`, `VerifiedBuild`) VALUES

@@ -1,0 +1,1 @@
+REPLACE INTO disables VALUES (0, 92189, 2, 36, 1518, "Deadmines Icicle Bug Fix");

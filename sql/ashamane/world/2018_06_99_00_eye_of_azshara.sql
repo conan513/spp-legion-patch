@@ -575,6 +575,11 @@ INSERT INTO `criteria_data` (`criteria_id`, `type`, `value1`, `value2`, `ScriptN
 
 UPDATE creature SET SpawnDist = 0 WHERE id = 91808;
 
+DELETE FROM scenarios WHERE map IN (1456, 1501);
+INSERT INTO scenarios VALUES
+(1456, 0, 1169, 1169, 0),
+(1501, 0, 1166, 1166, 0);
+
 DELETE FROM spell_area WHERE spell IN (191815, 212614, 191816, 212615);
 INSERT INTO spell_area VALUES
 (191815, 8040, 0, 0, 0, -1, 0, 2, 2, 64, 11),

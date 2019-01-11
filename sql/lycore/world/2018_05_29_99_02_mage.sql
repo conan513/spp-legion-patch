@@ -1115,7 +1115,7 @@ INSERT INTO `conversation_actor_template` (`Id`, `CreatureId`, `CreatureModelId`
 (108533, 108533, 1505, 26365); -- Lenny "Fingers" McCoy
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (3007, 3006, 3005, 3004, 3003, 3002, 3232, 2943, 3236, 5388, 5267, 5266, 5265, 5264, 5263, 5122, 5121, 5036, 2981, 4919, 4918, 4917, 4916, 5309, 2978, 2977, 2976, 2975, 3138, 2982, 2961, 3231, 5123, 4965, 4920, 2944, 3233, 3017, 3016, 2959, 7079, 7071, 7070, 7069, 3237, 2945, 5280, 3234, 3137, 2924, 2923, 5110, 5109, 3235, 5034, 5035, 5026, 5025, 5024, 5023, 5022, 5019);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
 (3007, 30337, 203675, 1, 0, 26365),
 (3006, 23687, 203675, 1, 0, 26365),
 (3005, 20761, 203675, 0, 0, 26365),

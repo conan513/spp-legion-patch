@@ -30,7 +30,7 @@ UPDATE `conversation_actor_template` SET `VerifiedBuild`=26972 WHERE `Id`=58084;
 UPDATE `conversation_actor_template` SET `VerifiedBuild`=26972 WHERE `Id`=48975;
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (10786, 10796);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
 (10786, 0, 82, 0, 0, 26972),
 (10796, 0, 0, 0, 0, 26972);
 

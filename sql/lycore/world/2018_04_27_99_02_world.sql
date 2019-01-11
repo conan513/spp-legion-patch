@@ -614,7 +614,7 @@ INSERT INTO `conversation_actors` (`ConversationId`, `ConversationActorId`, `Idx
 
 
 DELETE FROM `conversation_line_template` WHERE `Id`=4632;
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
 (4632, 0, 680, 0, 0, 26365);
 
 UPDATE `conversation_line_template` SET `UiCameraID`=2621374160, `VerifiedBuild`=26365 WHERE `Id`=2027;

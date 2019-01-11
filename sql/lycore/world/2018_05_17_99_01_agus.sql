@@ -33,7 +33,7 @@ INSERT INTO `spell_areatrigger` (`SpellMiscId`, `AreaTriggerId`, `MoveCurveId`, 
 
 
 DELETE FROM `conversation_actors` WHERE (`ConversationId`=5710 AND `Idx`=2) OR (`ConversationId`=5710 AND `Idx`=1) OR (`ConversationId`=5710 AND `Idx`=0) OR (`ConversationId`=4740 AND `Idx`=0) OR (`ConversationId`=5181 AND `Idx`=0) OR (`ConversationId`=4918 AND `Idx`=1) OR (`ConversationId`=4918 AND `Idx`=0) OR (`ConversationId`=4746 AND `Idx`=1) OR (`ConversationId`=4746 AND `Idx`=0) OR (`ConversationId`=5209 AND `Idx`=0) OR (`ConversationId`=5255 AND `ConversationActorId`=51642 AND `Idx`=0) OR (`ConversationId`=5213 AND `Idx`=3) OR (`ConversationId`=5213 AND `Idx`=2) OR (`ConversationId`=5213 AND `Idx`=1) OR (`ConversationId`=5213 AND `Idx`=0) OR (`ConversationId`=5063 AND `ConversationActorId`=58620 AND `Idx`=0) OR (`ConversationId`=5096 AND `Idx`=3) OR (`ConversationId`=5096 AND `Idx`=2) OR (`ConversationId`=5096 AND `Idx`=1) OR (`ConversationId`=5096 AND `Idx`=0) OR (`ConversationId`=6132 AND `Idx`=0) OR (`ConversationId`=5901 AND `ConversationActorId`=60451 AND `Idx`=0) OR (`ConversationId`=5257 AND `Idx`=0) OR (`ConversationId`=5257 AND `Idx`=1) OR (`ConversationId`=5137 AND `Idx`=2) OR (`ConversationId`=5137 AND `Idx`=1) OR (`ConversationId`=5137 AND `Idx`=0) OR (`ConversationId`=4982 AND `Idx`=0) OR (`ConversationId`=5816 AND `Idx`=1) OR (`ConversationId`=5816 AND `Idx`=0) OR (`ConversationId`=4981 AND `ConversationActorId`=58144 AND `Idx`=0) OR (`ConversationId`=5253 AND `ConversationActorId`=51642 AND `Idx`=0) OR (`ConversationId`=5960 AND `ConversationActorId`=51642 AND `Idx`=0) OR (`ConversationId`=5046 AND `Idx`=2) OR (`ConversationId`=5046 AND `Idx`=1) OR (`ConversationId`=5046 AND `Idx`=0) OR (`ConversationId`=5395 AND `Idx`=1) OR (`ConversationId`=5395 AND `Idx`=0) OR (`ConversationId`=6087 AND `Idx`=0) OR (`ConversationId`=5175 AND `Idx`=0) OR (`ConversationId`=5175 AND `Idx`=1) OR (`ConversationId`=4922 AND `Idx`=0) OR (`ConversationId`=4922 AND `Idx`=1) OR (`ConversationId`=5073 AND `Idx`=0) OR (`ConversationId`=4911 AND `Idx`=0) OR (`ConversationId`=5735 AND `ConversationActorId`=51642 AND `Idx`=0) OR (`ConversationId`=5107 AND `Idx`=1) OR (`ConversationId`=5107 AND `Idx`=0) OR (`ConversationId`=5177 AND `Idx`=1) OR (`ConversationId`=5177 AND `Idx`=0) OR (`ConversationId`=5726 AND `Idx`=0) OR (`ConversationId`=5216 AND `Idx`=1) OR (`ConversationId`=5216 AND `Idx`=0) OR (`ConversationId`=4878 AND `Idx`=1) OR (`ConversationId`=4878 AND `Idx`=0) OR (`ConversationId`=5468 AND `Idx`=1) OR (`ConversationId`=5468 AND `Idx`=0) OR (`ConversationId`=5739 AND `ConversationActorId`=60204 AND `Idx`=0) OR (`ConversationId`=5738 AND `ConversationActorId`=60204 AND `Idx`=0) OR (`ConversationId`=4819 AND `Idx`=0) OR (`ConversationId`=5220 AND `Idx`=0) OR (`ConversationId`=5741 AND `Idx`=0) OR (`ConversationId`=5065 AND `ConversationActorId`=58620 AND `Idx`=0) OR (`ConversationId`=4950 AND `Idx`=0) OR (`ConversationId`=5070 AND `Idx`=0) OR (`ConversationId`=5895 AND `Idx`=0) OR (`ConversationId`=5182 AND `Idx`=1) OR (`ConversationId`=5182 AND `Idx`=0) OR (`ConversationId`=4914 AND `Idx`=1) OR (`ConversationId`=4914 AND `Idx`=0) OR (`ConversationId`=5251 AND `Idx`=1) OR (`ConversationId`=5251 AND `Idx`=0) OR (`ConversationId`=5066 AND `Idx`=1) OR (`ConversationId`=5066 AND `Idx`=0) OR (`ConversationId`=5218 AND `Idx`=0) OR (`ConversationId`=5062 AND `Idx`=0) OR (`ConversationId`=5162 AND `Idx`=1) OR (`ConversationId`=5162 AND `Idx`=2) OR (`ConversationId`=5162 AND `Idx`=0) OR (`ConversationId`=5254 AND `ConversationActorId`=51642 AND `Idx`=0) OR (`ConversationId`=4904 AND `ConversationActorId`=53609 AND `Idx`=0) OR (`ConversationId`=5716 AND `Idx`=0) OR (`ConversationId`=4917 AND `Idx`=1) OR (`ConversationId`=4917 AND `Idx`=0) OR (`ConversationId`=5708 AND `Idx`=3) OR (`ConversationId`=5708 AND `Idx`=0) OR (`ConversationId`=5708 AND `Idx`=1) OR (`ConversationId`=5179 AND `Idx`=0) OR (`ConversationId`=5736 AND `ConversationActorId`=51642 AND `Idx`=0) OR (`ConversationId`=5897 AND `Idx`=1) OR (`ConversationId`=5897 AND `Idx`=0) OR (`ConversationId`=4852 AND `Idx`=2) OR (`ConversationId`=4852 AND `Idx`=1) OR (`ConversationId`=4852 AND `Idx`=0) OR (`ConversationId`=5711 AND `Idx`=0) OR (`ConversationId`=4915 AND `Idx`=1) OR (`ConversationId`=4915 AND `Idx`=0) OR (`ConversationId`=5859 AND `Idx`=0);
-REPLACE INTO `conversation_actors` (`ConversationId`, `ConversationActorId`, `Idx`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_actors` (`ConversationId`, `ConversationActorId`, `Idx`, `VerifiedBuild`) VALUES
 (5710, 59244, 2, 26365), -- Full: 0x203D2CDAC0766BC000000E0000736F24 Creature/0 R3915/S14 Map: 1750 Entry: 121263 (大技师罗姆尔) Low: 7565092
 (5710, 58620, 1, 26365), -- Full: 0x203D2CDAC076244000000E0000F36F24 Creature/0 R3915/S14 Map: 1750 Entry: 120977 (先知维伦) Low: 15953700
 (5710, 58620, 0, 26365), -- Full: 0x203D2CDAC0766B4000000E0000736F24 Creature/0 R3915/S14 Map: 1750 Entry: 121261 (洛萨克森) Low: 7565092
@@ -145,7 +145,7 @@ UPDATE `conversation_actor_template` SET `CreatureId`=120223, `CreatureModelId`=
 UPDATE `conversation_actor_template` SET `CreatureId`=120218, `CreatureModelId`=74146 WHERE `Id`=51642;
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (13040, 13039, 13330, 13498, 13497, 10810, 10809, 10808, 10807, 10806, 10805);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
 (13040, 6594, 0, 1, 0, 26365),
 (13039, 0, 0, 0, 0, 26365),
 (13330, 0, 82, 0, 0, 26365),
@@ -158,7 +158,7 @@ INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `Acto
 (10806, 7827, 0, 0, 8253, 26365),
 (10805, 0, 0, 0, 0, 26365);
 
-UPDATE `conversation_line_template` SET `Flags`=0, `VerifiedBuild`=26365 WHERE `Id`=10745;
+UPDATE `conversation_line_template` SET `Unk`=0, `VerifiedBuild`=26365 WHERE `Id`=10745;
 UPDATE `conversation_line_template` SET `UiCameraID`=1463753616, `VerifiedBuild`=26365 WHERE `Id`=11020;
 UPDATE `conversation_line_template` SET `UiCameraID`=1463753616, `VerifiedBuild`=26365 WHERE `Id`=10935;
 UPDATE `conversation_line_template` SET `UiCameraID`=130577936, `VerifiedBuild`=26365 WHERE `Id`=12888;
@@ -170,7 +170,7 @@ UPDATE `conversation_line_template` SET `UiCameraID`=130577936, `VerifiedBuild`=
 UPDATE `conversation_line_template` SET `UiCameraID`=130577936, `VerifiedBuild`=26365 WHERE `Id`=10634;
 UPDATE `conversation_line_template` SET `UiCameraID`=130577936, `VerifiedBuild`=26365 WHERE `Id`=11651;
 UPDATE `conversation_line_template` SET `UiCameraID`=130577936, `VerifiedBuild`=26365 WHERE `Id`=11680;
-UPDATE `conversation_line_template` SET `Flags`=0, `VerifiedBuild`=26365 WHERE `Id`=11644;
+UPDATE `conversation_line_template` SET `Unk`=0, `VerifiedBuild`=26365 WHERE `Id`=11644;
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26365 WHERE `Id`=13636;
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26365 WHERE `Id`=11751;
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26365 WHERE `Id`=11750;
@@ -197,6 +197,9 @@ UPDATE `conversation_line_template` SET `UiCameraID`=19434, `VerifiedBuild`=2636
 UPDATE `conversation_line_template` SET `UiCameraID`=19434, `VerifiedBuild`=26365 WHERE `Id`=12286;
 UPDATE `conversation_line_template` SET `UiCameraID`=1139519860, `VerifiedBuild`=26365 WHERE `Id`=12879;
 UPDATE `conversation_line_template` SET `UiCameraID`=1463752960, `VerifiedBuild`=26365 WHERE `Id`=10983;
+UPDATE `conversation_line_template` SET `Unk`=8253, `VerifiedBuild`=26365 WHERE `Id`=11674;
+UPDATE `conversation_line_template` SET `Unk`=8253, `VerifiedBuild`=26365 WHERE `Id`=13214;
+UPDATE `conversation_line_template` SET `Unk`=8253, `VerifiedBuild`=26365 WHERE `Id`=11736;
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26365 WHERE `Id`=11549;
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26365 WHERE `Id`=11548;
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26365 WHERE `Id`=11547;
@@ -206,7 +209,7 @@ UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26365 WH
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26365 WHERE `Id`=10932;
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26365 WHERE `Id`=13220;
 UPDATE `conversation_line_template` SET `UiCameraID`=0, `VerifiedBuild`=26365 WHERE `Id`=13219;
-
+UPDATE `conversation_line_template` SET `Unk`=0, `VerifiedBuild`=26365 WHERE `Id`=13113;
 
 DELETE FROM `conversation_template` WHERE `Id` IN (5960, 6087, 4852, 5816);
 INSERT INTO `conversation_template` (`Id`, `FirstLineID`, `LastLineEndTime`, `VerifiedBuild`) VALUES

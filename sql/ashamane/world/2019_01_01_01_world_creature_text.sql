@@ -1,0 +1,7 @@
+UPDATE `creature_text_locale` SET `Text`='Los recursos de Dalaran pueden ser transferidos. ¡Los héroes de la Alianza y la Horda comenzarán desde aquí a buscar los pilares de la creación!', `Locale`='esMX' WHERE `CreatureID`=111109 AND `GroupID`=0;
+UPDATE `creature_text_locale` SET `Text`='He oído que hay algunos artefactos poderosos que pueden ayudarte en tu batalla. ¡Si abres los ojos, las pistas útiles pueden salir automáticamente!', `Locale`='esMX' WHERE `CreatureID`=111109 AND `GroupID`=1;
+UPDATE `creature_text_locale` SET `Text`='Ahora, tengo que saludar a otros visitantes. Buena suerte, $ n!', `Locale`='esMX' WHERE `CreatureID`=111109 AND `GroupID`=2;
+
+UPDATE `creature_text` SET `Text`='The resources of Dalaran are allowed to be transferred. The heroes of the Alliance and the Horde will start from here to search for the pillars of creation!', `comment`='Ambassador Obriggi to Player' WHERE `CreatureID`=111109 AND `GroupID`=0;
+UPDATE `creature_text` SET `Text`='I heard that there are some powerful artifacts that may help you in your battle. If you open your eyes, useful clues may come out automatically!', `comment`='Ambassador Obriggi to Player' WHERE `CreatureID`=111109 AND `GroupID`=1;
+UPDATE `creature_text` SET `Text`='Now, I have to say hello to other visitors. Good luck, $n!', `comment`='Ambassador Obriggi to Player' WHERE `CreatureID`=111109 AND `GroupID`=2;

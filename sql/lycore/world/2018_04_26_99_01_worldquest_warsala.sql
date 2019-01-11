@@ -22,7 +22,7 @@ INSERT INTO `conversation_actors` (`ConversationId`, `ConversationActorId`, `Idx
 
 
 DELETE FROM `conversation_line_template` WHERE `Id`=5856;
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
 (5856, 0, 813, 0, 0, 26365);
 
 
@@ -216,7 +216,7 @@ UPDATE `conversation_actor_template` SET `CreatureId`=98012, `CreatureModelId`=6
 UPDATE `conversation_actor_template` SET `CreatureId`=98012, `CreatureModelId`=65532 WHERE `Id`=51642;
 
 DELETE FROM `conversation_line_template` WHERE `Id`=6517;
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
 (6517, 0, 104, 0, 0, 26365);
 
 
@@ -352,7 +352,7 @@ UPDATE `conversation_actor_template` SET `CreatureId`=98012, `CreatureModelId`=6
 UPDATE `conversation_actor_template` SET `CreatureId`=98012, `CreatureModelId`=65532 WHERE `Id`=51642;
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (6504, 6505);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
 (6504, 0, 105, 0, 0, 26365),
 (6505, 0, 104, 0, 0, 26365);
 
@@ -474,7 +474,7 @@ INSERT INTO `conversation_actor_template` (`Id`, `CreatureId`, `CreatureModelId`
 
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (3294, 3293);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
 (3294, 0, 82, 0, 0, 26365),
 (3293, 0, 82, 0, 0, 26365);
 
@@ -812,7 +812,7 @@ INSERT INTO `conversation_actors` (`ConversationId`, `ConversationActorId`, `Idx
 
 
 DELETE FROM `conversation_line_template` WHERE `Id`=3715;
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
 (3715, 0, 2576296624, 0, 0, 26365);
 
 
@@ -934,7 +934,7 @@ UPDATE `conversation_actor_template` SET `CreatureId`=91042, `CreatureModelId`=6
 UPDATE `conversation_actor_template` SET `CreatureId`=91042, `CreatureModelId`=63641 WHERE `Id`=51642;
 
 DELETE FROM `conversation_line_template` WHERE `Id` IN (6527, 6526);
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
 (6527, 0, 626, 0, 0, 26365),
 (6526, 0, 625, 0, 0, 26365);
 
@@ -1059,7 +1059,7 @@ INSERT INTO `conversation_actors` (`ConversationId`, `ConversationActorId`, `Idx
 UPDATE `conversation_actor_template` SET `CreatureId`=98012, `CreatureModelId`=65532 WHERE `Id`=51642;
 
 DELETE FROM `conversation_line_template` WHERE `Id`=6520;
-INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Flags`, `VerifiedBuild`) VALUES
+INSERT INTO `conversation_line_template` (`Id`, `StartTime`, `UiCameraID`, `ActorIdx`, `Unk`, `VerifiedBuild`) VALUES
 (6520, 0, 105, 0, 0, 26365);
 
 
