@@ -23,7 +23,7 @@ set hotfixes=hotfixes
 set login=realmd
 set website=blizzcms
 set worldfile=LDB_world_735.01.sql
-set hotfixesfile=LDB_hotfixes_735.01.sql.sql
+set hotfixesfile=LDB_hotfixes_735.01.sql
 set world_clean=world_clean
 set hotfixes_clean=hotfixes_clean
 set fulldb_zip=LDB_735.01.7z
@@ -122,38 +122,46 @@ cd "%mainfolder%"
 goto start_database
 
 :menu
+rmdir /Q /S "%mainfolder%\Realms\1"
+rmdir /Q /S "%mainfolder%\Realms\2"
+rmdir /Q /S "%mainfolder%\Realms\3"
+rmdir /Q /S "%mainfolder%\Realms\4"
+rmdir /Q /S "%mainfolder%\Realms\5"
+rmdir /Q /S "%mainfolder%\Realms\6"
+rmdir /Q /S "%mainfolder%\Realms\7"
+rmdir /Q /S "%mainfolder%\Realms\8"
+rmdir /Q /S "%mainfolder%\Realms\9"
+set realmslot=bestcore
 echo.
 cls
 echo #######################################################
-echo # Single Player Project - BestCore (made by Thordekk) #
+echo # Single Player Project - BestCore                    #
 echo # https://www.patreon.com/conan513                    #
 echo #######################################################
 echo.
 echo 0  -  Service Menu (you can fix problems here)
 echo.
-echo 1  -  Start servers (Win32)
-echo 2  -  Start servers (Win64)
-echo 3  -  Start and setup custom servers
+echo 1  -  Start servers (Win64)
+echo 2  -  Open settings folder
 echo.
-echo 4  -  Create/Manage Accounts (Website)
-echo 5  -  Character save manager
-echo 6  -  Mod manager [EXPERIMENTAL]
-echo 7  -  Patched exe files for the game (7.3.5.%gameversion%)
+echo 3  -  Create/Manage Accounts (Website)
+echo 4  -  Character save manager
+echo 5  -  Mod manager [EXPERIMENTAL]
+echo 6  -  Patched exe files for the game (7.3.5.%gameversion%)
 echo.
-echo 8  -  Report issues
+echo 7  -  Report issues
 echo.
 echo X  -  Shutdown all servers
 echo.
 set /P menu=Enter a number: 
 if "%menu%"=="0" (goto service_menu)
-if "%menu%"=="1" (goto quick_start_servers_x86)
-if "%menu%"=="2" (goto quick_start_servers_x64)
-if "%menu%"=="3" (goto realm_menu)
-if "%menu%"=="4" (goto account_tool)
-if "%menu%"=="5" (goto save_menu)
-if "%menu%"=="6" (goto modmanager_menu)
-if "%menu%"=="7" (explorer.exe %mainfolder%\Addons\Patched_Exe_%gameversion%)
-if "%menu%"=="8" (goto report_issue)
+if "%menu%"=="1" (goto quick_start_servers_x64)
+if "%menu%"=="2" (explorer "%mainfolder%\Realms\bestcore")
+if "%menu%"=="3" (goto account_tool)
+if "%menu%"=="4" (goto save_menu)
+if "%menu%"=="5" (goto modmanager_menu)
+if "%menu%"=="6" (explorer.exe %mainfolder%\Addons\Patched_Exe_%gameversion%)
+if "%menu%"=="7" (goto report_issue)
 if "%menu%"=="x" (goto shutdown_servers)
 if "%menu%"=="" (goto menu)
 
@@ -164,32 +172,15 @@ cls
 start https://github.com/Thordekk/Spp-BestCore-Bugtracker
 goto menu
 
-:quick_start_servers_x86
-cls
-set realmslot=1
-set serverstartoption=1
-set /p realmname1=<"%mainfolder%\Realms\%realmslot%\name.txt
-set /p realmlanguage1=<"%mainfolder%\Realms\%realmslot%\serverlanguage.txt"
-
-echo Starting the first realm...
-echo.
-echo Name:     %realmname1%
-echo Language: %realmlanguage1%
-echo.
-ping -n 5 127.0.0.1>nul
-goto check_autosave_start
-
 :quick_start_servers_x64
 cls
-set realmslot=1
+set realmslot=bestcore
 set serverstartoption=2
 set /p realmname1=<"%mainfolder%\Realms\%realmslot%\name.txt
-set /p realmlanguage1=<"%mainfolder%\Realms\%realmslot%\serverlanguage.txt"
 
 echo Starting the first realm...
 echo.
 echo Name:     %realmname1%
-echo Language: %realmlanguage1%
 echo.
 ping -n 5 127.0.0.1>nul
 goto check_autosave_start
