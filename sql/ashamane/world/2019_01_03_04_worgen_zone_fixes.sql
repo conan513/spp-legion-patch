@@ -1,7 +1,7 @@
 DELETE FROM creature_text WHERE CreatureID = 50415;
 SET @CAGUID := 800000;
 DELETE FROM `creature_addon` WHERE `guid` BETWEEN @CAGUID+1209 AND @CAGUID+1561;
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
 (@CAGUID+1209, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 36198
 (@CAGUID+1210, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 35374
 (@CAGUID+1211, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 36286
@@ -44,7 +44,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 (@CAGUID+1248, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 36453
 (@CAGUID+1249, 0, 0, 0, 2, 0, 0, 0, 0, ''); -- 36602
 
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
 (@CAGUID+1250, 0, 0, 50331649, 1, 0, 0, 0, 0, ''), -- 50260
 (@CAGUID+1251, 0, 0, 0, 2, 0, 0, 0, 0, ''), -- 36602
 (@CAGUID+1252, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 36713
@@ -296,7 +296,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 (@CAGUID+1498, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 36198
 (@CAGUID+1499, 0, 0, 0, 1, 0, 0, 0, 0, ''); -- 36405
 
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
 (@CAGUID+1500, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 36405
 (@CAGUID+1501, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 36236
 (@CAGUID+1502, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 36405
@@ -363,7 +363,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 SET @CAGUID := 801562;
 
 DELETE FROM `creature_addon` WHERE `guid` BETWEEN @CAGUID+0 AND @CAGUID+3300;
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
 (@CAGUID+0, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 36236
 (@CAGUID+1, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 36283
 (@CAGUID+2, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 36211
@@ -615,7 +615,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 (@CAGUID+248, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 36713
 (@CAGUID+249, 0, 0, 0, 1, 0, 0, 0, 0, ''); -- 36651
 
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
 (@CAGUID+250, 0, 0, 0, 2, 0, 0, 0, 0, ''), -- 36602
 (@CAGUID+251, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 36717
 (@CAGUID+252, 0, 0, 0, 2, 0, 0, 0, 0, ''), -- 36602
@@ -867,7 +867,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 (@CAGUID+498, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 1420
 (@CAGUID+499, 0, 0, 0, 1, 0, 0, 0, 0, ''); -- 2914
 
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
 (@CAGUID+500, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 2914
 (@CAGUID+501, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37067
 (@CAGUID+502, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37067
@@ -1119,7 +1119,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 (@CAGUID+748, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 38022
 (@CAGUID+749, 0, 0, 0, 1, 0, 0, 0, 0, ''); -- 38022
 
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
 (@CAGUID+750, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37757
 (@CAGUID+751, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 38022
 (@CAGUID+752, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37757
@@ -1371,7 +1371,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 (@CAGUID+998, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 4075
 (@CAGUID+999, 0, 0, 0, 1, 0, 0, 0, 0, ''); -- 37694
 
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
 (@CAGUID+1000, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 14881
 (@CAGUID+1001, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37701
 (@CAGUID+1002, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 24042
@@ -1623,7 +1623,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 (@CAGUID+1248, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 4076
 (@CAGUID+1249, 0, 0, 0, 1, 0, 0, 0, 0, ''); -- 38192
 
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
 (@CAGUID+1250, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 38192
 (@CAGUID+1251, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 28332
 (@CAGUID+1252, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 38613
@@ -1875,7 +1875,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 (@CAGUID+1498, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37889
 (@CAGUID+1499, 0, 0, 0, 1, 0, 0, 0, 0, ''); -- 37889
 
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
 (@CAGUID+1500, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37889
 (@CAGUID+1501, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37889
 (@CAGUID+1502, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37889
@@ -2127,7 +2127,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 (@CAGUID+1748, 0, 0, 0, 2, 0, 0, 0, 0, ''), -- 38363
 (@CAGUID+1749, 0, 0, 0, 2, 0, 0, 0, 0, ''); -- 38363
 
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
 (@CAGUID+1750, 0, 0, 0, 2, 0, 0, 0, 0, ''), -- 38363
 (@CAGUID+1751, 0, 0, 0, 2, 0, 0, 0, 0, ''), -- 38363
 (@CAGUID+1752, 0, 0, 0, 2, 0, 0, 0, 0, ''), -- 38363
@@ -2379,7 +2379,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 (@CAGUID+1998, 0, 0, 0, 2, 0, 0, 0, 0, ''), -- 38363
 (@CAGUID+1999, 0, 0, 0, 2, 0, 0, 0, 0, ''); -- 38363
 
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
 (@CAGUID+2000, 0, 0, 0, 2, 0, 0, 0, 0, ''), -- 38363
 (@CAGUID+2001, 0, 0, 0, 2, 0, 0, 0, 0, ''), -- 38363
 (@CAGUID+2002, 0, 0, 0, 2, 0, 0, 0, 0, ''), -- 38363
@@ -2631,7 +2631,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 (@CAGUID+2248, 0, 0, 0, 2, 0, 0, 0, 0, ''), -- 38363
 (@CAGUID+2249, 0, 0, 0, 1, 0, 0, 0, 0, ''); -- 38364
 
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
 (@CAGUID+2250, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 38287
 (@CAGUID+2251, 0, 0, 0, 2, 0, 0, 0, 0, ''), -- 38363
 (@CAGUID+2252, 0, 0, 0, 2, 0, 0, 0, 0, ''), -- 38363
@@ -2883,7 +2883,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 (@CAGUID+2498, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37889
 (@CAGUID+2499, 0, 0, 0, 1, 0, 0, 0, 0, ''); -- 37884
 
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
 (@CAGUID+2500, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37884
 (@CAGUID+2501, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37884
 (@CAGUID+2502, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37884
@@ -3135,7 +3135,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 (@CAGUID+2748, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37938
 (@CAGUID+2749, 0, 0, 0, 1, 0, 0, 0, 0, ''); -- 37939
 
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
 (@CAGUID+2750, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37939
 (@CAGUID+2751, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37916
 (@CAGUID+2752, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37938
@@ -3387,7 +3387,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 (@CAGUID+2998, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37939
 (@CAGUID+2999, 0, 0, 0, 1, 0, 0, 0, 0, ''); -- 37938
 
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
 (@CAGUID+3000, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37938
 (@CAGUID+3001, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37939
 (@CAGUID+3002, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 37939
@@ -3639,7 +3639,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 (@CAGUID+3248, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 42141
 (@CAGUID+3249, 0, 0, 0, 1, 0, 0, 0, 0, ''); -- 42141
 
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
 (@CAGUID+3250, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 43703
 (@CAGUID+3251, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 42141
 (@CAGUID+3252, 0, 0, 0, 1, 0, 0, 0, 0, ''), -- 43793
@@ -3695,7 +3695,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 -- 1.3 Creature questitem section
 
 DELETE FROM `creature_questitem` WHERE (`CreatureEntry`=37701 AND `Idx`=0) OR (`CreatureEntry`=36461 AND `Idx`=0) OR (`CreatureEntry`=37786 AND `Idx`=0);
-INSERT INTO `creature_questitem` (`CreatureEntry`, `Idx`, `ItemId`, `VerifiedBuild`) VALUES
+REPLACE INTO `creature_questitem` (`CreatureEntry`, `Idx`, `ItemId`, `VerifiedBuild`) VALUES
 (37701, 0, 49881, 25549), -- 37701
 (36461, 0, 49281, 25549), -- 36461
 (37786, 0, 50219, 25549); -- 37786
@@ -3829,7 +3829,7 @@ UPDATE `creature_text` SET `GroupID`=1 WHERE `CreatureID` = 50415;
 -- Gwen Armstead (35840)
 
 DELETE FROM `creature_text` WHERE `CreatureID`=35840;
-INSERT INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `BroadcastTextId`, `TextRange`, `comment`) VALUES 
+REPLACE INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `BroadcastTextId`, `TextRange`, `comment`) VALUES 
 (35840, 0, 0, 'We must stick together to survive.  Move around in groups.', 12, 0, 100, 1, 0, 0, 36094, 0, 'Gwen Armstead'),
 (35840, 1, 0, 'The plan is to keep moving south.  We can\\\'t go back to the Merchant Square.  It\\\'s not safe.', 12, 0, 100, 1, 0, 0, 36093, 0, 'Gwen Armstead'),
 (35840, 2, 0, 'The king\\\'s men will protect us.  We\\\'re almost there.', 12, 0, 100, 1, 0, 0, 36095, 0, 'Gwen Armstead');
@@ -3837,14 +3837,14 @@ INSERT INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Lan
 -- Frightened Citizen
 
 DELETE FROM `creature_text` WHERE `CreatureID`=34981;
-INSERT INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `BroadcastTextId`, `TextRange`, `comment`) VALUES 
+REPLACE INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `BroadcastTextId`, `TextRange`, `comment`) VALUES 
 (34981, 1, 0, 'Flee!  They\'re everywhere!', 12, 0, 100, 1, 0, 0, 35240, 0, 'Frightened Citizen to Player'),
 (34981, 1, 1, 'Worgen!  Worgen everywhere!', 12, 0, 100, 1, 0, 0, 35238, 0, 'Frightened Citizen to Player'),
 (34981, 1, 2, 'Protect me, please!', 12, 0, 100, 1, 0, 0, 35234, 0, 'Frightened Citizen to Player'),
 (34981, 1, 3, 'Let\\\'s go!', 12, 0, 100, 1, 0, 0, 35236, 0, 'Frightened Citizen to Player'),
 (34981, 1, 4, 'No time to waste!', 12, 0, 100, 1, 0, 0, 35237, 0, 'Frightened Citizen to Player');
 DELETE FROM `creature_text` WHERE `CreatureID`=35836;
-INSERT INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `BroadcastTextId`, `TextRange`, `comment`) VALUES 
+REPLACE INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `BroadcastTextId`, `TextRange`, `comment`) VALUES 
 (35836, 0, 0, 'Help me, please!', 12, 0, 100, 430, 0, 0, 36038, 0, 'Frightened Citizen to Player'),
 (35836, 0, 1, 'There\'s one after me!', 12, 0, 100, 430, 0, 0, 36039, 0, 'Frightened Citizen to Player'),
 (35836, 0, 2, 'It\\\'s coming right for me!', 12, 0, 100, 430, 0, 0, 36037, 0, 'Frightened Citizen to Player'),
@@ -3854,7 +3854,7 @@ INSERT INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Lan
 -- Missing text for Gilnea City Guard
 
 DELETE FROM `creature_text` WHERE `CreatureID`=34864;
-INSERT INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `BroadcastTextId`, `comment`) VALUES
+REPLACE INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `BroadcastTextId`, `comment`) VALUES
 (34864, 0, 0, 'No one\'s allowed to leave. Prince Liam\'s orders.', 12, 0, 100, 1, 0, 0, 0, 'Gilneas City Guard'),
 (34864, 1, 1, 'Stay calm. We have everything under control.', 12, 0, 100, 1, 0, 0, 0, 'Gilneas City Guard'),
 (34864, 2, 2, 'It isn\'t safe to leave, there\'s something lurking out there in the woods.', 12, 0, 100, 1, 0, 0, 0, 'Gilneas City Guard');
@@ -3865,7 +3865,7 @@ INSERT INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Lan
 -- 3.1.1 Quest Template Section
 
 DELETE FROM `quest_template` WHERE `ID` IN (14348 /*14348*/, 14336 /*14336*/, 14320 /*14320*/, 14313 /*14313*/, 14159 /*14159*/, 14291 /*14291*/, 46277 /*46277*/, 14369 /*14369*/, 14366 /*14366*/, 14212 /*14212*/, 14204 /*14204*/, 26129 /*26129*/, 14154 /*14154*/, 28850 /*28850*/, 14157 /*14157*/, 14093 /*14093*/, 46735 /*46735*/, 14368 /*14368*/, 14367 /*14367*/, 14375 /*14375*/, 14221 /*14221*/, 14214 /*14214*/, 14280 /*14280*/, 46736 /*46736*/, 14382 /*14382*/, 14347 /*14347*/, 14321 /*14321*/, 14222 /*14222*/, 14218 /*14218*/, 14294 /*14294*/, 14293 /*14293*/, 24930 /*24930*/, 14099 /*14099*/, 14094 /*14094*/, 14098 /*14098*/, 14091 /*14091*/, 14078 /*14078*/);
-INSERT INTO `quest_template` (`ID`, `QuestType`, `QuestLevel`, `MaxScalingLevel`, `QuestPackageID`, `MinLevel`, `QuestSortID`, `QuestInfoID`, `SuggestedGroupNum`, `RewardNextQuest`, `RewardXPDifficulty`, `RewardXPMultiplier`, `RewardMoney`, `RewardMoneyDifficulty`, `RewardMoneyMultiplier`, `RewardBonusMoney`, `RewardDisplaySpell1`, `RewardDisplaySpell2`, `RewardDisplaySpell3`, `RewardSpell`, `RewardHonor`, `RewardKillHonor`, `StartItem`, `RewardArtifactXPDifficulty`, `RewardArtifactXPMultiplier`, `RewardArtifactCategoryID`, `Flags`, `FlagsEx`, `RewardSkillLineID`, `RewardNumSkillUps`, `PortraitGiver`, `PortraitTurnIn`, `RewardItem1`, `RewardItem2`, `RewardItem3`, `RewardItem4`, `RewardAmount1`, `RewardAmount2`, `RewardAmount3`, `RewardAmount4`, `ItemDrop1`, `ItemDrop2`, `ItemDrop3`, `ItemDrop4`, `ItemDropQuantity1`, `ItemDropQuantity2`, `ItemDropQuantity3`, `ItemDropQuantity4`, `RewardChoiceItemID1`, `RewardChoiceItemID2`, `RewardChoiceItemID3`, `RewardChoiceItemID4`, `RewardChoiceItemID5`, `RewardChoiceItemID6`, `RewardChoiceItemQuantity1`, `RewardChoiceItemQuantity2`, `RewardChoiceItemQuantity3`, `RewardChoiceItemQuantity4`, `RewardChoiceItemQuantity5`, `RewardChoiceItemQuantity6`, `RewardChoiceItemDisplayID1`, `RewardChoiceItemDisplayID2`, `RewardChoiceItemDisplayID3`, `RewardChoiceItemDisplayID4`, `RewardChoiceItemDisplayID5`, `RewardChoiceItemDisplayID6`, `POIContinent`, `POIx`, `POIy`, `POIPriority`, `RewardTitle`, `RewardArenaPoints`, `RewardFactionID1`, `RewardFactionID2`, `RewardFactionID3`, `RewardFactionID4`, `RewardFactionID5`, `RewardFactionValue1`, `RewardFactionValue2`, `RewardFactionValue3`, `RewardFactionValue4`, `RewardFactionValue5`, `RewardFactionCapIn1`, `RewardFactionCapIn2`, `RewardFactionCapIn3`, `RewardFactionCapIn4`, `RewardFactionCapIn5`, `RewardFactionOverride1`, `RewardFactionOverride2`, `RewardFactionOverride3`, `RewardFactionOverride4`, `RewardFactionOverride5`, `RewardFactionFlags`, `AreaGroupID`, `TimeAllowed`, `AllowableRaces`, `QuestRewardID`, `Expansion`, `LogTitle`, `LogDescription`, `QuestDescription`, `AreaDescription`, `QuestCompletionLog`, `RewardCurrencyID1`, `RewardCurrencyID2`, `RewardCurrencyID3`, `RewardCurrencyID4`, `RewardCurrencyQty1`, `RewardCurrencyQty2`, `RewardCurrencyQty3`, `RewardCurrencyQty4`, `PortraitGiverText`, `PortraitGiverName`, `PortraitTurnInText`, `PortraitTurnInName`, `AcceptedSoundKitID`, `CompleteSoundKitID`, `VerifiedBuild`) VALUES
+REPLACE INTO `quest_template` (`ID`, `QuestType`, `QuestLevel`, `MaxScalingLevel`, `QuestPackageID`, `MinLevel`, `QuestSortID`, `QuestInfoID`, `SuggestedGroupNum`, `RewardNextQuest`, `RewardXPDifficulty`, `RewardXPMultiplier`, `RewardMoney`, `RewardMoneyDifficulty`, `RewardMoneyMultiplier`, `RewardBonusMoney`, `RewardDisplaySpell1`, `RewardDisplaySpell2`, `RewardDisplaySpell3`, `RewardSpell`, `RewardHonor`, `RewardKillHonor`, `StartItem`, `RewardArtifactXPDifficulty`, `RewardArtifactXPMultiplier`, `RewardArtifactCategoryID`, `Flags`, `FlagsEx`, `RewardSkillLineID`, `RewardNumSkillUps`, `PortraitGiver`, `PortraitTurnIn`, `RewardItem1`, `RewardItem2`, `RewardItem3`, `RewardItem4`, `RewardAmount1`, `RewardAmount2`, `RewardAmount3`, `RewardAmount4`, `ItemDrop1`, `ItemDrop2`, `ItemDrop3`, `ItemDrop4`, `ItemDropQuantity1`, `ItemDropQuantity2`, `ItemDropQuantity3`, `ItemDropQuantity4`, `RewardChoiceItemID1`, `RewardChoiceItemID2`, `RewardChoiceItemID3`, `RewardChoiceItemID4`, `RewardChoiceItemID5`, `RewardChoiceItemID6`, `RewardChoiceItemQuantity1`, `RewardChoiceItemQuantity2`, `RewardChoiceItemQuantity3`, `RewardChoiceItemQuantity4`, `RewardChoiceItemQuantity5`, `RewardChoiceItemQuantity6`, `RewardChoiceItemDisplayID1`, `RewardChoiceItemDisplayID2`, `RewardChoiceItemDisplayID3`, `RewardChoiceItemDisplayID4`, `RewardChoiceItemDisplayID5`, `RewardChoiceItemDisplayID6`, `POIContinent`, `POIx`, `POIy`, `POIPriority`, `RewardTitle`, `RewardArenaPoints`, `RewardFactionID1`, `RewardFactionID2`, `RewardFactionID3`, `RewardFactionID4`, `RewardFactionID5`, `RewardFactionValue1`, `RewardFactionValue2`, `RewardFactionValue3`, `RewardFactionValue4`, `RewardFactionValue5`, `RewardFactionCapIn1`, `RewardFactionCapIn2`, `RewardFactionCapIn3`, `RewardFactionCapIn4`, `RewardFactionCapIn5`, `RewardFactionOverride1`, `RewardFactionOverride2`, `RewardFactionOverride3`, `RewardFactionOverride4`, `RewardFactionOverride5`, `RewardFactionFlags`, `AreaGroupID`, `TimeAllowed`, `AllowableRaces`, `QuestRewardID`, `Expansion`, `LogTitle`, `LogDescription`, `QuestDescription`, `AreaDescription`, `QuestCompletionLog`, `RewardCurrencyID1`, `RewardCurrencyID2`, `RewardCurrencyID3`, `RewardCurrencyID4`, `RewardCurrencyQty1`, `RewardCurrencyQty2`, `RewardCurrencyQty3`, `RewardCurrencyQty4`, `PortraitGiverText`, `PortraitGiverName`, `PortraitTurnInText`, `PortraitTurnInName`, `AcceptedSoundKitID`, `CompleteSoundKitID`, `VerifiedBuild`) VALUES
 (14348, 2, 5, 0, 1875, 5, 4714, 0, 0, 14366, 5, 1, 100, 5, 1, 270, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 131080, 0, 0, 0, 0, 0, 2723, 0, 0, 0, 5, 0, 0, 0, 49202, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1134, 0, 0, 0, 0, 5, 0, 0, 0, 0, 7, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 4294967295, 0, 0, 'You Can\'t Take \'Em Alone', 'Use the Black Gunpowder Kegs to blow up 4 Horrid Abominations.', 'Look here, $n.  The big fat ones -- abominations, they\'re called -- they don\'t go down easy, so don\'t tackle them on your own.$B$BBut I have an idea so crazy it might just work.  Or it might get you killed, if we\'re not careful, I suppose.$B$BThere\'s barrels of gunpowder beneath the sheds and by the windmills.  Grab them and toss \'em right on the abominations\' heads.  I\'ll take care of the rest with this trusty old blunderbuss.', '', '', 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', 890, 878, 25549), -- 14348
 (14336, 2, 5, 0, 0, 5, 4714, 0, 0, 0, 3, 1, 50, 3, 1, 120, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 16777224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1134, 0, 0, 0, 0, 3, 0, 0, 0, 0, 7, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 4294967295, 0, 0, 'Kill or Be Killed', 'Speak to Prince Liam Greymane outside of Duskhaven.', 'The reefs have always protected us from a coastal attack.  The earthquakes must\'ve opened a passage for the Forsaken ships.$B$BQuick, $n.  Slow down the attackers while I get the rest of the militia ready.$B$BI think I can hear the Prince and some of our men engaging the Forsaken even as we speak.  Speak to Liam and see how you can be of use.$B$BOh... and make sure he doesn\'t get himself killed.  I\'m afraid he might be a little reckless in his current state.', '', '', 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', 890, 878, 25549), -- 14336
 (14320, 2, 5, 0, 0, 5, 4714, 0, 0, 0, 5, 1, 100, 5, 1, 270, 0, 0, 0, 69296, 0, 0, 0, 0, 1, 0, 2097160, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1134, 0, 0, 0, 0, 5, 0, 0, 0, 0, 7, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 4294967295, 0, 0, 'In Need of Ingredients', 'Find the Crate of Mandrake Essence.', 'Ah, yes.  The effects of the Curse cannot ever be fully cured as far as we know.$B$BWith treatment, however, your mind will remain yours... and not that of a wild animal.$B$BWe are fortunate that the treatment worked on you.  Normally, I can only treat recent infections.$B$BWe\'ll need to continue your medication if we\'re to have you reverse the Curse.$B$BI will need mandrake essence to brew another batch of my serum for you.  You will find a crate stashed beneath a shed southwest of town.', '', '', 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', 890, 878, 25549), -- 14320
@@ -3905,7 +3905,7 @@ INSERT INTO `quest_template` (`ID`, `QuestType`, `QuestLevel`, `MaxScalingLevel`
 (14078, 2, 1, 0, 0, 1, 4755, 0, 0, 14091, 5, 1, 15, 5, 1, 60, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 524288, 512, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1134, 0, 0, 0, 0, 5, 0, 0, 0, 0, 7, 7, 7, 7, 7, 0, 0, 0, 0, 0, 1, 0, 0, 4294967295, 0, 0, 'Lockdown!', 'Find Lieutenant Walden in the northwestern end of the Merchant Square.', 'What are you still doing here, citizen?  Haven\'t you heard?  The city\'s under complete lockdown.$B$BGo see Lieutenant Walden -- he\'ll give you further directions for evacuation.', '', '', 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', 890, 878, 25549); -- 14078
 
 DELETE FROM `quest_template` WHERE `ID` IN (26706 /*26706*/, 24679 /*24679*/, 24904 /*24904*/, 24593 /*24593*/, 24646 /*24646*/, 24578 /*24578*/, 24483 /*24483*/, 14467 /*14467*/, 14404 /*14404*/, 14401 /*14401*/, 14406 /*14406*/, 14398 /*14398*/, 31725 /*31725*/, 24602 /*24602*/, 24678 /*24678*/, 24902 /*24902*/, 24675 /*24675*/, 24674 /*24674*/, 24575 /*24575*/, 24673 /*24673*/, 24628 /*24628*/, 24617 /*24617*/, 24501 /*24501*/, 24484 /*24484*/, 14405 /*14405*/, 14399 /*14399*/, 14403 /*14403*/, 14395 /*14395*/, 14396 /*14396*/, 14386 /*14386*/, 24680 /*24680*/, 24920 /*24920*/, 24676 /*24676*/, 24592 /*24592*/, 24672 /*24672*/, 24627 /*24627*/, 24616 /*24616*/, 24495 /*24495*/, 24472 /*24472*/, 24468 /*24468*/, 14397 /*14397*/, 24681 /*24681*/, 24903 /*24903*/, 24677 /*24677*/, 24438 /*24438*/, 14466 /*14466*/, 14465 /*14465*/, 14412 /*14412*/, 14400 /*14400*/, 14416 /*14416*/);
-INSERT INTO `quest_template` (`ID`, `QuestType`, `QuestLevel`, `MaxScalingLevel`, `QuestPackageID`, `MinLevel`, `QuestSortID`, `QuestInfoID`, `SuggestedGroupNum`, `RewardNextQuest`, `RewardXPDifficulty`, `RewardXPMultiplier`, `RewardMoney`, `RewardMoneyDifficulty`, `RewardMoneyMultiplier`, `RewardBonusMoney`, `RewardDisplaySpell1`, `RewardDisplaySpell2`, `RewardDisplaySpell3`, `RewardSpell`, `RewardHonor`, `RewardKillHonor`, `StartItem`, `RewardArtifactXPDifficulty`, `RewardArtifactXPMultiplier`, `RewardArtifactCategoryID`, `Flags`, `FlagsEx`, `RewardSkillLineID`, `RewardNumSkillUps`, `PortraitGiver`, `PortraitTurnIn`, `RewardItem1`, `RewardItem2`, `RewardItem3`, `RewardItem4`, `RewardAmount1`, `RewardAmount2`, `RewardAmount3`, `RewardAmount4`, `ItemDrop1`, `ItemDrop2`, `ItemDrop3`, `ItemDrop4`, `ItemDropQuantity1`, `ItemDropQuantity2`, `ItemDropQuantity3`, `ItemDropQuantity4`, `RewardChoiceItemID1`, `RewardChoiceItemID2`, `RewardChoiceItemID3`, `RewardChoiceItemID4`, `RewardChoiceItemID5`, `RewardChoiceItemID6`, `RewardChoiceItemQuantity1`, `RewardChoiceItemQuantity2`, `RewardChoiceItemQuantity3`, `RewardChoiceItemQuantity4`, `RewardChoiceItemQuantity5`, `RewardChoiceItemQuantity6`, `RewardChoiceItemDisplayID1`, `RewardChoiceItemDisplayID2`, `RewardChoiceItemDisplayID3`, `RewardChoiceItemDisplayID4`, `RewardChoiceItemDisplayID5`, `RewardChoiceItemDisplayID6`, `POIContinent`, `POIx`, `POIy`, `POIPriority`, `RewardTitle`, `RewardArenaPoints`, `RewardFactionID1`, `RewardFactionID2`, `RewardFactionID3`, `RewardFactionID4`, `RewardFactionID5`, `RewardFactionValue1`, `RewardFactionValue2`, `RewardFactionValue3`, `RewardFactionValue4`, `RewardFactionValue5`, `RewardFactionCapIn1`, `RewardFactionCapIn2`, `RewardFactionCapIn3`, `RewardFactionCapIn4`, `RewardFactionCapIn5`, `RewardFactionOverride1`, `RewardFactionOverride2`, `RewardFactionOverride3`, `RewardFactionOverride4`, `RewardFactionOverride5`, `RewardFactionFlags`, `AreaGroupID`, `TimeAllowed`, `AllowableRaces`, `QuestRewardID`, `Expansion`, `LogTitle`, `LogDescription`, `QuestDescription`, `AreaDescription`, `QuestCompletionLog`, `RewardCurrencyID1`, `RewardCurrencyID2`, `RewardCurrencyID3`, `RewardCurrencyID4`, `RewardCurrencyQty1`, `RewardCurrencyQty2`, `RewardCurrencyQty3`, `RewardCurrencyQty4`, `PortraitGiverText`, `PortraitGiverName`, `PortraitTurnInText`, `PortraitTurnInName`, `AcceptedSoundKitID`, `CompleteSoundKitID`, `VerifiedBuild`) VALUES
+REPLACE INTO `quest_template` (`ID`, `QuestType`, `QuestLevel`, `MaxScalingLevel`, `QuestPackageID`, `MinLevel`, `QuestSortID`, `QuestInfoID`, `SuggestedGroupNum`, `RewardNextQuest`, `RewardXPDifficulty`, `RewardXPMultiplier`, `RewardMoney`, `RewardMoneyDifficulty`, `RewardMoneyMultiplier`, `RewardBonusMoney`, `RewardDisplaySpell1`, `RewardDisplaySpell2`, `RewardDisplaySpell3`, `RewardSpell`, `RewardHonor`, `RewardKillHonor`, `StartItem`, `RewardArtifactXPDifficulty`, `RewardArtifactXPMultiplier`, `RewardArtifactCategoryID`, `Flags`, `FlagsEx`, `RewardSkillLineID`, `RewardNumSkillUps`, `PortraitGiver`, `PortraitTurnIn`, `RewardItem1`, `RewardItem2`, `RewardItem3`, `RewardItem4`, `RewardAmount1`, `RewardAmount2`, `RewardAmount3`, `RewardAmount4`, `ItemDrop1`, `ItemDrop2`, `ItemDrop3`, `ItemDrop4`, `ItemDropQuantity1`, `ItemDropQuantity2`, `ItemDropQuantity3`, `ItemDropQuantity4`, `RewardChoiceItemID1`, `RewardChoiceItemID2`, `RewardChoiceItemID3`, `RewardChoiceItemID4`, `RewardChoiceItemID5`, `RewardChoiceItemID6`, `RewardChoiceItemQuantity1`, `RewardChoiceItemQuantity2`, `RewardChoiceItemQuantity3`, `RewardChoiceItemQuantity4`, `RewardChoiceItemQuantity5`, `RewardChoiceItemQuantity6`, `RewardChoiceItemDisplayID1`, `RewardChoiceItemDisplayID2`, `RewardChoiceItemDisplayID3`, `RewardChoiceItemDisplayID4`, `RewardChoiceItemDisplayID5`, `RewardChoiceItemDisplayID6`, `POIContinent`, `POIx`, `POIy`, `POIPriority`, `RewardTitle`, `RewardArenaPoints`, `RewardFactionID1`, `RewardFactionID2`, `RewardFactionID3`, `RewardFactionID4`, `RewardFactionID5`, `RewardFactionValue1`, `RewardFactionValue2`, `RewardFactionValue3`, `RewardFactionValue4`, `RewardFactionValue5`, `RewardFactionCapIn1`, `RewardFactionCapIn2`, `RewardFactionCapIn3`, `RewardFactionCapIn4`, `RewardFactionCapIn5`, `RewardFactionOverride1`, `RewardFactionOverride2`, `RewardFactionOverride3`, `RewardFactionOverride4`, `RewardFactionOverride5`, `RewardFactionFlags`, `AreaGroupID`, `TimeAllowed`, `AllowableRaces`, `QuestRewardID`, `Expansion`, `LogTitle`, `LogDescription`, `QuestDescription`, `AreaDescription`, `QuestCompletionLog`, `RewardCurrencyID1`, `RewardCurrencyID2`, `RewardCurrencyID3`, `RewardCurrencyID4`, `RewardCurrencyQty1`, `RewardCurrencyQty2`, `RewardCurrencyQty3`, `RewardCurrencyQty4`, `PortraitGiverText`, `PortraitGiverName`, `PortraitTurnInText`, `PortraitTurnInName`, `AcceptedSoundKitID`, `CompleteSoundKitID`, `VerifiedBuild`) VALUES
 (26706, 2, 12, 0, 0, 12, 4714, 0, 0, 0, 7, 1, 1500, 7, 1, 7800, 0, 0, 0, 95840, 0, 0, 0, 0, 1, 0, 2097288, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1134, 0, 0, 0, 0, 7, 0, 0, 0, 0, 7, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 4294967295, 0, 0, 'Endgame', 'Jump on a Hippogryph when Tobias signals you and destroy the Horde Gunship.', 'We need to get rid of that flying gunship if our people have any chance of escaping.$B$BHere\'s the plan.  Keel Harbor had its share of rebel sympathizers in the old days.  I\'ve managed to round up a hefty amount of incendiary explosives from one of our storehouses.$B$BWe\'re going to hit the enemy with a force small enough to fly undetected.  The night elf hippogryphs should do the trick.$B$BTobias will give you the signal when we\'re ready to go.', '', '', 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', 890, 878, 25549), -- 26706
 (24679, 2, 11, 0, 0, 5, 4714, 0, 0, 24680, 5, 1, 400, 5, 1, 2220, 0, 0, 0, 0, 0, 0, 51956, 0, 1, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 51956, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1134, 0, 0, 0, 0, 5, 0, 0, 0, 0, 7, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 4294967295, 0, 0, 'Patriarch\'s Blessing', 'Place the Blessed Offerings at Aderic\'s Tomb.', 'You\'ve done it, $n.  Even in these times we must honor our dead.$B$BTake these offerings and place them at Aderic\'s tomb.$B$BLet\'s hope that\'s enough to placate the ghosts of our ancestors.', '', '', 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', 890, 878, 25549), -- 24679
 (24904, 2, 11, 0, 2100, 5, 4714, 0, 0, 24902, 7, 1, 1300, 7, 1, 3300, 0, 0, 0, 0, 0, 0, 50334, 0, 1, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50334, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1134, 0, 0, 0, 0, 7, 0, 0, 0, 0, 7, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 4294967295, 0, 0, 'The Battle for Gilneas City', 'Achieve victory in the Battle for Gilneas City.', 'The time has come, $n.  We\'ve rallied and armed every available Gilnean.$B$BIt is time to meet the enemy head on.  Time to settle the score with Sylvanas and her Forsaken dogs once and for all.$B$BLiam is heading the assault from this gate.  King Greymane and my father are leading the assault on the other districts.$B$BYou have a crucial role to play in this as well.  Take this rapier.  Use it to inspire our men and women in combat.  Speak to Krennan Aranas to take part in the battle for Gilneas City.', '', '', 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', 890, 878, 25549), -- 24904
@@ -3974,7 +3974,7 @@ UPDATE quest_template_addon SET PrevQuestID = 14094 WHERE ID = 14099;
 -- Fix - set previous quest 0 for quest 24930 while youre at it
 
 DELETE FROM `quest_template_addon` WHERE `ID`=24930;
-INSERT INTO `quest_template_addon` (`ID`, `MaxLevel`, `AllowableClasses`, `SourceSpellID`, `PrevQuestID`, `NextQuestID`, `ExclusiveGroup`, `RewardMailTemplateID`, `RewardMailDelay`, `RequiredSkillID`, `RequiredSkillPoints`, `RequiredMinRepFaction`, `RequiredMaxRepFaction`, `RequiredMinRepValue`, `RequiredMaxRepValue`, `ProvidedItemCount`, `SpecialFlags`, `ScriptName`) 
+REPLACE INTO `quest_template_addon` (`ID`, `MaxLevel`, `AllowableClasses`, `SourceSpellID`, `PrevQuestID`, `NextQuestID`, `ExclusiveGroup`, `RewardMailTemplateID`, `RewardMailDelay`, `RequiredSkillID`, `RequiredSkillPoints`, `RequiredMinRepFaction`, `RequiredMaxRepFaction`, `RequiredMinRepValue`, `RequiredMaxRepValue`, `ProvidedItemCount`, `SpecialFlags`, `ScriptName`) 
 VALUES (24930, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
 
 -- 3.1.3 Quest CONDITIONS Section
@@ -3982,31 +3982,31 @@ VALUES (24930, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
 -- Fix - 24930 while youre at it corect order if one of quests 14291, 14290, 14289, 14288, 14287, 14286, 14285 (all are safety in numbers) is rewarded
 
 DELETE FROM `conditions` WHERE `SourceEntry`=24930 AND `ConditionValue1`=14291 AND `ElseGroup`=0;
-INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) 
+REPLACE INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) 
 VALUES (19, 0, 24930, 0, 0, 8, 0, 14291, 0, 0, 0, 0, 0, '', 'make quest 24930 while your at it available');
 DELETE FROM `conditions` WHERE `SourceEntry`=24930 AND `ConditionValue1`=14290 AND `ElseGroup`=1;
-INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) 
+REPLACE INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) 
 VALUES (19, 0, 24930, 0, 1, 8, 0, 14290, 0, 0, 0, 0, 0, '', 'make quest 24930 while your at it available');
 DELETE FROM `conditions` WHERE `SourceEntry`=24930 AND `ConditionValue1`=14289 AND `ElseGroup`=2;
-INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) 
+REPLACE INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) 
 VALUES (19, 0, 24930, 0, 2, 8, 0, 14289, 0, 0, 0, 0, 0, '', 'make quest 24930 while your at it available');
 DELETE FROM `conditions` WHERE `SourceEntry`=24930 AND `ConditionValue1`=14288 AND `ElseGroup`=3;
-INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) 
+REPLACE INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) 
 VALUES (19, 0, 24930, 0, 3, 8, 0, 14288, 0, 0, 0, 0, 0, '', 'make quest 24930 while your at it available');
 DELETE FROM `conditions` WHERE `SourceEntry`=24930 AND `ConditionValue1`=14287 AND `ElseGroup`=4;
-INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) 
+REPLACE INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) 
 VALUES (19, 0, 24930, 0, 4, 8, 0, 14287, 0, 0, 0, 0, 0, '', 'make quest 24930 while your at it available');
 DELETE FROM `conditions` WHERE `SourceEntry`=24930 AND `ConditionValue1`=14286 AND `ElseGroup`=5;
-INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) 
+REPLACE INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) 
 VALUES (19, 0, 24930, 0, 5, 8, 0, 14286, 0, 0, 0, 0, 0, '', 'make quest 24930 while your at it available');
 DELETE FROM `conditions` WHERE `SourceEntry`=24930 AND `ConditionValue1`=14285 AND `ElseGroup`=6;
-INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) 
+REPLACE INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) 
 VALUES (19, 0, 24930, 0, 6, 8, 0, 14285, 0, 0, 0, 0, 0, '', 'make quest 24930 while your at it available');
 
 -- 3.2 Quest Details Section
 
 DELETE FROM `quest_details` WHERE `ID` IN (14347 /*14347*/, 14222 /*14222*/, 14294 /*14294*/, 14204 /*14204*/, 14154 /*14154*/, 14291 /*14291*/, 14099 /*14099*/, 14094 /*14094*/, 14091 /*14091*/, 14078 /*14078*/, 14368 /*14368*/, 14367 /*14367*/, 14336 /*14336*/, 14321 /*14321*/, 14320 /*14320*/, 14313 /*14313*/, 14221 /*14221*/, 14159 /*14159*/, 14093 /*14093*/, 14369 /*14369*/, 14366 /*14366*/, 14348 /*14348*/, 14212 /*14212*/, 28850 /*28850*/, 24930 /*24930*/, 14157 /*14157*/, 14098 /*14098*/, 14382 /*14382*/, 14218 /*14218*/, 14293 /*14293*/, 14214 /*14214*/, 26129 /*26129*/, 14280 /*14280*/);
-INSERT INTO `quest_details` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `EmoteDelay4`, `VerifiedBuild`) VALUES
+REPLACE INTO `quest_details` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `EmoteDelay4`, `VerifiedBuild`) VALUES
 (14347, 0, 0, 0, 0, 0, 0, 0, 0, 25549), -- 14347
 (14222, 0, 0, 0, 0, 0, 0, 0, 0, 25549), -- 14222
 (14294, 0, 0, 0, 0, 0, 0, 0, 0, 25549), -- 14294
@@ -4042,7 +4042,7 @@ INSERT INTO `quest_details` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, `Emot
 (14280, 1, 0, 0, 0, 0, 0, 0, 0, 25549); -- 14280
 
 DELETE FROM `quest_details` WHERE `ID` IN (24678 /*24678*/, 24903 /*24903*/, 24902 /*24902*/, 24904 /*24904*/, 24675 /*24675*/, 24592 /*24592*/, 24673 /*24673*/, 24593 /*24593*/, 24646 /*24646*/, 24628 /*24628*/, 24616 /*24616*/, 24501 /*24501*/, 24484 /*24484*/, 14404 /*14404*/, 14401 /*14401*/, 14386 /*14386*/, 24679 /*24679*/, 24674 /*24674*/, 24575 /*24575*/, 24483 /*24483*/, 24472 /*24472*/, 24468 /*24468*/, 24438 /*24438*/, 14399 /*14399*/, 14398 /*14398*/, 14397 /*14397*/, 14395 /*14395*/, 14396 /*14396*/, 24680 /*24680*/, 24920 /*24920*/, 24676 /*24676*/, 24627 /*24627*/, 24617 /*24617*/, 24578 /*24578*/, 24495 /*24495*/, 14466 /*14466*/, 14465 /*14465*/, 14400 /*14400*/, 14406 /*14406*/, 14403 /*14403*/, 26706 /*26706*/, 24681 /*24681*/, 24602 /*24602*/, 24677 /*24677*/, 24672 /*24672*/, 14405 /*14405*/, 14412 /*14412*/, 14416 /*14416*/);
-INSERT INTO `quest_details` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `EmoteDelay4`, `VerifiedBuild`) VALUES
+REPLACE INTO `quest_details` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `EmoteDelay4`, `VerifiedBuild`) VALUES
 (24678, 1, 0, 0, 0, 0, 0, 0, 0, 25549), -- 24678
 (24903, 0, 0, 0, 0, 0, 0, 0, 0, 25549), -- 24903
 (24902, 0, 0, 0, 0, 0, 0, 0, 0, 25549), -- 24902
@@ -4095,7 +4095,7 @@ INSERT INTO `quest_details` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, `Emot
 -- 3.3 Quest Offer Section
 
 DELETE FROM `quest_offer_reward` WHERE `ID` IN (14321 /*14321*/, 14375 /*14375*/, 14221 /*14221*/, 14294 /*14294*/, 14293 /*14293*/, 14204 /*14204*/, 24930 /*24930*/, 28850 /*28850*/, 14157 /*14157*/, 14280 /*14280*/, 14099 /*14099*/, 14093 /*14093*/, 14078 /*14078*/, 14366 /*14366*/, 14336 /*14336*/, 14094 /*14094*/, 14098 /*14098*/, 14091 /*14091*/, 14313 /*14313*/, 14222 /*14222*/, 14212 /*14212*/, 14159 /*14159*/, 14291 /*14291*/, 14367 /*14367*/, 14348 /*14348*/, 14347 /*14347*/, 14320 /*14320*/, 14218 /*14218*/, 14214 /*14214*/, 26129 /*26129*/, 14154 /*14154*/);
-INSERT INTO `quest_offer_reward` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `EmoteDelay4`, `RewardText`, `VerifiedBuild`) VALUES
+REPLACE INTO `quest_offer_reward` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `EmoteDelay4`, `RewardText`, `VerifiedBuild`) VALUES
 (14321, 0, 0, 0, 0, 0, 0, 0, 0, 'Forsaken!  Quick, $n!  We must mount a defense.', 25549), -- 14321
 (14375, 0, 0, 0, 0, 0, 0, 0, 0, 'I need you to pull through, $n.  This dosage is strong enough to kill a horse.$B$BBut I know you.  I know what you\'re made of.  You will be fine.$B$BTrust me.  I know what you\'re going through.$B$BNow drink up and close your eyes.', 25549), -- 14375
 (14221, 0, 0, 0, 0, 0, 0, 0, 0, 'We\'ve given them everything we have... yet still they come.  Do not worry, $n.  We\'ll slay many more before today is over.', 25549), -- 14221
@@ -4129,7 +4129,7 @@ INSERT INTO `quest_offer_reward` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, 
 (14154, 0, 0, 0, 0, 0, 0, 0, 0, 'We did it, $n.  Thanks to you a good man has survived.', 25549); -- 14154
 
 DELETE FROM `quest_offer_reward` WHERE `ID` IN (24680 /*24680*/, 24920 /*24920*/, 24676 /*24676*/, 24627 /*24627*/, 24484 /*24484*/, 24483 /*24483*/, 14467 /*14467*/, 14404 /*14404*/, 14401 /*14401*/, 14395 /*14395*/, 14368 /*14368*/, 26706 /*26706*/, 24678 /*24678*/, 24902 /*24902*/, 24673 /*24673*/, 24578 /*24578*/, 14403 /*14403*/, 14398 /*14398*/, 14396 /*14396*/, 14386 /*14386*/, 14382 /*14382*/, 14369 /*14369*/, 14434 /*14434*/, 24602 /*24602*/, 24675 /*24675*/, 24674 /*24674*/, 24575 /*24575*/, 24592 /*24592*/, 24672 /*24672*/, 24593 /*24593*/, 24646 /*24646*/, 24628 /*24628*/, 24501 /*24501*/, 24495 /*24495*/, 24472 /*24472*/, 24468 /*24468*/, 14466 /*14466*/, 14465 /*14465*/, 14405 /*14405*/, 14406 /*14406*/, 14397 /*14397*/, 24681 /*24681*/, 24679 /*24679*/, 24903 /*24903*/, 24904 /*24904*/, 24677 /*24677*/, 24617 /*24617*/, 24616 /*24616*/, 24438 /*24438*/, 14412 /*14412*/, 14400 /*14400*/, 14399 /*14399*/, 14416 /*14416*/);
-INSERT INTO `quest_offer_reward` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `EmoteDelay4`, `RewardText`, `VerifiedBuild`) VALUES
+REPLACE INTO `quest_offer_reward` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `EmoteDelay4`, `RewardText`, `VerifiedBuild`) VALUES
 (24680, 0, 0, 0, 0, 0, 0, 0, 0, 'It\'s good to see you again, $n.', 25549), -- 24680
 (24920, 0, 0, 0, 0, 0, 0, 0, 0, 'You\'ve done well, $n.  Almost everybody managed to make it through.  ', 25549), -- 24920
 (24676, 1, 0, 0, 0, 0, 0, 0, 0, 'We have the people of Emberstone on our side now thanks to you.  ', 25549), -- 24676
@@ -4187,7 +4187,7 @@ INSERT INTO `quest_offer_reward` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, 
 -- Fix - endquest texts for gilneas class trainers, quests given by gwen armstead npc: 35840
 
 DELETE FROM `quest_offer_reward` WHERE `ID` IN (14277, 14278, 14273, 14275, 14269, 14272, 14280, 14265);
-INSERT INTO `quest_offer_reward` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `EmoteDelay4`, `RewardText`, `VerifiedBuild`) VALUES 
+REPLACE INTO `quest_offer_reward` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `EmoteDelay4`, `RewardText`, `VerifiedBuild`) VALUES 
 (14277, 0, 0, 0, 0, 0, 0, 0, 0, 'A disciple of the arcane always finds a way forward. I\'m glad to see you, $N.', 0),
 (14278, 0, 0, 0, 0, 0, 0, 0, 0, 'The Light is with you, $N. It\'s still quite a relief to see you.', 0),
 (14273, 0, 0, 0, 0, 0, 0, 0, 0, 'A darkness has descended over our lands. And not our kind of darkness, if you know what I mean.', 0),
@@ -4200,7 +4200,7 @@ INSERT INTO `quest_offer_reward` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, 
 -- Fix - 35112 king genn greymane endquests texts
 
 DELETE FROM `quest_offer_reward` WHERE `ID` IN (14291, 14290, 14289, 14288, 14287, 14286, 14285);
-INSERT INTO `quest_offer_reward` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `EmoteDelay4`, `RewardText`, `VerifiedBuild`) VALUES 
+REPLACE INTO `quest_offer_reward` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `EmoteDelay4`, `RewardText`, `VerifiedBuild`) VALUES 
 (14291, 0, 0, 0, 0, 0, 0, 0, 0, 'You\'ve done well in coming here. If we Gilneans stick together we might yet defeat this terrible enemy.', 0),
 (14290, 0, 0, 0, 0, 0, 0, 0, 0, 'You\'ve done well in coming here. If we Gilneans stick together we might yet defeat this terrible enemy.', 0),
 (14289, 0, 0, 0, 0, 0, 0, 0, 0, 'You\'ve done well in coming here. If we Gilneans stick together we might yet defeat this terrible enemy.', 0),
@@ -4214,12 +4214,12 @@ INSERT INTO `quest_offer_reward` (`ID`, `Emote1`, `Emote2`, `Emote3`, `Emote4`, 
 -- 3.6 Quest request Item Section
 
 DELETE FROM `quest_request_items` WHERE `ID` IN (14094 /*14094*/, 14154 /*14154*/);
-INSERT INTO `quest_request_items` (`ID`, `EmoteOnComplete`, `EmoteOnIncomplete`, `EmoteOnCompleteDelay`, `EmoteOnIncompleteDelay`, `CompletionText`, `VerifiedBuild`) VALUES
+REPLACE INTO `quest_request_items` (`ID`, `EmoteOnComplete`, `EmoteOnIncomplete`, `EmoteOnCompleteDelay`, `EmoteOnIncompleteDelay`, `CompletionText`, `VerifiedBuild`) VALUES
 (14094, 0, 0, 0, 0, 'Have you salvaged the supplies, $n?', 25549), -- 14094
 (14154, 0, 0, 0, 0, 'Getting there!  Careful or we\'ll lose him!', 25549); -- 14154
 
 DELETE FROM `quest_request_items` WHERE `ID` IN (24646 /*24646*/, 14399 /*14399*/, 26706 /*26706*/, 24628 /*24628*/, 24495 /*24495*/, 24472 /*24472*/, 14400 /*14400*/, 24602 /*24602*/, 14404 /*14404*/, 14401 /*14401*/, 24675 /*24675*/);
-INSERT INTO `quest_request_items` (`ID`, `EmoteOnComplete`, `EmoteOnIncomplete`, `EmoteOnCompleteDelay`, `EmoteOnIncompleteDelay`, `CompletionText`, `VerifiedBuild`) VALUES
+REPLACE INTO `quest_request_items` (`ID`, `EmoteOnComplete`, `EmoteOnIncomplete`, `EmoteOnCompleteDelay`, `EmoteOnIncompleteDelay`, `CompletionText`, `VerifiedBuild`) VALUES
 (24646, 0, 0, 0, 0, 'Do you have the scythe, $n?', 25549), -- 24646
 (14399, 0, 0, 0, 0, 'How goes it, dear?  Will you be staying for tea?', 25549), -- 14399
 (26706, 0, 0, 0, 0, 'The only risks worth taking are the ones that lead to victories worth having.', 25549), -- 26706
@@ -4235,7 +4235,7 @@ INSERT INTO `quest_request_items` (`ID`, `EmoteOnComplete`, `EmoteOnIncomplete`,
 -- 3.7 Quest Objectives Section
 
 DELETE FROM `quest_objectives` WHERE `ID` IN (265475 /*265475*/, 289167 /*289167*/, 264865 /*264865*/, 264864 /*264864*/, 264863 /*264863*/, 289536 /*289536*/, 255603 /*255603*/, 267253 /*267253*/, 263905 /*263905*/, 264929 /*264929*/, 289535 /*289535*/, 264796 /*264796*/, 264795 /*264795*/, 262806 /*262806*/, 264452 /*264452*/, 264948 /*264948*/, 264587 /*264587*/, 265434 /*265434*/, 265006 /*265006*/, 267179 /*267179*/);
-INSERT INTO `quest_objectives` (`ID`, `QuestID`, `Type`, `Order`, `StorageIndex`, `ObjectID`, `Amount`, `Flags`, `Flags2`, `ProgressBarWeight`, `Description`, `VerifiedBuild`) VALUES
+REPLACE INTO `quest_objectives` (`ID`, `QuestID`, `Type`, `Order`, `StorageIndex`, `ObjectID`, `Amount`, `Flags`, `Flags2`, `ProgressBarWeight`, `Description`, `VerifiedBuild`) VALUES
 (265475, 14348, 0, 0, 0, 36233, 4, 0, 0, 0, 'Gunpowder thrown at abomination', 25549), -- 265475
 (289167, 46277, 4, 0, -1, 1342, 100, 0, 0, 0, '', 25549), -- 289167
 (264865, 14368, 0, 2, 2, 36289, 1, 0, 0, 0, 'James rescued', 25549), -- 264865
@@ -4258,7 +4258,7 @@ INSERT INTO `quest_objectives` (`ID`, `QuestID`, `Type`, `Order`, `StorageIndex`
 (267179, 14098, 0, 0, 0, 35830, 3, 0, 0, 0, 'Market Homes Evacuated', 25549); -- 267179
 
 DELETE FROM `quest_objectives` WHERE `ID` IN (254200 /*254200*/, 265108 /*265108*/, 265467 /*265467*/, 266555 /*266555*/, 266554 /*266554*/, 266553 /*266553*/, 256045 /*256045*/, 265423 /*265423*/, 265422 /*265422*/, 265421 /*265421*/, 264872 /*264872*/, 268950 /*268950*/, 265438 /*265438*/, 266831 /*266831*/, 265172 /*265172*/, 266403 /*266403*/, 265213 /*265213*/, 265584 /*265584*/, 253933 /*253933*/, 265253 /*265253*/, 256573 /*256573*/, 267072 /*267072*/, 265366 /*265366*/, 265365 /*265365*/, 265364 /*265364*/, 264483 /*264483*/, 265575 /*265575*/, 261452 /*261452*/, 265635 /*265635*/, 265634 /*265634*/, 265134 /*265134*/, 265133 /*265133*/, 265132 /*265132*/, 265566 /*265566*/, 265565 /*265565*/, 266711 /*266711*/, 266512 /*266512*/, 256540 /*256540*/, 265446 /*265446*/, 265445 /*265445*/, 255768 /*255768*/);
-INSERT INTO `quest_objectives` (`ID`, `QuestID`, `Type`, `Order`, `StorageIndex`, `ObjectID`, `Amount`, `Flags`, `Flags2`, `ProgressBarWeight`, `Description`, `VerifiedBuild`) VALUES
+REPLACE INTO `quest_objectives` (`ID`, `QuestID`, `Type`, `Order`, `StorageIndex`, `ObjectID`, `Amount`, `Flags`, `Flags2`, `ProgressBarWeight`, `Description`, `VerifiedBuild`) VALUES
 (254200, 26706, 0, 0, 0, 43729, 1, 0, 0, 0, 'Gunship destroyed', 25549), -- 254200
 (265108, 24679, 0, 0, 0, 38147, 1, 0, 0, 0, 'Offering placed', 25549), -- 265108
 (265467, 24904, 0, 0, 0, 38854, 1, 0, 0, 0, 'Battle for Gilneas City Complete', 25549), -- 265467
@@ -4304,11 +4304,11 @@ INSERT INTO `quest_objectives` (`ID`, `QuestID`, `Type`, `Order`, `StorageIndex`
 -- 3.8 Quest Visual Effect Section
 
 DELETE FROM `quest_visual_effect` WHERE (`ID`=264587 AND `Index`=0);
-INSERT INTO `quest_visual_effect` (`ID`, `Index`, `VisualEffect`, `VerifiedBuild`) VALUES
+REPLACE INTO `quest_visual_effect` (`ID`, `Index`, `VisualEffect`, `VerifiedBuild`) VALUES
 (264587, 0, 2914, 25549);
 
 DELETE FROM `quest_visual_effect` WHERE (`ID`=265467 AND `Index`=0) OR (`ID`=268950 AND `Index`=0);
-INSERT INTO `quest_visual_effect` (`ID`, `Index`, `VisualEffect`, `VerifiedBuild`) VALUES
+REPLACE INTO `quest_visual_effect` (`ID`, `Index`, `VisualEffect`, `VerifiedBuild`) VALUES
 (265467, 0, 1976, 25549),
 (268950, 0, 988, 25549);
 
@@ -4317,7 +4317,7 @@ INSERT INTO `quest_visual_effect` (`ID`, `Index`, `VisualEffect`, `VerifiedBuild
 -- Fix - bridge phase corections between merchant square and military district
 
 DELETE FROM `spell_area` WHERE `spell`=59073 AND `area`=4755 AND `quest_start`=14078 AND `aura_spell`=0 AND `teamId`=-1 AND `racemask`=0 AND `gender`=2;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (59073, 4755, 14078, 14159, 0, -1, 0, 2, 3, 64, 64);
 
 -- Fix - quest 14087 14159 14239 phase corections for applying and removeing phases 170 171 and 172 military district
@@ -4325,17 +4325,17 @@ VALUES (59073, 4755, 14078, 14159, 0, -1, 0, 2, 3, 64, 64);
 DELETE FROM `spell_area` WHERE `spell`=59073 AND `area`=4757 AND `quest_start`=0 AND `aura_spell`=0 AND `teamId`=-1 AND `racemask`=0 AND `gender`=2;
 
 DELETE FROM `spell_area` WHERE `spell`=59073 AND `area`=4756 AND `quest_start`=14078 AND `aura_spell`=0 AND `teamId`=-1 AND `racemask`=0 AND `gender`=2;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (59073, 4756, 14078, 14159, 0, -1, 0, 2, 3, 64, 64);
 
 DELETE FROM `spell_area` WHERE `spell`=59073 AND `area`=4757 AND `quest_start`=14078 AND `aura_spell`=0 AND `teamId`=-1 AND `racemask`=0 AND `gender`=2;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (59073, 4757, 14078, 14159, 0, -1, 0, 2, 3, 64, 64);
 
 DELETE FROM `spell_area` WHERE `spell`=59074 AND `area`=4757 AND `quest_start`=14159 AND `aura_spell`=0 AND `teamId`=-1 AND `racemask`=0 AND `gender`=2;
 
 DELETE FROM `spell_area` WHERE `spell`=59087 AND `area`=4757 AND `quest_start`=14293 AND `aura_spell`=0 AND `teamId`=-1 AND `racemask`=0 AND `gender`=2;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (59087, 4757, 14293, 14222, 0, -1, 0, 2, 3, 64, 64);
 
 -- Fix - corect phase shifts duskhaven
@@ -4343,165 +4343,165 @@ VALUES (59087, 4757, 14293, 14222, 0, -1, 0, 2, 3, 64, 64);
 -- Phase 181
 
 DELETE FROM `spell_area` WHERE `spell`=68481 AND `area`=4786;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68481, 4786, 14375, 14321, 0, -1, 0, 2, 3, 64, 64);
 
 DELETE FROM `spell_area` WHERE `spell`=68481 AND `area`=4714;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68481, 4714, 14375, 14321, 0, -1, 0, 2, 3, 64, 64);
 
 DELETE FROM `spell_area` WHERE `spell`=68481 AND `area`=4808;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68481, 4808, 14375, 14321, 0, -1, 0, 2, 3, 64, 64);
 
 DELETE FROM `spell_area` WHERE `spell`=68481 AND `area`=4818;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68481, 4818, 14375, 14321, 0, -1, 0, 2, 3, 64, 64);
 
 DELETE FROM `spell_area` WHERE `spell`=68481 AND `area`=4807;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68481, 4807, 14375, 14321, 0, -1, 0, 2, 3, 64, 64);
 
 DELETE FROM `spell_area` WHERE `spell`=68481 AND `area`=4806;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68481, 4806, 14375, 14321, 0, -1, 0, 2, 3, 64, 64);
 
 DELETE FROM `spell_area` WHERE `spell`=68481 AND `area`=5720;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68481, 5720, 14375, 14321, 0, -1, 0, 2, 3, 64, 64);
 
 DELETE FROM `spell_area` WHERE `spell`=68481 AND `area`=4793;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68481, 4793, 14375, 14321, 0, -1, 0, 2, 3, 64, 64);
 
 DELETE FROM `spell_area` WHERE `spell`=68481 AND `area`=4792;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68481, 4792, 14375, 14321, 0, -1, 0, 2, 3, 64, 64);
 
 -- Phase 182
 
 DELETE FROM `spell_area` WHERE `spell`=68482 AND `area`=4786;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68482, 4786, 14321, 14396, 0, -1, 0, 2, 3, 64, 74);
 
 DELETE FROM `spell_area` WHERE `spell`=68482 AND `area`=4714;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68482, 4714, 14321, 14396, 0, -1, 0, 2, 3, 64, 74);
 
 DELETE FROM `spell_area` WHERE `spell`=68482 AND `area`=4808;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68482, 4808, 14321, 14396, 0, -1, 0, 2, 3, 64, 74);
 
 DELETE FROM `spell_area` WHERE `spell`=68482 AND `area`=4818;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68482, 4818, 14321, 14396, 0, -1, 0, 2, 3, 64, 74);
 
 DELETE FROM `spell_area` WHERE `spell`=68482 AND `area`=4807;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68482, 4807, 14321, 14396, 0, -1, 0, 2, 3, 64, 74);
 
 DELETE FROM `spell_area` WHERE `spell`=68482 AND `area`=4806;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68482, 4806, 14321, 14396, 0, -1, 0, 2, 3, 64, 74);
 
 DELETE FROM `spell_area` WHERE `spell`=68482 AND `area`=5720;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68482, 5720, 14321, 14396, 0, -1, 0, 2, 3, 64, 74);
 
 DELETE FROM `spell_area` WHERE `spell`=68482 AND `area`=4793;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68482, 4793, 14321, 14396, 0, -1, 0, 2, 3, 64, 74);
 
 DELETE FROM `spell_area` WHERE `spell`=68482 AND `area`=4792;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68482, 4792, 14321, 14396, 0, -1, 0, 2, 3, 64, 74);
 
 -- Phase 183
 
 DELETE FROM `spell_area` WHERE `spell`=68483 AND `area`=4786;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68483, 4786, 14396, 14465, 0, -1, 0, 2, 3, 64, 64);
 
 DELETE FROM `spell_area` WHERE `spell`=68483 AND `area`=4714;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68483, 4714, 14396, 14465, 0, -1, 0, 2, 3, 64, 64);
 
 DELETE FROM `spell_area` WHERE `spell`=68483 AND `area`=4808;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68483, 4808, 14396, 14465, 0, -1, 0, 2, 3, 64, 64);
 
 DELETE FROM `spell_area` WHERE `spell`=68483 AND `area`=4818;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68483, 4818, 14396, 14465, 0, -1, 0, 2, 3, 64, 64);
 
 DELETE FROM `spell_area` WHERE `spell`=68483 AND `area`=4807;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68483, 4807, 14396, 14465, 0, -1, 0, 2, 3, 64, 64);
 
 DELETE FROM `spell_area` WHERE `spell`=68483 AND `area`=4806;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68483, 4806, 14396, 14465, 0, -1, 0, 2, 3, 64, 64);
 
 DELETE FROM `spell_area` WHERE `spell`=68483 AND `area`=5720;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68483, 5720, 14396, 14465, 0, -1, 0, 2, 3, 64, 64);
 
 DELETE FROM `spell_area` WHERE `spell`=68483 AND `area`=4793;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68483, 4793, 14396, 14465, 0, -1, 0, 2, 3, 64, 64);
 
 DELETE FROM `spell_area` WHERE `spell`=68483 AND `area`=4792;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68483, 4792, 14396, 14465, 0, -1, 0, 2, 3, 64, 64);
 
 DELETE FROM `spell_area` WHERE `spell`=68483 AND `area`=4817;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (68483, 4817, 14396, 24438, 0, -1, 0, 2, 3, 64, 64);
 
 -- Phase 186
 
 DELETE FROM `spell_area` WHERE `spell`=69484 AND `area`=4817;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (69484, 4817, 14467, 0, 0, -1, 0, 2, 3, 64, 0);
 
 DELETE FROM `spell_area` WHERE `spell`=69484 AND `area`=6545;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (69484, 6545, 14467, 0, 0, -1, 0, 2, 3, 64, 0);
 
 DELETE FROM `spell_area` WHERE `spell`=69484 AND `area`=4714;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (69484, 4714, 14467, 0, 0, -1, 0, 2, 3, 64, 0);
 
 DELETE FROM `spell_area` WHERE `spell`=69484 AND `area`=4730;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (69484, 4730, 14467, 0, 0, -1, 0, 2, 3, 64, 0);
 
 DELETE FROM `spell_area` WHERE `spell`=69484 AND `area`=4787;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (69484, 4787, 14467, 0, 0, -1, 0, 2, 3, 64, 0);
 
 DELETE FROM `spell_area` WHERE `spell`=69484 AND `area`=4794;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (69484, 4794, 14467, 0, 0, -1, 0, 2, 3, 64, 0);
 
 DELETE FROM `spell_area` WHERE `spell`=69484 AND `area`=4731;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (69484, 4731, 14467, 0, 0, -1, 0, 2, 3, 64, 0);
 
 DELETE FROM `spell_area` WHERE `spell`=69484 AND `area`=4788;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (69484, 4788, 14467, 0, 0, -1, 0, 2, 3, 64, 0);
 
 DELETE FROM `spell_area` WHERE `spell`=69484 AND `area`=4732;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (69484, 4732, 14467, 0, 0, -1, 0, 2, 3, 64, 0);
 
 DELETE FROM `spell_area` WHERE `spell`=69484 AND `area`=4734;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (69484, 4734, 14467, 0, 0, -1, 0, 2, 3, 64, 0);
 
 DELETE FROM `spell_area` WHERE `spell`=69484 AND `area`=4842;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (69484, 4842, 14467, 0, 0, -1, 0, 2, 3, 64, 0);
 
 DELETE FROM `spell_area` WHERE `spell`=69484 AND `area`=4482; -- This area does not have this spell at all
@@ -4515,13 +4515,13 @@ DELETE FROM `spell_area` WHERE `spell`=69484 AND `area`=4482; -- This area does 
 -- VEHICLE TEMPLATE ACCESSORIES
 
 DELETE FROM vehicle_template_accessory WHERE entry IN (36283, 35905, 35231);
-INSERT INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`, `minion`, `description`, `summontype`, `summontimer`) VALUES
+REPLACE INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`, `minion`, `description`, `summontype`, `summontimer`) VALUES
 (36283, 36292, 2, 0, '36283 - 36292', 0, 0), -- 36283 - 36292
 (35905, 35907, 1, 0, '35905 - 35907', 3, 5000), -- 35905 - 35907
 (35231, 35230, 1, 0, '35231 - 35230', 3, 5000); -- 35231 - 35230
 
 DELETE FROM vehicle_template_accessory WHERE entry IN (37939, 38363, 44928, 38755, 43336, 43337);
-INSERT INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`, `minion`, `description`, `summontype`, `summontimer`) VALUES
+REPLACE INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`, `minion`, `description`, `summontype`, `summontimer`) VALUES
 (37939, 37938, 0, 0, '37939 - 37938', 0, 0), -- 37939 - 37938
 (38363, 38366, 0, 0, '38363 - 38366', 0, 0), -- 38363 - 38366
 (44928, 51409, 6, 0, '44928 - 51409', 0, 0), -- 44928 - 51409
@@ -4543,7 +4543,7 @@ INSERT INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`,
 
 -- SPELLCLICK SPELLS
 DELETE FROM npc_spellclick_spells WHERE npc_entry IN (35317, 44427,44429, 36283, 36287, 36288, 36289);
-INSERT INTO `npc_spellclick_spells` (`npc_entry`, `spell_id`, `cast_flags`, `user_type`) VALUES
+REPLACE INTO `npc_spellclick_spells` (`npc_entry`, `spell_id`, `cast_flags`, `user_type`) VALUES
 (35317, 43671, 0, 0),
 (44427, 56685, 0, 0),
 (44429, 56685, 0, 0),
@@ -4553,7 +4553,7 @@ INSERT INTO `npc_spellclick_spells` (`npc_entry`, `spell_id`, `cast_flags`, `use
 (36287, 68597, 0, 0);
 
 DELETE FROM npc_spellclick_spells WHERE npc_entry IN (36440, 36459, 36540, 44928, 38755, 37807, 38377, 38150, 38615, 43747, 53522);
-INSERT INTO `npc_spellclick_spells` (`npc_entry`, `spell_id`, `cast_flags`, `user_type`) VALUES
+REPLACE INTO `npc_spellclick_spells` (`npc_entry`, `spell_id`, `cast_flags`, `user_type`) VALUES
 (36440, 68735, 0, 0),
 (36459, 68743, 0, 0),
 (36540, 94654, 0, 0),
@@ -4570,7 +4570,7 @@ INSERT INTO `npc_spellclick_spells` (`npc_entry`, `spell_id`, `cast_flags`, `use
 
 -- text part - TESTED AND IN DB
 DELETE FROM `npc_text` WHERE `ID` IN (15443 /*15443*/, 16330 /*16330*/, 14847 /*14847*/);
-INSERT INTO `npc_text` (`ID`, `Probability0`, `Probability1`, `Probability2`, `Probability3`, `Probability4`, `Probability5`, `Probability6`, `Probability7`, `BroadcastTextId0`, `BroadcastTextId1`, `BroadcastTextId2`, `BroadcastTextId3`, `BroadcastTextId4`, `BroadcastTextId5`, `BroadcastTextId6`, `BroadcastTextId7`, `VerifiedBuild`) VALUES
+REPLACE INTO `npc_text` (`ID`, `Probability0`, `Probability1`, `Probability2`, `Probability3`, `Probability4`, `Probability5`, `Probability6`, `Probability7`, `BroadcastTextId0`, `BroadcastTextId1`, `BroadcastTextId2`, `BroadcastTextId3`, `BroadcastTextId4`, `BroadcastTextId5`, `BroadcastTextId6`, `BroadcastTextId7`, `VerifiedBuild`) VALUES
 (15443, 1, 0, 0, 0, 0, 0, 0, 0, 38799, 0, 0, 0, 0, 0, 0, 0, 27547), -- 15443
 (16330, 1, 0, 0, 0, 0, 0, 0, 0, 42896, 0, 0, 0, 0, 0, 0, 0, 27547), -- 16330
 (14847, 1, 0, 0, 0, 0, 0, 0, 0, 36075, 0, 0, 0, 0, 0, 0, 0, 27547); -- 14847
@@ -4578,7 +4578,7 @@ INSERT INTO `npc_text` (`ID`, `Probability0`, `Probability1`, `Probability2`, `P
 -- gossip part
 
 DELETE FROM `gossip_menu` WHERE (`MenuId`=13111 AND `TextId`=18430) OR (`MenuId`=11061 AND `TextId`=15377) OR (`MenuId`=11061 AND `TextId`=15443) OR (`MenuId`=14175 AND `TextId`=15029) OR (`MenuId`=11672 AND `TextId`=16330) OR (`MenuId`=14290 AND `TextId`=14835) OR (`MenuId`=14176 AND `TextId`=14832) OR (`MenuId`=14177 AND `TextId`=14847) OR (`MenuId`=11794 AND `TextId`=16542) OR (`MenuId`=11795 AND `TextId`=16543) OR (`MenuId`=11070 AND `TextId`=15395);
-INSERT INTO `gossip_menu` (`MenuId`, `TextId`, `VerifiedBuild`) VALUES
+REPLACE INTO `gossip_menu` (`MenuId`, `TextId`, `VerifiedBuild`) VALUES
 (13111, 18430, 27547), -- 55285 (Astrid Langstrump)
 (11061, 15377, 27547), -- 38553 (Krennan Aranas)
 (11061, 15443, 27547), -- 38553 (Krennan Aranas)
@@ -4729,7 +4729,7 @@ UPDATE `gossip_menu` SET `VerifiedBuild`=27547 WHERE (`MenuId`=10676 AND `TextId
 UPDATE `gossip_menu` SET `VerifiedBuild`=27547 WHERE (`MenuId`=10676 AND `TextId`=14798); -- 0
 
 DELETE FROM `gossip_menu_option` WHERE (`MenuId`=11672 AND `OptionIndex`=0) OR (`MenuId`=12195 AND `OptionIndex`=4) OR (`MenuId`=12195 AND `OptionIndex`=0) OR (`MenuId`=12186 AND `OptionIndex`=4) OR (`MenuId`=12186 AND `OptionIndex`=0) OR (`MenuId`=12196 AND `OptionIndex`=4) OR (`MenuId`=12196 AND `OptionIndex`=0) OR (`MenuId`=12188 AND `OptionIndex`=4) OR (`MenuId`=12188 AND `OptionIndex`=0) OR (`MenuId`=12191 AND `OptionIndex`=0) OR (`MenuId`=12185 AND `OptionIndex`=4) OR (`MenuId`=12185 AND `OptionIndex`=0) OR (`MenuId`=12198 AND `OptionIndex`=4) OR (`MenuId`=12198 AND `OptionIndex`=0) OR (`MenuId`=12190 AND `OptionIndex`=4) OR (`MenuId`=12190 AND `OptionIndex`=0);
-INSERT INTO `gossip_menu_option` (`MenuId`, `OptionIndex`, `OptionIcon`, `OptionText`, `OptionBroadcastTextId`, `VerifiedBuild`) VALUES
+REPLACE INTO `gossip_menu_option` (`MenuId`, `OptionIndex`, `OptionIcon`, `OptionText`, `OptionBroadcastTextId`, `VerifiedBuild`) VALUES
 (11672, 0, 1, 'I would like to buy from you.', 2583, 27547), -- NEED TO CHECK HOW COULD ADD THESE : OptionBroadcastTextID: 6399 - 7142 - 9992 - 14967
 (12195, 4, 3, 'Train me in Herbalism.', 47112, 27547),
 (12195, 0, 3, 'Train me in Alchemy.', 47109, 27547),
@@ -4999,16 +4999,16 @@ UPDATE `gossip_menu_option` SET `VerifiedBuild`=27547 WHERE (`MenuId`=10841 AND 
 UPDATE `gossip_menu_option` SET `VerifiedBuild`=27547 WHERE (`MenuId`=10841 AND `OptionIndex`=0);
 
 DELETE FROM `gossip_menu_option_action` WHERE (`MenuId`=11795 AND `OptionIndex`=0) OR (`MenuId`=11794 AND `OptionIndex`=1);
-INSERT INTO `gossip_menu_option_action` (`MenuId`, `OptionIndex`, `ActionMenuId`, `ActionPoiId`) VALUES
+REPLACE INTO `gossip_menu_option_action` (`MenuId`, `OptionIndex`, `ActionMenuId`, `ActionPoiId`) VALUES
 (11795, 0, 11794, 44125),
 (11794, 1, 11795, 44125);
 
 DELETE FROM points_of_interest WHERE ID = 44125;
-INSERT INTO points_of_interest (ID, PositionX, PositionY, Icon, Flags, Importance, Name, VerifiedBuild) VALUES
+REPLACE INTO points_of_interest (ID, PositionX, PositionY, Icon, Flags, Importance, Name, VerifiedBuild) VALUES
 (44125, -1884.02, 2244.08, 7, 99, 0, "Chris Moller Pie Vendor", 27547);
 
 DELETE FROM `gossip_menu_option_trainer` WHERE (`MenuId`=12180 AND `OptionIndex`=0) OR (`MenuId`=12180 AND `OptionIndex`=4);
-INSERT INTO `gossip_menu_option_trainer` (`MenuId`, `OptionIndex`, `TrainerId`) VALUES
+REPLACE INTO `gossip_menu_option_trainer` (`MenuId`, `OptionIndex`, `TrainerId`) VALUES
 (12180, 0, 59),
 (12180, 4, 388);
 
@@ -5018,7 +5018,7 @@ UPDATE `gossip_menu_option_trainer` SET `TrainerId`=877 WHERE (`MenuId`=5855 AND
 UPDATE `gossip_menu_option_trainer` SET `TrainerId`=877 WHERE (`MenuId`=5855 AND `OptionIndex`=0);
 
 DELETE FROM `trainer` WHERE `Id`=877;
-INSERT INTO `trainer` (`Id`, `Type`, `Greeting`, `VerifiedBuild`) VALUES
+REPLACE INTO `trainer` (`Id`, `Type`, `Greeting`, `VerifiedBuild`) VALUES
 (877, 2, 'Here, let me show you how to bind those wounds....', 27547);
 
 UPDATE `trainer` SET `VerifiedBuild`=27547 WHERE `Id`=46;
@@ -5038,7 +5038,7 @@ UPDATE `trainer` SET `VerifiedBuild`=27547 WHERE `Id`=390;
 UPDATE `trainer` SET `VerifiedBuild`=27547 WHERE `Id`=388;
 
 DELETE FROM `trainer_spell` WHERE (`TrainerId`=59 AND `SpellId`=264212) OR (`TrainerId`=10 AND `SpellId`=271617) OR (`TrainerId`=10 AND `SpellId`=271663) OR (`TrainerId`=10 AND `SpellId`=271673) OR (`TrainerId`=10 AND `SpellId`=271659) OR (`TrainerId`=10 AND `SpellId`=271657) OR (`TrainerId`=10 AND `SpellId`=271661) OR (`TrainerId`=10 AND `SpellId`=271665) OR (`TrainerId`=388 AND `SpellId`=265820) OR (`TrainerId`=877 AND `SpellId`=7928) OR (`TrainerId`=877 AND `SpellId`=7929) OR (`TrainerId`=877 AND `SpellId`=3278) OR (`TrainerId`=877 AND `SpellId`=3277) OR (`TrainerId`=877 AND `SpellId`=3276) OR (`TrainerId`=877 AND `SpellId`=18630) OR (`TrainerId`=877 AND `SpellId`=10840) OR (`TrainerId`=877 AND `SpellId`=10841) OR (`TrainerId`=877 AND `SpellId`=18629) OR (`TrainerId`=102 AND `SpellId`=264478) OR (`TrainerId`=103 AND `SpellId`=264578) OR (`TrainerId`=390 AND `SpellId`=265856) OR (`TrainerId`=387 AND `SpellId`=264495);
-INSERT INTO `trainer_spell` (`TrainerId`, `SpellId`, `MoneyCost`, `ReqSkillLine`, `ReqSkillRank`, `ReqAbility1`, `ReqAbility2`, `ReqAbility3`, `ReqLevel`, `VerifiedBuild`) VALUES
+REPLACE INTO `trainer_spell` (`TrainerId`, `SpellId`, `MoneyCost`, `ReqSkillLine`, `ReqSkillRank`, `ReqAbility1`, `ReqAbility2`, `ReqAbility3`, `ReqLevel`, `VerifiedBuild`) VALUES
 (59, 264212, 9, 0, 0, 0, 0, 0, 5, 27547),
 (10, 271617, 90, 0, 0, 0, 0, 0, 5, 27547),
 (10, 271663, 225000, 356, 1, 0, 0, 0, 78, 27547),
@@ -5200,7 +5200,7 @@ UPDATE `trainer_spell` SET `MoneyCost`=950, `ReqSkillLine`=2485, `VerifiedBuild`
 UPDATE `trainer_spell` SET `MoneyCost`=142, `ReqSkillLine`=2485, `VerifiedBuild`=27547 WHERE (`TrainerId`=59 AND `SpellId`=2332);
 
 DELETE FROM `creature_default_trainer` WHERE `CreatureId`=4753;
-INSERT INTO `creature_default_trainer` (`CreatureId`, `TrainerId`) VALUES
+REPLACE INTO `creature_default_trainer` (`CreatureId`, `TrainerId`) VALUES
 (4753, 46);
 
 -- NPC Vendor, creature equip
@@ -5742,7 +5742,7 @@ UPDATE `npc_vendor` SET `slot`=1, `VerifiedBuild`=27547 WHERE (`entry`=38853 AND
 -- Creature equip template update
 
 DELETE FROM `creature_equip_template` WHERE (`CreatureID`=37067 AND `ID`=3) OR (`CreatureID`=37067 AND `ID`=2);
-INSERT INTO `creature_equip_template` (`CreatureID`, `ID`, `ItemID1`, `AppearanceModID1`, `ItemVisual1`, `ItemID2`, `AppearanceModID2`, `ItemVisual2`, `ItemID3`, `AppearanceModID3`, `ItemVisual3`) VALUES
+REPLACE INTO `creature_equip_template` (`CreatureID`, `ID`, `ItemID1`, `AppearanceModID1`, `ItemVisual1`, `ItemID2`, `AppearanceModID2`, `ItemVisual2`, `ItemID3`, `AppearanceModID3`, `ItemVisual3`) VALUES
 (37067, 3, 3367, 0, 0, 0, 0, 0, 0, 0, 0), -- Crash Survivor
 (37067, 2, 3346, 0, 0, 0, 0, 0, 0, 0, 0); -- Crash Survivor
 
@@ -5754,7 +5754,7 @@ UPDATE `creature_equip_template` SET `ItemID2`=0 WHERE (`CreatureID`=43727 AND `
 -- creature template update
 
 DELETE FROM `creature_template` WHERE `entry`=141903;
-INSERT INTO `creature_template` (`entry`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `BaseAttackTime`, `RangeAttackTime`, `unit_class`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `VehicleId`, `HoverHeight`) VALUES
+REPLACE INTO `creature_template` (`entry`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `BaseAttackTime`, `RangeAttackTime`, `unit_class`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `VehicleId`, `HoverHeight`) VALUES
 (141903, 0, 45, 45, 80, 1, 1, 1.142857, 2000, 2000, 1, 32768, 2048, 0, 0, 0, 1); -- Eranril Moontear
 
 UPDATE `creature_template` SET `minlevel`=10, `maxlevel`=60 WHERE `entry`=33175; -- Johnathan Staats
@@ -6123,7 +6123,7 @@ SET @CELESTINE := 35873;
 SET @NATURECHANNELING := 13236;
 UPDATE `creature_template` SET `AIName`='SmartAI', `scriptname`='' WHERE entry=@CELESTINE;
 DELETE FROM `smart_scripts` WHERE `entryorguid`=@CELESTINE AND `id`=0 AND `source_type`=0 LIMIT 1;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) 
+REPLACE INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) 
 VALUES (@CELESTINE,0,0,0,1,0,100,257,500,500,500,500,11,@NATURECHANNELING,0,0,0,0,0,1,0,0,0,0.0,0.0,0.0,0.0,"Cast nature channeling");
 
 -- 6.1 Random save fix section
@@ -6142,7 +6142,7 @@ DELETE FROM `creature` WHERE `guid` in
  @CGUID+61, @CGUID+62, @CGUID+63, @CGUID+64, @CGUID+65, @CGUID+66, @CGUID+67, @CGUID+68, @CGUID+69, @CGUID+70,
  @CGUID+71, @CGUID+72, @CGUID+73, @CGUID+74, @CGUID+75, @CGUID+76, @CGUID+77, @CGUID+78, @CGUID+79, @CGUID+80);
 
-INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) 
+REPLACE INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) 
 VALUES 
 (@CGUID+1, 4075, 654, 4714, 4786, 3, 0, 182, 0, -1, 0, 0, -1908.89, 2294.2, 42.4302, 4.33124, 7200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 25549),
 (@CGUID+2, 4075, 654, 4714, 4786, 3, 0, 182, 0, -1, 0, 0, -1821.14, 2287.42, 42.3269, 5.92199, 7200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 25549),
@@ -6236,7 +6236,7 @@ DELETE FROM `creature_addon` WHERE `guid` in
  @CGUID+61, @CGUID+62, @CGUID+63, @CGUID+64, @CGUID+65, @CGUID+66, @CGUID+67, @CGUID+68, @CGUID+69, @CGUID+70,
  @CGUID+71, @CGUID+72, @CGUID+73, @CGUID+74, @CGUID+75, @CGUID+76, @CGUID+77, @CGUID+78, @CGUID+79, @CGUID+80);
  
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) 
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) 
 VALUES 
 (@CGUID+1, 0, 0, 0, 1, 0, 0, 0, 0, ''),
 (@CGUID+2, 0, 0, 0, 1, 0, 0, 0, 0, ''),
@@ -6322,12 +6322,12 @@ VALUES
 -- Fix - map changes in gilneas (land under water)
 
 DELETE FROM terrain_swap_defaults WHERE MapId = 654 AND TerrainSwapMap IN (655, 656);
-INSERT INTO terrain_swap_defaults (MapId, TerrainSwapMap, Comment) VALUES
+REPLACE INTO terrain_swap_defaults (MapId, TerrainSwapMap, Comment) VALUES
 (654, 655, 'Gilneas duskhaven phase 1'),
 (654, 656, 'Gilneas duskhaven phase 2');
 
 DELETE FROM conditions WHERE SourceTypeOrReferenceId = 25 AND SourceEntry IN (638, 655, 656);
-INSERT INTO conditions (SourceTypeOrReferenceId, SourceEntry, ElseGroup, ConditionTypeOrReference, ConditionValue1, ConditionValue2, NegativeCondition) VALUES
+REPLACE INTO conditions (SourceTypeOrReferenceId, SourceEntry, ElseGroup, ConditionTypeOrReference, ConditionValue1, ConditionValue2, NegativeCondition) VALUES
 (25, 638, 0, 47, 14396, 74, 1),
 (25, 655, 0, 47, 14396, 74, 0),
 (25, 655, 0, 47, 14467, 74, 1),
@@ -6344,17 +6344,17 @@ UPDATE creature_template SET modelid1=30295 AND modelid2=30294 AND modelid3=3029
 -- Save Krennan Aranas (14293)
 UPDATE `creature_template` SET `AIName`='SmartAI', `ScriptName`='' WHERE `entry` IN (35550);
 DELETE FROM `smart_scripts` WHERE `entryorguid` IN (35550);
-INSERT INTO `smart_scripts` VALUES
+REPLACE INTO `smart_scripts` VALUES
 (35550, 0, 0, 0, 1, 0, 100, 0, 0, 0, 30000, 30000, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'King Genn Greymane - Out Of Combat - Say Text'),
 (35550, 0, 1, 0, 19, 0, 100, 0, 14293, 0, 0, 0, 0, 11, 68232, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 'King Genn Greymane - Accepted Quest - Cast Gilneas Prison Periodic');
 UPDATE `creature_template` SET `AIName`='SmartAI', `ScriptName`='', `unit_flags`=33280, `flags_extra`=2 WHERE `entry` IN (35753);
 DELETE FROM `smart_scripts` WHERE `entryorguid` IN (35753);
-INSERT INTO `smart_scripts` VALUES
+REPLACE INTO `smart_scripts` VALUES
 (35753, 0, 0, 0, 1, 0, 100, 0, 0, 0, 60000, 60000, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Krennan Aranas - Out Of Combat - Say Text'),
 (35753, 0, 1, 0, 8, 0, 100, 1, 68219, 0, 0, 0, 0, 41, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Krennan Aranas - On Spellhit - Forced Despawn');
 UPDATE `creature_template` SET `AIName`='SmartAI', `ScriptName`='', `spell1`=68219, `unit_flags`=10 WHERE `entry` IN (35905);
 DELETE FROM `smart_scripts` WHERE `entryorguid` IN (35905, 3590500);
-INSERT INTO `smart_scripts` VALUES
+REPLACE INTO `smart_scripts` VALUES
 (35905, 0, 0, 1, 27, 0, 100, 1, 0, 0, 0, 0, 0, 80, 3590500, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'King Greymane\'s Horse - On Passanger Boarded - Start Timed Action Script'),
 (35905, 0, 1, 0, 61, 0, 100, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'King Greymane\'s Horse - On Link - Allow Combat Movement'),
 (35905, 0, 2, 0, 40, 0, 100, 0, 6, 0, 0, 0, 0, 97, 25, 10, 0, 0, 0, 0, 1, 0, 0, 0, -1674.46, 1344.95, 15.1352, 0, 'King Greymane\'s Horse - On WP Reached - Jump to PoS'),
@@ -6363,13 +6363,13 @@ INSERT INTO `smart_scripts` VALUES
 (3590500, 9, 0, 0, 0, 0, 100, 0, 5000, 5000, 5000, 5000, 0, 53, 1, 35905, 0, 14293, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'King Greymane\'s Horse - Script - Start WP Movement');
 UPDATE `creature_template` SET `AIName`='SmartAI', `ScriptName`='' WHERE `entry` IN (35907);
 DELETE FROM `smart_scripts` WHERE `entryorguid` IN (35907);
-INSERT INTO `smart_scripts` VALUES
+REPLACE INTO `smart_scripts` VALUES
 (35907, 0, 0, 0, 11, 0, 100, 1, 0, 0, 0, 0, 0, 11, 46598, 0, 0, 0, 0, 0, 11, 35905, 10, 0, 0, 0, 0, 0, 'Krennan Aranas - On Respawn - Cast Spell'),
 (35907, 0, 1, 2, 38, 0, 100, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Krennan Aranas - on Data Set - Say Text'),
 (35907, 0, 2, 3, 61, 0, 100, 0, 0, 0, 0, 0, 0, 24, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Krennan Aranas - on Data Set - Prevent Combat Movement'),
 (35907, 0, 3, 0, 61, 0, 100, 0, 0, 0, 0, 0, 0, 41, 1000, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Krennan Aranas - on Data Set - Forced Despawn');
 DELETE FROM `creature_text` WHERE `creatureid` IN (35550, 35753, 35907);
-INSERT INTO `creature_text` VALUES
+REPLACE INTO `creature_text` VALUES
 (35550, 0, 0, 'Fire!', 14, 0, 100, 0, 0, 0, 0, 0, ''),
 (35550, 0, 1, 'Hold the barricades! Do not give them an inch!', 14, 0, 100, 0, 0, 0, 0, 0, ''),
 (35550, 0, 2, 'Keep them back!', 14, 0, 100, 0, 0, 0, 0, 0, ''),
@@ -6377,7 +6377,7 @@ INSERT INTO `creature_text` VALUES
 (35907, 1, 0, 'Thank you! I owe you my life.', 12, 0, 100, 0, 0, 0, 0, 0, '');
 
 DELETE FROM `waypoints` WHERE `entry` IN (35905);
-INSERT INTO `waypoints` VALUES 
+REPLACE INTO `waypoints` VALUES 
 (35905, 16, -1771.46, 1430.1, 19.8183, ''),
 (35905, 15, -1766.16, 1404.17, 19.8109, ''),
 (35905, 14, -1746.3, 1375.96, 19.97, ''),
@@ -6396,20 +6396,20 @@ INSERT INTO `waypoints` VALUES
 (35905, 1, -1800.37, 1407.18, 20.0265, '');
 
 -- Save Krennan Spell Focus
-INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `size`, `Data0`, `Data1`, `Data2`, `Data3`, `Data4`, `Data5`, `Data6`, `Data7`, `Data8`, `Data9`, `Data10`, `Data11`, `Data12`, `Data13`, `Data14`, `Data15`, `Data16`, `Data17`, `Data18`, `Data19`, `Data20`, `Data21`, `Data22`, `Data23`, `Data24`, `Data25`, `Data26`, `Data27`, `Data28`, `Data29`, `Data30`, `Data31`, `Data32`, `RequiredLevel`, `AIName`, `ScriptName`, `VerifiedBuild`) 
+REPLACE INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconName`, `castBarCaption`, `unk1`, `size`, `Data0`, `Data1`, `Data2`, `Data3`, `Data4`, `Data5`, `Data6`, `Data7`, `Data8`, `Data9`, `Data10`, `Data11`, `Data12`, `Data13`, `Data14`, `Data15`, `Data16`, `Data17`, `Data18`, `Data19`, `Data20`, `Data21`, `Data22`, `Data23`, `Data24`, `Data25`, `Data26`, `Data27`, `Data28`, `Data29`, `Data30`, `Data31`, `Data32`, `RequiredLevel`, `AIName`, `ScriptName`, `VerifiedBuild`) 
 VALUES (195660, 8, 299, 'Krennan Aranas Spell Focus', '', '', '', 1, 1630, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 1);
 
 DELETE FROM `gameobject` WHERE `id` IN (301027, 195660);
-INSERT INTO `gameobject` VALUES
+REPLACE INTO `gameobject` VALUES
 (905000, 301027, 654, 1, 1, 1, 0, 171, 0, -1, -1674.46, 1344.95, 15.1352, 0, 0, 0, 0, 0, 300, 0, 0, 1, '', 0),
 (905001, 195660, 654, 1, 1, 1, 0, 171, 0, -1, -1674.46, 1344.95, 15.1352, 0, 0, 0, 0, 0, 300, 0, 0, 1, '', 0);
 
 DELETE FROM `gameobject_addon` WHERE `guid`IN (301027, 195660);
-INSERT INTO `gameobject_addon` (`guid`, `parent_rotation0`, `parent_rotation1`, `parent_rotation2`, `parent_rotation3`, `invisibilityType`, `invisibilityValue`, `WorldEffectID`) VALUES 
+REPLACE INTO `gameobject_addon` (`guid`, `parent_rotation0`, `parent_rotation1`, `parent_rotation2`, `parent_rotation3`, `invisibilityType`, `invisibilityValue`, `WorldEffectID`) VALUES 
 (301027, 0, 0, 0, 1, 8, 1000, 0),
 (195660, 0, 0, 0, 1, 8, 1000, 0);
 
-INSERT INTO spell_area (`spell`, `area`, `quest_start`, `quest_end`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO spell_area (`spell`, `area`, `quest_start`, `quest_end`, `quest_start_status`, `quest_end_status`) 
 VALUES (49416, 4755, 14293, 14294, 74, 64);
 
 -- Lord Godfrey 35906 Quest Ender for Save Krennan Aranas and Previous Godrey from Phase 170
@@ -6419,20 +6419,20 @@ UPDATE creature SET PhaseID = 170 where GUID = 210115271 and PhaseID = 0;
 -- Fix  Begin SACRIFICES Quest - https://www.wowhead.com/quest=14212/sacrifices
 
 DELETE FROM areatrigger_scripts WHERE entry IN (35231, 3523100);
-INSERT INTO areatrigger_scripts (entry, ScriptName) VALUES (35231, 'SmartTrigger');
-INSERT INTO areatrigger_scripts (entry, ScriptName) VALUES (3523100, 'SmartTrigger');
+REPLACE INTO areatrigger_scripts (entry, ScriptName) VALUES (35231, 'SmartTrigger');
+REPLACE INTO areatrigger_scripts (entry, ScriptName) VALUES (3523100, 'SmartTrigger');
 
 DELETE FROM creature_text WHERE CreatureID = 35230 AND  GroupID = 1 AND  ID = 0; -- delete unneeded sound and text from 35230, otherwise it repeats a text and sound by every 2 second. This does not belongs to this NPC.
 
 DELETE FROM vehicle_template_accessory WHERE entry IN (36283,35905,35231);
-INSERT INTO vehicle_template_accessory (`entry`, `accessory_entry`, `seat_id`, `minion`, `description`, `summontype`, `summontimer`) VALUES
+REPLACE INTO vehicle_template_accessory (`entry`, `accessory_entry`, `seat_id`, `minion`, `description`, `summontype`, `summontimer`) VALUES
 (36283, 36292, 2, 0, '36283 - 36292', 0, 0), -- 36283 - 36292 Forsaken Catapult seat definition
 (35905, 35907, 1, 0, '35905 - 35907', 3, 300000), -- 35905 - 35907 - summontime - King GreyMane Horse seat definition
 (35231, 35230, 1, 0, '35231 - 35230', 3, 300000); -- 35231 - 35230 - summontime - Lord Crowley's Horse seat definition
 
 UPDATE creature_template SET npcflag =16777216 WHERE  entry IN (44427, 44429);
 DELETE FROM npc_spellclick_spells WHERE npc_entry IN (35231, 44427, 44429);
-INSERT INTO npc_spellclick_spells VALUES 
+REPLACE INTO npc_spellclick_spells VALUES 
 (35231, 63151, 1, 0), -- Lord Crowley's horse (summoned) - Ride Vehicle spell
 (44427, 67001, 1, 0), -- Lord Crowley's Horse (spawned quest start) - Summon Crowley's Horse 35231
 (44429, 82992, 1, 0); -- Lord Crowley's Horse (spawned quest end Cathedral) - Summon Crowley's Horse 35231
@@ -6440,7 +6440,7 @@ INSERT INTO npc_spellclick_spells VALUES
 UPDATE `creature_template` SET `AIName`='SmartAI', `ScriptName`='', `spell1`=67063, `unit_flags`=10, MovementType = 2 WHERE `entry` IN (35231);
 UPDATE `creature_template` SET `AIName`='SmartAI', `ScriptName`='' WHERE `entry` IN (35230);
 DELETE FROM smart_scripts WHERE entryorguid IN (35231, 3523100);
-INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param_string`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES 
+REPLACE INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param_string`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES 
 (35231, 0, 0, 0, 54, 0, 100, 512, 0, 0, 0, 0, '', 80, 3523100, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Crowley Hors Start Script'),
 (35231, 0, 1, 0, 40, 0, 100, 512, 10, 35231, 0, 0, '', 54, 1000, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'WP Paused'),
 (35231, 0, 2, 3, 40, 0, 100, 512, 22, 35231, 0, 0, '', 11, 68576, 4, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Despawn'),
@@ -6493,50 +6493,50 @@ delete FROM `creature_addon` WHERE `guid` IN (SELECT `guid` FROM `creature` WHER
 delete FROM `creature` WHERE `id` IN (36289, 36288, 36287) AND `map`=654 AND `phaseid`=182; 
 
 DELETE FROM `creature` WHERE `guid` IN (801490, 801496, 801486);
-INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) 
+REPLACE INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) 
 VALUES 
 (801490, 36287, 654, 4714, 4793, 3, 0, 182, 0, -1, 0, 0, -1987.47, 2508.71, 1.47526, 0.872665, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 25549),
 (801496, 36288, 654, 4714, 4793, 3, 0, 182, 0, -1, 0, 0, -1931.61, 2562.29, 12.815, 5.75959, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 25549),
 (801486, 36289, 654, 4714, 4793, 3, 0, 182, 0, -1, 0, 0, -1935.49, 2541.38, 1.47525, 4.78220, 300, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, '', 25549);
 
 DELETE FROM `creature_addon` WHERE `guid` IN (801490, 801496, 801486);
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) 
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) 
 VALUES 
 (801490, 0, 0, 0, 1, 0, 0, 0, 0, ''),
 (801496, 0, 0, 0, 1, 0, 0, 0, 0, ''),
 (801486, 0, 0, 0, 1, 0, 0, 0, 0, '');
 
 DELETE FROM `creature_text` WHERE `CreatureID` in (36289, 36288, 36287) AND `GroupID`=1;
-INSERT INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `BroadcastTextId`, `TextRange`, `comment`) 
+REPLACE INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `BroadcastTextId`, `TextRange`, `comment`) 
 VALUES
 (36287, 1, 1, 'You are scary!  I just want my mommy!', 12, 0, 100, 18, 0, 23508, 0, 0, 'Cynthia to Player'), -- 36325
 (36288, 1, 1, 'Are you one of the good worgen, $G mister:ma\'am;?  Did you see Cynthia hiding in the sheds outside?', 12, 0, 100, 0, 0, 23508, 0, 0, 'Ashley to Player'), -- 36326
 (36289, 1, 1, 'Don\'t hurt me!  I was just looking for my sisters!  I think Ashley\'s inside that house!', 12, 0, 100, 0, 0, 23508, 0, 0, 'James to Player'); -- 36324
 
 DELETE FROM `creature_text` WHERE `CreatureID` in (36289, 36288, 36287) AND `GroupID`=0;
-INSERT INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `BroadcastTextId`, `TextRange`, `comment`) 
+REPLACE INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `BroadcastTextId`, `TextRange`, `comment`) 
 VALUES
 (36287, 0, 1, 'It\'s not safe here. Go to Allen\'s basement.', 12, 0, 100, 0, 0, 0, 0, 0, 'Player to Cynthia'),
 (36288, 0, 1, 'Join the others inside the basement next door. Hurry!', 12, 0, 100, 0, 0, 0, 0, 0, 'Player to Ashley'),
 (36289, 0, 1, 'Your mother\'s in the basement next door. Get to her now!', 12, 0, 100, 0, 0, 0, 0, 0, 'Player to James');
 
 DELETE FROM `hotfixes`.`broadcast_text` WHERE id IN (36324, 36325, 36326);
-INSERT INTO `hotfixes`.`broadcast_text` (`ID`, `Text`, `Text1`, `EmoteID1`, `EmoteID2`, `EmoteID3`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `EmotesID`, `LanguageID`, `Flags`, `ConditionID`, `SoundEntriesID1`, `SoundEntriesID2`, `VerifiedBuild`) 
+REPLACE INTO `hotfixes`.`broadcast_text` (`ID`, `Text`, `Text1`, `EmoteID1`, `EmoteID2`, `EmoteID3`, `EmoteDelay1`, `EmoteDelay2`, `EmoteDelay3`, `EmotesID`, `LanguageID`, `Flags`, `ConditionID`, `SoundEntriesID1`, `SoundEntriesID2`, `VerifiedBuild`) 
 VALUES 
 (36324, 'Don\'t hurt me!  I was just looking for my sisters!  I think Ashley\'s inside that house!', '', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 26365),
 (36325, '', 'You are scary!  I just want my mommy!', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 26365),
 (36326, '', 'Are you one of the good worgen, $G mister:ma\'am;?  Did you see Cynthia hiding in the sheds outside?', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 26365);
 
 DELETE FROM `quest_poi` WHERE `QuestID`=14368 AND `BlobIndex`=0 AND `Idx1`=3;
-INSERT INTO `quest_poi` (`QuestID`, `BlobIndex`, `Idx1`, `ObjectiveIndex`, `QuestObjectiveID`, `QuestObjectID`, `MapID`, `WorldMapAreaId`, `Floor`, `Priority`, `Flags`, `WorldEffectID`, `PlayerConditionID`, `WoDUnk1`, `AlwaysAllowMergingBlobs`, `VerifiedBuild`) VALUES (14368, 0, 3, 2, 264865, 36289, 654, 545, 0, 0, 0, 0, 0, 0, 0, 26365);
+REPLACE INTO `quest_poi` (`QuestID`, `BlobIndex`, `Idx1`, `ObjectiveIndex`, `QuestObjectiveID`, `QuestObjectID`, `MapID`, `WorldMapAreaId`, `Floor`, `Priority`, `Flags`, `WorldEffectID`, `PlayerConditionID`, `WoDUnk1`, `AlwaysAllowMergingBlobs`, `VerifiedBuild`) VALUES (14368, 0, 3, 2, 264865, 36289, 654, 545, 0, 0, 0, 0, 0, 0, 0, 26365);
 DELETE FROM `quest_poi` WHERE `QuestID`=14368 AND `BlobIndex`=0 AND `Idx1`=2;
-INSERT INTO `quest_poi` (`QuestID`, `BlobIndex`, `Idx1`, `ObjectiveIndex`, `QuestObjectiveID`, `QuestObjectID`, `MapID`, `WorldMapAreaId`, `Floor`, `Priority`, `Flags`, `WorldEffectID`, `PlayerConditionID`, `WoDUnk1`, `AlwaysAllowMergingBlobs`, `VerifiedBuild`) VALUES (14368, 0, 2, 1, 264864, 36288, 654, 545, 0, 0, 0, 0, 0, 0, 0, 26365);
+REPLACE INTO `quest_poi` (`QuestID`, `BlobIndex`, `Idx1`, `ObjectiveIndex`, `QuestObjectiveID`, `QuestObjectID`, `MapID`, `WorldMapAreaId`, `Floor`, `Priority`, `Flags`, `WorldEffectID`, `PlayerConditionID`, `WoDUnk1`, `AlwaysAllowMergingBlobs`, `VerifiedBuild`) VALUES (14368, 0, 2, 1, 264864, 36288, 654, 545, 0, 0, 0, 0, 0, 0, 0, 26365);
 DELETE FROM `quest_poi` WHERE `QuestID`=14368 AND `BlobIndex`=0 AND `Idx1`=1;
-INSERT INTO `quest_poi` (`QuestID`, `BlobIndex`, `Idx1`, `ObjectiveIndex`, `QuestObjectiveID`, `QuestObjectID`, `MapID`, `WorldMapAreaId`, `Floor`, `Priority`, `Flags`, `WorldEffectID`, `PlayerConditionID`, `WoDUnk1`, `AlwaysAllowMergingBlobs`, `VerifiedBuild`) VALUES (14368, 0, 1, 0, 264863, 36287, 654, 545, 0, 0, 0, 0, 0, 0, 0, 26365);
+REPLACE INTO `quest_poi` (`QuestID`, `BlobIndex`, `Idx1`, `ObjectiveIndex`, `QuestObjectiveID`, `QuestObjectID`, `MapID`, `WorldMapAreaId`, `Floor`, `Priority`, `Flags`, `WorldEffectID`, `PlayerConditionID`, `WoDUnk1`, `AlwaysAllowMergingBlobs`, `VerifiedBuild`) VALUES (14368, 0, 1, 0, 264863, 36287, 654, 545, 0, 0, 0, 0, 0, 0, 0, 26365);
 
 -- fix - wrong queststrarters in gilneas
 DELETE FROM `creature_queststarter` WHERE `id`=35118 AND `quest`=24930;
-INSERT INTO `creature_queststarter` (`id`, `quest`) VALUES (35118, 24930);
+REPLACE INTO `creature_queststarter` (`id`, `quest`) VALUES (35118, 24930);
 
 -- Broadcast addition to have data for further work in creature text
 -- Sniff gave incorrect sound IDs to creature_text needed to remove. More work needed to add available sounds to creature_text in this area
@@ -6576,12 +6576,12 @@ UPDATE creature_text SET BroadcastTextID = 50264 WHERE creatureID = 50474;
 -- fix - duskhaven questobject 196394 in phase 181
 
 DELETE FROM `gameobject` WHERE `guid`=51003240;
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `isActive`, `ScriptName`, `VerifiedBuild`) 
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `isActive`, `ScriptName`, `VerifiedBuild`) 
 VALUES (51003240, 196394, 654, 0, 0, 1, 0, 181, 0, -1, -1926.27, 2408.62, 30.0234, 5.44543, 0, 0, -0.406736, 0.913545, 7200, 255, 1, 0, '', 26365);
 
 -- fix - horse spell round-up horse 68903
 
-UPDATE `world`.`creature_template` SET `spell1`='68903' AND `unit_flags`='16777216' WHERE  `entry`=36540;
+UPDATE `creature_template` SET `spell1`='68903' AND `unit_flags`='16777216' WHERE  `entry`=36540;
 
 -- 6.2 Random save fix section
 -- !!!!!!!!!!!!!!!!!!!!!!!!!!! ATTENTION !!!!!!!!!!!!!!!!!!! - Correct creature has to be in DB with GUID !!!!!!!!!!!!!!!!!!!!!!!!!
@@ -6592,13 +6592,13 @@ UPDATE `world`.`creature_template` SET `spell1`='68903' AND `unit_flags`='167772
 
 UPDATE `creature_addon` SET `emote`=375, `auras`=49414  WHERE `guid`=20556362;
 DELETE FROM `spell_area` WHERE `spell`=49416 AND `area`=4756 AND `quest_start`=14078;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
+REPLACE INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `aura_spell`, `teamId`, `racemask`, `gender`, `flags`, `quest_start_status`, `quest_end_status`) 
 VALUES (49416, 4756, 14078, 14099, 0, -1, 0, 2, 3, 64, 10);
 
 -- Fix - set canons 35317 to phase 172 in cathedral quarter
 
 DELETE FROM `creature` WHERE `guid` IN (20556240, 20556235, 20556230, 20556228, 20556222, 20556217, 20556202);
-INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) VALUES 
+REPLACE INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) VALUES 
 (20556240, 35317, 654, 4755, 4759, 1, 0, 172, 0, -1, 0, 0, -1533.46, 1591.96, 26.5365, 0.944223, 120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 25383),
 (20556235, 35317, 654, 4755, 4759, 1, 0, 172, 0, -1, 0, 0, -1540.95, 1596.29, 26.5364, 1.56207, 120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 25383),
 (20556230, 35317, 654, 4755, 4759, 1, 0, 172, 0, -1, 0, 0, -1528.7, 1610.23, 20.5689, 1.06465, 120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 25383),
@@ -6610,7 +6610,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficult
 -- Fix - corect emotes 35369 Josiah Avery
 
 DELETE FROM `creature_addon` WHERE `guid`=20556546;
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) 
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) 
 VALUES (20556546, 0, 0, 65536, 1, 431, 0, 0, 0, 'null');
 
 -- 6.2.2 Random save fix section with concrete GAMEOBJECT GUID
@@ -6618,10 +6618,10 @@ VALUES (20556546, 0, 0, 65536, 1, 431, 0, 0, 0, 'null');
 -- Fix - 195430 cellar door type door and autoclose 11 seconds
 
 DELETE FROM `gameobject` WHERE `guid`=20406504;
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `isActive`, `ScriptName`, `VerifiedBuild`) 
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `isActive`, `ScriptName`, `VerifiedBuild`) 
 VALUES (20406504, 195430, 654, 4755, 4756, 1, 0, 0, 379, -1, -1790.04, 1435.53, 21.7363, 1.66817, -0.0106378, 0.0138349, 0.740533, 0.671794, 120, 255, 1, 0, '', 25383);
 DELETE FROM `gameobject_addon` WHERE `guid`=20406504;
-INSERT INTO `gameobject_addon` (`guid`, `parent_rotation0`, `parent_rotation1`, `parent_rotation2`, `parent_rotation3`, `invisibilityType`, `invisibilityValue`, `WorldEffectID`) 
+REPLACE INTO `gameobject_addon` (`guid`, `parent_rotation0`, `parent_rotation1`, `parent_rotation2`, `parent_rotation3`, `invisibilityType`, `invisibilityValue`, `WorldEffectID`) 
 VALUES (20406504, 0, 0, 0.942641, -0.333807, 0, 0, 0);
 UPDATE `gameobject_template` SET  `Data0`=0 AND `Data1`=0 AND `Data2`=11000  WHERE entry=195430;
 
@@ -6630,7 +6630,7 @@ UPDATE `gameobject_template` SET  `Data0`=0 AND `Data1`=0 AND `Data2`=11000  WHE
 DELETE FROM `creature_addon` WHERE `guid` IN (20556412, 20556411, 20556410, 20556409, 20556408, 20556407, 20556406, 20556405, 20556404, 
 20556403, 20556402, 20556401, 20556400, 20556398, 20556396, 20556394, 20556393, 20556392, 20556389, 20556385, 20556384, 20556382, 
 20556375, 20556374, 20556369, 20556360, 20556347, 20556345, 20556341, 20556335);
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES
 (20556412, 0, 0, 0, 0, 45, 0, 0, 0, NULL),
 (20556411, 0, 0, 0, 0, 45, 0, 0, 0, NULL),
 (20556410, 0, 0, 0, 0, 45, 0, 0, 0, NULL),
@@ -6665,7 +6665,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 -- Fix - baricades in phases 171 and 172 in military district
 
 DELETE FROM `gameobject` WHERE `guid` IN (20406557, 20406556, 20406555, 20406554, 20406561, 20406562, 20406563, 20406564);
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `isActive`, `ScriptName`, `VerifiedBuild`) VALUES 
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `isActive`, `ScriptName`, `VerifiedBuild`) VALUES 
 (20406557, 195466, 654, 4755, 4757, 1, 0, 171, 0, -1, -1805.29, 1399.5, 20.261, 1.26536, 0.0655289, 0.0184669, 0.591166, 0.803671, 120, 255, 1, 0, '', 25383),
 (20406556, 195465, 654, 4755, 4757, 1, 0, 171, 0, -1, -1794.13, 1402.51, 20.1318, 2.15548, -0.038096, -0.0252781, 0.880382, 0.472057, 120, 255, 1, 0, '', 25383),
 (20406555, 195454, 654, 4755, 4757, 1, 0, 171, 0, -1, -1764.93, 1415.87, 20.1221, 1.40499, 0, 0, 0.646124, 0.763233, 120, 255, 1, 0, '', 25383),
@@ -6678,11 +6678,11 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficu
 -- Fix - horsed and phased lord godfrey 35906 near cellar 
 
 DELETE FROM `creature_addon` WHERE `guid` IN (210115271, 210115272);
-INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES 
+REPLACE INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) VALUES 
 (210115271, 0, 2410, 0, 0, 0, 0, 0, 0, NULL),
 (210115272, 0, 2410, 0, 0, 0, 0, 0, 0, NULL);
 DELETE FROM `creature` WHERE `guid` IN (210115271, 210115272);
-INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) VALUES 
+REPLACE INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) VALUES 
 (210115271, 35906, 654, 0, 0, 1, 0, 171, 0, -1, 0, 1, -1785.53, 1437.74, 20.2669, 6.02249, 300, 0, 0, 130, 115, 0, 0, 0, 0, 0, 0, '', 0),
 (210115272, 35906, 654, 0, 0, 1, 0, 172, 0, -1, 0, 1, -1785.82, 1437.63, 20.2474, 6.19842, 300, 0, 0, 130, 115, 0, 0, 0, 0, 0, 0, '', 0);
 
@@ -6747,47 +6747,47 @@ DELETE FROM `creature` WHERE `guid`=20556426;
 -- fix - put npcs: 35077, 35124, 35081, 35123 in phase 170
 
 DELETE FROM `creature` WHERE `guid`=20556540;
-INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`, `VerifiedBuild`)
+REPLACE INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`, `VerifiedBuild`)
 VALUES (20556540, 35077, 654, 4755, 4757, 1, 0, 170, 0, -1, 0, 0, -1679.73, 1442.12, 52.3705, 0.750492, 120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 25383);
 DELETE FROM `creature` WHERE `guid`=20556541;
-INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) 
+REPLACE INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) 
 VALUES (20556541, 35081, 654, 4755, 4757, 1, 0, 170, 0, -1, 0, 0, -1682.17, 1439.67, 52.3705, 0.837758, 120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 25383);
 DELETE FROM `creature` WHERE `guid`=20556536;
-INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) 
+REPLACE INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) 
 VALUES (20556536, 35123, 654, 4755, 4757, 1, 0, 170, 0, -1, 0, 0, -1682.8, 1441.26, 52.3705, 5.48033, 120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 25383);
 DELETE FROM `creature` WHERE `guid`=20556537;
-INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) 
+REPLACE INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) 
 VALUES (20556537, 35124, 654, 4755, 4757, 1, 0, 170, 0, -1, 0, 0, -1678.51, 1438.79, 52.3704, 6.25315, 120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 25383);
 
 -- test - duskhaven to graymane mannor gameobjects
 
 DELETE FROM `gameobject` WHERE `guid`=20406515;
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `isActive`, `ScriptName`, `VerifiedBuild`) 
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `isActive`, `ScriptName`, `VerifiedBuild`) 
 VALUES (20406515, 196399, 654, 4714, 4756, 1, 0, 0, 385, -1, -1817.84, 2333.37, 36.3445, 3.79899, 0, 0, -0.946463, 0.322813, 120, 255, 1, 0, '', 25383);
 DELETE FROM `gameobject_template_addon` WHERE `entry`=196399;
-INSERT INTO `gameobject_template_addon` (`entry`, `faction`, `flags`, `mingold`, `maxgold`, `WorldEffectID`) 
+REPLACE INTO `gameobject_template_addon` (`entry`, `faction`, `flags`, `mingold`, `maxgold`, `WorldEffectID`) 
 VALUES (196399, 0, 6, 0, 0, 0);
 
 DELETE FROM `gameobject` WHERE `guid`=20406513;
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `isActive`, `ScriptName`, `VerifiedBuild`) 
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `isActive`, `ScriptName`, `VerifiedBuild`) 
 VALUES (20406513, 196412, 654, 4755, 4756, 1, 0, 0, 385, -1, -1872.92, 2073.58, 89.1548, 1.54751, 0, 0, 0.698826, 0.715292, 120, 255, 1, 0, '', 25383);
 DELETE FROM `gameobject_template_addon` WHERE `entry`=196412;
-INSERT INTO `gameobject_template_addon` (`entry`, `faction`, `flags`, `mingold`, `maxgold`, `WorldEffectID`) 
+REPLACE INTO `gameobject_template_addon` (`entry`, `faction`, `flags`, `mingold`, `maxgold`, `WorldEffectID`) 
 VALUES (196412, 0, 6, 0, 0, 0);
 
 DELETE FROM `gameobject` WHERE `guid`=20406509;
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `isActive`, `ScriptName`, `VerifiedBuild`) 
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `isActive`, `ScriptName`, `VerifiedBuild`) 
 VALUES (20406509, 196401, 654, 4755, 4756, 1, 0, 0, 385, -1, -1681.84, 2507.57, 97.7786, 3.93862, 0, 0, -0.921639, 0.388047, 120, 255, 1, 0, '', 25383);
 DELETE FROM `gameobject_template_addon` WHERE `entry`=196401;
-INSERT INTO `gameobject_template_addon` (`entry`, `faction`, `flags`, `mingold`, `maxgold`, `WorldEffectID`) 
+REPLACE INTO `gameobject_template_addon` (`entry`, `faction`, `flags`, `mingold`, `maxgold`, `WorldEffectID`) 
 VALUES (196401, 0, 6, 0, 0, 0);
 
 DELETE FROM `gameobject` WHERE `guid`=51003228;
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `isActive`, `ScriptName`, `VerifiedBuild`) 
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `isActive`, `ScriptName`, `VerifiedBuild`) 
 VALUES (51003228, 196880, 654, 4714, 4786, 1, 0, 0, 385, -1, -1865.89, 2232.71, 42.3229, 5.37562, 0, 0, -0.43837, 0.898795, 7200, 255, 1, 0, '', 26365);
 
 DELETE FROM `gameobject` WHERE `guid`=51003227;
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `isActive`, `ScriptName`, `VerifiedBuild`) 
+REPLACE INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `isActive`, `ScriptName`, `VerifiedBuild`) 
 VALUES (51003227, 196879, 654, 4714, 4786, 1, 0, 0, 385, -1, -1869.11, 2229.79, 42.3233, 1.72787, 0, 0, 0.760405, 0.649449, 7200, 255, 1, 0, '', 26365);
 
 DELETE FROM `gameobject` WHERE `guid`=51003225;

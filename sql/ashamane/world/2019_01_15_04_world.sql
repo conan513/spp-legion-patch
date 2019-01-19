@@ -1,6 +1,3 @@
--- Wrong gossip menu id for Sraaz in Ironforge
-UPDATE `creature_template` SET `gossip_menu_id`='' WHERE `entry`=9099;
-
 -- Waypoints missing for Sraaz in IronForge
 DELETE FROM `creature_addon` WHERE `guid`=180650;
 insert into `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `aiAnimKit`, `movementAnimKit`, `meleeAnimKit`, `auras`) values

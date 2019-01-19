@@ -1,1 +1,1 @@
-UPDATE `creature_template` SET `spell1`='', `scriptname`='npc_monk_xuen' WHERE `entry`=63508;
+UPDATE `creature_template` SET `scriptname`='npc_monk_xuen' WHERE `entry`=63508;
