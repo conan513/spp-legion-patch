@@ -36,7 +36,7 @@ INSERT INTO spell_loot_template (Entry, reference, Chance, MinCount, MaxCount) V
 (263148, 263148, 100, 1, 1);
 
 DELETE FROM reference_loot_template WHERE Entry = 263148;
-INSERT INTO reference_loot_template (Entry, Item, Chance, MinCount, MaxCount) VALUES
+REPLACE INTO reference_loot_template (Entry, Item, Chance, MinCount, MaxCount) VALUES
 (263148, 124124, 31, 1, 1),
 (263148, 139065, 2.6, 1, 1),
 (263148, 139063, 2.4, 1, 1),
@@ -202,7 +202,7 @@ INSERT INTO spell_loot_template (Entry, reference, Chance, MinCount, MaxCount) V
 (263149, 263149, 100, 1, 1);
 
 DELETE FROM reference_loot_template WHERE Entry = 263148;
-INSERT INTO reference_loot_template (Entry, Item, Chance, MinCount, MaxCount) VALUES
+REPLACE INTO reference_loot_template (Entry, Item, Chance, MinCount, MaxCount) VALUES
 (263149, 124124, 30, 1, 1),
 (263149, 139101, 2.5, 1, 1),
 (263149, 139103, 2.4, 1, 1),
@@ -361,7 +361,7 @@ INSERT INTO spell_loot_template (Entry, reference, Chance, MinCount, MaxCount) V
 (263150, 263150, 100, 1, 1);
 
 DELETE FROM reference_loot_template WHERE Entry = 263148;
-INSERT INTO reference_loot_template (Entry, Item, Chance, MinCount, MaxCount) VALUES
+REPLACE INTO reference_loot_template (Entry, Item, Chance, MinCount, MaxCount) VALUES
 (263150, 124124, 29, 1, 1),
 (263150, 134191, 2.1, 1, 1),
 (263150, 134187, 1.9, 1, 1),
@@ -513,7 +513,7 @@ INSERT INTO spell_loot_template (Entry, reference, Chance, MinCount, MaxCount) V
 (263151, 263151, 100, 1, 1);
 
 DELETE FROM reference_loot_template WHERE Entry = 263148;
-INSERT INTO reference_loot_template (Entry, Item, Chance, MinCount, MaxCount) VALUES
+REPLACE INTO reference_loot_template (Entry, Item, Chance, MinCount, MaxCount) VALUES
 (263151, 124124, 29, 1, 1),
 (263151, 134319, 3, 1, 1),
 (263151, 134334, 2.6, 1, 1),
@@ -629,7 +629,7 @@ INSERT INTO spell_loot_template (Entry, reference, Chance, MinCount, MaxCount) V
 (263152, 263152, 100, 1, 1);
 
 DELETE FROM reference_loot_template WHERE Entry = 263148;
-INSERT INTO reference_loot_template (Entry, Item, Chance, MinCount, MaxCount) VALUES
+REPLACE INTO reference_loot_template (Entry, Item, Chance, MinCount, MaxCount) VALUES
 (263152, 124124, 29, 1, 1),
 (263152, 121796, 1.5, 1, 1),
 (263152, 134279, 1.5, 1, 1),
@@ -824,7 +824,7 @@ INSERT INTO spell_loot_template (Entry, reference, Chance, MinCount, MaxCount) V
 (263153, 263153, 100, 1, 1);
 
 DELETE FROM reference_loot_template WHERE Entry = 263148;
-INSERT INTO reference_loot_template (Entry, Item, Chance, MinCount, MaxCount) VALUES
+REPLACE INTO reference_loot_template (Entry, Item, Chance, MinCount, MaxCount) VALUES
 (263153, 124124, 30, 1, 1),
 (263153, 136748, 2.7, 1, 1),
 (263153, 136733, 2.3, 1, 1),
@@ -959,7 +959,7 @@ INSERT INTO spell_loot_template (Entry, reference, Chance, MinCount, MaxCount) V
 (263154, 263154, 100, 1, 1);
 
 DELETE FROM reference_loot_template WHERE Entry = 263148;
-INSERT INTO reference_loot_template (Entry, Item, Chance, MinCount, MaxCount) VALUES
+REPLACE INTO reference_loot_template (Entry, Item, Chance, MinCount, MaxCount) VALUES
 (263154, 124124, 30, 1, 1),
 (263154, 141349, 0.8, 1, 1),
 (263154, 136748, 0.6, 1, 1),
@@ -2005,7 +2005,7 @@ INSERT INTO `spell_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `Ques
 ('188802', '137595', '0', '0', '0', '1', '1', '1', '1', '');
 
 DELETE FROM `reference_loot_template` WHERE `Entry` IN (300001, 300002, 300003, 300004, 300005, 300006, 300007, 300008);
-INSERT INTO `reference_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`) VALUES 
+REPLACE INTO `reference_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`) VALUES 
 ('300001', '128304', '0', '10', '0', '1', '0', '1', '10'),
 ('300001', '124105', '0', '10', '0', '1', '0', '1', '1'),
 ('300001', '124103', '0', '10', '0', '1', '0', '1', '5'),
