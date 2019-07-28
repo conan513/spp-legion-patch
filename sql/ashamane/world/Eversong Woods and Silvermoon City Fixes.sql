@@ -1506,8 +1506,6 @@ DELETE FROM `creature` WHERE id IN (16196);
 INSERT INTO `creature` (id, map, phaseId, position_x, position_y, position_z,
 orientation, spawntimesecs, MovementType) VALUES
 (16196, 530, 2, 8117.816, -6901.498, 70.322, 1.51, 300, 0);
-DELETE FROM `conditions` WHERE `SourceTypeOrReferenceId`=26 AND `SourceGroup`=1 AND `SourceEntry`=3430 AND `SourceId`=0 AND `ElseGroup`=0 AND `ConditionTypeOrReference`=8 AND `ConditionTarget`=0 AND `ConditionValue1`=9144 AND `ConditionValue2`=0 AND `ConditionValue3`=0;
-INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) VALUES (26, 1, 3430, 0, 0, 8, 0, 9147, 0, 0, 1, 0, 0, '', 'Eversong Woods Set in Phase 1 from start to -Reward 9147');
 DELETE FROM `conditions` WHERE `SourceTypeOrReferenceId`=26 AND `SourceGroup`=2 AND `SourceEntry`=3430 AND `SourceId`=0 AND `ElseGroup`=0 AND `ConditionTypeOrReference`=8 AND `ConditionTarget`=0 AND `ConditionValue1`=9147 AND `ConditionValue2`=0 AND `ConditionValue3`=0;
 INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) VALUES (26, 2, 3430, 0, 0, 8, 0, 9147, 0, 0, 0, 0, 0, '', 'Eversong Woods Set in Phase 2 from reward 9147');
 
