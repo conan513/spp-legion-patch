@@ -1499,7 +1499,7 @@ UPDATE `quest_objectives` SET `Flags`='1', `Description`='Amani Berserker slain 
 UPDATE `quest_objectives` SET `Flags`='1', `Description`='Amani Axe Thrower slain (5)' WHERE  `ID`=259032;
 
 -- Amani Invasion Objective Flag Fix
-UPDATE `world`.`quest_objectives` SET `Flags`='1', `Description`='Amani Invasion Plans (Provided)' WHERE  `ID`=261347;
+UPDATE `quest_objectives` SET `Flags`='1', `Description`='Amani Invasion Plans (Provided)' WHERE `ID`=261347;
 
 -- Missing in the Ghostlands and The Fallen Courier
 DELETE FROM `creature` WHERE id IN (16196);
