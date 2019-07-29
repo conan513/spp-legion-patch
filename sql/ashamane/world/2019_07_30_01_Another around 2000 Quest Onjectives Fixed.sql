@@ -5,7 +5,7 @@ INSERT INTO `quest_objectives` (`ID`, `QuestID`, `Type`, `Order`, `StorageIndex`
 DELETE FROM `quest_objectives` WHERE `ID`=254656;
 INSERT INTO `quest_objectives` (`ID`, `QuestID`, `Type`, `Order`, `StorageIndex`, `ObjectID`, `Amount`, `Flags`, `Flags2`, `ProgressBarWeight`, `Description`, `VerifiedBuild`) VALUES (254656, 1168, 0, 2, 2, 4328, 5, 1, 0, 0, '', 25996);
 DELETE FROM `quest_objectives` WHERE `ID`=254467;
-INSERT INTO `quest_objectives` (`ID`, `QuestID`, `Type`, `Order`, `StorageIndex`, `ObjectID`, `Amount`, `Flags`, `Flags2`, `ProgressBarWeight`, `Description`, `VerifiedBuild`) VALUES (254467, 1169, 1, 0, 0, 5840, 7, 1, 0,, 0, '', 22995);
+INSERT INTO `quest_objectives` (`ID`, `QuestID`, `Type`, `Order`, `StorageIndex`, `ObjectID`, `Amount`, `Flags`, `Flags2`, `ProgressBarWeight`, `Description`, `VerifiedBuild`) VALUES (254467, 1169, 1, 0, 0, 5840, 7, 1, 0, 0, '', 22995);
 DELETE FROM `quest_objectives` WHERE `ID`=254468;
 INSERT INTO `quest_objectives` (`ID`, `QuestID`, `Type`, `Order`, `StorageIndex`, `ObjectID`, `Amount`, `Flags`, `Flags2`, `ProgressBarWeight`, `Description`, `VerifiedBuild`) VALUES (254468, 1169, 1, 0, 1, 5841, 7, 1, 0, 0, '', 22995);
 DELETE FROM `quest_objectives` WHERE `ID`=254581;
